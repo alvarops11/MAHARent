@@ -1,4 +1,4 @@
-# VISUAL — MAHARent
+# MAHARent
 
 **MAHARent** es una plataforma **SaaS + Marketplace de renting de vehículos** desarrollada como proyecto dentro de VISUAL.
 
