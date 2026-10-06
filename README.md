@@ -356,9 +356,9 @@ MAHARent
 
 **VISUAL — MAHARent**
 *SaaS + Marketplace para la gestión y comercialización de vehículos de renting.*
-**COEvaluación**
-*Adrian Lopez - 100% de las tareas completadas en tiempo y forma*
-*Hugo del Rio - 100% de las tareas completadas en tiempo y forma*
-*Álvaro Pérez - 100% de las tareas completadas en tiempo y forma*
-*Manuel Parrilla- 100% de las tareas completadas en tiempo y forma*
+## COEvaluación
 
+- *Adrian Lopez* - 100% de las tareas completadas en tiempo y forma.
+- *Hugo del Rio* - 100% de las tareas completadas en tiempo y forma.
+- *Álvaro Pérez* - 100% de las tareas completadas en tiempo y forma.
+- *Manuel Parrilla* - 100% de las tareas completadas en tiempo y forma.
