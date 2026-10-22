@@ -1,0 +1,37 @@
+@use '../abstracts/variables' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: $border-radius-sm;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &--primary {
+    background-color: $color-accent;
+    color: #000000;
+
+    &:hover {
+      background-color: $color-accent-hover;
+      box-shadow: $shadow-md;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-bg-card;
+    color: $color-text-primary;
+    border: 1px solid $color-border;
+
+    &:hover {
+      border-color: $color-accent;
+    }
+  }
+
+  &--full {
+    width: 100%;
+  }
+}

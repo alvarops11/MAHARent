@@ -1,0 +1,35 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Visibilidad
+.u-hidden {
+  display: none !important;
+}
+
+.u-mobile-only {
+  @include respond-to('tablet') {
+    display: none !important;
+  }
+}
+
+.u-desktop-only {
+  display: none !important;
+
+  @include respond-to('tablet') {
+    display: block !important;
+  }
+}
+
+// Alineación de texto
+.u-text-center { text-align: center !important; }
+.u-text-left { text-align: left !important; }
+.u-text-right { text-align: right !important; }
+
+// Margen rápido
+.u-mb-sm { margin-bottom: 0.5rem !important; }
+.u-mb-md { margin-bottom: 1rem !important; }
+.u-mb-lg { margin-bottom: 2rem !important; }
+
+// Colores de texto auxiliares
+.u-text-accent { color: $color-accent !important; }
+.u-text-muted { color: $color-text-secondary !important; }
