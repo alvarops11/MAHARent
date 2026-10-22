@@ -1,0 +1,33 @@
+// Punto de entrada único: unifica todos los parciales de la hoja de estilos.
+
+@use 'abstracts/variables';
+@use 'abstracts/typography-tokens';
+@use 'abstracts/breakpoints';
+@use 'abstracts/mixins';
+@use 'abstracts/functions';
+
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/icons';
+@use 'base/utilities';
+
+@use 'layout/header';
+@use 'layout/navigation';
+@use 'layout/sidebar';
+@use 'layout/footer';
+@use 'layout/grid';
+
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/badges';
+@use 'components/forms';
+@use 'components/tabs-toggles';
+@use 'components/tables';
+@use 'components/modals';
+@use 'components/avatar';
+
+@use 'pages/home';
+@use 'pages/marketplace';
+@use 'pages/vehiculo-detalle';
+@use 'pages/login';
+@use 'pages/dashboard';
