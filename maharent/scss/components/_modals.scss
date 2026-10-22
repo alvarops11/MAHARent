@@ -1,1 +1,40 @@
-// Estilos de ventanas modales.
+@use '../abstracts/variables' as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  &--open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__content {
+    background-color: $color-bg-card;
+    border: 1px solid $color-border;
+    border-radius: $border-radius-md;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: $color-text-secondary;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+}

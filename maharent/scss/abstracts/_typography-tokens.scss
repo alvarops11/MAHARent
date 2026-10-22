@@ -1,1 +1,16 @@
-// Tokens tipográficos: familias, tamaños, pesos e interlineados.
+// Fuentes
+$font-family-base: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+$font-family-heading: 'Outfit', system-ui, -apple-system, sans-serif;
+
+// Tamaños de Fuente (Escala Rem)
+$font-size-xs: 0.75rem;   // 12px
+$font-size-sm: 0.875rem;  // 14px
+$font-size-base: 1rem;    // 16px
+$font-size-lg: 1.25rem;   // 20px
+$font-size-xl: 1.75rem;   // 28px
+$font-size-xxl: 2.25rem;  // 36px
+
+// Grosores
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;

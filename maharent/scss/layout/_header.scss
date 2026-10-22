@@ -1,1 +1,11 @@
-// Estilos de la cabecera (header) del sitio.
+@use '../abstracts/variables' as *;
+
+.header {
+  grid-area: header;
+  background-color: $color-bg-secondary;
+  border-bottom: 1px solid $color-border;
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}

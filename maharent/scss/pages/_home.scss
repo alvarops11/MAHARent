@@ -1,1 +1,23 @@
-// Estilos específicos de la página de inicio (index.html).
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: linear-gradient(180deg, $color-bg-secondary 0%, $color-bg-primary 100%);
+
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+
+    @include respond-to('tablet') {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__subtitle {
+    color: $color-text-secondary;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+}
