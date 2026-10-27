@@ -1,0 +1,63 @@
+// Contenedores de la página
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  &--fluid {
+    max-width: 100%;
+  }
+}
+
+// Sistema de Rejilla Flexbox
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--between {
+    justify-content: space-between;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+}
+
+// Columnas Generales y Responsivas
+[class*="col-"] {
+  width: 100%;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+// Teléfonos grandes / Tablets (> 576px)
+@media (min-width: 576px) {
+  .col-sm-6 { width: 50%; }
+  .col-sm-12 { width: 100%; }
+}
+
+// Tablets (> 768px)
+@media (min-width: 768px) {
+  .col-md-4 { width: 33.3333%; }
+  .col-md-6 { width: 50%; }
+  .col-md-8 { width: 66.6666%; }
+  .col-md-12 { width: 100%; }
+}
+
+// Escritorio (> 992px)
+@media (min-width: 992px) {
+  .col-lg-3 { width: 25%; }
+  .col-lg-4 { width: 33.3333%; }
+  .col-lg-6 { width: 50%; }
+  .col-lg-8 { width: 66.6666%; }
+  .col-lg-12 { width: 100%; }
+}
