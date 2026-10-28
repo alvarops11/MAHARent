@@ -1,28 +1,58 @@
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
+@use '../abstracts' as *;
 
+// Navegación principal: panel desplegable en móvil y píldora horizontal desde tablet
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: absolute;
+  top: $header-height;
+  right: 0;
+  left: 0;
+  display: none;
+  padding: $space-md;
+  background-color: $color-surface;
+  box-shadow: $shadow-header;
 
-  &__menu {
-    display: none; // Oculto en móvil
+  &--open {
+    display: block;
+  }
 
-    @include respond-to('tablet') {
-      display: flex;
+  @include respond-to('md') {
+    position: static;
+    display: flex;
+    align-items: center;
+    padding: 0.375rem;
+    background-color: rgba($color-surface-container, 0.8);
+    border-radius: $radius-xl;
+    box-shadow: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+
+    @include respond-to('md') {
+      flex-direction: row;
       align-items: center;
-      gap: 1.5rem;
+      gap: $space-sm;
     }
   }
 
   &__link {
-    color: $color-text-secondary;
-    transition: color 0.3s ease;
+    display: block;
+    padding: $space-sm $space-md;
+    color: $color-on-surface-variant;
+    border-radius: $radius-lg;
+    @include type('label-lg');
+    @include interactive($hover-color: $color-on-surface);
 
-    &:hover,
+    @include respond-to('md') {
+      padding: 0.375rem $space-md;
+    }
+
     &--active {
-      color: $color-accent;
+      background-color: $color-surface-container-lowest;
+      color: $color-on-surface;
+      box-shadow: $shadow-button;
     }
   }
 }

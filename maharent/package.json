@@ -1,0 +1,14 @@
+{
+  "name": "maharent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MAHARent - frontend HTML5 semántico + SASS (BEM) con Tailwind para utilidades puntuales",
+  "scripts": {
+    "sass": "sass --style=expanded --source-map scss/main.scss css/main.css",
+    "sass:watch": "sass --watch --style=expanded --source-map scss/main.scss css/main.css",
+    "serve": "python -m http.server 8000"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

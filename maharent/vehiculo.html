@@ -1,932 +1,572 @@
 <!DOCTYPE html>
-
-<html lang="es"
-  style="height: auto !important; min-height: 100vh; overflow-y: auto !important; overflow-x: hidden; scroll-behavior: smooth;">
+<html lang="es">
 
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <meta content="web_standard" name="shell-type" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
-  <style>
-    @layer base {
-
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        height: auto !important;
-        overflow-y: auto !important;
-        overflow-x: hidden;
-      }
-
-      body {
-        overscroll-behavior: auto;
-      }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW X1 sDrive18d en renting desde 449 €/mes | MAHARent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script
-    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed-dim": "#b4c5ff", "on-secondary-container": "#fefcff", "surface-container": "#e5eeff", "primary-container": "#0e1c2f", "surface": "#f8f9ff", "on-primary": "#ffffff", "error": "#ba1a1a", "primary-fixed-dim": "#bac7e1", "on-tertiary-container": "#b87500", "surface-variant": "#d3e4fe", "tertiary-fixed": "#ffddb8", "secondary-container": "#316bf3", "on-tertiary-fixed": "#2a1700", "surface-tint": "#525f75", "surface-container-high": "#dce9ff", "inverse-on-surface": "#eaf1ff", "on-tertiary-fixed-variant": "#653e00", "on-error": "#ffffff", "on-surface": "#0b1c30", "on-primary-fixed": "#0e1c2f", "on-secondary": "#ffffff", "surface-dim": "#cbdbf5", "tertiary-fixed-dim": "#ffb95f", "on-primary-container": "#77849c", "surface-bright": "#f8f9ff", "on-surface-variant": "#44474c", "surface-container-low": "#eff4ff", "primary": "#000000", "secondary-fixed": "#dbe1ff", "inverse-primary": "#bac7e1", "surface-container-highest": "#d3e4fe", "background": "#f8f9ff", "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "tertiary": "#000000", "secondary": "#0051d5", "outline-variant": "#c5c6cd", "on-primary-fixed-variant": "#3a475c", "primary-fixed": "#d6e3fe", "on-background": "#0b1c30", "on-error-container": "#93000a", "on-secondary-fixed": "#00174b", "on-secondary-fixed-variant": "#003ea8", "outline": "#75777d", "inverse-surface": "#213145", "error-container": "#ffdad6", "tertiary-container": "#2a1700" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "margin-sm": "1rem", "gutter-sm": "1rem", "gutter": "1.5rem", "margin-lg": "3rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "gutter-lg": "2rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin": "1.5rem" }, "fontFamily": { "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } }</script>
-  <link rel="stylesheet" href="css/main.css" />
+  <script src="js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary"
-  style="min-height: 100vh; height: auto !important; overflow-y: auto !important; overflow-x: hidden;">
-  <header
-    class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,28,48,0.04)]">
-    <div
-      class="h-20 max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg flex items-center justify-between gap-gutter">
-      <div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-sm focus:outline-none"
-          data-path="marketplace" href="marketplace.html"><img alt="MAHARent logo" class="h-9 md:h-10 w-auto object-contain"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFXdj2WIlWqqvBxAhbea1YWqKt1bZ9o--TbrT7_wKbpTz4qHuUsGPAPoogzLVICizJ8vIbjG5ssHa0Bobpvq2rOdJn_-m4zTnIdtzh5nkKCsb1tNc38-3z3rQRfhNtGYwF2pFfuDCF7dYq61i-Qr2MllKII6LAkgm0JXoRLW2Bue-GMx61tl5cBjZ2Vtsb56midx64t8rAtc-2JoqLwbMEu80p5yNg4iR5GP5lF3pHmYbrcj0GQGs5me4W1hbguJAeqv0" /></a>
-      </div>
-      <nav class="hidden md:flex items-center gap-space-xs p-space-xs rounded-xl bg-surface-container-low/70"
-        data-active-classes="bg-surface-container-high text-on-surface font-label-lg rounded-xl"><a
-          class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors rounded-lg"
-          data-path="inicio" href="index.html">Inicio</a><a aria-current="page"
-          class="px-space-md py-space-sm transition-colors bg-surface-container-high text-on-surface font-label-lg rounded-xl"
-          data-path="marketplace" href="marketplace.html">Marketplace</a><a
-          class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors rounded-lg"
-          data-path="empresas" href="dashboard.html">Empresas</a></nav>
-      <div class="flex items-center gap-space-md"><button aria-label="Favoritos"
-          class="relative p-space-sm rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors flex items-center justify-center"
-          type="button"><span class="material-symbols-outlined text-[22px]">favorite</span><span
-            class="absolute top-1.5 right-1.5 min-w-[18px] h-[18px] px-1 bg-secondary text-on-secondary rounded-full font-label-sm text-label-sm flex items-center justify-center leading-none">2</span></button><a
-          class="hidden sm:inline-block font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs transition-colors"
-          data-path="login" href="login.html">Iniciar sesión</a><a
-          class="hidden sm:inline-flex items-center justify-center font-label-lg text-label-lg bg-primary-container text-on-primary hover:bg-primary-container/90 px-space-lg py-space-sm rounded-xl shadow-[0_2px_4px_rgba(11,28,48,0.06)] transition-all"
-          data-path="registro" href="login.html">Registrarse</a>
-        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
-            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__brand" href="index.html">
+        <img class="header__logo" alt="MAHARent Renting de Coches"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHb71RAvnL9Ama0BfTnp5pUXSJsw8frIM6_GpZNHDtHfAl2YtCZJ2pGJBE02LPaYOPoh6CnDVTgemxWJFwd820-0c63MVx3wFGzwPWgRn0McBB5426Le3ex6km_KhDHFvnQXHT2PPUyGAJhAk3QSa9nfq63eMWm5CH4m3w04XQAHAnLMHfv5URZItPrJdRFmx9Cp_LsCyDwROsV5SAFJoBNar4nG-pQwaXosqN69TXIVeqH9sHn7rTeW-YEHLWacblXO4">
+      </a>
+      <nav class="nav" id="main-nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Inicio</a></li>
+          <li><a class="nav__link nav__link--active" href="marketplace.html" aria-current="page">Marketplace</a></li>
+          <li><a class="nav__link" href="dashboard.html">Empresas</a></li>
+          <li><a class="nav__link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a class="header__link header__link--secondary" href="login.html">Iniciar sesión</a>
+        <a class="btn btn--dark" href="login.html">Registrarse</a>
+        <button class="header__toggle" type="button" aria-controls="main-nav" aria-expanded="false"
+          aria-label="Abrir menú" data-nav-toggle>
+          <span class="icon" aria-hidden="true">menu</span>
+        </button>
       </div>
     </div>
   </header>
-  <main class="w-full pt-20 bg-surface min-h-[calc(100vh-160px)]">
-    <div class="flex flex-col w-full">
-      <!-- Vehicle Detail Main Canvas -->
-      <div
-        class="w-full max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg py-space-md md:py-space-lg flex flex-col gap-space-xl pb-space-xl">
-        <!-- Breadcrumb & Quick Actions Bar -->
-        <div class="flex flex-wrap items-center justify-between gap-space-sm">
-          <div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
-            <a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary hover:text-on-surface transition-colors py-1"
-              data-path="marketplace" href="marketplace.html">
-              <span class="material-symbols-outlined text-[18px]">arrow_back</span>
-              <span class="">Volver al Marketplace</span>
+
+  <main class="main container vehicle">
+    <header class="vehicle__toolbar">
+      <nav class="breadcrumb" aria-label="Migas de pan">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item">
+            <a class="breadcrumb__link breadcrumb__link--back" href="marketplace.html">
+              <span class="icon icon--md" aria-hidden="true">arrow_back</span>
+              Volver al Marketplace
             </a>
-            <span class="text-outline-variant">/</span>
-            <a class="hover:text-on-surface transition-colors" data-path="marketplace" href="marketplace.html">Vehículos</a>
-            <span class="text-outline-variant">/</span>
-            <span class="text-on-surface font-label-md text-label-md">BMW X1</span>
-          </div>
-          <div class="flex items-center gap-space-xs">
-            <span
-              class="inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container rounded-full font-label-sm text-label-sm text-on-surface-variant">
-              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              Stock verificado en tiempo real
-            </span>
-            <button aria-label="Compartir ficha"
-              class="p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center"
-              type="button">
-              <span class="material-symbols-outlined text-[20px]">share</span>
-            </button>
-          </div>
-        </div>
-        <!-- 2-Column Hero Configuration Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
-          <!-- LEFT COLUMN: Photographic Gallery & Vehicle Certifications -->
-          <div class="lg:col-span-7 flex flex-col gap-space-lg">
-            <!-- Main Media Frame -->
-            <div
-              class="relative w-full rounded-2xl overflow-hidden bg-gradient-to-b from-surface-container-low to-surface-container shadow-md group">
-              <!-- Ambient Vehicle Studio Canvas -->
-              <div class="relative w-full aspect-[16/10] overflow-hidden flex items-center justify-center">
-                <img
-                  class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-                  data-alt="Photorealistic studio shot of an elegant BMW X1 sDrive18d in metallic deep navy blue finish, parked at three-quarters dynamic angle inside a high-end minimalist automotive photography studio with soft overhead light bar reflections, glossy floor reflections, and sharp athletic styling lines."
-                  id="mainVehicleImg"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIasWc45FZ9OgIzWctThC9RCSrj4gDDWRmCmskDZBdfPEs04AaNX-bj2TXRDbMXq_446HZpRB3O28Pkg43RkvkmaGzLFeOfichprLdwMGwD7Mq6gSUlOsChF02Vv6U4yl1FKODtgRcqTm6jp7LB7HpexsPOAKTmEoKdUCmgcdix3hs9xuTxMCZfF2sekU3PEyNmV-2Kg2UYkUKJjN6uv9lG8MRgblK0_OkFISZVZk7W5cfWDd7NZ0-9w" />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-primary-container/30 via-transparent to-transparent pointer-events-none">
-                </div>
-              </div>
-              <!-- Overlay Pills -->
-              <div class="absolute top-space-md left-space-md flex flex-wrap items-center gap-space-xs">
-                <button
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-container/90 text-on-primary backdrop-blur-md font-label-sm text-label-sm shadow-md hover:bg-secondary transition-all"
-                  id="jumpTo3dBtn" type="button">
-                  <span class="material-symbols-outlined text-[16px] text-amber-400">view_in_ar</span>
-                  <span class="">3D disponible</span>
-                </button>
-                <span
-                  class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-800 backdrop-blur-md font-label-sm text-label-sm font-semibold shadow-sm">
-                  <span class="material-symbols-outlined text-[15px] text-emerald-600">eco</span>
-                  <span class="">Etiqueta ECO</span>
-                </span>
-              </div>
-              <!-- Gallery Counter & Fullscreen trigger -->
-              <div class="absolute bottom-space-md right-space-md flex items-center gap-space-xs">
-                <button
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-container/85 hover:bg-primary-container text-on-primary backdrop-blur-md font-label-sm text-label-sm shadow-lg transition-transform active:scale-95"
-                  type="button">
-                  <span class="material-symbols-outlined text-[16px]">photo_library</span>
-                  <span class="" id="photoIndexLabel">1 / 5 fotos</span>
-                </button>
-              </div>
-            </div>
-            <!-- Thumbnail Gallery Strip -->
-            <div class="grid grid-cols-5 gap-space-xs sm:gap-space-sm">
-              <button
-                class="thumb-btn group relative aspect-[16/10] rounded-xl overflow-hidden bg-surface-container shadow-sm ring-2 ring-secondary transition-all"
-                onclick="selectThumb(0)" type="button">
-                <img class="w-full h-full object-cover"
-                  data-alt="Front three-quarters exterior profile view of BMW X1 sDrive18d in metallic imperial blue, clean studio spotlighting."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXA-XqIwMHosCrmgYVL0We5txOY2VCmBO8kCLPlWVD0cbK8C9tkS7zXpfXa1oUxp-IYcl4PoM-_8JKVdLBclzCioG5VbOF6CXf3UFgcitRRAGX-LWCJHyJR-0N4Yyz7wQsco5K7XIvTslHx6rAt8DUZtCKHyor9Px2LkLsrqjfknl2dRvBVEVOLHU1ErKHTEy1OwPiR_OSkBT9UH1Y15EEUOk4jNtJy0hbhMwIJZTbfXy8aV8sMYttlA" />
-                <span class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></span>
-              </button>
-              <button
-                class="thumb-btn group relative aspect-[16/10] rounded-xl overflow-hidden bg-surface-container shadow-sm hover:ring-2 hover:ring-secondary/50 transition-all opacity-80 hover:opacity-100"
-                onclick="selectThumb(1)" type="button">
-                <img class="w-full h-full object-cover"
-                  data-alt="Front view closeup of kidney grille and sculpted adaptive LED headlights of BMW X1."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAIQ88sCTJhjiZp_qsMzEQ99FpQbxvi-Xi7ZOEPDbvhWxbjdsn1u-qBpg5yrBL-OENag19fN7D0U66CpevLUv1Quya1uCJUScslhJV9Ouv2cSUwzO3bEi-d15u_FP-owDbmwbDxLCnAQWjNB2_YU4gk5g1seqo0INJy3G6HimdawfDy20Wzk0975JX2xPhZtgyhdU4ykrvhzIXXY5_I8kOjwDBlffjMF-Ajl_Ausdy7dVX2eocdi1mmQ" />
-              </button>
-              <button
-                class="thumb-btn group relative aspect-[16/10] rounded-xl overflow-hidden bg-surface-container shadow-sm hover:ring-2 hover:ring-secondary/50 transition-all opacity-80 hover:opacity-100"
-                onclick="selectThumb(2)" type="button">
-                <img class="w-full h-full object-cover"
-                  data-alt="Aerodynamic sculpted rear view of BMW X1 showing modern tail lights and xLine bumper accents."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxFj7XdBrp_hVNB9G-VBXDOglFm266zBThHFgBYdKH8QePjgFK0II55Wv2JwHKod0TYUu_9hOrVYMMPPk_P-EnTHL8eeMQqybfVQjjGgmyQa9AwcF9dtdIQkSSO-6hdS5J-wEUpRHfixmv1QMhOeo2NnlMVdzH7MNxtvWBus6A7mXq01svd7T6KTD8ZA5PoXglTMcV4WvyPWIp0GzSdsG7XlcgrU5_iuNHNSIST9dXFnSurXoaDnOopA" />
-              </button>
-              <button
-                class="thumb-btn group relative aspect-[16/10] rounded-xl overflow-hidden bg-surface-container shadow-sm hover:ring-2 hover:ring-secondary/50 transition-all opacity-80 hover:opacity-100"
-                onclick="selectThumb(3)" type="button">
-                <img class="w-full h-full object-cover"
-                  data-alt="Luxury interior driver cockpit view of BMW X1 featuring dual BMW Curved Display with ambient blue LED illumination."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM2LFbwDSbsXWN-U95HT8soKogUA9WQPevnHPeg0bMNc8Whuv_O7zVQfx7jyWBIiNRaUMImhyePkyoAKUiSv2Kf1A5u7gYFzihw4fyY33t3PU1hwqR0HMP-DwXM5wICymomxAkTKywOXfVJ3uomvxhP2Ha1G0CSyh_MvuwVzxtvaWF_UDzMrJVvtNmYpll2gMiWYVSyrbdGcC1tW1PKopKqziJsSkO5jtdjSdc5zSy94gGsoQHtnYd3w" />
-              </button>
-              <button
-                class="thumb-btn group relative aspect-[16/10] rounded-xl overflow-hidden bg-surface-container shadow-sm hover:ring-2 hover:ring-secondary/50 transition-all opacity-80 hover:opacity-100"
-                onclick="selectThumb(4)" type="button">
-                <img class="w-full h-full object-cover"
-                  data-alt="Detail shot of 18 inch alloy wheels with Michelin performance tires on BMW X1 in showroom studio."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCil6adIhTIXJoeL-Wro6LfBHNCZ_RSodOZ_RRQuyZenm2V9DulE23pzVYFDysA5XRGlvqYPzBdO6I33VxUA76T1sxYbvGPXSOwlq-ZejOAABNmxuGhZaXmQPZhnXAdcDe-3-_jvWBUtvgFUkWQkPHBX0hOyQC6ra5AD988q46wvyCio9Spa5QufuhGH-lhVsiCB6zmxlEs68i97z7tPsD9pnMMjuLipLWEk-ID6ekDlui0RBV0-YtJA" />
-              </button>
-            </div>
-            <!-- Trust Badges & Guarantee Micro-Bar -->
-            <div
-              class="grid grid-cols-1 md:grid-cols-3 gap-space-sm p-space-md rounded-2xl bg-surface-container-lowest shadow-sm">
-              <div class="flex items-center gap-space-sm">
-                <div
-                  class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-secondary">
-                  <span class="material-symbols-outlined text-[22px]">verified</span>
-                </div>
-                <div class="flex flex-col">
-                  <span class="font-label-md text-label-md text-on-surface">Inspección de 150 puntos</span>
-                  <span class="font-body-sm text-body-sm text-on-surface-variant">Certificación técnica oficial</span>
-                </div>
-              </div>
-              <div class="flex items-center gap-space-sm">
-                <div
-                  class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-secondary">
-                  <span class="material-symbols-outlined text-[22px]">auto_awesome</span>
-                </div>
-                <div class="flex flex-col">
-                  <span class="font-label-md text-label-md text-on-surface">Vehículo a estrenar</span>
-                  <span class="font-body-sm text-body-sm text-on-surface-variant">0 km garantizado de fábrica</span>
-                </div>
-              </div>
-              <div class="flex items-center gap-space-sm">
-                <div
-                  class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-secondary">
-                  <span class="material-symbols-outlined text-[22px]">local_shipping</span>
-                </div>
-                <div class="flex flex-col">
-                  <span class="font-label-md text-label-md text-on-surface">Entrega rápida</span>
-                  <span class="font-body-sm text-body-sm text-on-surface-variant">En concesionario o domicilio</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- RIGHT COLUMN: Vehicle Specs & Contract Configuration Card -->
-          <div class="lg:col-span-5 flex flex-col gap-space-md">
-            <!-- Identity Header -->
-            <div class="flex flex-col gap-1">
-              <div class="flex items-center justify-between gap-space-sm">
-                <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Renting Todo
-                  Incluido</span>
-                <div class="flex items-center gap-1 text-amber-500">
-                  <span class="material-symbols-outlined text-[18px]"
-                    style='font-variation-settings: "FILL" 1;'>star</span>
-                  <span class="font-label-md text-label-md text-on-surface">4.9</span>
-                  <span class="font-body-sm text-body-sm text-on-surface-variant">(128 opiniones)</span>
-                </div>
-              </div>
-              <h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">BMW X1 sDrive18d</h1>
-              <p class="font-body-lg text-body-lg text-on-surface-variant">SUV · Automático Steptronic · Mild-Hybrid
-                Diésel · Acabado xLine</p>
-            </div>
-            <!-- Supplier & Verified Tag -->
-            <div class="inline-flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
-              <div
-                class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center shadow-xs text-primary-container">
-                <span class="material-symbols-outlined text-[20px]">shield</span>
-              </div>
-              <div class="flex flex-col">
-                <span class="font-label-md text-label-md text-on-surface">Gestionado por Arval Renting &amp; MAHARent
-                  Selection</span>
-                <span class="font-body-sm text-body-sm text-on-surface-variant">Contrato corporativo y particular con
-                  soporte prioritario</span>
-              </div>
-            </div>
-            <!-- 5-Grid Technical Chips -->
-            <div class="grid grid-cols-3 sm:grid-cols-5 gap-space-xs">
-              <div
-                class="flex flex-col items-center justify-center p-space-sm rounded-xl bg-surface-container-lowest text-center shadow-xs">
-                <span class="material-symbols-outlined text-[22px] text-secondary mb-1">group</span>
-                <span class="font-label-md text-label-md text-on-surface">5 plazas</span>
-                <span class="font-label-sm text-label-sm text-on-surface-variant">Capacidad</span>
-              </div>
-              <div
-                class="flex flex-col items-center justify-center p-space-sm rounded-xl bg-surface-container-lowest text-center shadow-xs">
-                <span class="material-symbols-outlined text-[22px] text-secondary mb-1">shift</span>
-                <span class="font-label-md text-label-md text-on-surface">Automático</span>
-                <span class="font-label-sm text-label-sm text-on-surface-variant">7 vel.</span>
-              </div>
-              <div
-                class="flex flex-col items-center justify-center p-space-sm rounded-xl bg-surface-container-lowest text-center shadow-xs">
-                <span class="material-symbols-outlined text-[22px] text-emerald-600 mb-1">energy_savings_leaf</span>
-                <span class="font-label-md text-label-md text-on-surface">MHEV ECO</span>
-                <span class="font-label-sm text-label-sm text-on-surface-variant">Diésel</span>
-              </div>
-              <div
-                class="flex flex-col items-center justify-center p-space-sm rounded-xl bg-surface-container-lowest text-center shadow-xs">
-                <span class="material-symbols-outlined text-[22px] text-secondary mb-1">speed</span>
-                <span class="font-label-md text-label-md text-on-surface">150 CV</span>
-                <span class="font-label-sm text-label-sm text-on-surface-variant">Potencia</span>
-              </div>
-              <div
-                class="flex flex-col items-center justify-center p-space-sm rounded-xl bg-surface-container-lowest text-center shadow-xs col-span-3 sm:col-span-1">
-                <span class="material-symbols-outlined text-[22px] text-secondary mb-1">luggage</span>
-                <span class="font-label-md text-label-md text-on-surface">540 L</span>
-                <span class="font-label-sm text-label-sm text-on-surface-variant">Maletero</span>
-              </div>
-            </div>
-            <!-- Featured Booking & Contract Pricing Box -->
-            <div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-md flex flex-col gap-space-md">
-              <div class="flex flex-col gap-1 pb-space-sm">
-                <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Cuota de
-                  renting mensual</span>
-                <div class="flex items-baseline gap-2">
-                  <span class="font-display-lg text-display-lg text-amber-500 font-extrabold tracking-tight">449
-                    €</span>
-                  <span class="font-headline-sm text-headline-sm text-on-surface font-semibold">/ mes</span>
-                </div>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">
-                  + IVA para empresas y autónomos · Cuota con IVA incluido disponible para particulares
-                </p>
-              </div>
-              <!-- Feature Tag Pills -->
-              <div class="flex flex-wrap gap-space-xs">
-                <span
-                  class="px-3 py-1 bg-surface-container rounded-lg font-label-md text-label-md text-on-surface flex items-center gap-1">
-                  <span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span> 36 meses
-                </span>
-                <span
-                  class="px-3 py-1 bg-surface-container rounded-lg font-label-md text-label-md text-on-surface flex items-center gap-1">
-                  <span class="material-symbols-outlined text-[16px] text-emerald-600">payments</span> Sin entrada
-                  inicial (0 €)
-                </span>
-                <span
-                  class="px-3 py-1 bg-amber-50 rounded-lg font-label-md text-label-md text-amber-800 flex items-center gap-1">
-                  <span class="material-symbols-outlined text-[16px] text-amber-600">bolt</span> Entrega inmediata en
-                  48-72h
-                </span>
-              </div>
-              <!-- Coverage Checklist Note -->
-              <div class="p-space-md rounded-xl bg-surface-container-low/70 flex flex-col gap-space-xs">
-                <span class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-1.5">
-                  <span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
-                  Cuota fija todo incluido sin sorpresas:
-                </span>
-                <ul class="font-body-sm text-body-sm text-on-surface-variant grid grid-cols-1 gap-1">
-                  <li class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
-                    Seguro a todo riesgo sin franquicia
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
-                    Mantenimientos, revisiones oficiales e ITV
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
-                    Cambio de neumáticos ilimitado por desgaste
-                  </li>
-                </ul>
-              </div>
-              <!-- Action Buttons -->
-              <div class="flex flex-col sm:flex-row items-stretch gap-space-sm pt-space-xs">
-                <button
-                  class="flex-1 py-3.5 px-space-lg rounded-xl bg-amber-500 hover:bg-amber-600 text-primary-container font-headline-sm text-headline-sm font-bold shadow-md hover:shadow-lg transition-all text-center flex items-center justify-center gap-2 group active:scale-[0.99]"
-                  id="mainRequestCta" type="button">
-                  <span class="">Solicitar renting</span>
-                  <span
-                    class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
-                </button>
-                <button
-                  class="py-3.5 px-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-2"
-                  id="favToggleBtn" type="button">
-                  <span class="material-symbols-outlined text-[20px] text-error" id="favIcon">favorite</span>
-                  <span class="" id="favText">En favoritos</span>
-                </button>
-              </div>
-              <!-- Micro Guarantees Footnote -->
-              <div
-                class="flex flex-wrap items-center justify-between text-center gap-space-xs pt-1 font-body-sm text-body-sm text-on-surface-variant">
-                <span class="inline-flex items-center gap-1">
-                  <span class="material-symbols-outlined text-[14px] text-secondary">lock</span> Sin compromiso previo
-                </span>
-                <span class="inline-flex items-center gap-1">
-                  <span class="material-symbols-outlined text-[14px] text-secondary">timer</span> Viabilidad en 15 min
-                </span>
-                <span class="inline-flex items-center gap-1">
-                  <span class="material-symbols-outlined text-[14px] text-secondary">support_agent</span> Asesor
-                  personal gratis
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Section: Sobre este vehículo -->
-        <div
-          class="p-space-lg md:p-space-xl rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-lg">
-          <div class="flex flex-col gap-1">
-            <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Detalles &amp;
-              Experiencia</span>
-            <h2 class="font-headline-lg text-headline-lg text-on-surface">Sobre este vehículo</h2>
-          </div>
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-            <!-- Technical Narrative -->
-            <div class="lg:col-span-7 flex flex-col gap-space-md font-body-lg text-body-lg text-on-surface-variant">
-              <p class="">
-                El nuevo <strong class="text-on-surface font-semibold">BMW X1 sDrive18d xLine</strong> redefine la
-                versatilidad de los SUV compactos de alta gama. Su diseño exterior proyecta un porte atlético e
-                imponente gracias a su parrilla doble frontal ensanchada, pasos de rueda esculpidos y elegantes
-                inserciones en aluminio satinado propias del acabado xLine.
-              </p>
-              <p class="">
-                En su interior, destaca el innovador puesto de conducción <strong
-                  class="text-on-surface font-semibold">BMW Curved Display</strong>, que fusiona el cuadro de
-                instrumentos digital de 10.25 pulgadas con la pantalla de control táctil de 10.7 pulgadas bajo un mismo
-                cristal de alta definición continuo, eliminando botones superfluos mediante control por voz inteligente.
-              </p>
-              <p class="">
-                Su propulsión Mild-Hybrid de 48V optimiza la respuesta del bloque turbodiésel de 150 CV, permitiendo un
-                consumo homologado extraordinario de tan solo <strong class="text-on-surface font-semibold">4,9 L/100
-                  km</strong> con acceso total a las zonas de bajas emisiones metropolitanas mediante el distintivo
-                medioambiental ECO.
-              </p>
-            </div>
-            <!-- Featured Equipments Highlight Box -->
-            <div class="lg:col-span-5 p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-md">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
-                <span class="material-symbols-outlined text-secondary text-[22px]">tune</span>
-                Equipamiento destacado incluido
-              </h3>
-              <ul class="flex flex-col gap-space-sm font-body-md text-body-md text-on-surface">
-                <li class="flex items-start gap-space-sm">
-                  <span
-                    class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0 mt-0.5">check_circle</span>
-                  <span class="">Faros LED adaptativos con asistente de luz de carretera automática</span>
-                </li>
-                <li class="flex items-start gap-space-sm">
-                  <span
-                    class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0 mt-0.5">check_circle</span>
-                  <span class="">BMW Live Cockpit Plus con navegación en la nube y Apple CarPlay / Android Auto</span>
-                </li>
-                <li class="flex items-start gap-space-sm">
-                  <span
-                    class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0 mt-0.5">check_circle</span>
-                  <span class="">Parking Assistant con sensores perimetrales y cámara de visión trasera</span>
-                </li>
-                <li class="flex items-start gap-space-sm">
-                  <span
-                    class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0 mt-0.5">check_circle</span>
-                  <span class="">Climatizador automático bizona con toberas de ventilación en fila trasera</span>
-                </li>
-                <li class="flex items-start gap-space-sm">
-                  <span
-                    class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0 mt-0.5">check_circle</span>
-                  <span class="">Portón del maletero con accionamiento eléctrico manos libres</span>
-                </li>
-                <li class="flex items-start gap-space-sm">
-                  <span
-                    class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0 mt-0.5">check_circle</span>
-                  <span class="">Llantas de aleación ligera BMW de 18 pulgadas radios en V con acabado bicolor</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Section: Condiciones del renting -->
-        <div class="flex flex-col gap-space-lg">
-          <div class="flex flex-col gap-1">
-            <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Condiciones
-              Claras</span>
-            <h2 class="font-headline-lg text-headline-lg text-on-surface">Condiciones del renting</h2>
-            <p class="font-body-lg text-body-lg text-on-surface-variant">Transparencia absoluta sin costes ocultos ni
-              letra pequeña.</p>
-          </div>
-          <!-- 5-Card Conditions Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-sm">
-            <!-- 1. Precio mensual -->
-            <div
-              class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
-              <div class="flex items-center justify-between">
-                <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Cuota mensual</span>
-                <span class="material-symbols-outlined text-secondary text-[22px]">price_check</span>
-              </div>
-              <div>
-                <div class="font-headline-lg text-headline-lg text-amber-500 font-extrabold">449 €</div>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Precio congelado durante todo el
-                  contrato de renting.</p>
-              </div>
-            </div>
-            <!-- 2. Duración -->
-            <div
-              class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
-              <div class="flex items-center justify-between">
-                <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Plazo contractual</span>
-                <span class="material-symbols-outlined text-secondary text-[22px]">calendar_month</span>
-              </div>
-              <div>
-                <div class="font-headline-lg text-headline-lg text-on-surface font-bold">36 meses</div>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Opción ampliable o cambio de modelo al
-                  finalizar.</p>
-              </div>
-            </div>
-            <!-- 3. Disponibilidad -->
-            <div
-              class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
-              <div class="flex items-center justify-between">
-                <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Disponibilidad</span>
-                <span class="material-symbols-outlined text-emerald-600 text-[22px]">inventory_2</span>
-              </div>
-              <div>
-                <div class="font-headline-lg text-headline-lg text-emerald-600 font-bold">Inmediata</div>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Entrega garantizada de 48 a 72 horas
-                  hábiles.</p>
-              </div>
-            </div>
-            <!-- 4. Kilometraje anual -->
-            <div
-              class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
-              <div class="flex items-center justify-between">
-                <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Kilometraje</span>
-                <span class="material-symbols-outlined text-secondary text-[22px]">route</span>
-              </div>
-              <div>
-                <div class="font-headline-lg text-headline-lg text-on-surface font-bold">10.000 km</div>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Ajustable a medida hasta 30.000 km/año
-                  según necesidad.</p>
-              </div>
-            </div>
-            <!-- 5. Entrada -->
-            <div
-              class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md sm:col-span-2 lg:col-span-1">
-              <div class="flex items-center justify-between">
-                <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Pago inicial</span>
-                <span class="material-symbols-outlined text-secondary text-[22px]">credit_card_off</span>
-              </div>
-              <div>
-                <div class="font-headline-lg text-headline-lg text-on-surface font-bold">0 € Entrada</div>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Sin desembolso previo, 100% financiado
-                  en la cuota.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Detail Card: Qué incluye tu cuota -->
-          <div class="p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low flex flex-col gap-space-md">
-            <h3 class="font-headline-sm text-headline-sm text-on-surface">¿Qué incluye exactamente tu cuota mensual de
-              MAHARent?</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
-              <div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest">
-                <div
-                  class="w-9 h-9 rounded-lg bg-surface-container text-secondary flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[20px]">security</span>
-                </div>
-                <div>
-                  <h4 class="font-label-lg text-label-lg text-on-surface">Seguro a todo riesgo integral</h4>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant">Sin franquicia, cobertura total a
-                    terceros, lunas, robo, incendio y conductor.</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest">
-                <div
-                  class="w-9 h-9 rounded-lg bg-surface-container text-secondary flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[20px]">build</span>
-                </div>
-                <div>
-                  <h4 class="font-label-lg text-label-lg text-on-surface">Mantenimiento oficial integral</h4>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant">Revisiones periódicas y piezas originales
-                    en la red de talleres certificados BMW.</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest">
-                <div
-                  class="w-9 h-9 rounded-lg bg-surface-container text-secondary flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[20px]">tire_repair</span>
-                </div>
-                <div>
-                  <h4 class="font-label-lg text-label-lg text-on-surface">Sustitución de neumáticos</h4>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant">Cambio por desgaste y reparación de
-                    pinchazos de primeras marcas premium.</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest">
-                <div
-                  class="w-9 h-9 rounded-lg bg-surface-container text-secondary flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[20px]">emergency</span>
-                </div>
-                <div>
-                  <h4 class="font-label-lg text-label-lg text-on-surface">Asistencia en carretera 24/7</h4>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant">Desde el kilómetro 0 en toda la Unión
-                    Europea con grúa y vehículo de sustitución.</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest">
-                <div
-                  class="w-9 h-9 rounded-lg bg-surface-container text-secondary flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[20px]">receipt_long</span>
-                </div>
-                <div>
-                  <h4 class="font-label-lg text-label-lg text-on-surface">Impuestos de circulación e ITV</h4>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant">Impuesto de matriculación, tracción
-                    mecánica y gestiones administrativas cubiertas.</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest">
-                <div
-                  class="w-9 h-9 rounded-lg bg-surface-container text-secondary flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[20px]">manage_accounts</span>
-                </div>
-                <div>
-                  <h4 class="font-label-lg text-label-lg text-on-surface">Gestor de flota &amp; App MAHARent</h4>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant">Citas de taller, telemetría y
-                    documentación digital en tu dispositivo en un clic.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Section: Explora el vehículo en 3D (Interactive High-Tech Studio Canvas) -->
-        <div class="flex flex-col gap-space-md" id="section3d">
-          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
-            <div class="flex flex-col gap-1">
-              <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Visualizador
-                Virtual</span>
-              <h2 class="font-headline-lg text-headline-lg text-on-surface">Explora el vehículo en 3D</h2>
-              <p class="font-body-lg text-body-lg text-on-surface-variant">Interactúa con el modelo para visualizar el
-                vehículo desde diferentes perspectivas y acabados.</p>
-            </div>
-            <div
-              class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">
-              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-              <span class="">Modo Interactivo HD · 60 FPS</span>
-            </div>
-          </div>
-          <!-- 3D Studio Container -->
-          <div
-            class="relative w-full h-[520px] md:h-[620px] rounded-3xl overflow-hidden bg-[#070e17] shadow-xl flex items-center justify-center select-none">
-            <!-- Tech grid & reflective floor SVG background effect -->
-            <div
-              class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#132742] via-[#091424] to-[#04080e] pointer-events-none">
-            </div>
-            <div
-              class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/80 to-transparent pointer-events-none">
-            </div>
-            <!-- Dynamic 3D Vehicle Render Showcase -->
-            <div
-              class="relative z-10 w-full h-full flex flex-col items-center justify-center p-space-md transition-all duration-500"
-              id="canvas3dScene">
-              <div class="relative max-w-4xl w-full flex items-center justify-center transition-transform duration-300"
-                id="vehicle3dWrapper" style="transform: scale(1) rotate(0deg);">
-                <!-- High Definition Vehicle Angle Render -->
-                <img class="w-full max-h-[380px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.85)] filter"
-                  data-alt="3D photorealistic studio rendering of a modern BMW X1 luxury SUV in deep metallic navy blue sitting on a dark reflective glass automotive showroom floor with subtle neon rim light contours, headlights gleaming, ultra-sharp detail."
-                  id="vehicle3dImage"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK2dU2vhiZSTmXbZ-eaevGm8rGnO9kWKL56CFuOVe0icQQ9Krle-bQ1cAVxki5pQIRl62QDtFRiR6dDxPj1CEB421iMYvLG-uHfFWyZi5zmJLNIy6kiU2fZZN18PdKPL591c9bYWTnVkEk4z_T5zp1ofqgT4zy_DuDqad4928sYBPyAB1VIXMI--dnP4qUsOoecYEJpild0FP_MnwHPWMh2H-TIz5eIEOQtwg6aZbshnOIlBPimbnwkA" />
-              </div>
-              <!-- Compass / Perspective indicator -->
-              <div
-                class="absolute top-space-md left-space-md flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/40 backdrop-blur-md text-white/90 font-label-sm text-label-sm">
-                <span class="material-symbols-outlined text-[18px] text-amber-400 animate-spin"
-                  style="animation-duration: 12s;">360</span>
-                <span class="" id="angleValue">Ángulo actual: 45° Lateral</span>
-              </div>
-            </div>
-            <!-- Floating Interactive Control Dock -->
-            <div
-              class="absolute bottom-space-lg inset-x-space-md md:inset-x-auto flex flex-col md:flex-row items-center justify-between gap-space-sm z-20">
-              <!-- View Manipulation Tools -->
-              <div class="flex items-center gap-1.5 p-1.5 rounded-2xl bg-black/60 backdrop-blur-xl shadow-2xl">
-                <button
-                  class="px-3 py-2 rounded-xl text-white hover:bg-white/10 active:scale-95 transition-all flex items-center gap-1 font-label-md text-label-md"
-                  onclick="rotateVehicle(-45)" type="button">
-                  <span class="material-symbols-outlined text-[18px]">rotate_left</span>
-                  <span class="hidden sm:inline">Girar -45°</span>
-                </button>
-                <button
-                  class="px-3 py-2 rounded-xl text-white hover:bg-white/10 active:scale-95 transition-all flex items-center gap-1 font-label-md text-label-md"
-                  onclick="rotateVehicle(45)" type="button">
-                  <span class="material-symbols-outlined text-[18px]">rotate_right</span>
-                  <span class="hidden sm:inline">Girar +45°</span>
-                </button>
-                <div class="w-px h-5 bg-white/20 mx-1"></div>
-                <button class="p-2 rounded-xl text-white hover:bg-white/10 active:scale-95 transition-all"
-                  onclick="zoomVehicle(0.15)" title="Zoom +" type="button">
-                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
-                </button>
-                <button class="p-2 rounded-xl text-white hover:bg-white/10 active:scale-95 transition-all"
-                  onclick="zoomVehicle(-0.15)" title="Zoom -" type="button">
-                  <span class="material-symbols-outlined text-[20px]">zoom_out</span>
-                </button>
-                <button class="p-2 rounded-xl text-white hover:bg-white/10 active:scale-95 transition-all"
-                  onclick="reset3dView()" title="Restablecer" type="button">
-                  <span class="material-symbols-outlined text-[20px]">restart_alt</span>
-                </button>
-              </div>
-              <!-- Color Swatch & Interior Toggle -->
-              <div class="flex items-center gap-space-sm p-1.5 rounded-2xl bg-black/60 backdrop-blur-xl shadow-2xl">
-                <!-- Swatches -->
-                <div class="flex items-center gap-1.5 px-2">
-                  <button
-                    class="w-6 h-6 rounded-full bg-[#0d2a4a] ring-2 ring-amber-400 ring-offset-2 ring-offset-black/70 transition-transform hover:scale-110 active:scale-95"
-                    onclick="changeColor('portimao')" title="Azul Portimao" type="button"></button>
-                  <button
-                    class="w-6 h-6 rounded-full bg-[#d4af37] hover:ring-2 hover:ring-white/70 ring-offset-2 ring-offset-black/70 transition-transform hover:scale-110 active:scale-95"
-                    onclick="changeColor('dorado')" title="Dorado Sunset" type="button"></button>
-                  <button
-                    class="w-6 h-6 rounded-full bg-[#52575d] hover:ring-2 hover:ring-white/70 ring-offset-2 ring-offset-black/70 transition-transform hover:scale-110 active:scale-95"
-                    onclick="changeColor('mineral')" title="Gris Mineral" type="button"></button>
-                  <button
-                    class="w-6 h-6 rounded-full bg-[#e8ecef] hover:ring-2 hover:ring-white/70 ring-offset-2 ring-offset-black/70 transition-transform hover:scale-110 active:scale-95"
-                    onclick="changeColor('alpin')" title="Blanco Alpin" type="button"></button>
-                  <button
-                    class="w-6 h-6 rounded-full bg-[#111114] hover:ring-2 hover:ring-white/70 ring-offset-2 ring-offset-black/70 transition-transform hover:scale-110 active:scale-95"
-                    onclick="changeColor('zafiro')" title="Negro Zafiro" type="button"></button>
-                </div>
-                <div class="w-px h-5 bg-white/20"></div>
-                <!-- Door/Interior Toggle -->
-                <button
-                  class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-label-md text-label-md flex items-center gap-1.5 transition-colors"
-                  id="interiorToggleBtn" onclick="toggleInterior()" type="button">
-                  <span class="material-symbols-outlined text-[18px]">airline_seat_recline_extra</span>
-                  <span class="" id="interiorBtnLabel">Ver Interior</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Final High-Conversion Request Banner -->
-        <div
-          class="p-space-lg md:p-space-xl rounded-3xl bg-primary-container text-on-primary shadow-xl relative overflow-hidden">
-          <!-- Ambient decorative glow -->
-          <div
-            class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none">
-          </div>
-          <div class="absolute -left-20 -top-20 w-80 h-80 rounded-full bg-amber-500/10 blur-3xl pointer-events-none">
-          </div>
-          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
-            <div class="lg:col-span-8 flex flex-col gap-space-sm">
-              <span class="font-label-sm text-label-sm uppercase tracking-wider text-amber-400 font-bold">Atención
-                Exclusiva MAHARent</span>
-              <h2 class="font-headline-xl text-headline-xl tracking-tight text-white">¿Te interesa este vehículo?</h2>
-              <p class="font-body-lg text-body-lg text-surface-container max-w-2xl">
-                Solicita información y comienza el proceso de renting de tu BMW X1 sin ningún coste ni permanencia.
-                Nuestros asesores especializados evaluarán tu viabilidad en menos de 15 minutos.
-              </p>
-              <div class="flex flex-wrap items-center gap-space-sm pt-space-xs text-white/90">
-                <span
-                  class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 font-label-md text-label-md">
-                  <span class="material-symbols-outlined text-[16px] text-amber-400">check</span> Cuota fija: 449 €/mes
-                </span>
-                <span
-                  class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 font-label-md text-label-md">
-                  <span class="material-symbols-outlined text-[16px] text-amber-400">check</span> 0 € Entrada
-                </span>
-                <span
-                  class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 font-label-md text-label-md">
-                  <span class="material-symbols-outlined text-[16px] text-amber-400">check</span> Entrega en 48-72h
-                </span>
-              </div>
-            </div>
-            <div class="lg:col-span-4 flex flex-col gap-space-sm items-stretch sm:items-start lg:items-end">
-              <button
-                class="w-full sm:w-auto px-space-xl py-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-primary-container font-headline-sm text-headline-sm font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group active:scale-95"
-                onclick="openApplicationModal()" type="button">
-                <span class="">Solicitar renting ahora</span>
-                <span
-                  class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
-              </button>
-              <a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-white/80 hover:text-white transition-colors py-1"
-                href="#">
-                <span class="material-symbols-outlined text-[18px] text-emerald-400">chat</span>
-                <span class="">Hablar por WhatsApp con un asesor</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Interactive Client-side Script for 3D Simulator, Photo Swapping & CTA Interactions -->
-      <script>
-        // 3D Canvas State
-        let currentZoom = 1;
-        let currentRotation = 0;
-        let isInterior = false;
-
-        const angleLabels = [
-          'Vista Frontal 0°',
-          'Ángulo Tres Cuartos 45°',
-          'Perfil Lateral 90°',
-          'Ángulo Trasero 135°',
-          'Vista Trasera 180°',
-          'Ángulo Trasero 225°',
-          'Perfil Lateral 270°',
-          'Ángulo Frontal 315°'
-        ];
-
-        function updateTransform() {
-          const wrapper = document.getElementById('vehicle3dWrapper');
-          if (wrapper) {
-            wrapper.style.transform = `scale(${currentZoom}) rotate(${currentRotation}deg)`;
-          }
-          const angleElem = document.getElementById('angleValue');
-          if (angleElem) {
-            const normalized = ((currentRotation % 360) + 360) % 360;
-            const index = Math.round(normalized / 45) % 8;
-            angleElem.textContent = isInterior ? 'Cockpit Interior Panorámico' : `Perspectiva: ${angleLabels[index]}`;
-          }
-        }
-
-        function rotateVehicle(step) {
-          if (isInterior) toggleInterior();
-          currentRotation += step;
-          updateTransform();
-        }
-
-        function zoomVehicle(delta) {
-          currentZoom = Math.min(Math.max(0.7, currentZoom + delta), 1.6);
-          updateTransform();
-        }
-
-        function reset3dView() {
-          currentZoom = 1;
-          currentRotation = 0;
-          isInterior = false;
-          const interiorLabel = document.getElementById('interiorBtnLabel');
-          if (interiorLabel) interiorLabel.textContent = 'Ver Interior';
-          updateTransform();
-        }
-
-        function changeColor(name) {
-          if (isInterior) toggleInterior();
-          const img = document.getElementById('vehicle3dImage');
-          if (!img) return;
-
-          img.style.opacity = '0.4';
-          img.style.filter = 'blur(4px)';
-          setTimeout(() => {
-            img.style.opacity = '1';
-            img.style.filter = 'none';
-          }, 200);
-        }
-
-        function toggleInterior() {
-          isInterior = !isInterior;
-          const img = document.getElementById('vehicle3dImage');
-          const label = document.getElementById('interiorBtnLabel');
-          if (!img || !label) return;
-
-          img.style.opacity = '0.3';
-          setTimeout(() => {
-            if (isInterior) {
-              label.textContent = 'Ver Exterior';
-              currentRotation = 0;
-              currentZoom = 1.1;
-            } else {
-              label.textContent = 'Ver Interior';
-              currentZoom = 1;
-            }
-            updateTransform();
-            img.style.opacity = '1';
-          }, 200);
-        }
-
-        // Main Gallery Photo Thumb Click Handler
-        function selectThumb(idx) {
-          const thumbs = document.querySelectorAll('.thumb-btn');
-          thumbs.forEach((t, i) => {
-            if (i === idx) {
-              t.classList.add('ring-2', 'ring-secondary', 'opacity-100');
-              t.classList.remove('opacity-80');
-            } else {
-              t.classList.remove('ring-2', 'ring-secondary', 'opacity-100');
-              t.classList.add('opacity-80');
-            }
-          });
-          const photoCounter = document.getElementById('photoIndexLabel');
-          if (photoCounter) photoCounter.textContent = `${idx + 1} / 5 fotos`;
-
-          const mainImg = document.getElementById('mainVehicleImg');
-          if (mainImg) {
-            mainImg.style.opacity = '0.5';
-            setTimeout(() => {
-              mainImg.style.opacity = '1';
-            }, 150);
-          }
-        }
-
-        // Scroll to 3D section
-        const jumpBtn = document.getElementById('jumpTo3dBtn');
-        if (jumpBtn) {
-          jumpBtn.addEventListener('click', () => {
-            const target = document.getElementById('section3d');
-            if (target) {
-              target.scrollIntoView({ behavior: 'smooth' });
-            }
-          });
-        }
-
-        // Favorite button toggle
-        const favBtn = document.getElementById('favToggleBtn');
-        let isFavorited = true;
-        if (favBtn) {
-          favBtn.addEventListener('click', () => {
-            isFavorited = !isFavorited;
-            const icon = document.getElementById('favIcon');
-            const text = document.getElementById('favText');
-            if (isFavorited) {
-              icon.style.fontVariationSettings = "'FILL' 1";
-              icon.classList.add('text-error');
-              text.textContent = 'En favoritos';
-            } else {
-              icon.style.fontVariationSettings = "'FILL' 0";
-              icon.classList.remove('text-error');
-              text.textContent = 'Añadir a favoritos';
-            }
-          });
-        }
-
-        function openApplicationModal() {
-          alert('Solicitud iniciada para el BMW X1 sDrive18d. Un asesor comercial de MAHARent se pondrá en contacto contigo en breve para verificar viabilidad.');
-        }
-
-        const mainReqCta = document.getElementById('mainRequestCta');
-        if (mainReqCta) {
-          mainReqCta.addEventListener('click', openApplicationModal);
-        }
-      </script>
-    </div>
-  </main>
-  <footer class="w-full bg-surface-container-lowest shadow-[0_-1px_6px_rgba(11,28,48,0.03)]">
-    <div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg py-space-xl">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-space-lg">
-        <div class="flex items-center gap-space-sm"><img alt="MAHARent logo" class="h-7 w-auto object-contain"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ7Wgo54DM-2N3Hr-tS0wNRyJZmET0FRm28axsc7BvpV8cy9VrrX8umGcBXCN9iz_hzs4bUH6IvoZsCLbtHCkzVGS1mWZf1ugDviF1rBKnQqThGd0oEAMM2ilWzUCPTTnQ4QjAw-Trf4ruHC-NHFRY28r3nqRE_hCbxzEe6DiTg5TfGQChK-fs5medCKOGGwH8vQxxfolJYGGmTpoCtAwlTLUyqPreUJrWtUf3T08OWlNDYiNJmvw_IFEJv1NOtLEuhf4" /><span
-            class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase">MAHARent</span><span
-            class="font-body-sm text-body-sm text-on-surface-variant">| Movilidad corporativa y particular</span></div>
-        <nav class="flex flex-wrap items-center justify-center gap-x-space-lg gap-y-space-xs"><a
-            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-            data-path="marketplace" href="marketplace.html">Marketplace</a><a
-            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-            data-path="empresas" href="dashboard.html">Empresas</a><a
-            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-            data-path="contacto" href="#">Contacto</a><a
-            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-            data-path="terminos-y-condiciones" href="#">Términos y condiciones</a><a
-            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-            data-path="politica-de-privacidad" href="#">Política de privacidad</a></nav>
-      </div>
-      <div class="mt-space-lg pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm">
-        <p class="font-body-sm text-body-sm text-on-surface-variant text-center sm:text-left">© 2026 MAHARent. Todos los
-          derechos reservados.</p>
-        <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Automotive SaaS Platform
+          </li>
+          <li class="breadcrumb__item">
+            <a class="breadcrumb__link" href="marketplace.html">Vehículos</a>
+          </li>
+          <li class="breadcrumb__item">
+            <span class="breadcrumb__current" aria-current="page">BMW X1</span>
+          </li>
+        </ol>
+      </nav>
+      <div class="vehicle__actions">
+        <p class="badge">
+          <span class="live-dot" aria-hidden="true"></span>
+          Stock verificado en tiempo real
         </p>
+        <button class="vehicle__share" type="button" aria-label="Compartir ficha">
+          <span class="icon icon--md" aria-hidden="true">share</span>
+        </button>
       </div>
+    </header>
+
+    <div class="grid vehicle__layout">
+      <section class="grid__item grid__item--lg-span-7 gallery" aria-label="Galería de fotos del vehículo" data-gallery>
+        <figure class="gallery__stage">
+          <img class="gallery__image" data-gallery-image
+            alt="BMW X1 sDrive18d en azul metalizado oscuro, vista tres cuartos en un estudio fotográfico minimalista con reflejos suaves en el suelo"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIasWc45FZ9OgIzWctThC9RCSrj4gDDWRmCmskDZBdfPEs04AaNX-bj2TXRDbMXq_446HZpRB3O28Pkg43RkvkmaGzLFeOfichprLdwMGwD7Mq6gSUlOsChF02Vv6U4yl1FKODtgRcqTm6jp7LB7HpexsPOAKTmEoKdUCmgcdix3hs9xuTxMCZfF2sekU3PEyNmV-2Kg2UYkUKJjN6uv9lG8MRgblK0_OkFISZVZk7W5cfWDd7NZ0-9w">
+          <ul class="gallery__pills">
+            <li>
+              <button class="gallery__pill gallery__pill--action" type="button" data-scroll-to="vehicle-3d">
+                <span class="icon icon--sm gallery__pill-icon" aria-hidden="true">view_in_ar</span>
+                3D disponible
+              </button>
+            </li>
+            <li class="gallery__pill gallery__pill--eco">
+              <span class="icon icon--sm gallery__pill-icon" aria-hidden="true">eco</span>
+              Etiqueta ECO
+            </li>
+          </ul>
+          <p class="gallery__counter" aria-live="polite">
+            <span class="icon icon--sm" aria-hidden="true">photo_library</span>
+            <span data-gallery-counter>1 / 5 fotos</span>
+          </p>
+          <figcaption class="u-visually-hidden">BMW X1 sDrive18d, fotografía principal</figcaption>
+        </figure>
+
+        <ul class="gallery__thumbs">
+          <li>
+            <button class="gallery__thumb gallery__thumb--active" type="button" aria-label="Ver foto 1 de 5"
+              aria-pressed="true" data-gallery-thumb
+              data-gallery-src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIasWc45FZ9OgIzWctThC9RCSrj4gDDWRmCmskDZBdfPEs04AaNX-bj2TXRDbMXq_446HZpRB3O28Pkg43RkvkmaGzLFeOfichprLdwMGwD7Mq6gSUlOsChF02Vv6U4yl1FKODtgRcqTm6jp7LB7HpexsPOAKTmEoKdUCmgcdix3hs9xuTxMCZfF2sekU3PEyNmV-2Kg2UYkUKJjN6uv9lG8MRgblK0_OkFISZVZk7W5cfWDd7NZ0-9w"
+              data-gallery-alt="BMW X1 sDrive18d en azul metalizado oscuro, vista tres cuartos en un estudio fotográfico minimalista con reflejos suaves en el suelo">
+              <img class="gallery__thumb-image"
+                alt="Perfil frontal en tres cuartos del BMW X1 sDrive18d en azul imperial metalizado"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXA-XqIwMHosCrmgYVL0We5txOY2VCmBO8kCLPlWVD0cbK8C9tkS7zXpfXa1oUxp-IYcl4PoM-_8JKVdLBclzCioG5VbOF6CXf3UFgcitRRAGX-LWCJHyJR-0N4Yyz7wQsco5K7XIvTslHx6rAt8DUZtCKHyor9Px2LkLsrqjfknl2dRvBVEVOLHU1ErKHTEy1OwPiR_OSkBT9UH1Y15EEUOk4jNtJy0hbhMwIJZTbfXy8aV8sMYttlA"
+                loading="lazy">
+            </button>
+          </li>
+          <li>
+            <button class="gallery__thumb" type="button" aria-label="Ver foto 2 de 5" aria-pressed="false"
+              data-gallery-thumb>
+              <img class="gallery__thumb-image"
+                alt="Detalle frontal de la parrilla doble y los faros LED adaptativos del BMW X1"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAIQ88sCTJhjiZp_qsMzEQ99FpQbxvi-Xi7ZOEPDbvhWxbjdsn1u-qBpg5yrBL-OENag19fN7D0U66CpevLUv1Quya1uCJUScslhJV9Ouv2cSUwzO3bEi-d15u_FP-owDbmwbDxLCnAQWjNB2_YU4gk5g1seqo0INJy3G6HimdawfDy20Wzk0975JX2xPhZtgyhdU4ykrvhzIXXY5_I8kOjwDBlffjMF-Ajl_Ausdy7dVX2eocdi1mmQ"
+                loading="lazy">
+            </button>
+          </li>
+          <li>
+            <button class="gallery__thumb" type="button" aria-label="Ver foto 3 de 5" aria-pressed="false"
+              data-gallery-thumb>
+              <img class="gallery__thumb-image"
+                alt="Vista trasera aerodinámica del BMW X1 con pilotos modernos y paragolpes xLine"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxFj7XdBrp_hVNB9G-VBXDOglFm266zBThHFgBYdKH8QePjgFK0II55Wv2JwHKod0TYUu_9hOrVYMMPPk_P-EnTHL8eeMQqybfVQjjGgmyQa9AwcF9dtdIQkSSO-6hdS5J-wEUpRHfixmv1QMhOeo2NnlMVdzH7MNxtvWBus6A7mXq01svd7T6KTD8ZA5PoXglTMcV4WvyPWIp0GzSdsG7XlcgrU5_iuNHNSIST9dXFnSurXoaDnOopA"
+                loading="lazy">
+            </button>
+          </li>
+          <li>
+            <button class="gallery__thumb" type="button" aria-label="Ver foto 4 de 5" aria-pressed="false"
+              data-gallery-thumb>
+              <img class="gallery__thumb-image"
+                alt="Puesto de conducción del BMW X1 con doble pantalla BMW Curved Display e iluminación ambiental azul"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM2LFbwDSbsXWN-U95HT8soKogUA9WQPevnHPeg0bMNc8Whuv_O7zVQfx7jyWBIiNRaUMImhyePkyoAKUiSv2Kf1A5u7gYFzihw4fyY33t3PU1hwqR0HMP-DwXM5wICymomxAkTKywOXfVJ3uomvxhP2Ha1G0CSyh_MvuwVzxtvaWF_UDzMrJVvtNmYpll2gMiWYVSyrbdGcC1tW1PKopKqziJsSkO5jtdjSdc5zSy94gGsoQHtnYd3w"
+                loading="lazy">
+            </button>
+          </li>
+          <li>
+            <button class="gallery__thumb" type="button" aria-label="Ver foto 5 de 5" aria-pressed="false"
+              data-gallery-thumb>
+              <img class="gallery__thumb-image"
+                alt="Detalle de las llantas de aleación de 18 pulgadas con neumáticos Michelin del BMW X1"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCil6adIhTIXJoeL-Wro6LfBHNCZ_RSodOZ_RRQuyZenm2V9DulE23pzVYFDysA5XRGlvqYPzBdO6I33VxUA76T1sxYbvGPXSOwlq-ZejOAABNmxuGhZaXmQPZhnXAdcDe-3-_jvWBUtvgFUkWQkPHBX0hOyQC6ra5AD988q46wvyCio9Spa5QufuhGH-lhVsiCB6zmxlEs68i97z7tPsD9pnMMjuLipLWEk-ID6ekDlui0RBV0-YtJA"
+                loading="lazy">
+            </button>
+          </li>
+        </ul>
+
+        <ul class="trust">
+          <li class="trust__item">
+            <span class="icon icon--lg trust__icon" aria-hidden="true">verified</span>
+            <p class="trust__body">
+              <strong class="trust__title">Inspección de 150 puntos</strong>
+              <span class="trust__text">Certificación técnica oficial</span>
+            </p>
+          </li>
+          <li class="trust__item">
+            <span class="icon icon--lg trust__icon" aria-hidden="true">auto_awesome</span>
+            <p class="trust__body">
+              <strong class="trust__title">Vehículo a estrenar</strong>
+              <span class="trust__text">0 km garantizado de fábrica</span>
+            </p>
+          </li>
+          <li class="trust__item">
+            <span class="icon icon--lg trust__icon" aria-hidden="true">local_shipping</span>
+            <p class="trust__body">
+              <strong class="trust__title">Entrega rápida</strong>
+              <span class="trust__text">En concesionario o domicilio</span>
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <div class="grid__item grid__item--lg-span-5 vehicle-detail">
+        <header class="vehicle-detail__header">
+          <div class="vehicle-detail__meta">
+            <p class="vehicle-detail__eyebrow">Renting Todo Incluido</p>
+            <p class="vehicle-detail__rating">
+              <span class="icon icon--md icon--filled vehicle-detail__rating-icon" aria-hidden="true">star</span>
+              <strong>4.9</strong>
+              <span class="vehicle-detail__rating-count">(128 opiniones)</span>
+            </p>
+          </div>
+          <h1 class="vehicle-detail__title" id="vehicle-title">BMW X1 sDrive18d</h1>
+          <p class="vehicle-detail__subtitle">SUV · Automático Steptronic · Mild-Hybrid Diésel · Acabado xLine</p>
+        </header>
+
+        <p class="vehicle-detail__provider">
+          <span class="icon icon--md vehicle-detail__provider-icon" aria-hidden="true">shield</span>
+          <span>
+            <strong class="vehicle-detail__provider-name">Gestionado por Arval Renting &amp; MAHARent Selection</strong>
+            <span class="vehicle-detail__provider-note">Contrato corporativo y particular con soporte prioritario</span>
+          </span>
+        </p>
+
+        <dl class="specs">
+          <div class="specs__item">
+            <dt class="specs__term"><span class="icon icon--lg specs__icon" aria-hidden="true">group</span><span class="specs__label">Capacidad</span></dt>
+            <dd class="specs__value">5 plazas</dd>
+          </div>
+          <div class="specs__item">
+            <dt class="specs__term"><span class="icon icon--lg specs__icon" aria-hidden="true">shift</span><span class="specs__label">7 vel.</span></dt>
+            <dd class="specs__value">Automático</dd>
+          </div>
+          <div class="specs__item">
+            <dt class="specs__term"><span class="icon icon--lg specs__icon" aria-hidden="true">energy_savings_leaf</span><span class="specs__label">Diésel</span></dt>
+            <dd class="specs__value">MHEV ECO</dd>
+          </div>
+          <div class="specs__item">
+            <dt class="specs__term"><span class="icon icon--lg specs__icon" aria-hidden="true">speed</span><span class="specs__label">Potencia</span></dt>
+            <dd class="specs__value">150 CV</dd>
+          </div>
+          <div class="specs__item">
+            <dt class="specs__term"><span class="icon icon--lg specs__icon" aria-hidden="true">luggage</span><span class="specs__label">Maletero</span></dt>
+            <dd class="specs__value">540 L</dd>
+          </div>
+        </dl>
+
+        <aside class="booking" aria-label="Cuota de renting y solicitud">
+          <header class="booking__header">
+            <p class="booking__label">Cuota de renting mensual</p>
+            <p class="booking__price">
+              <strong class="booking__amount">449&nbsp;€</strong>
+              <span class="booking__period">/ mes</span>
+            </p>
+            <p class="booking__note">
+              + IVA para empresas y autónomos · Cuota con IVA incluido disponible para particulares
+            </p>
+          </header>
+
+          <ul class="booking__tags">
+            <li class="badge booking__tag">
+              <span class="icon icon--sm badge__icon" aria-hidden="true">calendar_today</span>
+              36 meses
+            </li>
+            <li class="badge booking__tag">
+              <span class="icon icon--sm badge__icon" aria-hidden="true">payments</span>
+              Sin entrada inicial (0 €)
+            </li>
+            <li class="badge badge--warning booking__tag booking__tag--warm">
+              <span class="icon icon--sm badge__icon" aria-hidden="true">bolt</span>
+              Entrega inmediata en 48-72h
+            </li>
+          </ul>
+
+          <section class="booking__includes" aria-labelledby="booking-includes-title">
+            <h2 class="booking__includes-title" id="booking-includes-title">
+              <span class="icon icon--md booking__includes-icon" aria-hidden="true">verified_user</span>
+              Cuota fija todo incluido sin sorpresas:
+            </h2>
+            <ul class="checklist checklist--compact">
+              <li class="checklist__item">
+                <span class="icon icon--sm checklist__icon" aria-hidden="true">check_circle</span>
+                Seguro a todo riesgo sin franquicia
+              </li>
+              <li class="checklist__item">
+                <span class="icon icon--sm checklist__icon" aria-hidden="true">check_circle</span>
+                Mantenimientos, revisiones oficiales e ITV
+              </li>
+              <li class="checklist__item">
+                <span class="icon icon--sm checklist__icon" aria-hidden="true">check_circle</span>
+                Cambio de neumáticos ilimitado por desgaste
+              </li>
+            </ul>
+          </section>
+
+          <form class="booking__form" action="#" method="post" data-demo-form>
+            <button class="btn btn--cta btn--lg booking__submit" type="submit" data-request-cta
+              data-request-message="Solicitud iniciada para el BMW X1 sDrive18d. Un asesor comercial de MAHARent se pondrá en contacto contigo en breve para verificar viabilidad.">
+              Solicitar renting
+              <span class="icon icon--md" aria-hidden="true">arrow_forward</span>
+            </button>
+            <button class="btn booking__favorite" type="button" aria-pressed="true" data-fav-toggle>
+              <span class="icon icon--md booking__favorite-icon" aria-hidden="true">favorite</span>
+              <span data-fav-label>En favoritos</span>
+            </button>
+          </form>
+
+          <ul class="booking__perks">
+            <li class="booking__perk">
+              <span class="icon icon--xs" aria-hidden="true">lock</span>
+              Sin compromiso previo
+            </li>
+            <li class="booking__perk">
+              <span class="icon icon--xs" aria-hidden="true">timer</span>
+              Viabilidad en 15 min
+            </li>
+            <li class="booking__perk">
+              <span class="icon icon--xs" aria-hidden="true">support_agent</span>
+              Asesor personal gratis
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+
+    <section class="about" aria-labelledby="about-title">
+      <header class="about__header">
+        <p class="about__eyebrow">Detalles &amp; Experiencia</p>
+        <h2 class="about__title" id="about-title">Sobre este vehículo</h2>
+      </header>
+      <div class="about__body">
+        <div class="about__narrative">
+          <p>
+            El nuevo <strong class="about__strong">BMW X1 sDrive18d xLine</strong> redefine la versatilidad de los SUV
+            compactos de alta gama. Su diseño exterior proyecta un porte atlético e imponente gracias a su parrilla
+            doble frontal ensanchada, pasos de rueda esculpidos y elegantes inserciones en aluminio satinado propias
+            del acabado xLine.
+          </p>
+          <p>
+            En su interior, destaca el innovador puesto de conducción <strong class="about__strong">BMW Curved
+              Display</strong>, que fusiona el cuadro de instrumentos digital de 10.25 pulgadas con la pantalla de
+            control táctil de 10.7 pulgadas bajo un mismo cristal de alta definición continuo, eliminando botones
+            superfluos mediante control por voz inteligente.
+          </p>
+          <p>
+            Su propulsión Mild-Hybrid de 48V optimiza la respuesta del bloque turbodiésel de 150 CV, permitiendo un
+            consumo homologado extraordinario de tan solo <strong class="about__strong">4,9 L/100 km</strong> con
+            acceso total a las zonas de bajas emisiones metropolitanas mediante el distintivo medioambiental ECO.
+          </p>
+        </div>
+        <aside class="about__highlights" aria-labelledby="equipment-title">
+          <h3 class="about__highlights-title" id="equipment-title">
+            <span class="icon icon--lg about__highlights-icon" aria-hidden="true">tune</span>
+            Equipamiento destacado incluido
+          </h3>
+          <ul class="checklist">
+            <li class="checklist__item">
+              <span class="icon icon--md checklist__icon" aria-hidden="true">check_circle</span>
+              Faros LED adaptativos con asistente de luz de carretera automática
+            </li>
+            <li class="checklist__item">
+              <span class="icon icon--md checklist__icon" aria-hidden="true">check_circle</span>
+              BMW Live Cockpit Plus con navegación en la nube y Apple CarPlay / Android Auto
+            </li>
+            <li class="checklist__item">
+              <span class="icon icon--md checklist__icon" aria-hidden="true">check_circle</span>
+              Parking Assistant con sensores perimetrales y cámara de visión trasera
+            </li>
+            <li class="checklist__item">
+              <span class="icon icon--md checklist__icon" aria-hidden="true">check_circle</span>
+              Climatizador automático bizona con toberas de ventilación en fila trasera
+            </li>
+            <li class="checklist__item">
+              <span class="icon icon--md checklist__icon" aria-hidden="true">check_circle</span>
+              Portón del maletero con accionamiento eléctrico manos libres
+            </li>
+            <li class="checklist__item">
+              <span class="icon icon--md checklist__icon" aria-hidden="true">check_circle</span>
+              Llantas de aleación ligera BMW de 18 pulgadas radios en V con acabado bicolor
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="conditions" aria-labelledby="conditions-title">
+      <header class="conditions__header">
+        <p class="conditions__eyebrow">Condiciones Claras</p>
+        <h2 class="conditions__title" id="conditions-title">Condiciones del renting</h2>
+        <p class="conditions__lead">Transparencia absoluta sin costes ocultos ni letra pequeña.</p>
+      </header>
+
+      <ul class="conditions__list">
+        <li class="condition-card">
+          <p class="condition-card__label">Cuota mensual</p>
+          <span class="icon icon--lg condition-card__icon" aria-hidden="true">price_check</span>
+          <p class="condition-card__value condition-card__value--price">449 €</p>
+          <p class="condition-card__text">Precio congelado durante todo el contrato de renting.</p>
+        </li>
+        <li class="condition-card">
+          <p class="condition-card__label">Plazo contractual</p>
+          <span class="icon icon--lg condition-card__icon" aria-hidden="true">calendar_month</span>
+          <p class="condition-card__value">36 meses</p>
+          <p class="condition-card__text">Opción ampliable o cambio de modelo al finalizar.</p>
+        </li>
+        <li class="condition-card">
+          <p class="condition-card__label">Disponibilidad</p>
+          <span class="icon icon--lg condition-card__icon" aria-hidden="true">inventory_2</span>
+          <p class="condition-card__value condition-card__value--success">Inmediata</p>
+          <p class="condition-card__text">Entrega garantizada de 48 a 72 horas hábiles.</p>
+        </li>
+        <li class="condition-card">
+          <p class="condition-card__label">Kilometraje</p>
+          <span class="icon icon--lg condition-card__icon" aria-hidden="true">route</span>
+          <p class="condition-card__value">10.000 km</p>
+          <p class="condition-card__text">Ajustable a medida hasta 30.000 km/año según necesidad.</p>
+        </li>
+        <li class="condition-card condition-card--wide">
+          <p class="condition-card__label">Pago inicial</p>
+          <span class="icon icon--lg condition-card__icon" aria-hidden="true">credit_card_off</span>
+          <p class="condition-card__value">0 € Entrada</p>
+          <p class="condition-card__text">Sin desembolso previo, 100% financiado en la cuota.</p>
+        </li>
+      </ul>
+
+      <section class="included" aria-labelledby="included-title">
+        <h3 class="included__title" id="included-title">¿Qué incluye exactamente tu cuota mensual de MAHARent?</h3>
+        <ul class="included__list">
+          <li class="included__item">
+            <span class="icon icon--md included__icon" aria-hidden="true">security</span>
+            <h4 class="included__name">Seguro a todo riesgo integral</h4>
+            <p class="included__text">Sin franquicia, cobertura total a terceros, lunas, robo, incendio y conductor.</p>
+          </li>
+          <li class="included__item">
+            <span class="icon icon--md included__icon" aria-hidden="true">build</span>
+            <h4 class="included__name">Mantenimiento oficial integral</h4>
+            <p class="included__text">Revisiones periódicas y piezas originales en la red de talleres certificados BMW.
+            </p>
+          </li>
+          <li class="included__item">
+            <span class="icon icon--md included__icon" aria-hidden="true">tire_repair</span>
+            <h4 class="included__name">Sustitución de neumáticos</h4>
+            <p class="included__text">Cambio por desgaste y reparación de pinchazos de primeras marcas premium.</p>
+          </li>
+          <li class="included__item">
+            <span class="icon icon--md included__icon" aria-hidden="true">emergency</span>
+            <h4 class="included__name">Asistencia en carretera 24/7</h4>
+            <p class="included__text">Desde el kilómetro 0 en toda la Unión Europea con grúa y vehículo de sustitución.
+            </p>
+          </li>
+          <li class="included__item">
+            <span class="icon icon--md included__icon" aria-hidden="true">receipt_long</span>
+            <h4 class="included__name">Impuestos de circulación e ITV</h4>
+            <p class="included__text">Impuesto de matriculación, tracción mecánica y gestiones administrativas
+              cubiertas.</p>
+          </li>
+          <li class="included__item">
+            <span class="icon icon--md included__icon" aria-hidden="true">manage_accounts</span>
+            <h4 class="included__name">Gestor de flota &amp; App MAHARent</h4>
+            <p class="included__text">Citas de taller, telemetría y documentación digital en tu dispositivo en un clic.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="viewer" id="vehicle-3d" aria-labelledby="viewer-title" data-viewer>
+      <header class="viewer__header">
+        <hgroup class="viewer__heading">
+          <p class="viewer__eyebrow">Visualizador Virtual</p>
+          <h2 class="viewer__title" id="viewer-title">Explora el vehículo en 3D</h2>
+          <p class="viewer__lead">Interactúa con el modelo para visualizar el vehículo desde diferentes perspectivas y
+            acabados.</p>
+        </hgroup>
+        <p class="badge">
+          <span class="live-dot live-dot--static" aria-hidden="true"></span>
+          Modo Interactivo HD · 60 FPS
+        </p>
+      </header>
+
+      <figure class="viewer__stage" data-viewer-stage>
+        <img class="viewer__image" data-viewer-image
+          alt="Render 3D del BMW X1 en azul metalizado oscuro sobre un suelo de cristal reflectante de un concesionario"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK2dU2vhiZSTmXbZ-eaevGm8rGnO9kWKL56CFuOVe0icQQ9Krle-bQ1cAVxki5pQIRl62QDtFRiR6dDxPj1CEB421iMYvLG-uHfFWyZi5zmJLNIy6kiU2fZZN18PdKPL591c9bYWTnVkEk4z_T5zp1ofqgT4zy_DuDqad4928sYBPyAB1VIXMI--dnP4qUsOoecYEJpild0FP_MnwHPWMh2H-TIz5eIEOQtwg6aZbshnOIlBPimbnwkA"
+          loading="lazy">
+
+        <div class="viewer__dock">
+          <fieldset class="viewer__panel">
+            <legend class="u-visually-hidden">Controles de vista</legend>
+            <button class="viewer__button" type="button" aria-label="Girar -45°" data-viewer-action="rotate"
+              data-viewer-value="-45">
+              <span class="icon icon--md" aria-hidden="true">rotate_left</span>
+              <span class="viewer__button-text">Girar -45°</span>
+            </button>
+            <button class="viewer__button" type="button" aria-label="Girar +45°" data-viewer-action="rotate"
+              data-viewer-value="45">
+              <span class="icon icon--md" aria-hidden="true">rotate_right</span>
+              <span class="viewer__button-text">Girar +45°</span>
+            </button>
+            <span class="viewer__divider" aria-hidden="true"></span>
+            <button class="viewer__button viewer__button--icon" type="button" aria-label="Acercar" title="Zoom +"
+              data-viewer-action="zoom" data-viewer-value="0.15">
+              <span class="icon icon--md" aria-hidden="true">zoom_in</span>
+            </button>
+            <button class="viewer__button viewer__button--icon" type="button" aria-label="Alejar" title="Zoom -"
+              data-viewer-action="zoom" data-viewer-value="-0.15">
+              <span class="icon icon--md" aria-hidden="true">zoom_out</span>
+            </button>
+            <button class="viewer__button viewer__button--icon" type="button" aria-label="Restablecer vista"
+              title="Restablecer" data-viewer-action="reset">
+              <span class="icon icon--md" aria-hidden="true">restart_alt</span>
+            </button>
+          </fieldset>
+
+          <fieldset class="viewer__panel">
+            <legend class="u-visually-hidden">Color y vista interior</legend>
+            <button class="viewer__swatch viewer__swatch--portimao" type="button" aria-label="Azul Portimao"
+              title="Azul Portimao" aria-pressed="true" data-viewer-action="color"></button>
+            <button class="viewer__swatch viewer__swatch--dorado" type="button" aria-label="Dorado Sunset"
+              title="Dorado Sunset" aria-pressed="false" data-viewer-action="color"></button>
+            <button class="viewer__swatch viewer__swatch--mineral" type="button" aria-label="Gris Mineral"
+              title="Gris Mineral" aria-pressed="false" data-viewer-action="color"></button>
+            <button class="viewer__swatch viewer__swatch--alpin" type="button" aria-label="Blanco Alpin"
+              title="Blanco Alpin" aria-pressed="false" data-viewer-action="color"></button>
+            <button class="viewer__swatch viewer__swatch--zafiro" type="button" aria-label="Negro Zafiro"
+              title="Negro Zafiro" aria-pressed="false" data-viewer-action="color"></button>
+            <span class="viewer__divider" aria-hidden="true"></span>
+            <button class="viewer__button viewer__button--toggle" type="button" aria-pressed="false"
+              data-viewer-action="interior">
+              <span class="icon icon--md" aria-hidden="true">airline_seat_recline_extra</span>
+              <span data-viewer-interior-label>Ver Interior</span>
+            </button>
+          </fieldset>
+        </div>
+
+        <figcaption class="viewer__angle" aria-live="polite">
+          <span class="icon icon--md viewer__spin" aria-hidden="true">360</span>
+          <span data-viewer-angle>Ángulo actual: 45° Lateral</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="request" aria-labelledby="request-title">
+      <header class="request__body">
+        <p class="request__eyebrow">Atención Exclusiva MAHARent</p>
+        <h2 class="request__title" id="request-title">¿Te interesa este vehículo?</h2>
+        <p class="request__text">
+          Solicita información y comienza el proceso de renting de tu BMW X1 sin ningún coste ni permanencia. Nuestros
+          asesores especializados evaluarán tu viabilidad en menos de 15 minutos.
+        </p>
+        <ul class="request__chips">
+          <li class="request__chip">
+            <span class="icon icon--sm request__chip-icon" aria-hidden="true">check</span>
+            Cuota fija: 449 €/mes
+          </li>
+          <li class="request__chip">
+            <span class="icon icon--sm request__chip-icon" aria-hidden="true">check</span>
+            0 € Entrada
+          </li>
+          <li class="request__chip">
+            <span class="icon icon--sm request__chip-icon" aria-hidden="true">check</span>
+            Entrega en 48-72h
+          </li>
+        </ul>
+      </header>
+      <div class="request__actions">
+        <button class="btn btn--cta btn--lg request__cta" type="button" data-request-cta
+          data-request-message="Solicitud iniciada para el BMW X1 sDrive18d. Un asesor comercial de MAHARent se pondrá en contacto contigo en breve para verificar viabilidad.">
+          Solicitar renting ahora
+          <span class="icon icon--md" aria-hidden="true">arrow_forward</span>
+        </button>
+        <a class="request__link" href="#">
+          <span class="icon icon--md request__link-icon" aria-hidden="true">chat</span>
+          Hablar por WhatsApp con un asesor
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__brand">
+        <span class="footer__name">MAHARent</span>
+        <span class="footer__tagline">· Renting Inteligente</span>
+      </p>
+      <nav aria-label="Enlaces del pie de página">
+        <ul class="footer__list">
+          <li><a class="footer__link" href="marketplace.html">Marketplace</a></li>
+          <li><a class="footer__link" href="dashboard.html">Empresas</a></li>
+          <li><a class="footer__link" href="contacto.html">Contacto</a></li>
+          <li><a class="footer__link" href="#">Términos y condiciones</a></li>
+          <li><a class="footer__link" href="#">Política de privacidad</a></li>
+        </ul>
+      </nav>
+      <p class="footer__copy">© 2026 MAHARent. Todos los derechos reservados.</p>
     </div>
   </footer>
+
   <script src="js/main.js" defer></script>
 </body>
 

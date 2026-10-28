@@ -1,36 +1,42 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts' as *;
 
-.table-responsive {
-  width: 100%;
+// Tabla de datos con desplazamiento horizontal en pantallas pequeñas.
+// El bloque se llama data-table porque Tailwind ya define la utilidad .table.
+.data-table {
+  @include card-surface;
   overflow-x: auto;
-}
 
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: $color-bg-card;
-  border-radius: $border-radius-sm;
-  overflow: hidden;
-
-  &__th,
-  &__td {
-    padding: 1rem;
+  &__element {
+    width: 100%;
+    border-collapse: collapse;
     text-align: left;
-    border-bottom: 1px solid $color-border;
   }
 
   &__th {
-    background-color: $color-bg-secondary;
-    color: $color-text-secondary;
-    font-size: 0.875rem;
+    padding: $space-md;
+    background-color: $color-surface-container-low;
+    color: $color-on-surface-variant;
+    white-space: nowrap;
+    @include type('label-md');
     text-transform: uppercase;
   }
 
-  &__tr {
-    transition: background-color 0.2s ease;
+  &__row {
+    border-top: 1px solid $color-surface-container;
+    transition: background-color $transition-base;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.02);
+      background-color: $color-surface-container-low;
     }
+
+    &--highlight {
+      background-color: $color-secondary-fixed;
+    }
+  }
+
+  &__td {
+    padding: $space-md;
+    color: $color-on-surface;
+    @include type('body-md');
   }
 }

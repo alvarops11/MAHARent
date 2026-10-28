@@ -1,20 +1,40 @@
-@use '../abstracts/variables' as *;
-@use '../abstracts/typography-tokens' as *;
+@use '../abstracts' as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
-
+// Tipografía base. Plus Jakarta Sans se carga con <link> en el <head> de cada página.
 body {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
+  @include type('body-md');
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-family-heading;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-on-surface;
+}
+
+h1 {
+  @include type('headline-xl-mobile');
+
+  @include respond-to('md') {
+    @include type('headline-xl');
+  }
+}
+
+h2 {
+  @include type('headline-lg');
+}
+
+h3 {
+  @include type('headline-md');
+}
+
+h4 {
+  @include type('headline-sm');
+}
+
+strong,
+b {
   font-weight: $font-weight-bold;
-  line-height: 1.2;
-  color: $color-text-primary;
 }
-
-h1 { font-size: $font-size-xxl; }
-h2 { font-size: $font-size-xl; }
-h3 { font-size: $font-size-lg; }

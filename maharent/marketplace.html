@@ -1,1424 +1,698 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="es"
-  style="min-height: 100%; height: auto; overflow-y: auto; overflow-x: hidden; scroll-behavior: smooth;">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="web_standard" name="shell-type">
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script
-    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary": "#ffffff", "surface-container-low": "#eff4ff", "tertiary-container": "#2a1700", "surface-variant": "#d3e4fe", "on-background": "#0b1c30", "on-secondary": "#ffffff", "secondary-fixed-dim": "#b4c5ff", "on-primary-container": "#77849c", "surface-dim": "#cbdbf5", "surface-bright": "#f8f9ff", "outline-variant": "#c5c6cd", "primary-fixed": "#d6e3fe", "surface-container-lowest": "#ffffff", "secondary": "#0051d5", "inverse-on-surface": "#eaf1ff", "error": "#ba1a1a", "primary": "#000000", "on-secondary-fixed-variant": "#003ea8", "surface": "#f8f9ff", "on-surface": "#0b1c30", "inverse-surface": "#213145", "surface-tint": "#525f75", "secondary-container": "#316bf3", "on-primary-fixed": "#0e1c2f", "error-container": "#ffdad6", "on-surface-variant": "#44474c", "surface-container-highest": "#d3e4fe", "on-secondary-container": "#fefcff", "on-error-container": "#93000a", "outline": "#75777d", "on-primary-fixed-variant": "#3a475c", "on-error": "#ffffff", "on-tertiary-fixed": "#2a1700", "surface-container": "#e5eeff", "tertiary-fixed-dim": "#ffb95f", "primary-container": "#0e1c2f", "tertiary": "#000000", "surface-container-high": "#dce9ff", "secondary-fixed": "#dbe1ff", "tertiary-fixed": "#ffddb8", "primary-fixed-dim": "#bac7e1", "inverse-primary": "#bac7e1", "background": "#f8f9ff", "on-tertiary-fixed-variant": "#653e00", "on-tertiary-container": "#b87500", "on-tertiary": "#ffffff", "on-secondary-fixed": "#00174b" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }, spacing: { "space-xl": "2.5rem", "margin-sm": "1rem", "gutter-sm": "1rem", margin: "1.5rem", "space-lg": "1.5rem", "gutter-lg": "2rem", "margin-lg": "3rem", "space-sm": "0.5rem", gutter: "1.5rem", "space-md": "1rem", "space-xs": "0.25rem" }, fontFamily: { "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, fontSize: { "headline-sm": ["18px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "400" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.05em", fontWeight: "700" }], "headline-xl-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "30px", letterSpacing: "-0.015em", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0.01em", fontWeight: "400" }], "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "800" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "headline-xl": ["36px", { lineHeight: "44px", letterSpacing: "-0.025em", fontWeight: "700" }], "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.03em", fontWeight: "800" }], "body-md": ["14px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }] } } } }</script>
-  <link rel="stylesheet" href="css/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace de vehículos en renting | MAHARent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="bg-background font-body-md text-on-surface antialiased min-h-full flex flex-col"
-  style="min-height: 100%; height: auto; overflow-y: auto; overflow-x: hidden;">
-  <header
-    class="sticky top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(11,28,48,0.06)] border-b border-surface-container-high">
-    <div
-      class="h-20 max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg flex items-center justify-between gap-gutter">
-      <div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm focus:outline-none"
-          data-path="inicio" href="index.html"><img alt="MAHARent Logo" class="h-10 w-auto object-contain"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMvJo-Vp-uQ4YezeEeqzJ9sGV3u_EJYgfT-eGib0bpuoF66jgD6bs5N0MtdYJc5z4uOu5hNkN8Y_rTvBlq3Rt0-FNqRgjNI11d_aGIkDzSt2hQ1uoKY-B5FcY9LR1_Mh-6ouDwTK-hMfUGXM4n1nEp1tpXtaRWweeg3JoHw2tV4KlFwxnqWU4jBs92tTN2_7x5E7Zaz-7qD-RRJRtSaM7ghxqhU5iHRSutA2kbVzH_-F3yBrRr8iR0f0x9a3J3zlq69lE"></a>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__brand" href="index.html">
+        <img class="header__logo" alt="MAHARent Renting de Coches"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHb71RAvnL9Ama0BfTnp5pUXSJsw8frIM6_GpZNHDtHfAl2YtCZJ2pGJBE02LPaYOPoh6CnDVTgemxWJFwd820-0c63MVx3wFGzwPWgRn0McBB5426Le3ex6km_KhDHFvnQXHT2PPUyGAJhAk3QSa9nfq63eMWm5CH4m3w04XQAHAnLMHfv5URZItPrJdRFmx9Cp_LsCyDwROsV5SAFJoBNar4nG-pQwaXosqN69TXIVeqH9sHn7rTeW-YEHLWacblXO4">
+      </a>
+      <nav class="nav" id="main-nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Inicio</a></li>
+          <li><a class="nav__link nav__link--active" href="marketplace.html" aria-current="page">Marketplace</a></li>
+          <li><a class="nav__link" href="dashboard.html">Empresas</a></li>
+          <li><a class="nav__link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a class="header__link header__link--secondary" href="login.html">Iniciar sesión</a>
+        <a class="btn btn--dark" href="login.html">Registrarse</a>
+        <button class="header__toggle" type="button" aria-controls="main-nav" aria-expanded="false"
+          aria-label="Abrir menú" data-nav-toggle>
+          <span class="icon" aria-hidden="true">menu</span>
+        </button>
       </div>
-      <nav class="hidden md:flex items-center gap-gutter"
-        data-active-classes="text-on-background font-bold border-b-2 border-secondary pb-1"><a
-          class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors"
-          data-path="inicio" href="index.html">Inicio</a><a aria-current="page"
-          class="transition-colors text-on-background font-bold border-b-2 border-secondary pb-1"
-          data-path="marketplace" href="marketplace.html">Marketplace</a><a
-          class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors"
-          data-path="empresas" href="dashboard.html">Empresas</a></nav>
-      <div class="flex items-center gap-space-md"><a aria-label="Favoritos"
-          class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center"
-          data-path="favoritos" href="#"><span class="material-symbols-outlined text-[24px]">favorite</span><span
-            class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] leading-none flex items-center justify-center font-bold">2</span></a><a
-          class="hidden sm:inline-flex font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors px-space-sm py-space-xs"
-          data-path="iniciar-sesion" href="login.html">Iniciar sesión</a><a
-          class="inline-flex items-center justify-center bg-primary-container text-on-primary hover:bg-on-background font-label-lg text-label-lg px-space-md py-space-sm rounded-lg transition-all shadow-[0_2px_4px_rgba(11,28,48,0.1)]"
-          data-path="registrarse" href="login.html">Registrarse</a><button id="profile-drawer-btn" type="button"
-          aria-label="Abrir menú de usuario"
-          class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center hover:opacity-90 active:scale-95 transition-all shadow-xs cursor-pointer focus:outline-none ring-2 ring-secondary/30"><span
-            class="material-symbols-outlined text-[18px]">person</span></button></div>
     </div>
   </header>
-  <main class="w-full bg-background flex-1">
-    <div class="flex flex-col w-full">
-      <!-- 1. CABECERA HERO DEL MARKETPLACE -->
-      <section class="relative w-full bg-primary-container text-on-primary py-space-xl overflow-hidden shadow-md">
-        <!-- Ambient glowing accents -->
-        <div class="absolute -top-32 -right-32 w-96 h-96 bg-secondary/20 rounded-full blur-3xl pointer-events-none">
-        </div>
-        <div
-          class="absolute -bottom-24 -left-20 w-80 h-80 bg-tertiary-fixed-dim/15 rounded-full blur-2xl pointer-events-none">
-        </div>
-        <div class="relative max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg">
-          <div class="max-w-3xl mb-space-lg">
-            <div
-              class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary-container/20 text-secondary-fixed mb-space-sm">
-              <span class="material-symbols-outlined text-[16px]">verified</span>
-              <span class="font-label-sm text-label-sm uppercase tracking-wider">Catálogo oficial MAHARent 2026</span>
-            </div>
-            <h1
-              class="font-headline-xl text-headline-xl md:text-display-lg text-on-primary font-extrabold tracking-tight mb-space-xs">
-              Encuentra tu próximo vehículo.
-            </h1>
-            <p class="font-body-lg text-body-lg text-primary-fixed-dim leading-relaxed">
-              Explora vehículos disponibles para renting con cuota fija todo incluido, entrega inmediata y gestión 100%
-              digital.
+
+  <main class="main marketplace">
+    <section class="marketplace__hero" aria-labelledby="marketplace-title">
+      <div class="marketplace__hero-inner">
+        <header class="marketplace__intro">
+          <p class="badge marketplace__eyebrow">
+            <span class="icon icon--sm" aria-hidden="true">verified</span>
+            Catálogo oficial MAHARent 2026
+          </p>
+          <h1 class="marketplace__title" id="marketplace-title">Encuentra tu próximo vehículo.</h1>
+          <p class="marketplace__lead">
+            Explora vehículos disponibles para renting con cuota fija todo incluido, entrega inmediata y gestión 100%
+            digital.
+          </p>
+        </header>
+
+        <form class="search-box" role="search" aria-label="Buscar vehículos" action="marketplace.html"
+          data-demo-form>
+          <div class="search-box__row">
+            <label class="search-box__field" for="main-vehicle-search">
+              <span class="icon icon--lg search-box__icon" aria-hidden="true">search</span>
+              <span class="u-visually-hidden">Buscar vehículo</span>
+              <input class="search-box__input" id="main-vehicle-search" name="q" type="search"
+                placeholder="¿Qué vehículo estás buscando? (ej. Audi A4, SUV híbrido...)">
+            </label>
+            <button class="btn btn--cta search-box__submit" type="submit">
+              Buscar vehículos
+              <span class="icon icon--md" aria-hidden="true">arrow_forward</span>
+            </button>
+          </div>
+          <div class="search-box__suggestions">
+            <p class="search-box__hint" id="search-suggestions-label">
+              <span class="icon icon--xs" aria-hidden="true">bolt</span>
+              Sugerencias:
             </p>
+            <ul class="search-box__list" aria-labelledby="search-suggestions-label">
+              <li><button class="chip chip--soft" type="button" data-fill-input="main-vehicle-search">SUV automático
+                  para viajar</button></li>
+              <li><button class="chip chip--soft" type="button" data-fill-input="main-vehicle-search">Híbrido
+                  etiqueta ECO para ciudad</button></li>
+              <li><button class="chip chip--soft" type="button" data-fill-input="main-vehicle-search">Furgoneta
+                  empresa entrega inmediata</button></li>
+            </ul>
           </div>
-          <!-- Main Search Box -->
-          <div class="bg-surface-container-lowest rounded-xl shadow-xl p-space-sm md:p-space-md mb-space-md">
-            <div class="flex flex-col md:flex-row items-stretch md:items-center gap-space-sm">
-              <div
-                class="flex-1 flex items-center gap-space-sm px-space-sm py-space-xs bg-surface-container-low rounded-lg">
-                <span class="material-symbols-outlined text-outline text-[24px]">search</span>
-                <input
-                  class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none"
-                  id="main-vehicle-search" placeholder="¿Qué vehículo estás buscando? (ej. Audi A4, SUV híbrido...)"
-                  type="text">
-              </div>
-              <button
-                class="flex items-center justify-center gap-space-xs bg-tertiary-fixed-dim hover:bg-tertiary-fixed text-tertiary-container font-label-lg text-label-lg px-space-lg py-space-sm rounded-lg transition-transform active:scale-95 shadow-sm">
-                <span class="">Buscar vehículos</span>
-                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-              </button>
-            </div>
-            <!-- Natural language suggestion pills -->
-            <div class="mt-space-sm flex flex-wrap items-center gap-space-xs pt-space-xs">
-              <span class="font-label-sm text-label-sm uppercase text-outline flex items-center gap-1">
-                <span class="material-symbols-outlined text-[14px]">bolt</span> Sugerencias:
+        </form>
+
+        <ul class="chip-rail" aria-label="Filtros rápidos" data-chip-group>
+          <li><button class="chip chip--glass" type="button" aria-pressed="true" data-chip-all>Todos</button></li>
+          <li><button class="chip chip--glass" type="button" aria-pressed="false">
+              <span class="icon icon--sm" aria-hidden="true">electric_car</span>100% Eléctricos</button></li>
+          <li><button class="chip chip--glass" type="button" aria-pressed="false">
+              <span class="icon icon--sm" aria-hidden="true">eco</span>Híbridos enchufables</button></li>
+          <li><button class="chip chip--glass" type="button" aria-pressed="false">
+              <span class="icon icon--sm" aria-hidden="true">schedule</span>Entrega inmediata</button></li>
+          <li><button class="chip chip--glass" type="button" aria-pressed="false">
+              <span class="icon icon--sm" aria-hidden="true">payments</span>Menos de 400€/mes</button></li>
+          <li><button class="chip chip--glass" type="button" aria-pressed="false">
+              <span class="icon icon--sm" aria-hidden="true">domain</span>Empresas y Autónomos</button></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="marketplace__layout grid">
+      <aside class="marketplace__sidebar grid__item grid__item--lg-span-3" aria-labelledby="filters-title">
+        <form class="filters" action="marketplace.html" data-demo-form>
+          <header class="filters__header">
+            <h2 class="filters__title" id="filters-title">
+              <span class="icon icon--lg filters__title-icon" aria-hidden="true">tune</span>
+              Filtros
+            </h2>
+            <button class="filters__reset" id="reset-filters" type="reset">Limpiar filtros</button>
+            <button class="filters__toggle" type="button" aria-controls="filters-body" aria-expanded="false"
+              aria-label="Mostrar filtros" data-filters-toggle>
+              <span class="icon icon--lg" aria-hidden="true">expand_more</span>
+            </button>
+          </header>
+
+          <div class="filters__body" id="filters-body">
+            <fieldset class="filters__group">
+              <legend class="filters__legend">Marca</legend>
+              <ul class="filters__options">
+                <li><label class="checkbox"><input class="checkbox__input" type="checkbox" name="marca" value="bmw"
+                      checked><span class="checkbox__label">BMW (4)</span></label></li>
+                <li><label class="checkbox"><input class="checkbox__input" type="checkbox" name="marca" value="audi"
+                      checked><span class="checkbox__label">Audi (5)</span></label></li>
+                <li><label class="checkbox"><input class="checkbox__input" type="checkbox" name="marca"
+                      value="mercedes" checked><span class="checkbox__label">Mercedes (3)</span></label></li>
+                <li><label class="checkbox"><input class="checkbox__input" type="checkbox" name="marca" value="tesla"
+                      checked><span class="checkbox__label">Tesla (3)</span></label></li>
+                <li><label class="checkbox"><input class="checkbox__input" type="checkbox" name="marca" value="cupra"><span
+                      class="checkbox__label">Cupra (4)</span></label></li>
+                <li><label class="checkbox"><input class="checkbox__input" type="checkbox" name="marca"
+                      value="volkswagen"><span class="checkbox__label">Volkswagen (3)</span></label></li>
+                <li><label class="checkbox"><input class="checkbox__input" type="checkbox" name="marca"
+                      value="renault"><span class="checkbox__label">Renault (2)</span></label></li>
+                <li><label class="checkbox"><input class="checkbox__input" type="checkbox" name="marca"
+                      value="peugeot"><span class="checkbox__label">Peugeot (2)</span></label></li>
+              </ul>
+            </fieldset>
+
+            <div class="field filters__group">
+              <label class="filters__legend" for="filter-model">Modelo específico</label>
+              <span class="field__wrapper">
+                <input class="field__control field__control--icon-end" id="filter-model" name="modelo"
+                  type="search" placeholder="Ej. X1, Model Y, Formentor...">
+                <span class="icon icon--md field__icon field__icon--end" aria-hidden="true">search</span>
               </span>
-              <button
-                class="bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md px-space-sm py-1 rounded-full transition-colors">
-                SUV automático para viajar
-              </button>
-              <button
-                class="bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md px-space-sm py-1 rounded-full transition-colors">
-                Híbrido etiqueta ECO para ciudad
-              </button>
-              <button
-                class="bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md px-space-sm py-1 rounded-full transition-colors">
-                Furgoneta empresa entrega inmediata
-              </button>
             </div>
-          </div>
-          <!-- Quick Filter Chips Rail -->
-          <div class="flex items-center gap-space-xs overflow-x-auto pb-1 no-scrollbar">
-            <button
-              class="bg-on-primary text-primary-container font-label-md text-label-md px-space-md py-space-xs rounded-full shadow-sm whitespace-nowrap font-medium">
-              Todos
-            </button>
-            <button
-              class="bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-full whitespace-nowrap transition-colors flex items-center gap-1">
-              <span class="material-symbols-outlined text-[16px]">electric_car</span> 100% Eléctricos
-            </button>
-            <button
-              class="bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-full whitespace-nowrap transition-colors flex items-center gap-1">
-              <span class="material-symbols-outlined text-[16px]">eco</span> Híbridos enchufables
-            </button>
-            <button
-              class="bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-full whitespace-nowrap transition-colors flex items-center gap-1">
-              <span class="material-symbols-outlined text-[16px]">schedule</span> Entrega inmediata
-            </button>
-            <button
-              class="bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-full whitespace-nowrap transition-colors flex items-center gap-1">
-              <span class="material-symbols-outlined text-[16px]">payments</span> Menos de 400€/mes
-            </button>
-            <button
-              class="bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-full whitespace-nowrap transition-colors flex items-center gap-1">
-              <span class="material-symbols-outlined text-[16px]">domain</span> Empresas y Autónomos
-            </button>
-          </div>
-        </div>
-      </section>
-      <!-- 2. CONTENEDOR PRINCIPAL: SIDEBAR & GRID -->
-      <div class="max-w-[1440px] mx-auto w-full px-margin-sm md:px-margin lg:px-margin-lg py-space-lg">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
-          <!-- 3. SIDEBAR DE FILTROS (3 columnas en LG) -->
-          <aside class="lg:col-span-3 bg-surface-container-lowest rounded-xl p-space-md shadow-sm sticky top-24">
-            <!-- Sidebar Header -->
-            <div
-              class="flex items-center justify-between pb-space-sm mb-space-md border-b border-surface-container-high">
-              <div class="flex items-center gap-space-xs text-on-background">
-                <span class="material-symbols-outlined text-secondary text-[22px]">tune</span>
-                <span class="font-headline-sm text-headline-sm font-bold">Filtros</span>
-              </div>
-              <button class="font-label-md text-label-md text-secondary hover:underline cursor-pointer"
-                id="reset-filters">
-                Limpiar filtros
-              </button>
+
+            <div class="filters__group filters__group--panel">
+              <p class="filters__row">
+                <label class="filters__legend" for="price-range">Cuota mensual</label>
+                <output class="filters__output" id="price-display" for="price-range">Hasta 650 €/mes</output>
+              </p>
+              <input class="filters__range" id="price-range" name="cuota" type="range" min="250" max="1400" step="25"
+                value="650" data-range-output="price-display" data-range-template="Hasta {value} €/mes">
+              <p class="filters__scale"><span>250 €</span><span>1.400 €</span></p>
             </div>
-            <div class="space-y-space-md max-h-[calc(100vh-210px)] overflow-y-auto pr-1">
-              <!-- 1. Marca -->
-              <div>
-                <span class="font-label-lg text-label-lg font-bold text-on-background block mb-space-xs">Marca</span>
-                <div class="grid grid-cols-2 gap-space-xs">
-                  <label
-                    class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface cursor-pointer">
-                    <input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary"
-                      type="checkbox">
-                    <span class="">BMW (4)</span>
-                  </label>
-                  <label
-                    class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface cursor-pointer">
-                    <input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary"
-                      type="checkbox">
-                    <span class="">Audi (5)</span>
-                  </label>
-                  <label
-                    class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface cursor-pointer">
-                    <input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary"
-                      type="checkbox">
-                    <span class="">Mercedes (3)</span>
-                  </label>
-                  <label
-                    class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface cursor-pointer">
-                    <input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary"
-                      type="checkbox">
-                    <span class="">Tesla (3)</span>
-                  </label>
-                  <label
-                    class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface cursor-pointer">
-                    <input class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary" type="checkbox">
-                    <span class="">Cupra (4)</span>
-                  </label>
-                  <label
-                    class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface cursor-pointer">
-                    <input class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary" type="checkbox">
-                    <span class="">Volkswagen (3)</span>
-                  </label>
-                  <label
-                    class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface cursor-pointer">
-                    <input class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary" type="checkbox">
-                    <span class="">Renault (2)</span>
-                  </label>
-                  <label
-                    class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface cursor-pointer">
-                    <input class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary" type="checkbox">
-                    <span class="">Peugeot (2)</span>
-                  </label>
-                </div>
-              </div>
-              <!-- 2. Modelo Quick Search -->
-              <div>
-                <span class="font-label-lg text-label-lg font-bold text-on-background block mb-space-xs">Modelo
-                  específico</span>
-                <div class="relative">
-                  <input
-                    class="w-full bg-surface-container-low px-space-sm py-1.5 rounded text-body-sm font-body-sm focus:outline-none focus:ring-1 focus:ring-secondary"
-                    placeholder="Ej. X1, Model Y, Formentor..." type="text">
-                  <span class="material-symbols-outlined text-outline text-[18px] absolute right-2 top-2">search</span>
-                </div>
-              </div>
-              <!-- 3. Precio Mensual Slider -->
-              <div class="bg-surface-container-low p-space-sm rounded-lg">
-                <div class="flex items-center justify-between mb-space-xs">
-                  <span class="font-label-lg text-label-lg font-bold text-on-background">Cuota mensual</span>
-                  <span
-                    class="font-label-md text-label-md font-bold text-tertiary-container bg-tertiary-fixed px-2 py-0.5 rounded"
-                    id="price-display">
-                    Hasta 650 €/mes
-                  </span>
-                </div>
-                <input class="w-full accent-secondary cursor-pointer" id="price-range" max="1400" min="250" step="25"
-                  type="range" value="650">
-                <div class="flex justify-between text-body-sm font-body-sm text-outline mt-1">
-                  <span class="">250 €</span>
-                  <span class="">1.400 €</span>
-                </div>
-              </div>
-              <!-- 4. Tipo de Carrocería -->
-              <div>
-                <span class="font-label-lg text-label-lg font-bold text-on-background block mb-space-xs">Tipo de
-                  vehículo</span>
-                <div class="flex flex-wrap gap-1.5">
-                  <button
-                    class="bg-primary-container text-on-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full">SUV</button>
-                  <button
-                    class="bg-surface-container hover:bg-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full text-on-surface">Sedán</button>
-                  <button
-                    class="bg-surface-container hover:bg-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full text-on-surface">Compacto</button>
-                  <button
-                    class="bg-surface-container hover:bg-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full text-on-surface">Deportivo</button>
-                  <button
-                    class="bg-surface-container hover:bg-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full text-on-surface">Furgoneta</button>
-                </div>
-              </div>
-              <!-- 5. Distintivo Ambiental & Combustible -->
-              <div>
-                <span class="font-label-lg text-label-lg font-bold text-on-background block mb-space-xs">Distintivo
-                  ambiental</span>
-                <div class="space-y-1">
-                  <label
-                    class="flex items-center justify-between text-body-sm font-body-sm text-on-surface cursor-pointer">
-                    <span class="flex items-center gap-2">
-                      <span class="w-3 h-3 rounded-full bg-secondary"></span>
-                      0 Emisiones (Eléctrico)
-                    </span>
-                    <input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary"
-                      type="checkbox">
-                  </label>
-                  <label
-                    class="flex items-center justify-between text-body-sm font-body-sm text-on-surface cursor-pointer">
-                    <span class="flex items-center gap-2">
-                      <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
-                      Etiqueta ECO (Híbrido)
-                    </span>
-                    <input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary"
-                      type="checkbox">
-                  </label>
-                  <label
-                    class="flex items-center justify-between text-body-sm font-body-sm text-on-surface cursor-pointer">
-                    <span class="flex items-center gap-2">
-                      <span class="w-3 h-3 rounded-full bg-outline"></span>
-                      Etiqueta C (Gasolina / Diésel)
-                    </span>
-                    <input class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary" type="checkbox">
-                  </label>
-                </div>
-              </div>
-              <!-- 6. Transmisión -->
-              <div>
-                <span
-                  class="font-label-lg text-label-lg font-bold text-on-background block mb-space-xs">Transmisión</span>
-                <div class="grid grid-cols-2 gap-space-xs">
-                  <button
-                    class="bg-primary-container text-on-primary font-label-sm text-label-sm py-1.5 rounded flex items-center justify-center gap-1">
-                    <span class="material-symbols-outlined text-[16px]">settings</span> Automático
-                  </button>
-                  <button
-                    class="bg-surface-container hover:bg-surface-variant text-on-surface font-label-sm text-label-sm py-1.5 rounded flex items-center justify-center gap-1">
-                    Manual
-                  </button>
-                </div>
-              </div>
-              <!-- 7. Disponibilidad -->
-              <div>
-                <span class="font-label-lg text-label-lg font-bold text-on-background block mb-space-xs">Plazo de
-                  entrega</span>
-                <div class="space-y-1">
-                  <label class="flex items-center gap-2 text-body-sm font-body-sm cursor-pointer">
-                    <input checked="" class="accent-secondary" name="delivery" type="radio">
-                    <span class="">Entrega rápida (48-72h)</span>
-                  </label>
-                  <label class="flex items-center gap-2 text-body-sm font-body-sm cursor-pointer">
-                    <input class="accent-secondary" name="delivery" type="radio">
-                    <span class="">En stock inmediato (&lt; 2 semanas)</span>
-                  </label>
-                  <label class="flex items-center gap-2 text-body-sm font-body-sm cursor-pointer">
-                    <input class="accent-secondary" name="delivery" type="radio">
-                    <span class="">Próxima llegada bajo pedido</span>
-                  </label>
-                </div>
-              </div>
-              <!-- 8. Duración & 9. Kilometraje -->
-              <div class="grid grid-cols-2 gap-space-xs">
-                <div>
-                  <span class="font-label-sm text-label-sm font-bold text-on-background block mb-1">Duración</span>
-                  <select
-                    class="w-full bg-surface-container-low text-body-sm font-body-sm p-1.5 rounded border-0 focus:ring-1 focus:ring-secondary">
+
+            <fieldset class="filters__group">
+              <legend class="filters__legend">Tipo de vehículo</legend>
+              <ul class="filters__chips">
+                <li><label class="filters__chip"><input class="filters__chip-input" type="checkbox" name="carroceria"
+                      value="suv" checked><span class="filters__chip-text">SUV</span></label></li>
+                <li><label class="filters__chip"><input class="filters__chip-input" type="checkbox" name="carroceria"
+                      value="sedan"><span class="filters__chip-text">Sedán</span></label></li>
+                <li><label class="filters__chip"><input class="filters__chip-input" type="checkbox" name="carroceria"
+                      value="compacto"><span class="filters__chip-text">Compacto</span></label></li>
+                <li><label class="filters__chip"><input class="filters__chip-input" type="checkbox" name="carroceria"
+                      value="deportivo"><span class="filters__chip-text">Deportivo</span></label></li>
+                <li><label class="filters__chip"><input class="filters__chip-input" type="checkbox" name="carroceria"
+                      value="furgoneta"><span class="filters__chip-text">Furgoneta</span></label></li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="filters__group">
+              <legend class="filters__legend">Distintivo ambiental</legend>
+              <ul class="filters__options">
+                <li><label class="filters__option"><span class="filters__option-text"><span
+                        class="filters__dot filters__dot--zero" aria-hidden="true"></span>0 Emisiones
+                      (Eléctrico)</span><input class="filters__input" type="checkbox" name="distintivo" value="cero"
+                      checked></label></li>
+                <li><label class="filters__option"><span class="filters__option-text"><span
+                        class="filters__dot filters__dot--eco" aria-hidden="true"></span>Etiqueta ECO
+                      (Híbrido)</span><input class="filters__input" type="checkbox" name="distintivo" value="eco"
+                      checked></label></li>
+                <li><label class="filters__option"><span class="filters__option-text"><span
+                        class="filters__dot filters__dot--c" aria-hidden="true"></span>Etiqueta C (Gasolina /
+                      Diésel)</span><input class="filters__input" type="checkbox" name="distintivo" value="c"></label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="filters__group">
+              <legend class="filters__legend">Transmisión</legend>
+              <ul class="filters__chips filters__chips--pair">
+                <li><label class="filters__chip"><input class="filters__chip-input" type="checkbox"
+                      name="transmision" value="automatico" checked><span class="filters__chip-text"><span
+                        class="icon icon--sm" aria-hidden="true">settings</span>Automático</span></label></li>
+                <li><label class="filters__chip"><input class="filters__chip-input" type="checkbox"
+                      name="transmision" value="manual"><span class="filters__chip-text">Manual</span></label></li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="filters__group">
+              <legend class="filters__legend">Plazo de entrega</legend>
+              <ul class="filters__options">
+                <li><label class="checkbox"><input class="checkbox__input" type="radio" name="entrega" value="rapida"
+                      checked><span class="checkbox__label">Entrega rápida (48-72h)</span></label></li>
+                <li><label class="checkbox"><input class="checkbox__input" type="radio" name="entrega"
+                      value="stock"><span class="checkbox__label">En stock inmediato (&lt; 2 semanas)</span></label>
+                </li>
+                <li><label class="checkbox"><input class="checkbox__input" type="radio" name="entrega"
+                      value="pedido"><span class="checkbox__label">Próxima llegada bajo pedido</span></label></li>
+              </ul>
+            </fieldset>
+
+            <div class="filters__pair">
+              <div class="field">
+                <label class="field__label" for="filter-duration">Duración</label>
+                <span class="field__wrapper">
+                  <select class="field__control field__control--select" id="filter-duration" name="duracion">
                     <option>36 meses</option>
                     <option>24 meses</option>
                     <option>48 meses</option>
                     <option>Flexible mes a mes</option>
                   </select>
-                </div>
-                <div>
-                  <span class="font-label-sm text-label-sm font-bold text-on-background block mb-1">Km / año</span>
-                  <select
-                    class="w-full bg-surface-container-low text-body-sm font-body-sm p-1.5 rounded border-0 focus:ring-1 focus:ring-secondary">
+                  <span class="icon icon--md field__icon field__icon--end" aria-hidden="true">expand_more</span>
+                </span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="filter-mileage">Km / año</label>
+                <span class="field__wrapper">
+                  <select class="field__control field__control--select" id="filter-mileage" name="kilometraje">
                     <option>15.000 km</option>
                     <option>10.000 km</option>
                     <option>20.000 km</option>
                     <option>30.000 km</option>
                   </select>
-                </div>
-              </div>
-              <!-- 10. Operador Renting -->
-              <div>
-                <span class="font-label-lg text-label-lg font-bold text-on-background block mb-space-xs">Proveedor
-                  Renting</span>
-                <div class="space-y-1 text-body-sm font-body-sm">
-                  <label class="flex items-center justify-between cursor-pointer">
-                    <span class="">MAHARent Selection</span>
-                    <input checked="" class="accent-secondary" type="checkbox">
-                  </label>
-                  <label class="flex items-center justify-between cursor-pointer">
-                    <span class="">Arval Renting</span>
-                    <input checked="" class="accent-secondary" type="checkbox">
-                  </label>
-                  <label class="flex items-center justify-between cursor-pointer">
-                    <span class="">LeasePlan / ALD</span>
-                    <input class="accent-secondary" type="checkbox">
-                  </label>
-                  <label class="flex items-center justify-between cursor-pointer">
-                    <span class="">Santander Consumer</span>
-                    <input class="accent-secondary" type="checkbox">
-                  </label>
-                </div>
+                  <span class="icon icon--md field__icon field__icon--end" aria-hidden="true">expand_more</span>
+                </span>
               </div>
             </div>
-          </aside>
-          <!-- 4 & 5. RESULTADOS Y GRID DE VEHÍCULOS (9 columnas en LG) -->
-          <main class="lg:col-span-9 flex flex-col gap-space-md">
-            <!-- BARRA DE ENCABEZADO DE RESULTADOS -->
-            <div
-              class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
-              <div class="flex items-center gap-space-sm">
-                <h2 class="font-headline-sm text-headline-sm font-bold text-on-background">Vehículos disponibles</h2>
-                <div class="inline-flex items-center gap-1.5 bg-surface-container-low px-space-sm py-0.5 rounded-full">
-                  <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-                  <span class="font-label-sm text-label-sm font-bold text-on-surface">24 resultados en directo</span>
-                </div>
-              </div>
-              <div class="flex items-center gap-space-sm self-end sm:self-auto">
-                <!-- Sort dropdown -->
-                <div class="flex items-center gap-1">
-                  <label class="font-body-sm text-body-sm text-on-surface-variant" for="sort-select">Ordenar
-                    por:</label>
-                  <select
-                    class="bg-surface-container text-body-sm font-body-sm text-on-surface py-1 px-space-sm rounded border-0 focus:ring-1 focus:ring-secondary cursor-pointer"
-                    id="sort-select">
-                    <option>Relevancia</option>
-                    <option>Precio: menor a mayor</option>
-                    <option>Precio: mayor a menor</option>
-                    <option>Más recientes</option>
-                    <option>Menor cuota inicial</option>
-                  </select>
-                </div>
-                <!-- View switcher -->
-                <div class="hidden sm:flex items-center bg-surface-container rounded p-0.5">
-                  <button class="p-1 rounded bg-surface-container-lowest text-primary shadow-xs"
-                    title="Vista cuadrícula">
-                    <span class="material-symbols-outlined text-[18px]">grid_view</span>
-                  </button>
-                  <button class="p-1 rounded text-outline hover:text-on-surface transition-colors" title="Vista lista">
-                    <span class="material-symbols-outlined text-[18px]">view_list</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <!-- 5. GRID DE VEHÍCULOS (3 COLUMNAS EN DESKTOP) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-md">
-              <!-- TARJETA 1: BMW X1 (3D disponible) -->
-              <div
-                class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden relative">
-                <div
-                  class="relative w-full h-48 bg-gradient-to-b from-surface-container-low to-surface-container-lowest flex items-center justify-center p-space-sm overflow-hidden">
-                  <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Modern dark metallic blue BMW X1 compact luxury SUV parked inside a clean high-end studio lighting setup, sharp reflections, alloy wheels, profile angle shot with neutral grey gradients"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhgIHY5n-74zju5FhVAFmPnBbiO90b_3v3qYRP7_hhDBN5a9y0d4sbD082IFrV832C9qTTn-mwOFxpoko20bnYzqpoHFg60FFkIzQxZsyIrKOgGXv2qY5-dQVocCcT3ChLJHXBROrfX-wElbRYUPCQc2xPjzlytZbL-8V-aq3ROLEZaeraY2vMY6InE4tNeTwxWB-Iimc7i2m2ub18lCV06OpmNaprZBWAHgGvST3eeyoQPWmhl6Q28g">
-                  <div class="absolute top-3 left-3 flex flex-col gap-1 items-start">
-                    <span
-                      class="inline-flex items-center gap-1 bg-primary text-on-primary font-label-sm text-[10px] px-2 py-0.5 rounded-full shadow-sm">
-                      <span class="material-symbols-outlined text-[12px] text-tertiary-fixed-dim">view_in_ar</span> 3D
-                      disponible
-                    </span>
-                    <span class="bg-secondary text-on-secondary font-label-sm text-[10px] px-2 py-0.5 rounded-full">
-                      Etiqueta ECO
-                    </span>
-                  </div>
-                  <button
-                    class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface-variant hover:text-error transition-colors flex items-center justify-center shadow-xs">
-                    <span class="material-symbols-outlined text-[18px]">favorite</span>
-                  </button>
-                  <span
-                    class="absolute bottom-2 left-3 font-label-sm text-[10px] text-outline bg-surface-container-lowest/90 px-1.5 py-0.5 rounded">
-                    Arval Renting
-                  </span>
-                </div>
-                <div class="p-space-md flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3
-                      class="font-headline-sm text-headline-sm font-bold text-on-background group-hover:text-secondary transition-colors">
-                      BMW X1 sDrive18d
-                    </h3>
-                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
-                      SUV · Automático · Mild-Hybrid Diésel
-                    </p>
-                    <!-- Technical Micro-Grid -->
-                    <div
-                      class="grid grid-cols-4 gap-1 py-space-xs bg-surface-container-low rounded-lg text-center mb-space-sm">
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">speed</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">150 CV</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">local_gas_station</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">4.9 L/100</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span
-                          class="material-symbols-outlined text-[16px] text-outline">airline_seat_recline_normal</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">5 Plazas</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">luggage</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">540 L</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="flex items-baseline justify-between mb-1">
-                      <div>
-                        <span
-                          class="text-tertiary-container font-headline-xl text-headline-xl font-extrabold tracking-tight">449
-                          €</span>
-                        <span class="font-body-sm text-body-sm text-on-surface-variant">/mes + IVA</span>
-                      </div>
-                      <span
-                        class="font-label-sm text-[11px] bg-secondary-fixed text-on-secondary-fixed font-bold px-2 py-0.5 rounded">
-                        Sin entrada
-                      </span>
-                    </div>
-                    <div
-                      class="flex items-center justify-between text-body-sm font-body-sm text-outline-variant mb-space-sm text-[12px]">
-                      <span class="">36 meses · 15.000 km/año</span>
-                      <span class="text-secondary font-bold flex items-center gap-0.5">
-                        <span class="material-symbols-outlined text-[14px]">check_circle</span> Stock 48h
-                      </span>
-                    </div>
-                    <a class="w-full bg-primary-container hover:bg-secondary text-on-primary font-label-lg text-label-lg py-2 rounded-lg text-center transition-colors flex items-center justify-center gap-1"
-                      href="vehiculo.html">
-                      <span class="">Ver vehículo</span>
-                      <span class="material-symbols-outlined text-[18px]">chevron_right</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- TARJETA 2: Tesla Model Y (3D disponible) -->
-              <div
-                class="group bg-surface-container-lowest rounded-xl border border-secondary/20 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden relative">
-                <div
-                  class="relative w-full h-48 bg-gradient-to-b from-surface-container-low to-surface-container-lowest flex items-center justify-center p-space-sm overflow-hidden">
-                  <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Tesla Model Y pearl white electric crossover luxury car photographed in sleek automotive studio setting with soft floor reflection, minimalist lighting, dynamic quarter front view"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0kGW1q5uAcmDe74L4J7veHquX2qkkhi4NokqAdVal6TBe0HoLIzUZUgcro5uUp-g6itc2SphnWdUGq98bCIr5ElNnhvmHBCh_l-PQFiPufQ5p0qnuosQZw8w8Kik-w_SeJxOt0Y9jFuvPEEwcKl5lxEBgyNEw5xHKxqbjtwIoTh6ad4MMj6dclBkovcYOK1GRoawqV-bMcY9pK7O7g8lrN0WCZrrkwh93eodfN84uUlBdnlKyICsgkw">
-                  <div class="absolute top-3 left-3 flex flex-col gap-1 items-start">
-                    <span
-                      class="inline-flex items-center gap-1 bg-primary text-on-primary font-label-sm text-[10px] px-2 py-0.5 rounded-full shadow-sm">
-                      <span class="material-symbols-outlined text-[12px] text-tertiary-fixed-dim">view_in_ar</span> 3D
-                      disponible
-                    </span>
-                    <span
-                      class="bg-primary-container text-on-primary font-label-sm text-[10px] px-2 py-0.5 rounded-full">
-                      0 Emisiones
-                    </span>
-                  </div>
-                  <button
-                    class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface-variant hover:text-error transition-colors flex items-center justify-center shadow-xs">
-                    <span class="material-symbols-outlined text-[18px] text-error"
-                      style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
-                  </button>
-                  <span
-                    class="absolute bottom-2 left-3 font-label-sm text-[10px] text-outline bg-surface-container-lowest/90 px-1.5 py-0.5 rounded">
-                    MAHARent Selection
-                  </span>
-                </div>
-                <div class="p-space-md flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3
-                      class="font-headline-sm text-headline-sm font-bold text-on-background group-hover:text-secondary transition-colors">
-                      Tesla Model Y Gran Autonomía
-                    </h3>
-                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
-                      SUV Crossover · Tracción Integral AWD · 100% Eléctrico
-                    </p>
-                    <!-- Technical Micro-Grid -->
-                    <div
-                      class="grid grid-cols-4 gap-1 py-space-xs bg-surface-container-low rounded-lg text-center mb-space-sm">
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">bolt</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">514 CV</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">ev_station</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">533 km</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span
-                          class="material-symbols-outlined text-[16px] text-outline">airline_seat_recline_normal</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">5 Plazas</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">luggage</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">854 L</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="flex items-baseline justify-between mb-1">
-                      <div>
-                        <span
-                          class="text-tertiary-container font-headline-xl text-headline-xl font-extrabold tracking-tight">520
-                          €</span>
-                        <span class="font-body-sm text-body-sm text-on-surface-variant">/mes + IVA</span>
-                      </div>
-                      <span
-                        class="font-label-sm text-[11px] bg-secondary-fixed text-on-secondary-fixed font-bold px-2 py-0.5 rounded">
-                        Sin entrada
-                      </span>
-                    </div>
-                    <div
-                      class="flex items-center justify-between text-body-sm font-body-sm text-outline-variant mb-space-sm text-[12px]">
-                      <span class="">48 meses · 15.000 km/año</span>
-                      <span class="text-secondary font-bold flex items-center gap-0.5">
-                        <span class="material-symbols-outlined text-[14px]">local_shipping</span> Entrega 7 días
-                      </span>
-                    </div>
-                    <a class="w-full bg-secondary hover:bg-secondary-container text-on-secondary font-label-lg text-label-lg py-2 rounded-lg text-center transition-colors flex items-center justify-center gap-1 shadow-sm"
-                      href="vehiculo.html">
-                      <span class="">Ver vehículo</span>
-                      <span class="material-symbols-outlined text-[18px]">chevron_right</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- TARJETA 3: Audi A4 Avant S Line (3D disponible) -->
-              <div
-                class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden relative">
-                <div
-                  class="relative w-full h-48 bg-gradient-to-b from-surface-container-low to-surface-container-lowest flex items-center justify-center p-space-sm overflow-hidden">
-                  <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Silver grey Audi A4 Avant station wagon luxury estate car, studio lighting with sleek dark backdrop, elegant chrome detailing, premium executive appearance"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAetWcoBWSER0K6Puk1DCH3btIgs6c7F9QyIMf1v0O26WvsUckU7Y1I7B4A8lPxN4huRU4QdFPx9_GYg_lysMZRMBIM6T3WnWMLAfXlhEIrgMiuKAWSNU9E1SFn80OlsCx-4elfv_UBf6SgpJ2P7wzUHQwM_3Ur6rc0srBE1GHyhFhVU9iuddFosh_BvgeTWOPF_UR0-ov7pALZPpMd50ajvsRHXo2-9vUwtKbZbgL0TZGOMyLKvQR7FA">
-                  <div class="absolute top-3 left-3 flex flex-col gap-1 items-start">
-                    <span
-                      class="inline-flex items-center gap-1 bg-primary text-on-primary font-label-sm text-[10px] px-2 py-0.5 rounded-full shadow-sm">
-                      <span class="material-symbols-outlined text-[12px] text-tertiary-fixed-dim">view_in_ar</span> 3D
-                      disponible
-                    </span>
-                    <span class="bg-secondary text-on-secondary font-label-sm text-[10px] px-2 py-0.5 rounded-full">
-                      Etiqueta ECO
-                    </span>
-                  </div>
-                  <button
-                    class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface-variant hover:text-error transition-colors flex items-center justify-center shadow-xs">
-                    <span class="material-symbols-outlined text-[18px]">favorite</span>
-                  </button>
-                  <span
-                    class="absolute bottom-2 left-3 font-label-sm text-[10px] text-outline bg-surface-container-lowest/90 px-1.5 py-0.5 rounded">
-                    LeasePlan
-                  </span>
-                </div>
-                <div class="p-space-md flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3
-                      class="font-headline-sm text-headline-sm font-bold text-on-background group-hover:text-secondary transition-colors">
-                      Audi A4 Avant 35 TDI S Line
-                    </h3>
-                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
-                      Familiar · S tronic Automático · Híbrido Ligero
-                    </p>
-                    <!-- Technical Micro-Grid -->
-                    <div
-                      class="grid grid-cols-4 gap-1 py-space-xs bg-surface-container-low rounded-lg text-center mb-space-sm">
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">speed</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">163 CV</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">local_gas_station</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">4.8 L/100</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span
-                          class="material-symbols-outlined text-[16px] text-outline">airline_seat_recline_normal</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">5 Plazas</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">luggage</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">495 L</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="flex items-baseline justify-between mb-1">
-                      <div>
-                        <span
-                          class="text-tertiary-container font-headline-xl text-headline-xl font-extrabold tracking-tight">465
-                          €</span>
-                        <span class="font-body-sm text-body-sm text-on-surface-variant">/mes + IVA</span>
-                      </div>
-                      <span
-                        class="font-label-sm text-[11px] bg-secondary-fixed text-on-secondary-fixed font-bold px-2 py-0.5 rounded">
-                        Sin entrada
-                      </span>
-                    </div>
-                    <div
-                      class="flex items-center justify-between text-body-sm font-body-sm text-outline-variant mb-space-sm text-[12px]">
-                      <span class="">36 meses · 20.000 km/año</span>
-                      <span class="text-secondary font-bold flex items-center gap-0.5">
-                        <span class="material-symbols-outlined text-[14px]">check_circle</span> Stock 48h
-                      </span>
-                    </div>
-                    <a class="w-full bg-primary-container hover:bg-secondary text-on-primary font-label-lg text-label-lg py-2 rounded-lg text-center transition-colors flex items-center justify-center gap-1"
-                      href="vehiculo.html">
-                      <span class="">Ver vehículo</span>
-                      <span class="material-symbols-outlined text-[18px]">chevron_right</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- TARJETA 4: Cupra Formentor VZ -->
-              <div
-                class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden relative">
-                <div
-                  class="relative w-full h-48 bg-gradient-to-b from-surface-container-low to-surface-container-lowest flex items-center justify-center p-space-sm overflow-hidden">
-                  <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Matte petrol blue Cupra Formentor crossover sporting copper accents and aggressive front grille in dark moody studio lighting with high contrast"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuApjWqNgGplQxVu2tJi4ujrF2etSx36jbvNetzPQ7fBpg2yu9GCUrXMJafGhgeNm-mqZKvlS2m30DgGxkwLYafBaJf9dh-eM_wDvYjpusZetUo4RmDkloFbSbh9n_NWKRHhepg8OcO5UromlkfN-WOK7U-so8EebCsJ7vNsFAUusZ7uXbapH2ez5aCiv2X3g0FQSTap7ArDpemCvCul7SQhboWuYfTwKMngfUenjwyEchdU5iBzHrjbdA">
-                  <div class="absolute top-3 left-3 flex flex-col gap-1 items-start">
-                    <span
-                      class="bg-tertiary-fixed-dim text-tertiary-container font-label-sm text-[10px] font-bold px-2 py-0.5 rounded-full">
-                      Etiqueta CERO
-                    </span>
-                    <span
-                      class="bg-surface-container-highest text-on-surface font-label-sm text-[10px] px-2 py-0.5 rounded-full">
-                      Híbrido Enchufable
-                    </span>
-                  </div>
-                  <button
-                    class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface-variant hover:text-error transition-colors flex items-center justify-center shadow-xs">
-                    <span class="material-symbols-outlined text-[18px]">favorite</span>
-                  </button>
-                  <span
-                    class="absolute bottom-2 left-3 font-label-sm text-[10px] text-outline bg-surface-container-lowest/90 px-1.5 py-0.5 rounded">
-                    MAHARent Selection
-                  </span>
-                </div>
-                <div class="p-space-md flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3
-                      class="font-headline-sm text-headline-sm font-bold text-on-background group-hover:text-secondary transition-colors">
-                      Cupra Formentor 1.4 e-HYBRID
-                    </h3>
-                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
-                      Crossover Deportivo · Automático DSG · PHEV
-                    </p>
-                    <!-- Technical Micro-Grid -->
-                    <div
-                      class="grid grid-cols-4 gap-1 py-space-xs bg-surface-container-low rounded-lg text-center mb-space-sm">
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">speed</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">204 CV</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">ev_station</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">59 km</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span
-                          class="material-symbols-outlined text-[16px] text-outline">airline_seat_recline_normal</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">5 Plazas</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">luggage</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">345 L</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="flex items-baseline justify-between mb-1">
-                      <div>
-                        <span
-                          class="text-tertiary-container font-headline-xl text-headline-xl font-extrabold tracking-tight">385
-                          €</span>
-                        <span class="font-body-sm text-body-sm text-on-surface-variant">/mes + IVA</span>
-                      </div>
-                      <span
-                        class="font-label-sm text-[11px] bg-secondary-fixed text-on-secondary-fixed font-bold px-2 py-0.5 rounded">
-                        Sin entrada
-                      </span>
-                    </div>
-                    <div
-                      class="flex items-center justify-between text-body-sm font-body-sm text-outline-variant mb-space-sm text-[12px]">
-                      <span class="">48 meses · 10.000 km/año</span>
-                      <span class="text-secondary font-bold flex items-center gap-0.5">
-                        <span class="material-symbols-outlined text-[14px]">check_circle</span> Stock 48h
-                      </span>
-                    </div>
-                    <a class="w-full bg-primary-container hover:bg-secondary text-on-primary font-label-lg text-label-lg py-2 rounded-lg text-center transition-colors flex items-center justify-center gap-1"
-                      href="vehiculo.html">
-                      <span class="">Ver vehículo</span>
-                      <span class="material-symbols-outlined text-[18px]">chevron_right</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- TARJETA 5: Mercedes-Benz EQA 250+ -->
-              <div
-                class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden relative">
-                <div
-                  class="relative w-full h-48 bg-gradient-to-b from-surface-container-low to-surface-container-lowest flex items-center justify-center p-space-sm overflow-hidden">
-                  <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Polar white Mercedes Benz EQA compact all-electric luxury SUV positioned diagonally on a reflective dark studio platform with futuristic ambient blue lighting highlights"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtM49NjXouC11HqDE2-N5ftNSfUvU_t2EC2T26_IBZ7gs2n3ItdbLwXzcMY7XTxnRSPhYqKD_HxOJijVc1zF0Ds7T7sNE93szocgnV1B8BNgQnRD1wNO97Jjn_96KKceZkv66qlkiDNFfmZrm-03s82hIIg6VkEIdT8JDDhXrISJlYK9gOEmKP4XBVf8-Fe6YMx1qO4O8bLG-kkmWi5ep20SiASJ7WpiQ-RBMH3fZP_xutW7kR0HEcfg">
-                  <div class="absolute top-3 left-3 flex flex-col gap-1 items-start">
-                    <span
-                      class="bg-primary-container text-on-primary font-label-sm text-[10px] px-2 py-0.5 rounded-full">
-                      0 Emisiones
-                    </span>
-                    <span
-                      class="bg-tertiary-fixed text-tertiary-container font-label-sm text-[10px] font-bold px-2 py-0.5 rounded-full">
-                      Top Ventas
-                    </span>
-                  </div>
-                  <button
-                    class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface-variant hover:text-error transition-colors flex items-center justify-center shadow-xs">
-                    <span class="material-symbols-outlined text-[18px]">favorite</span>
-                  </button>
-                  <span
-                    class="absolute bottom-2 left-3 font-label-sm text-[10px] text-outline bg-surface-container-lowest/90 px-1.5 py-0.5 rounded">
-                    Santander Consumer
-                  </span>
-                </div>
-                <div class="p-space-md flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3
-                      class="font-headline-sm text-headline-sm font-bold text-on-background group-hover:text-secondary transition-colors">
-                      Mercedes-Benz EQA 250+
-                    </h3>
-                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
-                      SUV Compacto · Automático · 100% Eléctrico
-                    </p>
-                    <!-- Technical Micro-Grid -->
-                    <div
-                      class="grid grid-cols-4 gap-1 py-space-xs bg-surface-container-low rounded-lg text-center mb-space-sm">
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">bolt</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">190 CV</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">ev_station</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">530 km</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span
-                          class="material-symbols-outlined text-[16px] text-outline">airline_seat_recline_normal</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">5 Plazas</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">luggage</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">340 L</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="flex items-baseline justify-between mb-1">
-                      <div>
-                        <span
-                          class="text-tertiary-container font-headline-xl text-headline-xl font-extrabold tracking-tight">495
-                          €</span>
-                        <span class="font-body-sm text-body-sm text-on-surface-variant">/mes + IVA</span>
-                      </div>
-                      <span
-                        class="font-label-sm text-[11px] bg-secondary-fixed text-on-secondary-fixed font-bold px-2 py-0.5 rounded">
-                        Sin entrada
-                      </span>
-                    </div>
-                    <div
-                      class="flex items-center justify-between text-body-sm font-body-sm text-outline-variant mb-space-sm text-[12px]">
-                      <span class="">36 meses · 15.000 km/año</span>
-                      <span class="text-secondary font-bold flex items-center gap-0.5">
-                        <span class="material-symbols-outlined text-[14px]">local_shipping</span> 10 días
-                      </span>
-                    </div>
-                    <a class="w-full bg-primary-container hover:bg-secondary text-on-primary font-label-lg text-label-lg py-2 rounded-lg text-center transition-colors flex items-center justify-center gap-1"
-                      href="vehiculo.html">
-                      <span class="">Ver vehículo</span>
-                      <span class="material-symbols-outlined text-[18px]">chevron_right</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- TARJETA 6: Volkswagen ID.4 Pro -->
-              <div
-                class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden relative">
-                <div
-                  class="relative w-full h-48 bg-gradient-to-b from-surface-container-low to-surface-container-lowest flex items-center justify-center p-space-sm overflow-hidden">
-                  <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Dusk blue Volkswagen ID 4 electric SUV with two tone black roof, futuristic daytime running LED light signature, clean studio shot on grey floor"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPPVehMO4g7Q7aDHmNZKH7i4TfiZScnn5hXn4E9AzSjGlBd5BhJDMO5nK9_BJ07psyXBytZ750j9w6bgP7PNUCsnhubh0Z0LVCl6hBpnQj6V1cBv4q0OmQuYeHIFefMogRs-7dRXj6wHS6_wm4I3mTG4yhNKbhnecKfWcS5DPom6goFqtqs5e2l-6X9Maihqhq_jWjMVwiEQJxi-Lnj2Dv1tZhObmXn4PwN6h3KeKKXAzdVWqk5JVpHw">
-                  <div class="absolute top-3 left-3 flex flex-col gap-1 items-start">
-                    <span
-                      class="bg-primary-container text-on-primary font-label-sm text-[10px] px-2 py-0.5 rounded-full">
-                      0 Emisiones
-                    </span>
-                    <span class="bg-secondary text-on-secondary font-label-sm text-[10px] px-2 py-0.5 rounded-full">
-                      Entrega 48h
-                    </span>
-                  </div>
-                  <button
-                    class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface-variant hover:text-error transition-colors flex items-center justify-center shadow-xs">
-                    <span class="material-symbols-outlined text-[18px]">favorite</span>
-                  </button>
-                  <span
-                    class="absolute bottom-2 left-3 font-label-sm text-[10px] text-outline bg-surface-container-lowest/90 px-1.5 py-0.5 rounded">
-                    Arval Renting
-                  </span>
-                </div>
-                <div class="p-space-md flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3
-                      class="font-headline-sm text-headline-sm font-bold text-on-background group-hover:text-secondary transition-colors">
-                      Volkswagen ID.4 Pro
-                    </h3>
-                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
-                      SUV Eléctrico Familiar · Batería 77 kWh
-                    </p>
-                    <!-- Technical Micro-Grid -->
-                    <div
-                      class="grid grid-cols-4 gap-1 py-space-xs bg-surface-container-low rounded-lg text-center mb-space-sm">
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">bolt</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">286 CV</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">ev_station</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">543 km</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span
-                          class="material-symbols-outlined text-[16px] text-outline">airline_seat_recline_normal</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">5 Plazas</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">luggage</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">543 L</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="flex items-baseline justify-between mb-1">
-                      <div>
-                        <span
-                          class="text-tertiary-container font-headline-xl text-headline-xl font-extrabold tracking-tight">430
-                          €</span>
-                        <span class="font-body-sm text-body-sm text-on-surface-variant">/mes + IVA</span>
-                      </div>
-                      <span
-                        class="font-label-sm text-[11px] bg-secondary-fixed text-on-secondary-fixed font-bold px-2 py-0.5 rounded">
-                        Sin entrada
-                      </span>
-                    </div>
-                    <div
-                      class="flex items-center justify-between text-body-sm font-body-sm text-outline-variant mb-space-sm text-[12px]">
-                      <span class="">48 meses · 15.000 km/año</span>
-                      <span class="text-secondary font-bold flex items-center gap-0.5">
-                        <span class="material-symbols-outlined text-[14px]">check_circle</span> Stock 48h
-                      </span>
-                    </div>
-                    <a class="w-full bg-primary-container hover:bg-secondary text-on-primary font-label-lg text-label-lg py-2 rounded-lg text-center transition-colors flex items-center justify-center gap-1"
-                      href="vehiculo.html">
-                      <span class="">Ver vehículo</span>
-                      <span class="material-symbols-outlined text-[18px]">chevron_right</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- TARJETA 7: Renault Austral E-Tech -->
-              <div
-                class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden relative">
-                <div
-                  class="relative w-full h-48 bg-gradient-to-b from-surface-container-low to-surface-container-lowest flex items-center justify-center p-space-sm overflow-hidden">
-                  <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Modern silver and matte black Renault Austral E-Tech full hybrid SUV side profile in professional automotive catalog studio lighting"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuATVNn1yBFmDsOxPFcY5z5xOOM64vlYLVjLdaTIfk67EinTPv_ZLEXlcPyEY5-CvVGyd1cAH4POaduRHua_ns8zpD07dfWWnsmJqh9aAsdr7YzfEgnBV2IJBX_6V1zK_pYqJDdjGQs5drFL2PN7ddlOAn3OxxxL_d8XYsYEDo33nPWPUkqvdcyhhyHQpXxvxllmIgEw89yi4EqXkekjUOw7l0wtdOqSvMWKdd2jCD1A69IkTMjMo4dIEg">
-                  <div class="absolute top-3 left-3 flex flex-col gap-1 items-start">
-                    <span class="bg-secondary text-on-secondary font-label-sm text-[10px] px-2 py-0.5 rounded-full">
-                      Etiqueta ECO
-                    </span>
-                    <span
-                      class="bg-surface-container-highest text-on-surface font-label-sm text-[10px] px-2 py-0.5 rounded-full">
-                      Full Hybrid
-                    </span>
-                  </div>
-                  <button
-                    class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface-variant hover:text-error transition-colors flex items-center justify-center shadow-xs">
-                    <span class="material-symbols-outlined text-[18px]">favorite</span>
-                  </button>
-                  <span
-                    class="absolute bottom-2 left-3 font-label-sm text-[10px] text-outline bg-surface-container-lowest/90 px-1.5 py-0.5 rounded">
-                    MAHARent Direct
-                  </span>
-                </div>
-                <div class="p-space-md flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3
-                      class="font-headline-sm text-headline-sm font-bold text-on-background group-hover:text-secondary transition-colors">
-                      Renault Austral E-Tech 200
-                    </h3>
-                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
-                      SUV Familiar · Automático Multimodo · Híbrido Autorecargable
-                    </p>
-                    <!-- Technical Micro-Grid -->
-                    <div
-                      class="grid grid-cols-4 gap-1 py-space-xs bg-surface-container-low rounded-lg text-center mb-space-sm">
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">speed</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">200 CV</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">local_gas_station</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">4.6 L/100</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span
-                          class="material-symbols-outlined text-[16px] text-outline">airline_seat_recline_normal</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">5 Plazas</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">luggage</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">500 L</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="flex items-baseline justify-between mb-1">
-                      <div>
-                        <span
-                          class="text-tertiary-container font-headline-xl text-headline-xl font-extrabold tracking-tight">339
-                          €</span>
-                        <span class="font-body-sm text-body-sm text-on-surface-variant">/mes + IVA</span>
-                      </div>
-                      <span
-                        class="font-label-sm text-[11px] bg-secondary-fixed text-on-secondary-fixed font-bold px-2 py-0.5 rounded">
-                        Sin entrada
-                      </span>
-                    </div>
-                    <div
-                      class="flex items-center justify-between text-body-sm font-body-sm text-outline-variant mb-space-sm text-[12px]">
-                      <span class="">48 meses · 10.000 km/año</span>
-                      <span class="text-secondary font-bold flex items-center gap-0.5">
-                        <span class="material-symbols-outlined text-[14px]">check_circle</span> Stock 48h
-                      </span>
-                    </div>
-                    <a class="w-full bg-primary-container hover:bg-secondary text-on-primary font-label-lg text-label-lg py-2 rounded-lg text-center transition-colors flex items-center justify-center gap-1"
-                      href="vehiculo.html">
-                      <span class="">Ver vehículo</span>
-                      <span class="material-symbols-outlined text-[18px]">chevron_right</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- TARJETA 8: Peugeot 3008 GT -->
-              <div
-                class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden relative">
-                <div
-                  class="relative w-full h-48 bg-gradient-to-b from-surface-container-low to-surface-container-lowest flex items-center justify-center p-space-sm overflow-hidden">
-                  <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Metallic dark grey Peugeot 3008 fastback crossover SUV front three-quarter view, high-contrast studio scene with crisp automotive highlights"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMEAJEGH4JvDb4VggBSUpEsixERkNHmZBNiK5ZojmWdhj4KeX1md4I6ciE4FpD5SUF4_bunIMlH1qWr0goBW7yheyTqnlfGoRJCebjv5JKTU4v3AF093AChEpvrzJM4DigiFeDOsfGo9ZJZ4Uwhz_k-IaKXh8drgA4KwxGuPZhelHhGwyAw2aemnq3cVLYSMOuO-BLcJUpQy5GiZSKUQaUut7jOec1eW-TMZsHXOFJgrHndy_Xznl2YA">
-                  <div class="absolute top-3 left-3 flex flex-col gap-1 items-start">
-                    <span class="bg-secondary text-on-secondary font-label-sm text-[10px] px-2 py-0.5 rounded-full">
-                      Etiqueta ECO
-                    </span>
-                    <span class="bg-primary text-on-primary font-label-sm text-[10px] px-2 py-0.5 rounded-full">
-                      Nuevo Diseño
-                    </span>
-                  </div>
-                  <button
-                    class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface-variant hover:text-error transition-colors flex items-center justify-center shadow-xs">
-                    <span class="material-symbols-outlined text-[18px]">favorite</span>
-                  </button>
-                  <span
-                    class="absolute bottom-2 left-3 font-label-sm text-[10px] text-outline bg-surface-container-lowest/90 px-1.5 py-0.5 rounded">
-                    ALD Automotive
-                  </span>
-                </div>
-                <div class="p-space-md flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3
-                      class="font-headline-sm text-headline-sm font-bold text-on-background group-hover:text-secondary transition-colors">
-                      Peugeot 3008 Hybrid 136 e-DCS6 GT
-                    </h3>
-                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
-                      Fastback SUV · Doble embrague 6 vel · Microhíbrido
-                    </p>
-                    <!-- Technical Micro-Grid -->
-                    <div
-                      class="grid grid-cols-4 gap-1 py-space-xs bg-surface-container-low rounded-lg text-center mb-space-sm">
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">speed</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">136 CV</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">local_gas_station</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">5.5 L/100</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span
-                          class="material-symbols-outlined text-[16px] text-outline">airline_seat_recline_normal</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">5 Plazas</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">luggage</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">520 L</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="flex items-baseline justify-between mb-1">
-                      <div>
-                        <span
-                          class="text-tertiary-container font-headline-xl text-headline-xl font-extrabold tracking-tight">369
-                          €</span>
-                        <span class="font-body-sm text-body-sm text-on-surface-variant">/mes + IVA</span>
-                      </div>
-                      <span
-                        class="font-label-sm text-[11px] bg-secondary-fixed text-on-secondary-fixed font-bold px-2 py-0.5 rounded">
-                        Sin entrada
-                      </span>
-                    </div>
-                    <div
-                      class="flex items-center justify-between text-body-sm font-body-sm text-outline-variant mb-space-sm text-[12px]">
-                      <span class="">36 meses · 15.000 km/año</span>
-                      <span class="text-secondary font-bold flex items-center gap-0.5">
-                        <span class="material-symbols-outlined text-[14px]">check_circle</span> Stock 48h
-                      </span>
-                    </div>
-                    <a class="w-full bg-primary-container hover:bg-secondary text-on-primary font-label-lg text-label-lg py-2 rounded-lg text-center transition-colors flex items-center justify-center gap-1"
-                      href="vehiculo.html">
-                      <span class="">Ver vehículo</span>
-                      <span class="material-symbols-outlined text-[18px]">chevron_right</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- TARJETA 9: Mercedes-Benz Vito Tourer PRO (Para Empresas) -->
-              <div
-                class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden relative">
-                <div
-                  class="relative w-full h-48 bg-gradient-to-b from-surface-container-low to-surface-container-lowest flex items-center justify-center p-space-sm overflow-hidden">
-                  <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Obsidian black Mercedes-Benz Vito Tourer passenger van executive version photographed cleanly in a spacious studio with glossy floor reflections"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGzRDZOZMl_ufi6m9gsG9WajDh0-BE0jN5DXi-gCubQJryJGZXAO_eqBXsoPOZxslZSQHF7mazoElMDFumd-F2RfvSo_9VEwyJLOVgJiNPMDIRmHSYJpC7GPpeciCjaPWyJN2CPuuN67eYiHbfGRqZmnDML8N083tn9yl2tqT8G5QqHKgKjSbKRYin_3AOPG9_vHVEiloBjRBGkrVcX3xR4XbDBtvlDlGiU8aUBWMYqNSEApquU3_R2g">
-                  <div class="absolute top-3 left-3 flex flex-col gap-1 items-start">
-                    <span
-                      class="bg-tertiary-fixed-dim text-tertiary-container font-label-sm text-[10px] font-bold px-2 py-0.5 rounded-full">
-                      Especial Empresas
-                    </span>
-                    <span
-                      class="bg-primary-container text-on-primary font-label-sm text-[10px] px-2 py-0.5 rounded-full">
-                      8-9 Asientos
-                    </span>
-                  </div>
-                  <button
-                    class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface-variant hover:text-error transition-colors flex items-center justify-center shadow-xs">
-                    <span class="material-symbols-outlined text-[18px]">favorite</span>
-                  </button>
-                  <span
-                    class="absolute bottom-2 left-3 font-label-sm text-[10px] text-outline bg-surface-container-lowest/90 px-1.5 py-0.5 rounded">
-                    MAHARent Flotas
-                  </span>
-                </div>
-                <div class="p-space-md flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3
-                      class="font-headline-sm text-headline-sm font-bold text-on-background group-hover:text-secondary transition-colors">
-                      Mercedes-Benz Vito 116 CDI Tourer
-                    </h3>
-                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
-                      Monovolumen / Furgoneta · 9G-TRONIC Automático · Diésel
-                    </p>
-                    <!-- Technical Micro-Grid -->
-                    <div
-                      class="grid grid-cols-4 gap-1 py-space-xs bg-surface-container-low rounded-lg text-center mb-space-sm">
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">speed</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">163 CV</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">local_gas_station</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">7.2 L/100</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span
-                          class="material-symbols-outlined text-[16px] text-outline">airline_seat_recline_normal</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">8 Plazas</span>
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span class="material-symbols-outlined text-[16px] text-outline">luggage</span>
-                        <span class="font-label-sm text-[11px] font-bold text-on-surface">990 L</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="flex items-baseline justify-between mb-1">
-                      <div>
-                        <span
-                          class="text-tertiary-container font-headline-xl text-headline-xl font-extrabold tracking-tight">589
-                          €</span>
-                        <span class="font-body-sm text-body-sm text-on-surface-variant">/mes + IVA</span>
-                      </div>
-                      <span
-                        class="font-label-sm text-[11px] bg-secondary-fixed text-on-secondary-fixed font-bold px-2 py-0.5 rounded">
-                        Sin entrada
-                      </span>
-                    </div>
-                    <div
-                      class="flex items-center justify-between text-body-sm font-body-sm text-outline-variant mb-space-sm text-[12px]">
-                      <span class="">48 meses · 25.000 km/año</span>
-                      <span class="text-secondary font-bold flex items-center gap-0.5">
-                        <span class="material-symbols-outlined text-[14px]">check_circle</span> Stock 48h
-                      </span>
-                    </div>
-                    <a class="w-full bg-primary-container hover:bg-secondary text-on-primary font-label-lg text-label-lg py-2 rounded-lg text-center transition-colors flex items-center justify-center gap-1"
-                      href="vehiculo.html">
-                      <span class="">Ver vehículo</span>
-                      <span class="material-symbols-outlined text-[18px]">chevron_right</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 6. PAGINACIÓN Y CONTROL DE NAVEGACIÓN -->
-            <div
-              class="mt-space-lg bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm">
-              <span class="font-body-sm text-body-sm text-on-surface-variant">
-                Mostrando <strong class="text-on-surface">1 - 9</strong> de <strong class="text-on-surface">24</strong>
-                vehículos
+
+            <fieldset class="filters__group">
+              <legend class="filters__legend">Proveedor Renting</legend>
+              <ul class="filters__options">
+                <li><label class="filters__option"><span class="filters__option-text">MAHARent Selection</span><input
+                      class="filters__input" type="checkbox" name="proveedor" value="maharent" checked></label></li>
+                <li><label class="filters__option"><span class="filters__option-text">Arval Renting</span><input
+                      class="filters__input" type="checkbox" name="proveedor" value="arval" checked></label></li>
+                <li><label class="filters__option"><span class="filters__option-text">LeasePlan / ALD</span><input
+                      class="filters__input" type="checkbox" name="proveedor" value="leaseplan"></label></li>
+                <li><label class="filters__option"><span class="filters__option-text">Santander Consumer</span><input
+                      class="filters__input" type="checkbox" name="proveedor" value="santander"></label></li>
+              </ul>
+            </fieldset>
+          </div>
+        </form>
+      </aside>
+
+      <section class="results grid__item grid__item--lg-span-9" aria-labelledby="results-title">
+        <header class="results__header">
+          <div class="results__summary">
+            <h2 class="results__title" id="results-title">Vehículos disponibles</h2>
+            <p class="results__live" aria-live="polite">
+              <span class="results__pulse" aria-hidden="true"></span>
+              24 resultados en directo
+            </p>
+          </div>
+          <div class="results__tools">
+            <label class="results__sort" for="sort-select">
+              <span class="results__sort-label">Ordenar por:</span>
+              <span class="results__select-wrapper">
+                <select class="results__select" id="sort-select" name="orden">
+                  <option>Relevancia</option>
+                  <option>Precio: menor a mayor</option>
+                  <option>Precio: mayor a menor</option>
+                  <option>Más recientes</option>
+                  <option>Menor cuota inicial</option>
+                </select>
+                <span class="icon icon--md results__select-icon" aria-hidden="true">expand_more</span>
               </span>
-              <nav aria-label="Paginación" class="flex items-center gap-1">
-                <button
-                  class="px-space-sm py-1.5 rounded-lg text-body-sm font-body-sm text-outline-variant hover:bg-surface-container flex items-center gap-1 transition-colors cursor-not-allowed opacity-50"
-                  disabled="">
-                  <span class="material-symbols-outlined text-[18px]">arrow_back</span>
-                  <span class="hidden sm:inline">Anterior</span>
-                </button>
-                <button
-                  class="w-9 h-9 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center font-bold shadow-xs">
-                  1
-                </button>
-                <button
-                  class="w-9 h-9 rounded-lg hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center transition-colors">
-                  2
-                </button>
-                <button
-                  class="w-9 h-9 rounded-lg hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center transition-colors">
-                  3
-                </button>
-                <span class="px-1 text-outline">...</span>
-                <button
-                  class="px-space-sm py-1.5 rounded-lg text-body-sm font-body-sm text-on-surface hover:bg-surface-container flex items-center gap-1 transition-colors">
-                  <span class="hidden sm:inline">Siguiente</span>
-                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                </button>
-              </nav>
+            </label>
+            <div class="view-toggle" role="group" aria-label="Tipo de vista" data-view-toggle="vehicle-list">
+              <button class="view-toggle__button view-toggle__button--active" type="button" aria-pressed="true"
+                aria-label="Vista cuadrícula" title="Vista cuadrícula" data-view="grid">
+                <span class="icon icon--md" aria-hidden="true">grid_view</span>
+              </button>
+              <button class="view-toggle__button" type="button" aria-pressed="false" aria-label="Vista lista"
+                title="Vista lista" data-view="list">
+                <span class="icon icon--md" aria-hidden="true">view_list</span>
+              </button>
             </div>
-          </main>
-        </div>
-      </div>
-      <!-- 7. BANNER CTA INFORMATIVO INFERIOR -->
-      <section class="max-w-[1440px] mx-auto w-full px-margin-sm md:px-margin lg:px-margin-lg pb-space-xl">
-        <div
-          class="relative bg-gradient-to-r from-primary-container via-surface-tint/80 to-secondary-container rounded-2xl p-space-lg md:p-space-xl text-on-primary shadow-lg overflow-hidden">
-          <!-- Decorative background blur lines -->
-          <div
-            class="absolute -right-10 -bottom-10 w-64 h-64 bg-tertiary-fixed-dim/20 rounded-full blur-2xl pointer-events-none">
           </div>
-          <div class="relative flex flex-col md:flex-row items-center justify-between gap-space-lg">
-            <div class="max-w-2xl text-center md:text-left">
-              <div
-                class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-on-primary/10 text-tertiary-fixed mb-space-xs font-label-sm text-label-sm">
-                <span class="material-symbols-outlined text-[16px]">support_agent</span>
-                Atención personalizada de renting
+        </header>
+
+        <ul class="results__list" id="vehicle-list">
+          <li class="results__item">
+            <article class="vehicle-card">
+              <figure class="vehicle-card__media">
+                <img class="vehicle-card__image" loading="lazy" alt="BMW X1 azul metalizado en estudio, vista de perfil"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhgIHY5n-74zju5FhVAFmPnBbiO90b_3v3qYRP7_hhDBN5a9y0d4sbD082IFrV832C9qTTn-mwOFxpoko20bnYzqpoHFg60FFkIzQxZsyIrKOgGXv2qY5-dQVocCcT3ChLJHXBROrfX-wElbRYUPCQc2xPjzlytZbL-8V-aq3ROLEZaeraY2vMY6InE4tNeTwxWB-Iimc7i2m2ub18lCV06OpmNaprZBWAHgGvST3eeyoQPWmhl6Q28g">
+                <ul class="vehicle-card__badges">
+                  <li><span class="badge badge--dark"><span class="icon icon--xs badge__icon" aria-hidden="true">view_in_ar</span>3D disponible</span></li>
+                  <li><span class="badge badge--info">Etiqueta ECO</span></li>
+                </ul>
+                <button class="vehicle-card__favorite" type="button" aria-pressed="false"
+                  aria-label="Guardar BMW X1 sDrive18d en favoritos" data-favorite>
+                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                </button>
+                <figcaption class="vehicle-card__provider">Arval Renting</figcaption>
+              </figure>
+              <div class="vehicle-card__body">
+                <header class="vehicle-card__header">
+                  <h3 class="vehicle-card__title">BMW X1 sDrive18d</h3>
+                  <p class="vehicle-card__subtitle">SUV · Automático · Mild-Hybrid Diésel</p>
+                </header>
+                <dl class="vehicle-card__features">
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">speed</span>150 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Consumo</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">local_gas_station</span>4.9 L/100</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>540 L</dd></div>
+                </dl>
+                <footer class="vehicle-card__footer">
+                  <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">449 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
+                  <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
+                  <p class="vehicle-card__terms">36 meses · 15.000 km/año</p>
+                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">check_circle</span>Stock 48h</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> BMW X1 sDrive18d</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                </footer>
               </div>
-              <h2 class="font-headline-lg text-headline-lg font-bold mb-space-xs text-on-primary">
-                ¿No encuentras lo que buscas o necesitas una flota para tu empresa?
-              </h2>
-              <p class="font-body-md text-body-md text-surface-container-high leading-relaxed">
-                Nuestros especialistas en renting multimarca configuran una propuesta a medida en menos de 15 minutos,
-                sin permanencias ocultas y con deducción fiscal óptima.
-              </p>
-            </div>
-            <div class="flex flex-col sm:flex-row items-center gap-space-sm w-full md:w-auto">
-              <button
-                class="w-full sm:w-auto bg-tertiary-fixed-dim hover:bg-tertiary-fixed text-tertiary-container font-label-lg text-label-lg px-space-lg py-space-sm rounded-lg transition-transform active:scale-95 shadow-md flex items-center justify-center gap-space-xs whitespace-nowrap">
-                <span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
-                <span class="">Contactar con un asesor</span>
-              </button>
-              <button
-                class="w-full sm:w-auto bg-on-primary/15 hover:bg-on-primary/25 text-on-primary font-label-lg text-label-lg px-space-lg py-space-sm rounded-lg transition-colors flex items-center justify-center whitespace-nowrap">
-                Ver renting corporativo
-              </button>
-            </div>
-          </div>
-        </div>
+            </article>
+          </li>
+
+          <li class="results__item">
+            <article class="vehicle-card">
+              <figure class="vehicle-card__media">
+                <img class="vehicle-card__image" loading="lazy" alt="Tesla Model Y blanco perla en estudio, vista tres cuartos delantera"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0kGW1q5uAcmDe74L4J7veHquX2qkkhi4NokqAdVal6TBe0HoLIzUZUgcro5uUp-g6itc2SphnWdUGq98bCIr5ElNnhvmHBCh_l-PQFiPufQ5p0qnuosQZw8w8Kik-w_SeJxOt0Y9jFuvPEEwcKl5lxEBgyNEw5xHKxqbjtwIoTh6ad4MMj6dclBkovcYOK1GRoawqV-bMcY9pK7O7g8lrN0WCZrrkwh93eodfN84uUlBdnlKyICsgkw">
+                <ul class="vehicle-card__badges">
+                  <li><span class="badge badge--dark"><span class="icon icon--xs badge__icon" aria-hidden="true">view_in_ar</span>3D disponible</span></li>
+                  <li><span class="badge badge--info">0 Emisiones</span></li>
+                </ul>
+                <button class="vehicle-card__favorite" type="button" aria-pressed="true"
+                  aria-label="Guardar Tesla Model Y Gran Autonomía en favoritos" data-favorite>
+                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                </button>
+                <figcaption class="vehicle-card__provider">MAHARent Selection</figcaption>
+              </figure>
+              <div class="vehicle-card__body">
+                <header class="vehicle-card__header">
+                  <h3 class="vehicle-card__title">Tesla Model Y Gran Autonomía</h3>
+                  <p class="vehicle-card__subtitle">SUV Crossover · Tracción Integral AWD · 100% Eléctrico</p>
+                </header>
+                <dl class="vehicle-card__features">
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">bolt</span>514 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Autonomía</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">ev_station</span>533 km</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>854 L</dd></div>
+                </dl>
+                <footer class="vehicle-card__footer">
+                  <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">520 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
+                  <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
+                  <p class="vehicle-card__terms">48 meses · 15.000 km/año</p>
+                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">local_shipping</span>Entrega 7 días</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Tesla Model Y Gran Autonomía</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                </footer>
+              </div>
+            </article>
+          </li>
+
+          <li class="results__item">
+            <article class="vehicle-card">
+              <figure class="vehicle-card__media">
+                <img class="vehicle-card__image" loading="lazy" alt="Audi A4 Avant gris plata en estudio con fondo oscuro"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAetWcoBWSER0K6Puk1DCH3btIgs6c7F9QyIMf1v0O26WvsUckU7Y1I7B4A8lPxN4huRU4QdFPx9_GYg_lysMZRMBIM6T3WnWMLAfXlhEIrgMiuKAWSNU9E1SFn80OlsCx-4elfv_UBf6SgpJ2P7wzUHQwM_3Ur6rc0srBE1GHyhFhVU9iuddFosh_BvgeTWOPF_UR0-ov7pALZPpMd50ajvsRHXo2-9vUwtKbZbgL0TZGOMyLKvQR7FA">
+                <ul class="vehicle-card__badges">
+                  <li><span class="badge badge--dark"><span class="icon icon--xs badge__icon" aria-hidden="true">view_in_ar</span>3D disponible</span></li>
+                  <li><span class="badge badge--info">Etiqueta ECO</span></li>
+                </ul>
+                <button class="vehicle-card__favorite" type="button" aria-pressed="false"
+                  aria-label="Guardar Audi A4 Avant 35 TDI S Line en favoritos" data-favorite>
+                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                </button>
+                <figcaption class="vehicle-card__provider">LeasePlan</figcaption>
+              </figure>
+              <div class="vehicle-card__body">
+                <header class="vehicle-card__header">
+                  <h3 class="vehicle-card__title">Audi A4 Avant 35 TDI S Line</h3>
+                  <p class="vehicle-card__subtitle">Familiar · S tronic Automático · Híbrido Ligero</p>
+                </header>
+                <dl class="vehicle-card__features">
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">speed</span>163 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Consumo</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">local_gas_station</span>4.8 L/100</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>495 L</dd></div>
+                </dl>
+                <footer class="vehicle-card__footer">
+                  <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">465 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
+                  <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
+                  <p class="vehicle-card__terms">36 meses · 20.000 km/año</p>
+                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">check_circle</span>Stock 48h</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Audi A4 Avant 35 TDI S Line</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                </footer>
+              </div>
+            </article>
+          </li>
+
+          <li class="results__item">
+            <article class="vehicle-card">
+              <figure class="vehicle-card__media">
+                <img class="vehicle-card__image" loading="lazy" alt="Cupra Formentor azul petróleo mate con detalles cobre en estudio oscuro"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuApjWqNgGplQxVu2tJi4ujrF2etSx36jbvNetzPQ7fBpg2yu9GCUrXMJafGhgeNm-mqZKvlS2m30DgGxkwLYafBaJf9dh-eM_wDvYjpusZetUo4RmDkloFbSbh9n_NWKRHhepg8OcO5UromlkfN-WOK7U-so8EebCsJ7vNsFAUusZ7uXbapH2ez5aCiv2X3g0FQSTap7ArDpemCvCul7SQhboWuYfTwKMngfUenjwyEchdU5iBzHrjbdA">
+                <ul class="vehicle-card__badges">
+                  <li><span class="badge badge--info">Etiqueta CERO</span></li>
+                  <li><span class="badge badge--warning">Híbrido Enchufable</span></li>
+                </ul>
+                <button class="vehicle-card__favorite" type="button" aria-pressed="false"
+                  aria-label="Guardar Cupra Formentor 1.4 e-HYBRID en favoritos" data-favorite>
+                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                </button>
+                <figcaption class="vehicle-card__provider">MAHARent Selection</figcaption>
+              </figure>
+              <div class="vehicle-card__body">
+                <header class="vehicle-card__header">
+                  <h3 class="vehicle-card__title">Cupra Formentor 1.4 e-HYBRID</h3>
+                  <p class="vehicle-card__subtitle">Crossover Deportivo · Automático DSG · PHEV</p>
+                </header>
+                <dl class="vehicle-card__features">
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">speed</span>204 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Autonomía eléctrica</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">ev_station</span>59 km</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>345 L</dd></div>
+                </dl>
+                <footer class="vehicle-card__footer">
+                  <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">385 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
+                  <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
+                  <p class="vehicle-card__terms">48 meses · 10.000 km/año</p>
+                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">check_circle</span>Stock 48h</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Cupra Formentor 1.4 e-HYBRID</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                </footer>
+              </div>
+            </article>
+          </li>
+
+          <li class="results__item">
+            <article class="vehicle-card">
+              <figure class="vehicle-card__media">
+                <img class="vehicle-card__image" loading="lazy" alt="Mercedes-Benz EQA blanco polar sobre plataforma reflectante con luz azul"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtM49NjXouC11HqDE2-N5ftNSfUvU_t2EC2T26_IBZ7gs2n3ItdbLwXzcMY7XTxnRSPhYqKD_HxOJijVc1zF0Ds7T7sNE93szocgnV1B8BNgQnRD1wNO97Jjn_96KKceZkv66qlkiDNFfmZrm-03s82hIIg6VkEIdT8JDDhXrISJlYK9gOEmKP4XBVf8-Fe6YMx1qO4O8bLG-kkmWi5ep20SiASJ7WpiQ-RBMH3fZP_xutW7kR0HEcfg">
+                <ul class="vehicle-card__badges">
+                  <li><span class="badge badge--info">0 Emisiones</span></li>
+                  <li><span class="badge badge--warning">Top Ventas</span></li>
+                </ul>
+                <button class="vehicle-card__favorite" type="button" aria-pressed="false"
+                  aria-label="Guardar Mercedes-Benz EQA 250+ en favoritos" data-favorite>
+                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                </button>
+                <figcaption class="vehicle-card__provider">Santander Consumer</figcaption>
+              </figure>
+              <div class="vehicle-card__body">
+                <header class="vehicle-card__header">
+                  <h3 class="vehicle-card__title">Mercedes-Benz EQA 250+</h3>
+                  <p class="vehicle-card__subtitle">SUV Compacto · Automático · 100% Eléctrico</p>
+                </header>
+                <dl class="vehicle-card__features">
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">bolt</span>190 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Autonomía</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">ev_station</span>530 km</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>340 L</dd></div>
+                </dl>
+                <footer class="vehicle-card__footer">
+                  <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">495 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
+                  <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
+                  <p class="vehicle-card__terms">36 meses · 15.000 km/año</p>
+                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">local_shipping</span>10 días</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Mercedes-Benz EQA 250+</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                </footer>
+              </div>
+            </article>
+          </li>
+
+          <li class="results__item">
+            <article class="vehicle-card">
+              <figure class="vehicle-card__media">
+                <img class="vehicle-card__image" loading="lazy" alt="Volkswagen ID.4 azul crepúsculo con techo negro bitono en estudio"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPPVehMO4g7Q7aDHmNZKH7i4TfiZScnn5hXn4E9AzSjGlBd5BhJDMO5nK9_BJ07psyXBytZ750j9w6bgP7PNUCsnhubh0Z0LVCl6hBpnQj6V1cBv4q0OmQuYeHIFefMogRs-7dRXj6wHS6_wm4I3mTG4yhNKbhnecKfWcS5DPom6goFqtqs5e2l-6X9Maihqhq_jWjMVwiEQJxi-Lnj2Dv1tZhObmXn4PwN6h3KeKKXAzdVWqk5JVpHw">
+                <ul class="vehicle-card__badges">
+                  <li><span class="badge badge--info">0 Emisiones</span></li>
+                  <li><span class="badge badge--warning">Entrega 48h</span></li>
+                </ul>
+                <button class="vehicle-card__favorite" type="button" aria-pressed="false"
+                  aria-label="Guardar Volkswagen ID.4 Pro en favoritos" data-favorite>
+                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                </button>
+                <figcaption class="vehicle-card__provider">Arval Renting</figcaption>
+              </figure>
+              <div class="vehicle-card__body">
+                <header class="vehicle-card__header">
+                  <h3 class="vehicle-card__title">Volkswagen ID.4 Pro</h3>
+                  <p class="vehicle-card__subtitle">SUV Eléctrico Familiar · Batería 77 kWh</p>
+                </header>
+                <dl class="vehicle-card__features">
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">bolt</span>286 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Autonomía</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">ev_station</span>543 km</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>543 L</dd></div>
+                </dl>
+                <footer class="vehicle-card__footer">
+                  <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">430 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
+                  <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
+                  <p class="vehicle-card__terms">48 meses · 15.000 km/año</p>
+                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">check_circle</span>Stock 48h</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Volkswagen ID.4 Pro</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                </footer>
+              </div>
+            </article>
+          </li>
+
+          <li class="results__item">
+            <article class="vehicle-card">
+              <figure class="vehicle-card__media">
+                <img class="vehicle-card__image" loading="lazy" alt="Renault Austral E-Tech plata y negro mate, perfil lateral en estudio"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuATVNn1yBFmDsOxPFcY5z5xOOM64vlYLVjLdaTIfk67EinTPv_ZLEXlcPyEY5-CvVGyd1cAH4POaduRHua_ns8zpD07dfWWnsmJqh9aAsdr7YzfEgnBV2IJBX_6V1zK_pYqJDdjGQs5drFL2PN7ddlOAn3OxxxL_d8XYsYEDo33nPWPUkqvdcyhhyHQpXxvxllmIgEw89yi4EqXkekjUOw7l0wtdOqSvMWKdd2jCD1A69IkTMjMo4dIEg">
+                <ul class="vehicle-card__badges">
+                  <li><span class="badge badge--info">Etiqueta ECO</span></li>
+                  <li><span class="badge badge--warning">Full Hybrid</span></li>
+                </ul>
+                <button class="vehicle-card__favorite" type="button" aria-pressed="false"
+                  aria-label="Guardar Renault Austral E-Tech 200 en favoritos" data-favorite>
+                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                </button>
+                <figcaption class="vehicle-card__provider">MAHARent Direct</figcaption>
+              </figure>
+              <div class="vehicle-card__body">
+                <header class="vehicle-card__header">
+                  <h3 class="vehicle-card__title">Renault Austral E-Tech 200</h3>
+                  <p class="vehicle-card__subtitle">SUV Familiar · Automático Multimodo · Híbrido Autorecargable</p>
+                </header>
+                <dl class="vehicle-card__features">
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">speed</span>200 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Consumo</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">local_gas_station</span>4.6 L/100</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>500 L</dd></div>
+                </dl>
+                <footer class="vehicle-card__footer">
+                  <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">339 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
+                  <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
+                  <p class="vehicle-card__terms">48 meses · 10.000 km/año</p>
+                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">check_circle</span>Stock 48h</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Renault Austral E-Tech 200</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                </footer>
+              </div>
+            </article>
+          </li>
+
+          <li class="results__item">
+            <article class="vehicle-card">
+              <figure class="vehicle-card__media">
+                <img class="vehicle-card__image" loading="lazy" alt="Peugeot 3008 gris oscuro metalizado, vista tres cuartos delantera en estudio"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMEAJEGH4JvDb4VggBSUpEsixERkNHmZBNiK5ZojmWdhj4KeX1md4I6ciE4FpD5SUF4_bunIMlH1qWr0goBW7yheyTqnlfGoRJCebjv5JKTU4v3AF093AChEpvrzJM4DigiFeDOsfGo9ZJZ4Uwhz_k-IaKXh8drgA4KwxGuPZhelHhGwyAw2aemnq3cVLYSMOuO-BLcJUpQy5GiZSKUQaUut7jOec1eW-TMZsHXOFJgrHndy_Xznl2YA">
+                <ul class="vehicle-card__badges">
+                  <li><span class="badge badge--info">Etiqueta ECO</span></li>
+                  <li><span class="badge badge--warning">Nuevo Diseño</span></li>
+                </ul>
+                <button class="vehicle-card__favorite" type="button" aria-pressed="false"
+                  aria-label="Guardar Peugeot 3008 Hybrid 136 e-DCS6 GT en favoritos" data-favorite>
+                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                </button>
+                <figcaption class="vehicle-card__provider">ALD Automotive</figcaption>
+              </figure>
+              <div class="vehicle-card__body">
+                <header class="vehicle-card__header">
+                  <h3 class="vehicle-card__title">Peugeot 3008 Hybrid 136 e-DCS6 GT</h3>
+                  <p class="vehicle-card__subtitle">Fastback SUV · Doble embrague 6 vel · Microhíbrido</p>
+                </header>
+                <dl class="vehicle-card__features">
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">speed</span>136 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Consumo</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">local_gas_station</span>5.5 L/100</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>520 L</dd></div>
+                </dl>
+                <footer class="vehicle-card__footer">
+                  <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">369 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
+                  <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
+                  <p class="vehicle-card__terms">36 meses · 15.000 km/año</p>
+                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">check_circle</span>Stock 48h</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Peugeot 3008 Hybrid 136 e-DCS6 GT</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                </footer>
+              </div>
+            </article>
+          </li>
+
+          <li class="results__item">
+            <article class="vehicle-card">
+              <figure class="vehicle-card__media">
+                <img class="vehicle-card__image" loading="lazy" alt="Mercedes-Benz Vito Tourer negro obsidiana en estudio amplio con suelo brillante"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGzRDZOZMl_ufi6m9gsG9WajDh0-BE0jN5DXi-gCubQJryJGZXAO_eqBXsoPOZxslZSQHF7mazoElMDFumd-F2RfvSo_9VEwyJLOVgJiNPMDIRmHSYJpC7GPpeciCjaPWyJN2CPuuN67eYiHbfGRqZmnDML8N083tn9yl2tqT8G5QqHKgKjSbKRYin_3AOPG9_vHVEiloBjRBGkrVcX3xR4XbDBtvlDlGiU8aUBWMYqNSEApquU3_R2g">
+                <ul class="vehicle-card__badges">
+                  <li><span class="badge badge--dark">Especial Empresas</span></li>
+                  <li><span class="badge badge--warning">8-9 Asientos</span></li>
+                </ul>
+                <button class="vehicle-card__favorite" type="button" aria-pressed="false"
+                  aria-label="Guardar Mercedes-Benz Vito 116 CDI Tourer en favoritos" data-favorite>
+                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                </button>
+                <figcaption class="vehicle-card__provider">MAHARent Flotas</figcaption>
+              </figure>
+              <div class="vehicle-card__body">
+                <header class="vehicle-card__header">
+                  <h3 class="vehicle-card__title">Mercedes-Benz Vito 116 CDI Tourer</h3>
+                  <p class="vehicle-card__subtitle">Monovolumen / Furgoneta · 9G-TRONIC Automático · Diésel</p>
+                </header>
+                <dl class="vehicle-card__features">
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">speed</span>163 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Consumo</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">local_gas_station</span>7.2 L/100</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>8 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>990 L</dd></div>
+                </dl>
+                <footer class="vehicle-card__footer">
+                  <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">589 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
+                  <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
+                  <p class="vehicle-card__terms">48 meses · 25.000 km/año</p>
+                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">check_circle</span>Stock 48h</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Mercedes-Benz Vito 116 CDI Tourer</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                </footer>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <footer class="results__footer">
+          <p class="results__count">Mostrando <strong>1 - 9</strong> de <strong>24</strong> vehículos</p>
+          <nav class="pagination" aria-label="Paginación">
+            <ul class="pagination__list">
+              <li><span class="pagination__link pagination__link--disabled" aria-disabled="true">
+                  <span class="icon icon--md" aria-hidden="true">arrow_back</span>Anterior</span></li>
+              <li><a class="pagination__link pagination__link--current" href="marketplace.html" aria-current="page"><span class="u-visually-hidden">Página </span>1</a></li>
+              <li><a class="pagination__link" href="marketplace.html?pagina=2"><span class="u-visually-hidden">Página </span>2</a></li>
+              <li><a class="pagination__link" href="marketplace.html?pagina=3"><span class="u-visually-hidden">Página </span>3</a></li>
+              <li><span class="pagination__gap" aria-hidden="true">...</span></li>
+              <li><a class="pagination__link" href="marketplace.html?pagina=2">Siguiente<span class="icon icon--md" aria-hidden="true">arrow_forward</span></a></li>
+            </ul>
+          </nav>
+        </footer>
       </section>
-      <!-- Interactive script for visual slider sync and favorite toggling -->
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          // Dynamic slider value display
-          const slider = document.getElementById('price-range');
-          const display = document.getElementById('price-display');
-          if (slider && display) {
-            slider.addEventListener('input', (e) => {
-              display.textContent = `Hasta ${e.target.value} €/mes`;
-            });
-          }
-
-          // Reset button feedback
-          const resetBtn = document.getElementById('reset-filters');
-          if (resetBtn && slider && display) {
-            resetBtn.addEventListener('click', () => {
-              slider.value = 650;
-              display.textContent = 'Hasta 650 €/mes';
-            });
-          }
-
-          // Micro-interaction for favorites
-          document.querySelectorAll('button:has(.material-symbols-outlined)').forEach(btn => {
-            const icon = btn.querySelector('.material-symbols-outlined');
-            if (icon && icon.textContent.trim() === 'favorite') {
-              btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                const isFilled = icon.style.fontVariationSettings?.includes("'FILL' 1");
-                if (isFilled) {
-                  icon.style.fontVariationSettings = "'FILL' 0";
-                  icon.classList.remove('text-error');
-                  icon.classList.add('text-on-surface-variant');
-                } else {
-                  icon.style.fontVariationSettings = "'FILL' 1";
-                  icon.classList.add('text-error');
-                  icon.classList.remove('text-on-surface-variant');
-                }
-              });
-            }
-          });
-        });
-      </script>
     </div>
+
+    <section class="marketplace-cta" aria-labelledby="marketplace-cta-title">
+      <div class="marketplace-cta__inner">
+        <header class="marketplace-cta__content">
+          <p class="badge marketplace-cta__eyebrow">
+            <span class="icon icon--sm" aria-hidden="true">support_agent</span>
+            Atención personalizada de renting
+          </p>
+          <h2 class="marketplace-cta__title" id="marketplace-cta-title">¿No encuentras lo que buscas o necesitas una
+            flota para tu empresa?</h2>
+          <p class="marketplace-cta__text">
+            Nuestros especialistas en renting multimarca configuran una propuesta a medida en menos de 15 minutos,
+            sin permanencias ocultas y con deducción fiscal óptima.
+          </p>
+        </header>
+        <ul class="marketplace-cta__actions">
+          <li class="marketplace-cta__action"><a class="btn btn--cta btn--lg" href="contacto.html"><span
+                class="icon icon--md" aria-hidden="true">phone_in_talk</span>Contactar con un asesor</a></li>
+          <li class="marketplace-cta__action"><a class="btn btn--outline btn--lg" href="dashboard.html">Ver renting
+              corporativo</a></li>
+        </ul>
+      </div>
+    </section>
   </main>
-  <footer class="w-full bg-surface-container-lowest border-t border-surface-container-high py-12 pb-16 mt-auto">
-    <div
-      class="max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg flex flex-col md:flex-row items-center justify-between gap-space-md">
-      <div class="flex flex-col sm:flex-row items-center gap-space-xs sm:gap-space-sm text-center sm:text-left"><span
-          class="font-label-lg text-label-lg font-bold text-on-background">MAHARent</span><span
-          class="hidden sm:inline text-outline-variant">•</span><span
-          class="font-body-sm text-body-sm text-on-surface-variant">Renting Inteligente</span></div>
-      <nav class="flex flex-wrap items-center justify-center gap-x-space-md gap-y-space-xs"><a
-          class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-          data-path="marketplace" href="marketplace.html">Marketplace</a><span class="text-outline-variant font-body-sm">·</span><a
-          class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-          data-path="empresas" href="marketplace.html">Empresas</a><span class="text-outline-variant font-body-sm">·</span><a
-          class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-          data-path="contacto" href="#">Contacto</a><span class="text-outline-variant font-body-sm">·</span><a
-          class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-          data-path="terminos-y-condiciones" href="#">Términos y condiciones</a><span
-          class="text-outline-variant font-body-sm">·</span><a
-          class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-          data-path="politica-de-privacidad" href="#">Política de privacidad</a></nav>
-      <div class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-right">© 2026 MAHARent. Todos
-        los derechos reservados.</div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__brand">
+        <span class="footer__name">MAHARent</span>
+        <span class="footer__tagline">· Renting Inteligente</span>
+      </p>
+      <nav aria-label="Enlaces del pie de página">
+        <ul class="footer__list">
+          <li><a class="footer__link" href="marketplace.html">Marketplace</a></li>
+          <li><a class="footer__link" href="dashboard.html">Empresas</a></li>
+          <li><a class="footer__link" href="contacto.html">Contacto</a></li>
+          <li><a class="footer__link" href="#">Términos y condiciones</a></li>
+          <li><a class="footer__link" href="#">Política de privacidad</a></li>
+        </ul>
+      </nav>
+      <p class="footer__copy">© 2026 MAHARent. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <div id="user-drawer-backdrop"
-    class="fixed inset-0 bg-primary-container/40 backdrop-blur-xs z-50 transition-opacity duration-300 pointer-events-auto">
-    <div id="user-profile-drawer"
-      class="fixed top-0 right-0 bottom-0 w-80 sm:w-96 bg-surface-container-lowest shadow-2xl flex flex-col justify-between border-l border-surface-container-high transition-transform duration-300 ease-out z-50 transform translate-x-0">
-      <div class="flex flex-col h-full">
-        <div
-          class="p-space-md border-b border-surface-container-high flex items-center justify-between bg-surface-container-low">
-          <div class="flex items-center gap-space-sm">
-            <div class="relative">
-              <div
-                class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-headline-sm shadow-xs">
-                <span class="material-symbols-outlined text-[20px]">person</span></div><span
-                class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-secondary border-2 border-surface-container-lowest"></span>
-            </div>
-            <div class="flex flex-col"><span
-                class="font-label-lg text-label-lg font-bold text-on-background leading-tight">Carlos
-                Morales</span><span
-                class="font-body-sm text-[12px] text-on-surface-variant leading-tight truncate max-w-[170px]">carlos.morales@empresa.es</span>
-            </div>
-          </div><button id="close-user-drawer" type="button" aria-label="Cerrar menú"
-            class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors cursor-pointer"><span
-              class="material-symbols-outlined text-[20px]">close</span></button>
-        </div>
-        <div
-          class="px-space-md py-space-sm bg-tertiary-fixed-dim/15 border-b border-surface-container-high flex items-center justify-between">
-          <span
-            class="font-label-sm text-[11px] font-bold text-tertiary-container uppercase tracking-wider flex items-center gap-1"><span
-              class="material-symbols-outlined text-[14px]">verified</span> Cliente Premium</span><span
-            class="font-label-sm text-[11px] bg-secondary-fixed text-on-secondary-fixed font-bold px-2 py-0.5 rounded-full">2
-            activos</span></div>
-        <nav class="p-space-md flex flex-col gap-1 overflow-y-auto flex-1"><a href="#perfil"
-            class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container text-on-surface hover:text-secondary transition-colors group">
-            <div class="flex items-center gap-space-sm">
-              <div
-                class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-outline group-hover:bg-secondary-fixed group-hover:text-secondary transition-colors">
-                <span class="material-symbols-outlined text-[20px]">account_circle</span></div><span
-                class="font-label-lg text-label-lg text-on-surface group-hover:text-secondary font-medium">Perfil</span>
-            </div><span
-              class="material-symbols-outlined text-outline text-[18px] group-hover:text-secondary transition-colors">chevron_right</span>
-          </a><a href="#solicitudes"
-            class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container text-on-surface hover:text-secondary transition-colors group">
-            <div class="flex items-center gap-space-sm">
-              <div
-                class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-outline group-hover:bg-secondary-fixed group-hover:text-secondary transition-colors">
-                <span class="material-symbols-outlined text-[20px]">assignment</span></div><span
-                class="font-label-lg text-label-lg text-on-surface group-hover:text-secondary font-medium">Mis
-                solicitudes</span>
-            </div>
-            <div class="flex items-center gap-1"><span
-                class="font-label-sm text-[10px] bg-tertiary-fixed text-tertiary-container font-bold px-1.5 py-0.5 rounded-full">1
-                en trámite</span><span
-                class="material-symbols-outlined text-outline text-[18px] group-hover:text-secondary transition-colors">chevron_right</span>
-            </div>
-          </a><a href="#rentings"
-            class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container/60 text-secondary font-semibold transition-colors group">
-            <div class="flex items-center gap-space-sm">
-              <div class="w-8 h-8 rounded-lg bg-secondary text-on-secondary flex items-center justify-center shadow-xs">
-                <span class="material-symbols-outlined text-[20px]">directions_car</span></div><span
-                class="font-label-lg text-label-lg font-bold text-on-background">Mis rentings</span>
-            </div><span class="material-symbols-outlined text-secondary text-[18px]">chevron_right</span>
-          </a><a href="#favoritos"
-            class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container text-on-surface hover:text-secondary transition-colors group">
-            <div class="flex items-center gap-space-sm">
-              <div
-                class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-outline group-hover:bg-secondary-fixed group-hover:text-secondary transition-colors">
-                <span class="material-symbols-outlined text-[20px]">favorite</span></div><span
-                class="font-label-lg text-label-lg text-on-surface group-hover:text-secondary font-medium">Favoritos</span>
-            </div>
-            <div class="flex items-center gap-1"><span
-                class="font-label-sm text-[10px] bg-secondary-fixed text-on-secondary-fixed font-bold px-2 py-0.5 rounded-full">2
-                guardados</span><span
-                class="material-symbols-outlined text-outline text-[18px] group-hover:text-secondary transition-colors">chevron_right</span>
-            </div>
-          </a><a href="#configuracion"
-            class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container text-on-surface hover:text-secondary transition-colors group">
-            <div class="flex items-center gap-space-sm">
-              <div
-                class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-outline group-hover:bg-secondary-fixed group-hover:text-secondary transition-colors">
-                <span class="material-symbols-outlined text-[20px]">settings</span></div><span
-                class="font-label-lg text-label-lg text-on-surface group-hover:text-secondary font-medium">Configuración</span>
-            </div><span
-              class="material-symbols-outlined text-outline text-[18px] group-hover:text-secondary transition-colors">chevron_right</span>
-          </a></nav>
-        <div class="p-space-md border-t border-surface-container-high bg-surface-container-lowest mt-auto"><button
-            type="button"
-            class="w-full flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded-lg border border-surface-container-high hover:bg-error-container hover:text-error text-on-surface-variant font-label-md text-label-md transition-all cursor-pointer"><span
-              class="material-symbols-outlined text-[18px]">logout</span><span class="">Cerrar sesión</span></button>
-        </div>
-      </div>
-    </div>
-  </div>
   <script src="js/main.js" defer></script>
 </body>
 

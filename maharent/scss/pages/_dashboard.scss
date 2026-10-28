@@ -1,20 +1,1306 @@
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
+@use '../abstracts' as *;
 
-.dashboard-stats {
-  @include grid-auto-fit(220px, 1rem);
-  margin-bottom: 2rem;
+// Panel de empresa (dashboard.html): estructura, KPIs, tabla de flota, listas, desplegables, modales y avisos.
 
-  &__card {
-    background-color: $color-bg-card;
-    border: 1px solid $color-border;
-    padding: 1.5rem;
-    border-radius: $border-radius-sm;
+$font-family-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+$menu-width: 14rem;
+
+@mixin menu-surface {
+  display: flex;
+  flex-direction: column;
+  padding-block: $space-sm;
+  background-color: $color-surface-container-lowest;
+  border: 1px solid $color-surface-container;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-card;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+@mixin menu-item {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  width: 100%;
+  padding: $space-sm $space-md;
+  color: $color-on-surface;
+  text-align: left;
+  @include type('label-md');
+  @include interactive($hover-bg: $color-surface-container-low);
+}
+
+// ---------------------------------------------------------------------------
+// Estructura de la página: barra lateral + contenido principal
+// ---------------------------------------------------------------------------
+.dashboard {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to('lg') {
+    flex-direction: row;
+  }
+
+  &__main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: $space-xl;
+    min-width: 0;
+    padding: $margin-sm;
+    scroll-margin-top: $header-height;
+
+    @include respond-to('md') {
+      padding: $margin;
+    }
+  }
+
+  &__toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-md;
+  }
+
+  &__tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-sm;
+  }
+
+  &__welcome {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+
+    @include respond-to('lg') {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__intro {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-sm;
+  }
+
+  &__title {
+    color: $color-on-surface;
+    @include type('headline-xl-mobile');
+
+    @include respond-to('md') {
+      @include type('headline-xl');
+    }
+  }
+
+  &__split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: $space-lg;
+
+    @include respond-to('xl') {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  &__verified {
+    color: $color-secondary;
+    box-shadow: $shadow-button;
+  }
+
+  &__lead {
+    flex-basis: 100%;
+    max-width: 42rem;
+    color: $color-on-surface-variant;
+    @include type('body-lg');
+  }
+
+  &__actions {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-sm;
+  }
+
+  &__action-icon {
+    color: $color-tertiary-fixed;
+  }
+
+  &__kpis {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: $space-md;
+
+    @include respond-to('sm') {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include respond-to('xl') {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+}
+
+// Títulos de grupo de la barra lateral (ocultos en la barra horizontal móvil)
+.side-section {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+
+  &__title {
+    @include visually-hidden;
+    color: $color-on-surface-variant;
+    @include type('label-sm');
+    text-transform: uppercase;
+
+    @include respond-to('lg') {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 0;
+      padding: $space-sm $space-md 0;
+      overflow: visible;
+      clip: auto;
+      white-space: normal;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Ampliación de kpi-card para el panel (iconos, pie, barra de progreso, alerta)
+// ---------------------------------------------------------------------------
+.kpi-card {
+  gap: $space-md;
+
+  &--alert {
+    background-image: linear-gradient(135deg, $color-surface-container-lowest, $color-surface-container);
+  }
+
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: $space-sm;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+
+    &--alert {
+      color: $color-on-tertiary-fixed-variant;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: $color-surface-container;
+    color: $color-secondary;
+    border-radius: $radius-xl;
+
+    &--fleet {
+      background-color: $color-surface-container;
+    }
+
+    &--published {
+      background-color: $color-surface-container-high;
+    }
+
+    &--renting {
+      background-color: $color-surface-container-highest;
+      color: $color-primary-container;
+    }
+
+    &--pending {
+      background-color: $color-tertiary-fixed;
+      color: $color-on-tertiary-fixed-variant;
+    }
+  }
+
+  &__figure {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: $space-sm;
   }
 
   &__value {
-    font-size: 2rem;
-    font-weight: 700;
-    color: $color-accent;
+    &--display {
+      @include type('display-lg');
+      line-height: 1;
+    }
+
+    &--alert {
+      color: $color-tertiary-container;
+    }
+  }
+
+  &__meter {
+    width: 100%;
+    height: 0.375rem;
+    overflow: hidden;
+    background-color: $color-surface-container-low;
+    border: 0;
+    border-radius: $radius-full;
+    appearance: none;
+
+    &::-webkit-progress-bar {
+      background-color: $color-surface-container-low;
+    }
+
+    &::-webkit-progress-value {
+      background-color: $color-secondary;
+      border-radius: $radius-full;
+    }
+
+    &::-moz-progress-bar {
+      background-color: $color-secondary;
+      border-radius: $radius-full;
+    }
+  }
+
+  &__foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-sm;
+    margin-top: auto;
+  }
+
+  &__note {
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-xs;
+    color: $color-secondary;
+    @include type('label-md');
+    @include interactive($hover-color: $color-on-secondary-fixed-variant);
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &--alert {
+      color: $color-on-tertiary-fixed-variant;
+      font-weight: $font-weight-bold;
+
+      &:hover {
+        color: $color-on-tertiary-fixed-variant;
+      }
+    }
+  }
+
+  &__pulse {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: $color-on-tertiary-container;
+    border-radius: $radius-full;
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: dashboard-pulse 1.6s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes dashboard-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Panel (tarjeta de sección con cabecera y pie)
+// ---------------------------------------------------------------------------
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  min-width: 0;
+  padding: $space-md;
+  background-color: $color-surface-container-lowest;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-field;
+  scroll-margin-top: $header-height + $space-md;
+
+  @include respond-to('md') {
+    padding: $space-lg;
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-md;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+  }
+
+  &__title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-sm;
+    color: $color-on-surface;
+    @include type('headline-sm');
+  }
+
+  &__subtitle {
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+  }
+
+  &__tabs {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-sm;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-xs;
+    color: $color-secondary;
+    @include type('label-md');
+    @include interactive($hover-color: $color-on-secondary-fixed-variant);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-sm;
+    margin-top: auto;
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Tabla de flota
+.fleet-table {
+  display: block;
+}
+
+.fleet-cell {
+  white-space: nowrap;
+
+  &--start {
+    text-align: left;
+  }
+
+  &--end {
+    text-align: right;
+  }
+
+  &--head {
+    font-weight: $font-weight-regular;
+    text-align: left;
+  }
+
+  &--muted {
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+  }
+
+  &__price {
+    color: $color-on-surface;
+    @include type('headline-sm');
+    font-weight: $font-weight-bold;
+  }
+
+  &__unit {
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+  }
+}
+
+.fleet-vehicle {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  min-width: 14rem;
+
+  &__image {
+    width: 3rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    object-fit: cover;
+    background-color: $color-surface-container;
+    border-radius: $radius-lg;
+  }
+
+  &__caption {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &__title {
+    color: $color-on-surface;
+    @include type('label-lg');
+  }
+
+  &__subtitle {
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+  }
+}
+
+.plate {
+  display: inline-block;
+  padding: $space-xs $space-sm;
+  background-color: $color-surface-container-high;
+  color: $color-on-surface;
+  border-radius: $radius-sm;
+  font-family: $font-family-mono;
+  @include type('label-md');
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.05em;
+}
+
+// Estado de vehículo (se combina con badge). El color del punto va en una custom property.
+.status {
+  --status-dot: #{$color-secondary};
+  background-color: $color-surface-container-low;
+  color: $color-secondary;
+  font-weight: $font-weight-semibold;
+
+  &__dot {
+    width: 0.375rem;
+    height: 0.375rem;
+    background-color: var(--status-dot);
+    border-radius: $radius-full;
+  }
+
+  &--renting {
+    background-color: $color-surface-container-highest;
+    color: $color-primary-container;
+  }
+
+  &--available {
+    --status-dot: #{$color-secondary};
+  }
+
+  &--published {
+    --status-dot: #{$color-secondary-container};
+    background-color: $color-surface-container;
+    color: $color-on-surface-variant;
+  }
+
+  &--draft {
+    --status-dot: #{$color-outline};
+    background-color: $color-surface-container;
+    color: $color-on-surface-variant;
+  }
+}
+
+.row-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: $space-xs;
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.375rem;
+  color: $color-on-surface-variant;
+  border-radius: $radius-lg;
+  @include interactive($hover-bg: $color-surface-container-low, $hover-color: $color-secondary);
+
+  &--media {
+    background-color: rgba($color-inverse-surface, 0.7);
+    color: $color-on-primary;
+
+    &:hover {
+      background-color: rgba($color-inverse-surface, 0.9);
+      color: $color-on-primary;
+    }
+  }
+}
+
+// Menú contextual de fila (posición fija calculada con JS mediante custom properties)
+.row-menu {
+  @include menu-surface;
+  position: fixed;
+  top: var(--row-menu-top, 0);
+  left: var(--row-menu-left, 0);
+  z-index: $z-overlay;
+  width: 11rem;
+
+  &__item {
+    @include menu-item;
+
+    &--danger {
+      color: $color-error;
+
+      &:hover {
+        background-color: $color-error-container;
+        color: $color-error;
+      }
+    }
+  }
+
+  &__divider {
+    height: 1px;
+    margin-block: $space-xs;
+    background-color: $color-surface-container-low;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Listas: publicaciones y solicitudes
+// ---------------------------------------------------------------------------
+.fleet-list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: $space-sm;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+    width: 100%;
+    padding: $space-sm;
+    background-color: $color-surface-container-low;
+    border-radius: $radius-xl;
+    text-align: left;
+    @include interactive($hover-bg: $color-surface-container);
+  }
+
+  &__image {
+    width: 4rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+    object-fit: cover;
+    background-color: $color-surface;
+    border-radius: $radius-lg;
+  }
+
+  &__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: $space-xs;
+    min-width: 0;
+  }
+
+  &__headline {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: $space-sm;
+  }
+
+  &__title {
+    overflow: hidden;
+    color: $color-on-surface;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include type('label-lg');
+  }
+
+  &__price {
+    flex-shrink: 0;
+    color: $color-on-tertiary-fixed-variant;
+    @include type('headline-sm');
+    font-weight: $font-weight-bold;
+  }
+
+  &__unit {
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+  }
+
+  &__stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-xs $space-md;
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+  }
+
+  &__stat {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-xs;
+  }
+
+  &__icon {
+    color: $color-secondary;
+
+    &--clicks {
+      color: $color-on-tertiary-container;
+    }
+  }
+
+  &__state {
+    margin-left: auto;
+  }
+}
+
+.activity {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: $space-sm;
+
+  &__item {
+    display: grid;
+    gap: $space-xs $space-md;
+    padding: $space-md;
+    background-color: $color-surface-container-low;
+    border-radius: $radius-xl;
+    transition: background-color $transition-base;
+
+    &:hover {
+      background-color: $color-surface-container;
+    }
+
+  }
+
+  &__name {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-sm;
+  }
+
+  &__applicant {
+    color: $color-on-surface;
+    @include type('label-lg');
+    font-weight: $font-weight-bold;
+  }
+
+  &__type {
+    border-radius: $radius-sm;
+
+    &--company {
+      background-color: $color-surface-container-high;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+  }
+
+  &__meta-item {
+    & + & {
+      &::before {
+        content: '•';
+        margin-inline: $space-sm;
+      }
+    }
+
+    &--today {
+      color: $color-on-tertiary-fixed-variant;
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-sm;
+    margin-top: $space-xs;
+  }
+
+  &__button {
+    padding: $space-xs $space-md;
+    border-radius: $radius-lg;
+    @include type('label-md');
+
+    &--approved {
+      background-color: $color-secondary-fixed;
+      color: $color-on-secondary-fixed-variant;
+      box-shadow: none;
+      cursor: default;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Desplegables de la barra de herramientas y notificaciones
+// ---------------------------------------------------------------------------
+.dropdown {
+  position: relative;
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    padding: $space-sm $space-md;
+    background-color: $color-surface-container-lowest;
+    color: $color-on-surface;
+    text-align: left;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-field;
+    @include type('label-md');
+    @include interactive($hover-bg: $color-surface-container-low);
+
+    &--icon {
+      position: relative;
+      padding: $space-sm;
+      color: $color-on-surface-variant;
+    }
+
+    &--profile {
+      padding: $space-xs $space-sm $space-xs $space-xs;
+    }
+  }
+
+  &__icon {
+    color: $color-secondary;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 0.375rem;
+    right: 0.375rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: $color-on-tertiary-container;
+    border-radius: $radius-full;
+  }
+
+  &__who {
+    display: none;
+    flex-direction: column;
+
+    @include respond-to('sm') {
+      display: flex;
+    }
+  }
+
+  &__name {
+    color: $color-on-surface;
+    @include type('label-md');
+    font-weight: $font-weight-bold;
+  }
+
+  &__role {
+    color: $color-on-surface-variant;
+    @include type('label-sm');
+  }
+
+  &__email {
+    color: $color-on-surface-variant;
+    font-family: $font-family-mono;
+    @include type('body-sm');
+  }
+
+  &__menu {
+    @include menu-surface;
+    position: absolute;
+    top: calc(100% + #{$space-sm});
+    left: 0;
+    z-index: $z-overlay;
+    width: $menu-width;
+    max-width: calc(100vw - #{$margin});
+
+    &--end {
+      right: 0;
+      left: auto;
+    }
+
+    &--wide {
+      width: 20rem;
+      padding-block: 0;
+      overflow: hidden;
+    }
+  }
+
+  &__heading {
+    padding: $space-xs $space-md;
+    color: $color-on-surface-variant;
+    @include type('label-sm');
+    text-transform: uppercase;
+  }
+
+  &__identity {
+    display: flex;
+    flex-direction: column;
+    padding: $space-sm $space-md;
+    border-bottom: 1px solid $color-surface-container-low;
+  }
+
+  &__item {
+    @include menu-item;
+
+    &--accent {
+      color: $color-secondary;
+    }
+
+    &--danger {
+      color: $color-error;
+
+      &:hover {
+        background-color: $color-error-container;
+        color: $color-error;
+      }
+    }
+  }
+
+  &__check {
+    margin-left: auto;
+    color: $color-secondary;
+    visibility: hidden;
+
+    &--on {
+      visibility: visible;
+    }
+  }
+
+  &__divider {
+    height: 1px;
+    margin-block: $space-xs;
+    background-color: $color-surface-container-low;
+  }
+}
+
+.notif {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-sm;
+    padding: $space-sm $space-md;
+    border-bottom: 1px solid $color-surface-container-low;
+  }
+
+  &__title {
+    color: $color-on-surface;
+    @include type('label-lg');
+    font-weight: $font-weight-bold;
+  }
+
+  &__action {
+    color: $color-secondary;
+    @include type('label-md');
+    @include interactive($hover-color: $color-on-secondary-fixed-variant);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__list {
+    max-height: 18rem;
+    overflow-y: auto;
+  }
+
+  &__item {
+    display: flex;
+    gap: $space-sm;
+    padding: $space-sm $space-md;
+    transition: background-color $transition-base;
+
+    &:hover {
+      background-color: $color-surface-bright;
+    }
+
+    & + & {
+      border-top: 1px solid $color-surface-container-low;
+    }
+  }
+
+  &__dot {
+    flex-shrink: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-top: 0.375rem;
+    background-color: $color-outline-variant;
+    border-radius: $radius-full;
+
+    &--warning {
+      background-color: $color-on-tertiary-container;
+    }
+
+    &--info {
+      background-color: $color-secondary;
+    }
+
+    &--read {
+      background-color: $color-outline-variant;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+  }
+
+  &__heading {
+    color: $color-on-surface;
+    @include type('label-md');
+  }
+
+  &__text {
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+  }
+
+  &__time {
+    color: $color-on-surface-variant;
+    @include type('label-sm');
+  }
+
+  &__footer {
+    padding: $space-sm;
+    background-color: $color-surface-container-low;
+    border-top: 1px solid $color-surface-container;
+    text-align: center;
+  }
+
+  &__link {
+    color: $color-secondary;
+    @include type('label-md');
+    @include interactive($hover-color: $color-on-secondary-fixed-variant);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Modales: título, ficha de vehículo y expediente de solicitud
+// ---------------------------------------------------------------------------
+// Rejilla de campos del formulario de vehículo (dos columnas desde sm)
+.vehicle-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: $space-md;
+
+  @include respond-to('sm') {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &__item {
+    min-width: 0;
+
+    &--wide {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.dialog-title {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+
+  &__icon {
+    color: $color-secondary;
+
+    &--warning {
+      color: $color-on-tertiary-container;
+    }
+  }
+}
+
+// El <dialog> modal ya es position: fixed, por lo que sirve de referencia al botón de cierre
+.preview {
+  overflow-x: hidden;
+  &__media {
+    position: relative;
+    overflow: hidden;
+    border-radius: $radius-xl $radius-xl 0 0;
+  }
+
+  &__image {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    background-color: $color-surface-container;
+  }
+
+  &__caption {
+    position: absolute;
+    bottom: $space-md;
+    left: $space-md;
+  }
+
+  &__close {
+    position: absolute;
+    top: $space-md;
+    right: $space-md;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+    padding: $space-lg;
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: $space-xs $space-md;
+    align-items: baseline;
+  }
+
+  &__title {
+    @include type('headline-sm');
+    font-weight: $font-weight-bold;
+  }
+
+  &__price {
+    color: $color-secondary;
+    @include type('headline-sm');
+    font-weight: $font-weight-bold;
+  }
+
+  &__specs {
+    grid-column: 1 / -1;
+    color: $color-on-surface-variant;
+  }
+}
+
+.spec-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: $space-md;
+  padding: $space-md;
+  background-color: $color-surface-container-low;
+  border-radius: $radius-xl;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+  }
+
+  &__term {
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+  }
+
+  &__value {
+    color: $color-on-surface;
+    font-weight: $font-weight-semibold;
+  }
+}
+
+.dossier {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+
+  &__summary {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+    padding: $space-md;
+    background-color: $color-surface-container-low;
+    border-radius: $radius-xl;
+  }
+
+  &__headline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-sm;
+  }
+
+  &__name {
+    color: $color-on-surface;
+    @include type('headline-sm');
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-xs $space-md;
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+  }
+
+  &__ok {
+    color: $color-secondary;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+  }
+
+  &__heading {
+    color: $color-on-surface;
+    @include type('label-md');
+    font-weight: $font-weight-bold;
+  }
+
+  &__vehicle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-md;
+    padding: $space-sm $space-md;
+    border: 1px solid $color-surface-container;
+    border-radius: $radius-lg;
+  }
+
+  &__vehicle-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__model {
+    color: $color-on-surface;
+    @include type('label-lg');
+    font-weight: $font-weight-bold;
+  }
+
+  &__term {
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+  }
+
+  &__fee {
+    color: $color-on-surface;
+    @include type('headline-sm');
+    font-weight: $font-weight-bold;
+  }
+
+  &__note {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+    padding: $space-sm $space-md;
+    background-color: $color-surface-bright;
+    border: 1px solid $color-surface-container;
+    border-radius: $radius-lg;
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+  }
+
+  &__note-title {
+    display: flex;
+    align-items: center;
+    gap: $space-xs;
+    color: $color-secondary;
+    font-weight: $font-weight-semibold;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Avisos (toasts)
+// ---------------------------------------------------------------------------
+.toasts {
+  position: fixed;
+  right: $space-md;
+  bottom: $space-md;
+  z-index: $z-modal + 10;
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  max-width: calc(100vw - #{$margin});
+  pointer-events: none;
+
+  @include respond-to('md') {
+    right: $space-lg;
+    bottom: $space-lg;
+  }
+}
+
+.toast {
+  --toast-icon: #{$color-tertiary-fixed};
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: 0.75rem $space-md;
+  background-color: $color-primary-container;
+  color: $color-on-primary;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-card;
+  opacity: 0;
+  pointer-events: auto;
+  transform: translateY(0.75rem);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  @include type('label-md');
+
+  @media (prefers-reduced-motion: reduce) {
+    transform: none;
+    transition: none;
+  }
+
+  &--visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  &--success {
+    --toast-icon: #{$color-secondary-fixed-dim};
+  }
+
+  &--warn {
+    --toast-icon: #{$color-tertiary-fixed-dim};
+  }
+
+  &__icon {
+    color: var(--toast-icon);
+  }
+
+  &__close {
+    display: inline-flex;
+    margin-left: $space-sm;
+    color: $color-inverse-primary;
+    @include interactive($hover-color: $color-on-primary);
   }
 }

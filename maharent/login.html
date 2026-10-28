@@ -3,1648 +3,199 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="web_blank" name="shell-type">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet">
-  <style>
-    @layer base {
-
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        overscroll-behavior: none;
-      }
-
-      main> :first-child {
-        margin-top: 0 !important;
-      }
-
-      main> :last-child {
-        margin-bottom: 0 !important;
-      }
-    }
-
-    ::-webkit-scrollbar {
-      display: none;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión | MAHARent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script
-    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-high": "#dce9ff", "secondary-fixed": "#dbe1ff", "background": "#f8f9ff", "secondary-container": "#316bf3", "on-secondary-fixed-variant": "#003ea8", "surface-dim": "#cbdbf5", "primary": "#000000", "on-error": "#ffffff", "tertiary": "#000000", "tertiary-container": "#2a1700", "surface-container": "#e5eeff", "on-background": "#0b1c30", "error-container": "#ffdad6", "tertiary-fixed-dim": "#ffb95f", "surface-bright": "#f8f9ff", "secondary": "#0051d5", "on-primary-container": "#77849c", "on-error-container": "#93000a", "outline-variant": "#c5c6cd", "on-tertiary-container": "#b87500", "outline": "#75777d", "inverse-on-surface": "#eaf1ff", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffddb8", "on-tertiary-fixed-variant": "#653e00", "on-tertiary": "#ffffff", "surface-variant": "#d3e4fe", "inverse-surface": "#213145", "on-primary-fixed": "#0e1c2f", "secondary-fixed-dim": "#b4c5ff", "surface-tint": "#525f75", "on-secondary-fixed": "#00174b", "on-surface": "#0b1c30", "inverse-primary": "#bac7e1", "surface-container-low": "#eff4ff", "on-secondary": "#ffffff", "on-surface-variant": "#44474c", "primary-container": "#0e1c2f", "surface-container-highest": "#d3e4fe", "primary-fixed": "#d6e3fe", "error": "#ba1a1a", "on-primary-fixed-variant": "#3a475c", "on-primary": "#ffffff", "on-secondary-container": "#fefcff", "primary-fixed-dim": "#bac7e1", "surface": "#f8f9ff", "on-tertiary-fixed": "#2a1700" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-lg": "3rem", "margin-sm": "1rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "space-md": "1rem", "gutter-sm": "1rem", "margin": "1.5rem", "space-lg": "1.5rem", "gutter-lg": "2rem", "space-xs": "0.25rem", "gutter": "1.5rem" }, "fontFamily": { "display-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"] }, "fontSize": { "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script>
-  <style>
-    *,
-    ::before,
-    ::after {
-      --tw-border-spacing-x: 0;
-      --tw-border-spacing-y: 0;
-      --tw-translate-x: 0;
-      --tw-translate-y: 0;
-      --tw-rotate: 0;
-      --tw-skew-x: 0;
-      --tw-skew-y: 0;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-pan-x: ;
-      --tw-pan-y: ;
-      --tw-pinch-zoom: ;
-      --tw-scroll-snap-strictness: proximity;
-      --tw-gradient-from-position: ;
-      --tw-gradient-via-position: ;
-      --tw-gradient-to-position: ;
-      --tw-ordinal: ;
-      --tw-slashed-zero: ;
-      --tw-numeric-figure: ;
-      --tw-numeric-spacing: ;
-      --tw-numeric-fraction: ;
-      --tw-ring-inset: ;
-      --tw-ring-offset-width: 0px;
-      --tw-ring-offset-color: #fff;
-      --tw-ring-color: rgb(59 130 246 / 0.5);
-      --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-ring-shadow: 0 0 #0000;
-      --tw-shadow: 0 0 #0000;
-      --tw-shadow-colored: 0 0 #0000;
-      --tw-blur: ;
-      --tw-brightness: ;
-      --tw-contrast: ;
-      --tw-grayscale: ;
-      --tw-hue-rotate: ;
-      --tw-invert: ;
-      --tw-saturate: ;
-      --tw-sepia: ;
-      --tw-drop-shadow: ;
-      --tw-backdrop-blur: ;
-      --tw-backdrop-brightness: ;
-      --tw-backdrop-contrast: ;
-      --tw-backdrop-grayscale: ;
-      --tw-backdrop-hue-rotate: ;
-      --tw-backdrop-invert: ;
-      --tw-backdrop-opacity: ;
-      --tw-backdrop-saturate: ;
-      --tw-backdrop-sepia: ;
-      --tw-contain-size: ;
-      --tw-contain-layout: ;
-      --tw-contain-paint: ;
-      --tw-contain-style:
-    }
-
-    ::backdrop {
-      --tw-border-spacing-x: 0;
-      --tw-border-spacing-y: 0;
-      --tw-translate-x: 0;
-      --tw-translate-y: 0;
-      --tw-rotate: 0;
-      --tw-skew-x: 0;
-      --tw-skew-y: 0;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-pan-x: ;
-      --tw-pan-y: ;
-      --tw-pinch-zoom: ;
-      --tw-scroll-snap-strictness: proximity;
-      --tw-gradient-from-position: ;
-      --tw-gradient-via-position: ;
-      --tw-gradient-to-position: ;
-      --tw-ordinal: ;
-      --tw-slashed-zero: ;
-      --tw-numeric-figure: ;
-      --tw-numeric-spacing: ;
-      --tw-numeric-fraction: ;
-      --tw-ring-inset: ;
-      --tw-ring-offset-width: 0px;
-      --tw-ring-offset-color: #fff;
-      --tw-ring-color: rgb(59 130 246 / 0.5);
-      --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-ring-shadow: 0 0 #0000;
-      --tw-shadow: 0 0 #0000;
-      --tw-shadow-colored: 0 0 #0000;
-      --tw-blur: ;
-      --tw-brightness: ;
-      --tw-contrast: ;
-      --tw-grayscale: ;
-      --tw-hue-rotate: ;
-      --tw-invert: ;
-      --tw-saturate: ;
-      --tw-sepia: ;
-      --tw-drop-shadow: ;
-      --tw-backdrop-blur: ;
-      --tw-backdrop-brightness: ;
-      --tw-backdrop-contrast: ;
-      --tw-backdrop-grayscale: ;
-      --tw-backdrop-hue-rotate: ;
-      --tw-backdrop-invert: ;
-      --tw-backdrop-opacity: ;
-      --tw-backdrop-saturate: ;
-      --tw-backdrop-sepia: ;
-      --tw-contain-size: ;
-      --tw-contain-layout: ;
-      --tw-contain-paint: ;
-      --tw-contain-style:
-    }
-
-    /* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
-    *,
-    ::after,
-    ::before {
-      box-sizing: border-box;
-      border-width: 0;
-      border-style: solid;
-      border-color: #e5e7eb
-    }
-
-    ::after,
-    ::before {
-      --tw-content: ''
-    }
-
-    :host,
-    html {
-      line-height: 1.5;
-      -webkit-text-size-adjust: 100%;
-      -moz-tab-size: 4;
-      tab-size: 4;
-      font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-      font-feature-settings: normal;
-      font-variation-settings: normal;
-      -webkit-tap-highlight-color: transparent
-    }
-
-    body {
-      margin: 0;
-      line-height: inherit
-    }
-
-    hr {
-      height: 0;
-      color: inherit;
-      border-top-width: 1px
-    }
-
-    abbr:where([title]) {
-      -webkit-text-decoration: underline dotted;
-      text-decoration: underline dotted
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-size: inherit;
-      font-weight: inherit
-    }
-
-    a {
-      color: inherit;
-      text-decoration: inherit
-    }
-
-    b,
-    strong {
-      font-weight: bolder
-    }
-
-    code,
-    kbd,
-    pre,
-    samp {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-feature-settings: normal;
-      font-variation-settings: normal;
-      font-size: 1em
-    }
-
-    small {
-      font-size: 80%
-    }
-
-    sub,
-    sup {
-      font-size: 75%;
-      line-height: 0;
-      position: relative;
-      vertical-align: baseline
-    }
-
-    sub {
-      bottom: -.25em
-    }
-
-    sup {
-      top: -.5em
-    }
-
-    table {
-      text-indent: 0;
-      border-color: inherit;
-      border-collapse: collapse
-    }
-
-    button,
-    input,
-    optgroup,
-    select,
-    textarea {
-      font-family: inherit;
-      font-feature-settings: inherit;
-      font-variation-settings: inherit;
-      font-size: 100%;
-      font-weight: inherit;
-      line-height: inherit;
-      letter-spacing: inherit;
-      color: inherit;
-      margin: 0;
-      padding: 0
-    }
-
-    button,
-    select {
-      text-transform: none
-    }
-
-    button,
-    input:where([type=button]),
-    input:where([type=reset]),
-    input:where([type=submit]) {
-      -webkit-appearance: button;
-      background-color: transparent;
-      background-image: none
-    }
-
-    :-moz-focusring {
-      outline: auto
-    }
-
-    :-moz-ui-invalid {
-      box-shadow: none
-    }
-
-    progress {
-      vertical-align: baseline
-    }
-
-    ::-webkit-inner-spin-button,
-    ::-webkit-outer-spin-button {
-      height: auto
-    }
-
-    [type=search] {
-      -webkit-appearance: textfield;
-      outline-offset: -2px
-    }
-
-    ::-webkit-search-decoration {
-      -webkit-appearance: none
-    }
-
-    ::-webkit-file-upload-button {
-      -webkit-appearance: button;
-      font: inherit
-    }
-
-    summary {
-      display: list-item
-    }
-
-    blockquote,
-    dd,
-    dl,
-    figure,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    hr,
-    p,
-    pre {
-      margin: 0
-    }
-
-    fieldset {
-      margin: 0;
-      padding: 0
-    }
-
-    legend {
-      padding: 0
-    }
-
-    menu,
-    ol,
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0
-    }
-
-    dialog {
-      padding: 0
-    }
-
-    textarea {
-      resize: vertical
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      opacity: 1;
-      color: #9ca3af
-    }
-
-    [role=button],
-    button {
-      cursor: pointer
-    }
-
-    :disabled {
-      cursor: default
-    }
-
-    audio,
-    canvas,
-    embed,
-    iframe,
-    img,
-    object,
-    svg,
-    video {
-      display: block;
-      vertical-align: middle
-    }
-
-    img,
-    video {
-      max-width: 100%;
-      height: auto
-    }
-
-    [hidden]:where(:not([hidden=until-found])) {
-      display: none
-    }
-
-    .pointer-events-none {
-      pointer-events: none
-    }
-
-    .fixed {
-      position: fixed
-    }
-
-    .absolute {
-      position: absolute
-    }
-
-    .relative {
-      position: relative
-    }
-
-    .inset-0 {
-      inset: 0px
-    }
-
-    .-bottom-32 {
-      bottom: -8rem
-    }
-
-    .-left-32 {
-      left: -8rem
-    }
-
-    .-right-32 {
-      right: -8rem
-    }
-
-    .-top-3 {
-      top: -0.75rem
-    }
-
-    .-top-32 {
-      top: -8rem
-    }
-
-    .bottom-10 {
-      bottom: 2.5rem
-    }
-
-    .bottom-3 {
-      bottom: 0.75rem
-    }
-
-    .left-0 {
-      left: 0px
-    }
-
-    .left-3 {
-      left: 0.75rem
-    }
-
-    .left-3\.5 {
-      left: 0.875rem
-    }
-
-    .left-\[-40px\] {
-      left: -40px
-    }
-
-    .right-0 {
-      right: 0px
-    }
-
-    .right-3 {
-      right: 0.75rem
-    }
-
-    .top-0 {
-      top: 0px
-    }
-
-    .z-10 {
-      z-index: 10
-    }
-
-    .z-20 {
-      z-index: 20
-    }
-
-    .z-50 {
-      z-index: 50
-    }
-
-    .mx-auto {
-      margin-left: auto;
-      margin-right: auto
-    }
-
-    .my-auto {
-      margin-top: auto;
-      margin-bottom: auto
-    }
-
-    .my-space-md {
-      margin-top: 1rem;
-      margin-bottom: 1rem
-    }
-
-    .ml-1 {
-      margin-left: 0.25rem
-    }
-
-    .mt-0\.5 {
-      margin-top: 0.125rem
-    }
-
-    .mt-space-sm {
-      margin-top: 0.5rem
-    }
-
-    .block {
-      display: block
-    }
-
-    .flex {
-      display: flex
-    }
-
-    .inline-flex {
-      display: inline-flex
-    }
-
-    .h-16 {
-      height: 4rem
-    }
-
-    .h-2 {
-      height: 0.5rem
-    }
-
-    .h-4 {
-      height: 1rem
-    }
-
-    .h-5 {
-      height: 1.25rem
-    }
-
-    .h-60 {
-      height: 15rem
-    }
-
-    .h-7 {
-      height: 1.75rem
-    }
-
-    .h-8 {
-      height: 2rem
-    }
-
-    .h-80 {
-      height: 20rem
-    }
-
-    .h-9 {
-      height: 2.25rem
-    }
-
-    .h-96 {
-      height: 24rem
-    }
-
-    .h-auto {
-      height: auto
-    }
-
-    .h-px {
-      height: 1px
-    }
-
-    .max-h-56 {
-      max-height: 14rem
-    }
-
-    .min-h-\[884px\] {
-      min-height: 884px
-    }
-
-    .min-h-\[calc\(884px-4rem\)\] {
-      min-height: calc(884px - 4rem)
-    }
-
-    .w-2 {
-      width: 0.5rem
-    }
-
-    .w-4 {
-      width: 1rem
-    }
-
-    .w-5 {
-      width: 1.25rem
-    }
-
-    .w-60 {
-      width: 15rem
-    }
-
-    .w-8 {
-      width: 2rem
-    }
-
-    .w-80 {
-      width: 20rem
-    }
-
-    .w-96 {
-      width: 24rem
-    }
-
-    .w-auto {
-      width: auto
-    }
-
-    .w-full {
-      width: 100%
-    }
-
-    .max-w-6xl {
-      max-width: 72rem
-    }
-
-    .max-w-\[170px\] {
-      max-width: 170px
-    }
-
-    .max-w-md {
-      max-width: 28rem
-    }
-
-    .flex-1 {
-      flex: 1 1 0%
-    }
-
-    .flex-shrink-0 {
-      flex-shrink: 0
-    }
-
-    .transform {
-      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
-    }
-
-    @keyframes pulse {
-      50% {
-        opacity: .5
-      }
-    }
-
-    .animate-pulse {
-      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite
-    }
-
-    .cursor-pointer {
-      cursor: pointer
-    }
-
-    .select-none {
-      -webkit-user-select: none;
-      user-select: none
-    }
-
-    .flex-col {
-      flex-direction: column
-    }
-
-    .items-center {
-      align-items: center
-    }
-
-    .justify-center {
-      justify-content: center
-    }
-
-    .justify-between {
-      justify-content: space-between
-    }
-
-    .gap-0\.5 {
-      gap: 0.125rem
-    }
-
-    .gap-1\.5 {
-      gap: 0.375rem
-    }
-
-    .gap-space-md {
-      gap: 1rem
-    }
-
-    .gap-space-sm {
-      gap: 0.5rem
-    }
-
-    .gap-space-xs {
-      gap: 0.25rem
-    }
-
-    .-space-x-2> :not([hidden])~ :not([hidden]) {
-      --tw-space-x-reverse: 0;
-      margin-right: calc(-0.5rem * var(--tw-space-x-reverse));
-      margin-left: calc(-0.5rem * calc(1 - var(--tw-space-x-reverse)))
-    }
-
-    .space-y-space-lg> :not([hidden])~ :not([hidden]) {
-      --tw-space-y-reverse: 0;
-      margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-      margin-bottom: calc(1.5rem * var(--tw-space-y-reverse))
-    }
-
-    .space-y-space-md> :not([hidden])~ :not([hidden]) {
-      --tw-space-y-reverse: 0;
-      margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-      margin-bottom: calc(1rem * var(--tw-space-y-reverse))
-    }
-
-    .space-y-space-sm> :not([hidden])~ :not([hidden]) {
-      --tw-space-y-reverse: 0;
-      margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-      margin-bottom: calc(0.5rem * var(--tw-space-y-reverse))
-    }
-
-    .space-y-space-xs> :not([hidden])~ :not([hidden]) {
-      --tw-space-y-reverse: 0;
-      margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
-      margin-bottom: calc(0.25rem * var(--tw-space-y-reverse))
-    }
-
-    .overflow-hidden {
-      overflow: hidden
-    }
-
-    .rounded {
-      border-radius: 0.25rem
-    }
-
-    .rounded-full {
-      border-radius: 9999px
-    }
-
-    .rounded-lg {
-      border-radius: 0.5rem
-    }
-
-    .rounded-xl {
-      border-radius: 0.75rem
-    }
-
-    .bg-background {
-      --tw-bg-opacity: 1;
-      background-color: rgb(248 249 255 / var(--tw-bg-opacity, 1))
-    }
-
-    .bg-primary-container {
-      --tw-bg-opacity: 1;
-      background-color: rgb(14 28 47 / var(--tw-bg-opacity, 1))
-    }
-
-    .bg-primary-container\/85 {
-      background-color: rgb(14 28 47 / 0.85)
-    }
-
-    .bg-primary-container\/90 {
-      background-color: rgb(14 28 47 / 0.9)
-    }
-
-    .bg-secondary {
-      --tw-bg-opacity: 1;
-      background-color: rgb(0 81 213 / var(--tw-bg-opacity, 1))
-    }
-
-    .bg-secondary-fixed {
-      --tw-bg-opacity: 1;
-      background-color: rgb(219 225 255 / var(--tw-bg-opacity, 1))
-    }
-
-    .bg-secondary\/20 {
-      background-color: rgb(0 81 213 / 0.2)
-    }
-
-    .bg-surface {
-      --tw-bg-opacity: 1;
-      background-color: rgb(248 249 255 / var(--tw-bg-opacity, 1))
-    }
-
-    .bg-surface-container {
-      --tw-bg-opacity: 1;
-      background-color: rgb(229 238 255 / var(--tw-bg-opacity, 1))
-    }
-
-    .bg-surface-container-high {
-      --tw-bg-opacity: 1;
-      background-color: rgb(220 233 255 / var(--tw-bg-opacity, 1))
-    }
-
-    .bg-surface-container-highest\/20 {
-      background-color: rgb(211 228 254 / 0.2)
-    }
-
-    .bg-surface-container-lowest {
-      --tw-bg-opacity: 1;
-      background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
-    }
-
-    .bg-surface\/90 {
-      background-color: rgb(248 249 255 / 0.9)
-    }
-
-    .bg-tertiary-fixed-dim {
-      --tw-bg-opacity: 1;
-      background-color: rgb(255 185 95 / var(--tw-bg-opacity, 1))
-    }
-
-    .bg-tertiary-fixed-dim\/10 {
-      background-color: rgb(255 185 95 / 0.1)
-    }
-
-    .bg-gradient-to-t {
-      background-image: linear-gradient(to top, var(--tw-gradient-stops))
-    }
-
-    .from-primary-container {
-      --tw-gradient-from: #0e1c2f var(--tw-gradient-from-position);
-      --tw-gradient-to: rgb(14 28 47 / 0) var(--tw-gradient-to-position);
-      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
-    }
-
-    .via-transparent {
-      --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
-      --tw-gradient-stops: var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to)
-    }
-
-    .to-transparent {
-      --tw-gradient-to: transparent var(--tw-gradient-to-position)
-    }
-
-    .object-contain {
-      object-fit: contain
-    }
-
-    .object-cover {
-      object-fit: cover
-    }
-
-    .object-center {
-      object-position: center
-    }
-
-    .p-1 {
-      padding: 0.25rem
-    }
-
-    .p-space-lg {
-      padding: 1.5rem
-    }
-
-    .p-space-sm {
-      padding: 0.5rem
-    }
-
-    .px-4 {
-      padding-left: 1rem;
-      padding-right: 1rem
-    }
-
-    .px-margin-sm {
-      padding-left: 1rem;
-      padding-right: 1rem
-    }
-
-    .px-space-lg {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem
-    }
-
-    .px-space-md {
-      padding-left: 1rem;
-      padding-right: 1rem
-    }
-
-    .px-space-sm {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem
-    }
-
-    .py-1 {
-      padding-top: 0.25rem;
-      padding-bottom: 0.25rem
-    }
-
-    .py-1\.5 {
-      padding-top: 0.375rem;
-      padding-bottom: 0.375rem
-    }
-
-    .py-2 {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem
-    }
-
-    .py-3 {
-      padding-top: 0.75rem;
-      padding-bottom: 0.75rem
-    }
-
-    .py-3\.5 {
-      padding-top: 0.875rem;
-      padding-bottom: 0.875rem
-    }
-
-    .py-space-sm {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem
-    }
-
-    .pl-11 {
-      padding-left: 2.75rem
-    }
-
-    .pr-11 {
-      padding-right: 2.75rem
-    }
-
-    .pr-space-md {
-      padding-right: 1rem
-    }
-
-    .pt-1 {
-      padding-top: 0.25rem
-    }
-
-    .pt-16 {
-      padding-top: 4rem
-    }
-
-    .pt-space-xs {
-      padding-top: 0.25rem
-    }
-
-    .text-center {
-      text-align: center
-    }
-
-    .font-body-md {
-      font-family: Plus Jakarta Sans
-    }
-
-    .font-body-sm {
-      font-family: Plus Jakarta Sans
-    }
-
-    .font-headline-sm {
-      font-family: Plus Jakarta Sans
-    }
-
-    .font-headline-xl {
-      font-family: Plus Jakarta Sans
-    }
-
-    .font-label-lg {
-      font-family: Plus Jakarta Sans
-    }
-
-    .font-label-sm {
-      font-family: Plus Jakarta Sans
-    }
-
-    .text-\[11px\] {
-      font-size: 11px
-    }
-
-    .text-\[14px\] {
-      font-size: 14px
-    }
-
-    .text-\[16px\] {
-      font-size: 16px
-    }
-
-    .text-\[18px\] {
-      font-size: 18px
-    }
-
-    .text-\[20px\] {
-      font-size: 20px
-    }
-
-    .text-body-md {
-      font-size: 14px;
-      line-height: 22px;
-      letter-spacing: 0em;
-      font-weight: 400
-    }
-
-    .text-body-sm {
-      font-size: 12px;
-      line-height: 18px;
-      letter-spacing: 0.01em;
-      font-weight: 400
-    }
-
-    .text-headline-sm {
-      font-size: 18px;
-      line-height: 26px;
-      letter-spacing: -0.01em;
-      font-weight: 600
-    }
-
-    .text-headline-xl {
-      font-size: 36px;
-      line-height: 44px;
-      letter-spacing: -0.025em;
-      font-weight: 700
-    }
-
-    .text-label-lg {
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: 0.01em;
-      font-weight: 600
-    }
-
-    .text-label-sm {
-      font-size: 10px;
-      line-height: 14px;
-      letter-spacing: 0.05em;
-      font-weight: 700
-    }
-
-    .font-bold {
-      font-weight: 700
-    }
-
-    .font-extrabold {
-      font-weight: 800
-    }
-
-    .font-medium {
-      font-weight: 500
-    }
-
-    .font-semibold {
-      font-weight: 600
-    }
-
-    .uppercase {
-      text-transform: uppercase
-    }
-
-    .leading-none {
-      line-height: 1
-    }
-
-    .leading-tight {
-      line-height: 1.25
-    }
-
-    .tracking-tight {
-      letter-spacing: -0.025em
-    }
-
-    .tracking-wider {
-      letter-spacing: 0.05em
-    }
-
-    .text-on-secondary {
-      --tw-text-opacity: 1;
-      color: rgb(255 255 255 / var(--tw-text-opacity, 1))
-    }
-
-    .text-on-surface {
-      --tw-text-opacity: 1;
-      color: rgb(11 28 48 / var(--tw-text-opacity, 1))
-    }
-
-    .text-on-surface-variant {
-      --tw-text-opacity: 1;
-      color: rgb(68 71 76 / var(--tw-text-opacity, 1))
-    }
-
-    .text-on-tertiary-fixed {
-      --tw-text-opacity: 1;
-      color: rgb(42 23 0 / var(--tw-text-opacity, 1))
-    }
-
-    .text-outline {
-      --tw-text-opacity: 1;
-      color: rgb(117 119 125 / var(--tw-text-opacity, 1))
-    }
-
-    .text-secondary {
-      --tw-text-opacity: 1;
-      color: rgb(0 81 213 / var(--tw-text-opacity, 1))
-    }
-
-    .text-secondary-fixed {
-      --tw-text-opacity: 1;
-      color: rgb(219 225 255 / var(--tw-text-opacity, 1))
-    }
-
-    .text-surface-container-high {
-      --tw-text-opacity: 1;
-      color: rgb(220 233 255 / var(--tw-text-opacity, 1))
-    }
-
-    .text-surface-container-high\/70 {
-      color: rgb(220 233 255 / 0.7)
-    }
-
-    .text-surface-container-high\/80 {
-      color: rgb(220 233 255 / 0.8)
-    }
-
-    .text-surface-container-lowest {
-      --tw-text-opacity: 1;
-      color: rgb(255 255 255 / var(--tw-text-opacity, 1))
-    }
-
-    .text-tertiary-fixed-dim {
-      --tw-text-opacity: 1;
-      color: rgb(255 185 95 / var(--tw-text-opacity, 1))
-    }
-
-    .antialiased {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale
-    }
-
-    .accent-secondary {
-      accent-color: #0051d5
-    }
-
-    .opacity-60 {
-      opacity: 0.6
-    }
-
-    .opacity-70 {
-      opacity: 0.7
-    }
-
-    .shadow-2xl {
-      --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-      --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-    }
-
-    .shadow-\[0_1px_3px_0_rgba\(11\2c 25\2c 44\2c 0\.04\)\] {
-      --tw-shadow: 0 1px 3px 0 rgba(11, 25, 44, 0.04);
-      --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-    }
-
-    .shadow-\[0_1px_3px_0_rgba\(11\2c 28\2c 48\2c 0\.06\)\] {
-      --tw-shadow: 0 1px 3px 0 rgba(11, 28, 48, 0.06);
-      --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-    }
-
-    .shadow-\[0_1px_8px_rgba\(11\2c 25\2c 44\2c 0\.04\)\] {
-      --tw-shadow: 0 1px 8px rgba(11, 25, 44, 0.04);
-      --tw-shadow-colored: 0 1px 8px var(--tw-shadow-color);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-    }
-
-    .shadow-\[0_20px_50px_-12px_rgba\(11\2c 28\2c 48\2c 0\.12\)\] {
-      --tw-shadow: 0 20px 50px -12px rgba(11, 28, 48, 0.12);
-      --tw-shadow-colored: 0 20px 50px -12px var(--tw-shadow-color);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-    }
-
-    .shadow-\[0_4px_14px_rgba\(255\2c 185\2c 95\2c 0\.35\)\] {
-      --tw-shadow: 0 4px 14px rgba(255, 185, 95, 0.35);
-      --tw-shadow-colored: 0 4px 14px var(--tw-shadow-color);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-    }
-
-    .shadow-lg {
-      --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-      --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-    }
-
-    .shadow-md {
-      --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-      --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-    }
-
-    .shadow-sm {
-      --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-      --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-    }
-
-    .blur-2xl {
-      --tw-blur: blur(40px);
-      filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
-    }
-
-    .blur-3xl {
-      --tw-blur: blur(64px);
-      filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
-    }
-
-    .backdrop-blur-md {
-      --tw-backdrop-blur: blur(12px);
-      -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-      backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)
-    }
-
-    .backdrop-blur-xl {
-      --tw-backdrop-blur: blur(24px);
-      -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-      backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)
-    }
-
-    .transition-all {
-      transition-property: all;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-duration: 150ms
-    }
-
-    .transition-colors {
-      transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
-      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-duration: 150ms
-    }
-
-    .transition-transform {
-      transition-property: transform;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-duration: 150ms
-    }
-
-    .duration-700 {
-      transition-duration: 700ms
-    }
-
-    .ease-out {
-      transition-timing-function: cubic-bezier(0, 0, 0.2, 1)
-    }
-
-    .placeholder\:text-outline\/70::placeholder {
-      color: rgb(117 119 125 / 0.7)
-    }
-
-    .hover\:-translate-y-0\.5:hover {
-      --tw-translate-y: -0.125rem;
-      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
-    }
-
-    .hover\:bg-on-tertiary-container:hover {
-      --tw-bg-opacity: 1;
-      background-color: rgb(184 117 0 / var(--tw-bg-opacity, 1))
-    }
-
-    .hover\:bg-secondary-container:hover {
-      --tw-bg-opacity: 1;
-      background-color: rgb(49 107 243 / var(--tw-bg-opacity, 1))
-    }
-
-    .hover\:bg-surface-container-low:hover {
-      --tw-bg-opacity: 1;
-      background-color: rgb(239 244 255 / var(--tw-bg-opacity, 1))
-    }
-
-    .hover\:text-on-secondary-fixed-variant:hover {
-      --tw-text-opacity: 1;
-      color: rgb(0 62 168 / var(--tw-text-opacity, 1))
-    }
-
-    .hover\:text-on-surface:hover {
-      --tw-text-opacity: 1;
-      color: rgb(11 28 48 / var(--tw-text-opacity, 1))
-    }
-
-    .hover\:underline:hover {
-      -webkit-text-decoration-line: underline;
-      text-decoration-line: underline
-    }
-
-    .hover\:shadow-\[0_6px_20px_rgba\(184\2c 117\2c 0\2c 0\.3\)\]:hover {
-      --tw-shadow: 0 6px 20px rgba(184, 117, 0, 0.3);
-      --tw-shadow-colored: 0 6px 20px var(--tw-shadow-color);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-    }
-
-    .hover\:shadow-md:hover {
-      --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-      --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-    }
-
-    .focus\:bg-surface-container-low:focus {
-      --tw-bg-opacity: 1;
-      background-color: rgb(239 244 255 / var(--tw-bg-opacity, 1))
-    }
-
-    .focus\:outline-none:focus {
-      outline: 2px solid transparent;
-      outline-offset: 2px
-    }
-
-    .focus\:ring-2:focus {
-      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
-    }
-
-    .focus\:ring-secondary:focus {
-      --tw-ring-opacity: 1;
-      --tw-ring-color: rgb(0 81 213 / var(--tw-ring-opacity, 1))
-    }
-
-    .active\:translate-y-0:active {
-      --tw-translate-y: 0px;
-      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
-    }
-
-    .group:hover .group-hover\:scale-\[1\.02\] {
-      --tw-scale-x: 1.02;
-      --tw-scale-y: 1.02;
-      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
-    }
-
-    @media (min-width: 640px) {
-      .sm\:h-10 {
-        height: 2.5rem
-      }
-
-      .sm\:max-h-64 {
-        max-height: 16rem
-      }
-
-      .sm\:p-space-md {
-        padding: 1rem
-      }
-
-      .sm\:p-space-xl {
-        padding: 2.5rem
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .lg\:my-space-lg {
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem
-      }
-
-      .lg\:w-\[46\%\] {
-        width: 46%
-      }
-
-      .lg\:w-\[54\%\] {
-        width: 54%
-      }
-
-      .lg\:flex-row {
-        flex-direction: row
-      }
-
-      .lg\:p-margin {
-        padding: 1.5rem
-      }
-
-      .lg\:p-margin-lg {
-        padding: 3rem
-      }
-
-      .lg\:p-space-xl {
-        padding: 2.5rem
-      }
-
-      .lg\:px-margin-lg {
-        padding-left: 3rem;
-        padding-right: 3rem
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="css/main.css" />
+  <script src="js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="bg-surface font-body-md text-on-surface antialiased min-h-[884px] flex flex-col"
-  data-stitch-vh="min-h-[884px]===min-h-screen" style="overflow-y: auto; min-height: 100vh; scroll-behavior: smooth;"
-  data-mode="connect">
-  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,25,44,0.04)]">
-    <div class="h-16 w-full px-margin-sm lg:px-margin-lg flex items-center justify-between"><a
-        class="flex items-center gap-space-sm" data-path="marketplace-home" href="index.html"><img
-          alt="MAHARent Renting de Coches" class="h-9 sm:h-10 w-auto object-contain"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHb71RAvnL9Ama0BfTnp5pUXSJsw8frIM6_GpZNHDtHfAl2YtCZJ2pGJBE02LPaYOPoh6CnDVTgemxWJFwd820-0c63MVx3wFGzwPWgRn0McBB5426Le3ex6km_KhDHFvnQXHT2PPUyGAJhAk3QSa9nfq63eMWm5CH4m3w04XQAHAnLMHfv5URZItPrJdRFmx9Cp_LsCyDwROsV5SAFJoBNar4nG-pQwaXosqN69TXIVeqH9sHn7rTeW-YEHLWacblXO4"></a>
-      <div class="flex items-center gap-space-md"><a
-          class="flex items-center gap-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors"
-          data-path="marketplace-home" href="marketplace.html"></a><a
-          class="font-label-lg text-label-lg bg-secondary text-on-secondary hover:bg-secondary-container transition-all px-space-md py-space-sm rounded-lg shadow-[0_1px_3px_0_rgba(11,25,44,0.04)]"
-          data-path="registro-usuario" href="#">Registrarse</a></div>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__brand" href="index.html">
+        <img class="header__logo" alt="MAHARent Renting de Coches"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHb71RAvnL9Ama0BfTnp5pUXSJsw8frIM6_GpZNHDtHfAl2YtCZJ2pGJBE02LPaYOPoh6CnDVTgemxWJFwd820-0c63MVx3wFGzwPWgRn0McBB5426Le3ex6km_KhDHFvnQXHT2PPUyGAJhAk3QSa9nfq63eMWm5CH4m3w04XQAHAnLMHfv5URZItPrJdRFmx9Cp_LsCyDwROsV5SAFJoBNar4nG-pQwaXosqN69TXIVeqH9sHn7rTeW-YEHLWacblXO4">
+      </a>
+      <nav class="nav" id="main-nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Inicio</a></li>
+          <li><a class="nav__link" href="marketplace.html">Marketplace</a></li>
+          <li><a class="nav__link" href="dashboard.html">Empresas</a></li>
+          <li><a class="nav__link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a class="header__link header__link--secondary" href="login.html" aria-current="page">Iniciar sesión</a>
+        <a class="btn btn--dark" href="login.html">Registrarse</a>
+        <button class="header__toggle" type="button" aria-controls="main-nav" aria-expanded="false"
+          aria-label="Abrir menú" data-nav-toggle>
+          <span class="icon" aria-hidden="true">menu</span>
+        </button>
+      </div>
     </div>
   </header>
-  <main class="w-full pt-16 flex-1 flex flex-col">
-    <div
-      class="flex flex-col w-full min-h-[calc(884px-4rem)] items-center justify-center p-space-sm sm:p-space-md lg:p-margin relative bg-background"
-      data-stitch-vh="min-h-[calc(884px-4rem)]===min-h-[calc(100vh-4rem)]">
-      <!-- Subtle decorative ambient background glows (no screen overflow) -->
-      <div
-        class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-secondary-fixed opacity-60 blur-3xl pointer-events-none">
-      </div>
-      <div
-        class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-surface-container-high opacity-70 blur-3xl pointer-events-none">
-      </div>
-      <!-- Master Split Container -->
-      <div
-        class="w-full max-w-6xl bg-surface-container-lowest rounded-xl shadow-[0_20px_50px_-12px_rgba(11,28,48,0.12)] overflow-hidden flex flex-col lg:flex-row relative z-10 my-auto">
-        <!-- LEFT PANEL: Brand, High-End Automotive Visual & Proof Points (approx. 45%) -->
-        <div
-          class="lg:w-[46%] bg-primary-container text-surface-container-lowest p-space-lg lg:p-space-xl flex flex-col justify-between relative overflow-hidden">
-          <!-- High-tech backdrop glow accents -->
-          <div class="absolute top-0 right-0 w-80 h-80 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
-          <div
-            class="absolute bottom-10 left-[-40px] w-60 h-60 bg-tertiary-fixed-dim/10 rounded-full blur-2xl pointer-events-none">
+
+  <main class="main login">
+    <div class="login__card">
+      <aside class="login__brand" aria-label="Ventajas de MAHARent">
+        <header class="login__brand-header">
+          <figure class="login__logo">
+            <img class="login__logo-image" alt="MAHARent Renting de Coches"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw3f7LQwRvhgNuAF_5dbY7djWKZo3PeTl-BSzMREQoUrXZyu13HiVti0heUktaAfpnEC0jCwGGVYA8rhbo5eaheUUNi-WUc_fVPriiyANC0NmB5U9_FueWioonpzhML6DCHV-E1rnH_xV5nmCFIY16Xy5tieE4E_74PidFls1zvx3ukkb9Md-DXJ-RubxYh_lB1tWa3X9Iaw_gO4RYNEtHY2ACF4HONOSrzb4C9ri7S5izhGOiQqmp_0N7pFUYZhprymA">
+          </figure>
+          <p class="login__eyebrow">Plataforma Next-Gen</p>
+          <h2 class="login__headline">
+            Todo el renting en un <span class="login__headline-accent">solo lugar.</span>
+          </h2>
+          <p class="login__lead">
+            Plataforma líder en gestión integral, marketplace y flotas corporativas y para particulares.
+          </p>
+        </header>
+
+        <figure class="login__hero">
+          <img class="login__hero-image" alt="SUV eléctrico premium disponible en MAHARent"
+            src="https://media.admagazine.com/photos/64d3e88febad238bffb5a2b7/16:9/w_2560%2Cc_limit/Mercedes-Benz-suv-3.jpg">
+          <p class="login__chip login__chip--top">
+            <span class="icon icon--sm login__chip-icon" aria-hidden="true">verified</span>
+            100% Digital
+          </p>
+          <p class="login__chip login__chip--bottom">
+            <span class="icon icon--sm login__chip-icon login__chip-icon--light" aria-hidden="true">shield_lock</span>
+            Sin costes ocultos
+          </p>
+          <figcaption class="u-visually-hidden">Vehículo premium de la flota MAHARent</figcaption>
+        </figure>
+
+        <footer class="login__metrics">
+          <div class="login__metric">
+            <span class="avatar-group">
+              <span class="avatar avatar--sm avatar--accent avatar-group__item">+5k</span>
+              <span class="avatar avatar--sm avatar-group__item">
+                <span class="icon icon--sm" aria-hidden="true">electric_car</span>
+              </span>
+            </span>
+            <p>
+              <strong class="login__metric-title">+500 Vehículos</strong>
+              <span class="login__metric-subtitle">Disponibilidad inmediata</span>
+            </p>
           </div>
-          <!-- Top Header inside Visual Panel -->
-          <div class="relative z-10 flex flex-col gap-space-md">
-            <!-- Logo Image Integration -->
-            <div class="flex items-center">
-              <div class="bg-surface-container-lowest px-4 py-2 rounded-lg shadow-sm flex items-center justify-center">
-                <img alt="MAHARent Renting de Coches Logo" class="h-7 w-auto object-contain max-w-[170px]"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw3f7LQwRvhgNuAF_5dbY7djWKZo3PeTl-BSzMREQoUrXZyu13HiVti0heUktaAfpnEC0jCwGGVYA8rhbo5eaheUUNi-WUc_fVPriiyANC0NmB5U9_FueWioonpzhML6DCHV-E1rnH_xV5nmCFIY16Xy5tieE4E_74PidFls1zvx3ukkb9Md-DXJ-RubxYh_lB1tWa3X9Iaw_gO4RYNEtHY2ACF4HONOSrzb4C9ri7S5izhGOiQqmp_0N7pFUYZhprymA">
+          <p class="login__metric login__metric--delivery">
+            <span class="icon icon--md login__chip-icon" aria-hidden="true">speed</span>
+            Entrega en 48h
+          </p>
+        </footer>
+      </aside>
+
+      <div class="login__panel">
+        <div class="login__content">
+          <header>
+            <h1 class="login__title" id="login-title">Bienvenido de nuevo</h1>
+            <p class="login__subtitle">
+              Inicia sesión en tu cuenta de <strong class="login__subtitle-strong">MAHARent</strong> para gestionar
+              tus vehículos y solicitudes.
+            </p>
+          </header>
+
+          <form class="form" action="#" method="post" data-demo-form>
+            <div class="field">
+              <label class="field__label" for="login-email">Correo electrónico</label>
+              <div class="field__wrapper">
+                <span class="icon icon--md field__icon" aria-hidden="true">mail</span>
+                <input class="field__control field__control--icon-start" id="login-email" name="email" type="email"
+                  placeholder="Introduce tu correo electrónico" autocomplete="email" required>
               </div>
             </div>
-            <!-- Editorial Headline & Subtitle -->
-            <div class="mt-space-sm space-y-space-xs">
-              <div
-                class="inline-flex items-center gap-space-xs bg-surface-container-highest/20 px-space-sm py-1 rounded-full text-surface-container-high font-label-sm text-label-sm uppercase tracking-wider">
-                <span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
-                Plataforma Next-Gen
+
+            <div class="field">
+              <div class="field__header">
+                <label class="field__label" for="login-password">Contraseña</label>
+                <a class="field__link" href="#">¿Has olvidado tu contraseña?</a>
               </div>
-              <h2 class="font-headline-xl text-headline-xl text-surface-container-lowest font-bold leading-tight">
-                Todo el renting en un <span class="text-tertiary-fixed-dim">solo lugar.</span>
-              </h2>
-              <p class="font-body-md text-body-md text-surface-container-high/80 max-w-md">
-                Plataforma líder en gestión integral, marketplace y flotas corporativas y para particulares.
-              </p>
-            </div>
-          </div>
-          <!-- Center Hero Vehicle Integration -->
-          <div class="relative z-10 my-space-md lg:my-space-lg flex items-center justify-center">
-            <div class="relative w-full group">
-              <!-- Ambient vehicle ground light -->
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent z-10 pointer-events-none">
-              </div>
-              <img alt="Vehículo premium MAHARent SUV Eléctrico"
-                class="w-full h-auto max-h-56 sm:max-h-64 object-cover object-center rounded-xl shadow-2xl transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-                src="https://media.admagazine.com/photos/64d3e88febad238bffb5a2b7/16:9/w_2560%2Cc_limit/Mercedes-Benz-suv-3.jpg">
-              <!-- Floating Badges over imagery -->
-              <div
-                class="absolute -top-3 right-3 z-20 bg-primary-container/85 backdrop-blur-md px-space-sm py-1.5 rounded-full flex items-center gap-1.5 shadow-lg">
-                <span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">verified</span>
-                <span class="font-label-sm text-label-sm text-surface-container-lowest font-semibold">100%
-                  Digital</span>
-              </div>
-              <div
-                class="absolute bottom-3 left-3 z-20 bg-primary-container/90 backdrop-blur-md px-space-sm py-1.5 rounded-full flex items-center gap-1.5 shadow-lg">
-                <span class="material-symbols-outlined text-[16px] text-secondary-fixed">shield_lock</span>
-                <span class="font-label-sm text-label-sm text-surface-container-lowest font-medium">Sin costes
-                  ocultos</span>
-              </div>
-            </div>
-          </div>
-          <!-- Bottom Visual Metadata / Micro-Metrics -->
-          <div class="relative z-10 pt-space-xs flex items-center justify-between gap-space-sm">
-            <div class="flex items-center gap-space-sm">
-              <div class="flex -space-x-2">
-                <div
-                  class="w-8 h-8 rounded-full bg-secondary text-surface-container-lowest flex items-center justify-center font-label-sm text-label-sm font-bold shadow-md">
-                  +5k
-                </div>
-                <div
-                  class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-sm text-label-sm font-bold shadow-md">
-                  <span class="material-symbols-outlined text-[16px]">electric_car</span>
-                </div>
-              </div>
-              <div>
-                <div class="font-label-sm text-label-sm text-surface-container-lowest font-bold leading-none">+500
-                  Vehículos</div>
-                <div class="font-body-sm text-body-sm text-surface-container-high/70 text-[11px] leading-tight mt-0.5">
-                  Disponibilidad inmediata</div>
-              </div>
-            </div>
-            <div class="flex items-center gap-1.5 text-surface-container-high/70 font-label-sm text-label-sm">
-              <span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">speed</span>
-              <span class="">Entrega en 48h</span>
-            </div>
-          </div>
-        </div>
-        <!-- RIGHT PANEL: Precision Login Interface (approx. 55%) -->
-        <div
-          class="lg:w-[54%] bg-surface-container-lowest p-space-lg sm:p-space-xl lg:p-margin-lg flex flex-col justify-center">
-          <div class="w-full max-w-md mx-auto space-y-space-lg">
-            <!-- Welcome Header -->
-            <div class="space-y-space-xs">
-              <h1 class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">
-                Bienvenido de nuevo
-              </h1>
-              <p class="font-body-md text-body-md text-on-surface-variant">
-                Inicia sesión en tu cuenta de <span class="font-semibold text-on-surface">MAHARent</span> para gestionar
-                tus vehículos y solicitudes.
-              </p>
-            </div>
-            <!-- Login Form -->
-            <form class="space-y-space-md" onsubmit="event.preventDefault();">
-              <!-- Email Input -->
-              <div class="space-y-space-xs">
-                <label class="block font-label-lg text-label-lg text-on-surface font-semibold" for="login-email">
-                  Correo electrónico
-                </label>
-                <div class="relative flex items-center">
-                  <span
-                    class="material-symbols-outlined absolute left-3.5 text-outline text-[20px] pointer-events-none">
-                    mail
-                  </span>
-                  <input
-                    class="w-full pl-11 pr-space-md py-3 bg-surface-container-lowest text-on-surface placeholder:text-outline/70 font-body-md text-body-md rounded-xl shadow-[0_1px_3px_0_rgba(11,28,48,0.06)] focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-low transition-all"
-                    id="login-email" placeholder="Introduce tu correo electrónico" required="" type="email">
-                </div>
-              </div>
-              <!-- Password Input -->
-              <div class="space-y-space-xs">
-                <div class="flex items-center justify-between">
-                  <label class="block font-label-lg text-label-lg text-on-surface font-semibold" for="login-password">
-                    Contraseña
-                  </label>
-                  <a class="font-label-sm text-label-sm text-secondary hover:text-on-secondary-fixed-variant transition-colors hover:underline"
-                    href="#">
-                    ¿Has olvidado tu contraseña?
-                  </a>
-                </div>
-                <div class="relative flex items-center">
-                  <span
-                    class="material-symbols-outlined absolute left-3.5 text-outline text-[20px] pointer-events-none">
-                    lock
-                  </span>
-                  <input
-                    class="w-full pl-11 pr-11 py-3 bg-surface-container-lowest text-on-surface placeholder:text-outline/70 font-body-md text-body-md rounded-xl shadow-[0_1px_3px_0_rgba(11,28,48,0.06)] focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-low transition-all"
-                    id="login-password" placeholder="Introduce tu contraseña" required="" type="password">
-                  <button aria-label="Mostrar contraseña"
-                    class="absolute right-3 text-outline hover:text-on-surface transition-colors p-1 flex items-center justify-center focus:outline-none"
-                    id="toggle-pwd-btn" type="button">
-                    <span class="material-symbols-outlined text-[20px]" id="pwd-icon">visibility</span>
-                  </button>
-                </div>
-              </div>
-              <!-- Remember Me Checkbox -->
-              <div class="flex items-center justify-between pt-1">
-                <label class="flex items-center gap-space-xs cursor-pointer select-none">
-                  <input class="w-4 h-4 rounded text-secondary focus:ring-secondary accent-secondary cursor-pointer"
-                    id="remember-me" name="remember" type="checkbox">
-                  <span class="font-body-sm text-body-sm text-on-surface-variant font-medium">
-                    Recordar sesión en este dispositivo
-                  </span>
-                </label>
-              </div>
-              <!-- Primary Action Button (Amber CTA per style mandate) -->
-              <div class="pt-space-xs">
-                <button
-                  class="w-full py-3.5 px-space-lg rounded-xl bg-tertiary-fixed-dim hover:bg-on-tertiary-container text-on-tertiary-fixed font-headline-sm text-headline-sm font-bold shadow-[0_4px_14px_rgba(255,185,95,0.35)] hover:shadow-[0_6px_20px_rgba(184,117,0,0.3)] transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-space-xs"
-                  type="submit">
-                  <span class="">Iniciar sesión</span>
-                  <span class="material-symbols-outlined text-[20px] font-bold">arrow_forward</span>
+              <div class="field__wrapper">
+                <span class="icon icon--md field__icon" aria-hidden="true">lock</span>
+                <input class="field__control field__control--icon-start field__control--icon-end" id="login-password"
+                  name="password" type="password" placeholder="Introduce tu contraseña" autocomplete="current-password"
+                  required>
+                <button class="field__action" type="button" aria-label="Mostrar contraseña"
+                  data-toggle-password="login-password">
+                  <span class="icon icon--md" aria-hidden="true">visibility</span>
                 </button>
               </div>
-            </form>
-            <!-- Divider -->
-            <div class="relative flex items-center justify-center my-space-md">
-              <div class="w-full h-px bg-surface-container-high"></div>
-              <span
-                class="absolute bg-surface-container-lowest px-space-sm font-label-sm text-label-sm text-outline uppercase font-semibold">
-                o
-              </span>
             </div>
-            <!-- Social Sign-in Button (Google) -->
-            <div>
-              <button
-                class="w-full py-3 px-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low text-on-surface font-label-lg text-label-lg font-semibold shadow-[0_1px_3px_0_rgba(11,28,48,0.06)] hover:shadow-md transition-all flex items-center justify-center gap-space-sm"
-                type="button">
-                <!-- Official Clean Google SVG Icon -->
-                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24">
-                  <path
-                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
-                    fill="#4285F4"></path>
-                  <path
-                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-                    fill="#34A853"></path>
-                  <path
-                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
-                    fill="#FBBC05"></path>
-                  <path
-                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
-                    fill="#EA4335"></path>
-                </svg>
-                <span class="">Continuar con Google</span>
-              </button>
-            </div>
-            <!-- Footer / Registration Navigation -->
-            <div class="text-center pt-space-xs space-y-space-sm">
-              <p class="font-body-md text-body-md text-on-surface-variant">
-                ¿Todavía no tienes una cuenta?
-                <a class="font-label-lg text-label-lg font-bold text-secondary hover:text-on-secondary-fixed-variant hover:underline transition-all ml-1 inline-flex items-center gap-0.5"
-                  data-path="registro-usuario" href="#">
-                  Regístrate gratis
-                  <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-                </a>
-              </p>
-              <!-- Security Badge -->
-              <div
-                class="inline-flex items-center justify-center gap-space-xs py-1 px-space-sm rounded-full bg-surface-container text-on-surface-variant font-body-sm text-body-sm text-[11px]">
-                <span class="material-symbols-outlined text-[14px] text-secondary">verified_user</span>
-                <span class="">Conexión encriptada SSL de 256 bits · MAHARent Security</span>
-              </div>
-            </div>
-          </div>
+
+            <label class="checkbox">
+              <input class="checkbox__input" name="remember" type="checkbox">
+              <span class="checkbox__label">Recordar sesión en este dispositivo</span>
+            </label>
+
+            <button class="btn btn--cta btn--lg btn--full" type="submit">
+              Iniciar sesión
+              <span class="icon icon--md" aria-hidden="true">arrow_forward</span>
+            </button>
+          </form>
+
+          <p class="divider" role="separator">
+            <span class="divider__line"></span>
+            <span class="divider__label">o</span>
+          </p>
+
+          <button class="btn btn--outline btn--full" type="button">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4"
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+              <path fill="#34A853"
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+              <path fill="#FBBC05"
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+              <path fill="#EA4335"
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+            </svg>
+            Continuar con Google
+          </button>
+
+          <footer class="login__footer">
+            <p class="login__signup">
+              ¿Todavía no tienes una cuenta?
+              <a class="login__signup-link" href="#">
+                Regístrate gratis
+                <span class="icon icon--sm" aria-hidden="true">chevron_right</span>
+              </a>
+            </p>
+            <p class="badge login__secure">
+              <span class="icon icon--xs badge__icon" aria-hidden="true">verified_user</span>
+              Conexión encriptada SSL de 256 bits · MAHARent Security
+            </p>
+          </footer>
         </div>
       </div>
     </div>
-    <script>
-      (function () {
-        const toggleBtn = document.getElementById('toggle-pwd-btn');
-        const pwdInput = document.getElementById('login-password');
-        const pwdIcon = document.getElementById('pwd-icon');
-
-        if (toggleBtn && pwdInput && pwdIcon) {
-          toggleBtn.addEventListener('click', function () {
-            const isPassword = pwdInput.type === 'password';
-            pwdInput.type = isPassword ? 'text' : 'password';
-            pwdIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
-            toggleBtn.setAttribute('aria-label', isPassword ? 'Ocultar contraseña' : 'Mostrar contraseña');
-          });
-        }
-      })();
-    </script>
   </main>
 
-
-
-
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__brand">
+        <span class="footer__name">MAHARent</span>
+        <span class="footer__tagline">· Renting Inteligente</span>
+      </p>
+      <nav aria-label="Enlaces del pie de página">
+        <ul class="footer__list">
+          <li><a class="footer__link" href="marketplace.html">Marketplace</a></li>
+          <li><a class="footer__link" href="dashboard.html">Empresas</a></li>
+          <li><a class="footer__link" href="contacto.html">Contacto</a></li>
+          <li><a class="footer__link" href="#">Términos y condiciones</a></li>
+          <li><a class="footer__link" href="#">Política de privacidad</a></li>
+        </ul>
+      </nav>
+      <p class="footer__copy">© 2026 MAHARent. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
   <script src="js/main.js" defer></script>
 </body>

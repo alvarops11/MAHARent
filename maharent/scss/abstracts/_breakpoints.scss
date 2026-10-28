@@ -1,19 +1,20 @@
-// Mapa de Breakpoints del sistema
+@use 'sass:map';
+
+// Breakpoints alineados con Tailwind (sm, md, lg, xl). Metodología Mobile-First.
 $breakpoints: (
-  "mobile-sm": 320px,
-  "mobile":    480px,
-  "tablet":    768px,
-  "desktop":   1024px,
-  "wide":      1200px
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px
 ) !default;
 
-// Mixin para aplicar media queries de forma limpia
-@mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
+// Aplica los estilos a partir del breakpoint indicado (min-width).
+@mixin respond-to($name) {
+  @if map.has-key($breakpoints, $name) {
+    @media (min-width: map.get($breakpoints, $name)) {
       @content;
     }
   } @else {
-    @warn "El breakpoint '#{$breakpoint}' no existe en el mapa $breakpoints.";
+    @error "Breakpoint '#{$name}' no definido. Opciones: #{map.keys($breakpoints)}";
   }
 }

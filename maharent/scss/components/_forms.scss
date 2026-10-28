@@ -1,29 +1,150 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts' as *;
 
-.form-group {
+// Formulario: columna con separación uniforme
+.form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.25rem;
+  gap: $space-md;
 
-  &__label {
-    color: $color-text-primary;
-    margin-bottom: 0.5rem;
-    font-size: 0.875rem;
+}
+
+// Separador con texto central ("o")
+.divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background-color: $color-surface-container-high;
   }
 
-  &__input,
-  &__select,
-  &__textarea {
-    background-color: $color-bg-secondary;
-    border: 1px solid $color-border;
-    border-radius: $border-radius-sm;
-    color: $color-text-primary;
-    padding: 0.75rem 1rem;
-    transition: border-color 0.3s ease;
+  &__label {
+    position: absolute;
+    padding-inline: $space-sm;
+    background-color: $color-surface-container-lowest;
+    color: $color-outline;
+    text-transform: uppercase;
+    @include type('label-sm');
+    font-weight: $font-weight-semibold;
+  }
+}
 
-    &:focus {
-      outline: none;
-      border-color: $color-accent;
+// Campo: etiqueta + control (+ icono) + mensaje
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-sm;
+  }
+
+  &__label {
+    color: $color-on-surface;
+    @include type('label-lg');
+  }
+
+  &__link {
+    color: $color-secondary;
+    @include type('label-sm');
+    @include interactive($hover-color: $color-on-secondary-fixed-variant);
+
+    &:hover {
+      text-decoration: underline;
     }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__control {
+    @include field-control;
+
+    &--icon-start {
+      padding-left: 2.75rem;
+    }
+
+    &--icon-end {
+      padding-right: 2.75rem;
+    }
+
+    &--textarea {
+      min-height: 8rem;
+      resize: vertical;
+    }
+
+    &--select {
+      appearance: none;
+      padding-right: 2.75rem;
+      cursor: pointer;
+    }
+
+    &--error {
+      box-shadow: 0 0 0 2px $color-error;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0.875rem;
+    color: $color-outline;
+    pointer-events: none;
+
+    &--end {
+      right: 0.875rem;
+      left: auto;
+    }
+  }
+
+  &__action {
+    position: absolute;
+    right: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-xs;
+    color: $color-outline;
+    @include interactive($hover-color: $color-on-surface);
+  }
+
+  &__hint {
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+  }
+
+  &__error {
+    color: $color-error;
+    @include type('body-sm');
+  }
+}
+
+// Casilla de verificación con etiqueta
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  cursor: pointer;
+  user-select: none;
+
+  &__input {
+    width: 1rem;
+    height: 1rem;
+    accent-color: $color-secondary;
+    cursor: pointer;
+  }
+
+  &__label {
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+    font-weight: $font-weight-medium;
   }
 }

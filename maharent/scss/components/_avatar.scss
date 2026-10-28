@@ -1,19 +1,52 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts' as *;
 
+// Avatar circular (imagen o iniciales)
 .avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid $color-accent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  overflow: hidden;
+  background-color: $color-surface-container-high;
+  color: $color-on-surface;
+  border-radius: $radius-full;
+  box-shadow: $shadow-button;
+  @include type('label-sm');
 
   &--sm {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
   }
 
   &--lg {
-    width: 64px;
-    height: 64px;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &--accent {
+    background-color: $color-secondary;
+    color: $color-on-secondary;
+  }
+
+  &--dark {
+    background-color: $color-primary-container;
+    color: $color-on-primary;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Grupo de avatares solapados
+.avatar-group {
+  display: flex;
+
+  &__item + &__item {
+    margin-left: -0.5rem;
   }
 }

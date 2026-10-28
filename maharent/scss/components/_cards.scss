@@ -1,35 +1,140 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts' as *;
 
+// Tarjeta genérica
 .card {
-  background-color: $color-bg-card;
-  border: 1px solid $color-border;
-  border-radius: $border-radius-md;
-  overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  @include card-surface;
+  display: flex;
+  flex-direction: column;
+
+  &--elevated {
+    box-shadow: $shadow-card;
+  }
+
+  &__media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: $space-sm;
+    padding: $space-lg;
+  }
+
+  &__title {
+    color: $color-on-surface;
+    @include type('headline-sm');
+  }
+
+  &__text {
+    color: $color-on-surface-variant;
+    @include type('body-md');
+  }
+}
+
+// Tarjeta de vehículo del marketplace
+.vehicle-card {
+  @include card-surface;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow $transition-base, transform $transition-base;
 
   &:hover {
-    transform: translateY(-4px);
-    border-color: $color-accent;
+    transform: translateY(-2px);
+    box-shadow: $shadow-card;
+  }
+
+  &__media {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    background-color: $color-surface-container;
   }
 
   &__image {
     width: 100%;
-    height: 180px;
+    height: 100%;
     object-fit: cover;
   }
 
-  &__content {
-    padding: 1.25rem;
+  &__badge {
+    position: absolute;
+    top: $space-sm;
+    left: $space-sm;
+  }
+
+  &__favorite {
+    position: absolute;
+    top: $space-sm;
+    right: $space-sm;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: $space-sm;
+    padding: $space-md;
   }
 
   &__title {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    color: $color-on-surface;
+    @include type('headline-sm');
+  }
+
+  &__specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-xs $space-md;
+    color: $color-on-surface-variant;
+    @include type('body-sm');
   }
 
   &__price {
-    color: $color-accent;
-    font-size: 1.125rem;
-    font-weight: 700;
+    margin-top: auto;
+    color: $color-on-surface;
+    @include type('headline-md');
+
+    &--highlight {
+      color: $color-secondary;
+    }
+  }
+}
+
+// Tarjeta de indicador (KPI) del panel
+.kpi-card {
+  @include card-surface;
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+  padding: $space-lg;
+
+  &__label {
+    color: $color-on-surface-variant;
+    @include type('label-md');
+    text-transform: uppercase;
+  }
+
+  &__value {
+    color: $color-on-surface;
+    @include type('headline-lg');
+  }
+
+  &__trend {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-xs;
+    color: $color-on-surface-variant;
+    @include type('body-sm');
+
+    &--up {
+      color: $color-secondary;
+    }
+
+    &--down {
+      color: $color-error;
+    }
   }
 }

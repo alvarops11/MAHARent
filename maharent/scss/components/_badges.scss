@@ -1,30 +1,37 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts' as *;
 
+// Etiquetas de estado
 .badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.25rem 0.75rem;
-  border-radius: 50px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  gap: $space-xs;
+  padding: $space-xs $space-sm;
+  background-color: $color-surface-container;
+  color: $color-on-surface-variant;
+  border-radius: $radius-full;
+  @include type('label-md');
 
-  &--available {
-    background-color: rgba(16, 185, 129, 0.15);
-    color: $color-success;
-    border: 1px solid $color-success;
+  &__icon {
+    color: $color-secondary;
   }
 
-  &--rented {
-    background-color: rgba(239, 68, 68, 0.15);
-    color: $color-danger;
-    border: 1px solid $color-danger;
+  &--info {
+    background-color: $color-secondary-fixed;
+    color: $color-on-secondary-fixed-variant;
   }
 
-  &--premium {
-    background-color: rgba(255, 193, 7, 0.15);
-    color: $color-accent;
-    border: 1px solid $color-accent;
+  &--warning {
+    background-color: $color-tertiary-fixed;
+    color: $color-on-tertiary-fixed-variant;
+  }
+
+  &--error {
+    background-color: $color-error-container;
+    color: $color-on-error-container;
+  }
+
+  &--dark {
+    background-color: $color-primary-container;
+    color: $color-on-primary;
   }
 }

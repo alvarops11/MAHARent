@@ -1,1674 +1,980 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <meta content="web_dashboard" name="shell-type" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
-  <style>
-    @layer base {
-
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        overscroll-behavior: none;
-      }
-
-      main>:first-child {
-        margin-top: 0 !important;
-      }
-
-      main>:last-child {
-        margin-bottom: 0 !important;
-      }
-    }
-
-    ::-webkit-scrollbar {
-      display: none;
-    }
-
-    @keyframes fadeInScale {
-      from {
-        opacity: 0;
-        transform: scale(0.96) translateY(4px);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-      }
-    }
-
-    .animate-in-modal {
-      animation: fadeInScale 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-
-    .transition-smooth {
-      transition: all 0.2s ease-in-out;
-    }
-  </style>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script
-    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#653e00", "on-secondary-fixed-variant": "#003ea8", "surface-container-low": "#eff4ff", "on-secondary": "#ffffff", "tertiary": "#000000", "on-secondary-container": "#fefcff", "surface-container-highest": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#00174b", "on-primary-fixed-variant": "#3a475c", "tertiary-container": "#2a1700", "surface-tint": "#525f75", "surface-bright": "#f8f9ff", "inverse-surface": "#213145", "primary-fixed": "#d6e3fe", "on-tertiary": "#ffffff", "inverse-primary": "#bac7e1", "on-tertiary-container": "#b87500", "tertiary-fixed": "#ffddb8", "on-primary": "#ffffff", "primary-fixed-dim": "#bac7e1", "outline-variant": "#c5c6cd", "on-background": "#0b1c30", "outline": "#75777d", "surface-container": "#e5eeff", "inverse-on-surface": "#eaf1ff", "on-surface-variant": "#44474c", "secondary": "#0051d5", "surface": "#f8f9ff", "secondary-fixed-dim": "#b4c5ff", "secondary-fixed": "#dbe1ff", "on-tertiary-fixed": "#2a1700", "error": "#ba1a1a", "on-primary-container": "#77849c", "on-error-container": "#93000a", "secondary-container": "#316bf3", "on-primary-fixed": "#0e1c2f", "surface-variant": "#d3e4fe", "primary": "#000000", "error-container": "#ffdad6", "tertiary-fixed-dim": "#ffb95f", "background": "#f8f9ff", "on-error": "#ffffff", "on-surface": "#0b1c30", "primary-container": "#0e1c2f", "surface-container-high": "#dce9ff", "surface-dim": "#cbdbf5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "gutter-sm": "1rem", "margin-sm": "1rem", "gutter-lg": "2rem", "space-md": "1rem", "margin": "1.5rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "margin-lg": "3rem", "space-xs": "0.25rem", "gutter": "1.5rem" }, "fontFamily": { "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"] }, "fontSize": { "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }] } } } }</script>
-  <link rel="stylesheet" href="css/main.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Empresa | MAHARent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body
-  class="bg-background font-body-md text-on-surface antialiased relative selection:bg-secondary-fixed selection:text-secondary">
-  <header
-    class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-    <div class="h-16 w-full px-gutter flex items-center justify-between">
-      <div class="flex items-center gap-space-md"><img alt="logo.png" class="h-8 w-auto object-contain cursor-pointer"
-          onclick="location.reload()"
-          src="https://lh3.googleusercontent.com/aida/AEtjO1VYjMjRaN1U5hnU--ahRZ1I_JPu3f9Q9_iqcdA-K63QORlkREKWc-ymdCSFYBJ2QF3qSVXblO9xZuTP2P9b4BvoyeGm5wm03C1sPbj0MwzVld9VLdG02xIC43J_lJumj36_181lZ2q71lV2N2zHn9hjPyvEG2JYGMNvdVny2Hq2fEDW8OF8FPSQMQlKR9rX5NYgWjsj-YvFMlJHQ1c_S5j8rzu9UOeB8xsS8UDh_UeuQk7MSk6MAmUmN7WteWQG9RlI1wcUGeSvTc4" />
-        <div class="flex items-center gap-space-xs"><span
-            class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">MAHARent</span><span
-            class="bg-primary-container text-on-tertiary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full uppercase tracking-wider font-semibold ml-2">Panel
-            de Empresa</span></div>
-      </div>
-      <div class="flex items-center gap-space-md relative">
-        <!-- Selector de Empresa Interactiva -->
-        <div class="relative">
-          <button
-            class="flex items-center bg-surface-container-low hover:bg-surface-container rounded-lg px-3 py-1.5 transition-colors gap-2 text-left"
-            id="btnCompanySelect" type="button">
-            <span class="material-symbols-outlined text-secondary text-[20px]">business</span>
-            <span class="font-label-md text-label-md text-on-surface" id="currentCompanyName">Arval Fleet
-              Services</span>
-            <span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span>
-          </button>
-          <!-- Dropdown Empresa -->
-          <div
-            class="hidden absolute top-full mt-2 left-0 w-56 bg-surface-container-lowest border border-surface-container rounded-xl shadow-xl py-2 z-50 animate-in-modal"
-            id="companyDropdown">
-            <div class="px-3 py-1.5 text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Cuentas
-              vinculadas</div>
-            <button
-              class="w-full text-left px-3 py-2 text-label-md hover:bg-surface-container-low flex items-center justify-between"
-              onclick="switchCompany('Arval Fleet Services')">
-              <span>Arval Fleet Services</span>
-              <span class="material-symbols-outlined text-secondary text-[16px]">check</span>
-            </button>
-            <button
-              class="w-full text-left px-3 py-2 text-label-md hover:bg-surface-container-low flex items-center justify-between text-on-surface-variant hover:text-on-surface"
-              onclick="switchCompany('AutoEmpresa Madrid S.L.')">
-              <span>AutoEmpresa Madrid S.L.</span>
-            </button>
-            <div class="border-t border-surface-container-low my-1"></div>
-            <button
-              class="w-full text-left px-3 py-2 text-label-md text-secondary hover:bg-surface-container-low flex items-center gap-2"
-              onclick="showToast('Solicitud para vincular nueva empresa enviada')">
-              <span class="material-symbols-outlined text-[18px]">add_business</span>
-              <span>Añadir otra empresa</span>
-            </button>
-          </div>
-        </div>
-        <!-- Campana Notificaciones -->
-        <div class="relative">
-          <button
-            class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
-            id="btnNotif" type="button">
-            <span class="material-symbols-outlined text-[22px]">notifications</span>
-            <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-on-tertiary-container rounded-full"
-              id="notifBadge"></span>
-          </button>
-          <!-- Menú desplegable notificaciones -->
-          <div
-            class="hidden absolute top-full right-0 mt-2 w-80 bg-surface-container-lowest border border-surface-container rounded-xl shadow-xl z-50 animate-in-modal overflow-hidden"
-            id="notifDropdown">
-            <div class="px-4 py-3 border-b border-surface-container-low flex items-center justify-between">
-              <span class="font-label-lg font-bold text-on-surface">Notificaciones</span>
-              <button class="font-label-sm text-secondary hover:underline" onclick="markAllNotificationsRead()">Marcar
-                leídas</button>
-            </div>
-            <div class="max-h-72 overflow-y-auto divide-y divide-surface-container-low" id="notifList">
-              <div class="p-3 hover:bg-surface-bright flex gap-3 transition-colors">
-                <span class="w-2 h-2 rounded-full bg-on-tertiary-container mt-1.5 shrink-0"></span>
-                <div class="flex-1 text-left">
-                  <p class="font-label-md text-on-surface font-semibold">Nueva solicitud de renting</p>
-                  <p class="font-body-sm text-on-surface-variant text-[12px]">Logística TransIberia solicitó Mercedes
-                    GLA.</p>
-                  <span class="text-[10px] text-outline font-mono mt-1 block">Hace 10 min</span>
-                </div>
-              </div>
-              <div class="p-3 hover:bg-surface-bright flex gap-3 transition-colors">
-                <span class="w-2 h-2 rounded-full bg-secondary mt-1.5 shrink-0"></span>
-                <div class="flex-1 text-left">
-                  <p class="font-label-md text-on-surface font-semibold">Validación de contrato</p>
-                  <p class="font-body-sm text-on-surface-variant text-[12px]">Toyota C-HR firmado y en preparación de
-                    entrega.</p>
-                  <span class="text-[10px] text-outline font-mono mt-1 block">Hace 1 hora</span>
-                </div>
-              </div>
-              <div class="p-3 hover:bg-surface-bright flex gap-3 transition-colors">
-                <span class="w-2 h-2 rounded-full bg-outline-variant mt-1.5 shrink-0"></span>
-                <div class="flex-1 text-left">
-                  <p class="font-label-md text-on-surface font-semibold">Revisión de flota</p>
-                  <p class="font-body-sm text-on-surface-variant text-[12px]">Cupra Formentor pendiente de publicar
-                    ficha técnica.</p>
-                  <span class="text-[10px] text-outline font-mono mt-1 block">Ayer</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-2.5 bg-surface-container-low text-center border-t border-surface-container">
-              <a class="font-label-sm text-secondary hover:underline" href="javascript:void(0)"
-                onclick="showToast('Historial completo cargado'); closeAllDropdowns();">Ver todas las notificaciones</a>
-            </div>
-          </div>
-        </div>
-        <!-- Menú Perfil / Avatar -->
-        <div class="relative">
-          <button
-            class="flex items-center gap-space-sm pl-2 py-1 pr-1.5 rounded-lg hover:bg-surface-container-low transition-colors"
-            id="btnProfile" type="button">
-            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-              <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
-            </div>
-            <div class="hidden sm:flex flex-col text-left">
-              <span class="font-label-md text-label-md text-on-surface leading-none">Gestión Flota</span>
-              <span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-1">Admin
-                Corporativo</span>
-            </div>
-            <span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span>
-          </button>
-          <!-- Dropdown Perfil -->
-          <div
-            class="hidden absolute top-full right-0 mt-2 w-56 bg-surface-container-lowest border border-surface-container rounded-xl shadow-xl py-2 z-50 animate-in-modal"
-            id="profileDropdown">
-            <div class="px-4 py-2 border-b border-surface-container-low">
-              <div class="font-label-md font-bold text-on-surface">Gestión Flota</div>
-              <div class="text-[11px] text-on-surface-variant font-mono truncate">admin@arval-fleet.com</div>
-            </div>
-            <button
-              class="w-full text-left px-4 py-2 text-label-md hover:bg-surface-container-low flex items-center gap-2"
-              onclick="showToast('Accediendo a Facturación B2B...'); closeAllDropdowns();">
-              <span class="material-symbols-outlined text-[18px] text-on-surface-variant">receipt_long</span>
-              <span>Facturación B2B</span>
-            </button>
-            <button
-              class="w-full text-left px-4 py-2 text-label-md hover:bg-surface-container-low flex items-center gap-2"
-              onclick="showToast('Ajustes de cuenta abiertos'); closeAllDropdowns();">
-              <span class="material-symbols-outlined text-[18px] text-on-surface-variant">manage_accounts</span>
-              <span>Ajustes de cuenta</span>
-            </button>
-            <div class="border-t border-surface-container-low my-1"></div>
-            <button
-              class="w-full text-left px-4 py-2 text-label-md text-error hover:bg-error-container/40 flex items-center gap-2"
-              onclick="showToast('Sesión cerrada correctamente'); closeAllDropdowns();">
-              <span class="material-symbols-outlined text-[18px] text-error">logout</span>
-              <span>Cerrar sesión</span>
-            </button>
-          </div>
-        </div>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__brand" href="index.html">
+        <img class="header__logo" alt="MAHARent Renting de Coches"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHb71RAvnL9Ama0BfTnp5pUXSJsw8frIM6_GpZNHDtHfAl2YtCZJ2pGJBE02LPaYOPoh6CnDVTgemxWJFwd820-0c63MVx3wFGzwPWgRn0McBB5426Le3ex6km_KhDHFvnQXHT2PPUyGAJhAk3QSa9nfq63eMWm5CH4m3w04XQAHAnLMHfv5URZItPrJdRFmx9Cp_LsCyDwROsV5SAFJoBNar4nG-pQwaXosqN69TXIVeqH9sHn7rTeW-YEHLWacblXO4">
+      </a>
+      <nav class="nav" id="main-nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Inicio</a></li>
+          <li><a class="nav__link" href="marketplace.html">Marketplace</a></li>
+          <li><a class="nav__link nav__link--active" href="dashboard.html" aria-current="page">Empresas</a></li>
+          <li><a class="nav__link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a class="header__link header__link--secondary" href="login.html">Iniciar sesión</a>
+        <a class="btn btn--dark" href="login.html">Registrarse</a>
+        <button class="header__toggle" type="button" aria-controls="main-nav" aria-expanded="false"
+          aria-label="Abrir menú" data-nav-toggle>
+          <span class="icon" aria-hidden="true">menu</span>
+        </button>
       </div>
     </div>
   </header>
-  <aside
-    class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest z-30 shadow-[0_1px_8px_rgba(0,0,0,0.03)] flex flex-col justify-between py-space-md">
-    <div class="px-space-md">
-      <div class="px-3 py-2 mb-2"><span
-          class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operaciones
-          Flota</span></div>
-      <nav class="space-y-1" id="sidebarNav"><a aria-current="page"
-          class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors bg-surface-container-high text-on-surface font-semibold shadow-sm border-l-4 border-on-tertiary-container"
-          data-path="dashboard" href="javascript:void(0)" onclick="selectSidebarItem(this, 'Dashboard')"><span
-            class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a
-          class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"
-          data-path="mis-vehiculos" href="javascript:void(0)" onclick="selectSidebarItem(this, 'Mis vehículos')"><span
-            class="material-symbols-outlined text-[20px]">directions_car</span><span>Mis vehículos</span></a><a
-          class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"
-          data-path="publicaciones" href="javascript:void(0)" onclick="selectSidebarItem(this, 'Publicaciones')"><span
-            class="material-symbols-outlined text-[20px]">campaign</span><span>Publicaciones</span></a><a
-          class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"
-          data-path="solicitudes" href="javascript:void(0)" onclick="selectSidebarItem(this, 'Solicitudes')"><span
-            class="material-symbols-outlined text-[20px]">assignment</span><span>Solicitudes</span></a><a
-          class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"
-          data-path="rentings-activos" href="javascript:void(0)"
-          onclick="selectSidebarItem(this, 'Rentings activos')"><span
-            class="material-symbols-outlined text-[20px]">key</span><span>Rentings activos</span></a></nav>
-    </div>
-    <div class="px-space-md">
-      <div class="px-3 py-2 mb-1"><span
-          class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Ajustes del
-          Sistema</span></div>
-      <nav class="space-y-1"><a
-          class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"
-          data-path="configuracion" href="javascript:void(0)" onclick="selectSidebarItem(this, 'Configuración')"><span
-            class="material-symbols-outlined text-[20px]">settings</span><span>Configuración</span></a></nav>
-    </div>
-  </aside>
-  <div class="pl-64">
-    <main class="relative pt-16 min-h-screen bg-background w-full px-gutter py-space-lg">
-      <div class="flex flex-col w-full space-y-space-xl">
-        <!-- 1. Cabecera de bienvenida -->
-        <section class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
-          <div class="space-y-space-xs">
-            <div class="flex items-center gap-space-sm flex-wrap">
-              <h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight" id="welcomeGreeting">Buenos
-                días, Arval Mobility Fleet</h1>
-              <span
-                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm shadow-sm">
-                <span class="material-symbols-outlined text-[16px] text-secondary"
-                  style="font-variation-settings: 'FILL' 1;">verified</span>
-                Cuenta B2B Verificada
+
+  <div class="main dashboard" data-dashboard>
+    <aside class="sidebar" aria-label="Panel de empresa">
+      <nav class="side-section" aria-labelledby="sidebar-operations">
+        <p class="side-section__title" id="sidebar-operations">Operaciones Flota</p>
+        <ul class="sidebar__menu">
+          <li>
+            <a class="sidebar__link sidebar__link--active" href="#panel" aria-current="page" data-sidebar-link>
+              <span class="icon icon--md" aria-hidden="true">dashboard</span>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a class="sidebar__link" href="#mis-vehiculos" data-sidebar-link>
+              <span class="icon icon--md" aria-hidden="true">directions_car</span>
+              Mis vehículos
+            </a>
+          </li>
+          <li>
+            <a class="sidebar__link" href="#publicaciones" data-sidebar-link>
+              <span class="icon icon--md" aria-hidden="true">campaign</span>
+              Publicaciones
+            </a>
+          </li>
+          <li>
+            <a class="sidebar__link" href="#solicitudes" data-sidebar-link>
+              <span class="icon icon--md" aria-hidden="true">assignment</span>
+              Solicitudes
+            </a>
+          </li>
+          <li>
+            <a class="sidebar__link" href="#" data-sidebar-link data-toast="Sección activada: Rentings activos">
+              <span class="icon icon--md" aria-hidden="true">key</span>
+              Rentings activos
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="side-section" aria-labelledby="sidebar-settings">
+        <p class="side-section__title" id="sidebar-settings">Ajustes del Sistema</p>
+        <ul class="sidebar__menu">
+          <li>
+            <a class="sidebar__link" href="#" data-sidebar-link data-toast="Sección activada: Configuración">
+              <span class="icon icon--md" aria-hidden="true">settings</span>
+              Configuración
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="dashboard__main" id="panel">
+      <header class="dashboard__toolbar">
+        <p class="badge badge--dark">Panel de Empresa</p>
+        <ul class="dashboard__tools">
+          <li class="dropdown">
+            <button class="dropdown__toggle" type="button" aria-expanded="false" aria-controls="company-menu"
+              data-dropdown-toggle>
+              <span class="icon icon--md dropdown__icon" aria-hidden="true">business</span>
+              <span data-company-name>Arval Fleet Services</span>
+              <span class="icon icon--sm" aria-hidden="true">expand_more</span>
+            </button>
+            <ul class="dropdown__menu" id="company-menu" hidden>
+              <li class="dropdown__heading">Cuentas vinculadas</li>
+              <li>
+                <button class="dropdown__item" type="button" data-company="Arval Fleet Services" aria-current="true">
+                  Arval Fleet Services
+                  <span class="icon icon--sm dropdown__check dropdown__check--on" aria-hidden="true">check</span>
+                </button>
+              </li>
+              <li>
+                <button class="dropdown__item" type="button" data-company="AutoEmpresa Madrid S.L.">
+                  AutoEmpresa Madrid S.L.
+                  <span class="icon icon--sm dropdown__check" aria-hidden="true">check</span>
+                </button>
+              </li>
+              <li class="dropdown__divider" aria-hidden="true"></li>
+              <li>
+                <button class="dropdown__item dropdown__item--accent" type="button"
+                  data-toast="Solicitud para vincular nueva empresa enviada">
+                  <span class="icon icon--md" aria-hidden="true">add_business</span>
+                  Añadir otra empresa
+                </button>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <button class="dropdown__toggle dropdown__toggle--icon" type="button" aria-label="Notificaciones"
+              aria-expanded="false" aria-controls="notif-menu" data-dropdown-toggle>
+              <span class="icon icon--lg" aria-hidden="true">notifications</span>
+              <span class="dropdown__badge" data-notif-badge>
+                <span class="u-visually-hidden">Tienes notificaciones sin leer</span>
               </span>
-            </div>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-              Aquí tienes un resumen en tiempo real de la actividad comercial, métricas operativas y rentabilidad de tu
-              flota.
+            </button>
+            <section class="dropdown__menu dropdown__menu--wide dropdown__menu--end" id="notif-menu"
+              aria-label="Notificaciones" hidden>
+              <div class="notif__header">
+                <p class="notif__title">Notificaciones</p>
+                <button class="notif__action" type="button" data-mark-read>Marcar leídas</button>
+              </div>
+              <ul class="notif__list">
+                <li class="notif__item">
+                  <span class="notif__dot notif__dot--warning" aria-hidden="true"></span>
+                  <article class="notif__body">
+                    <h2 class="notif__heading">Nueva solicitud de renting</h2>
+                    <p class="notif__text">Logística TransIberia solicitó Mercedes GLA.</p>
+                    <p class="notif__time">Hace 10 min</p>
+                  </article>
+                </li>
+                <li class="notif__item">
+                  <span class="notif__dot notif__dot--info" aria-hidden="true"></span>
+                  <article class="notif__body">
+                    <h2 class="notif__heading">Validación de contrato</h2>
+                    <p class="notif__text">Toyota C-HR firmado y en preparación de entrega.</p>
+                    <p class="notif__time">Hace 1 hora</p>
+                  </article>
+                </li>
+                <li class="notif__item">
+                  <span class="notif__dot notif__dot--read" aria-hidden="true"></span>
+                  <article class="notif__body">
+                    <h2 class="notif__heading">Revisión de flota</h2>
+                    <p class="notif__text">Cupra Formentor pendiente de publicar ficha técnica.</p>
+                    <p class="notif__time">Ayer</p>
+                  </article>
+                </li>
+              </ul>
+              <div class="notif__footer">
+                <a class="notif__link" href="#" data-toast="Historial completo cargado">Ver todas las
+                  notificaciones</a>
+              </div>
+            </section>
+          </li>
+
+          <li class="dropdown">
+            <button class="dropdown__toggle dropdown__toggle--profile" type="button" aria-label="Cuenta de Gestión Flota"
+              aria-expanded="false" aria-controls="profile-menu" data-dropdown-toggle>
+              <span class="avatar avatar--sm avatar--dark" aria-hidden="true">
+                <span class="icon icon--md">person</span>
+              </span>
+              <span class="dropdown__who">
+                <span class="dropdown__name">Gestión Flota</span>
+                <span class="dropdown__role">Admin Corporativo</span>
+              </span>
+              <span class="icon icon--sm" aria-hidden="true">expand_more</span>
+            </button>
+            <ul class="dropdown__menu dropdown__menu--end" id="profile-menu" hidden>
+              <li class="dropdown__identity">
+                <strong class="dropdown__name">Gestión Flota</strong>
+                <span class="dropdown__email">admin@arval-fleet.com</span>
+              </li>
+              <li>
+                <button class="dropdown__item" type="button" data-toast="Accediendo a Facturación B2B...">
+                  <span class="icon icon--md" aria-hidden="true">receipt_long</span>
+                  Facturación B2B
+                </button>
+              </li>
+              <li>
+                <button class="dropdown__item" type="button" data-toast="Ajustes de cuenta abiertos">
+                  <span class="icon icon--md" aria-hidden="true">manage_accounts</span>
+                  Ajustes de cuenta
+                </button>
+              </li>
+              <li class="dropdown__divider" aria-hidden="true"></li>
+              <li>
+                <button class="dropdown__item dropdown__item--danger" type="button"
+                  data-toast="Sesión cerrada correctamente">
+                  <span class="icon icon--md" aria-hidden="true">logout</span>
+                  Cerrar sesión
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </header>
+
+      <section class="dashboard__welcome" aria-labelledby="welcome-title">
+        <header class="dashboard__intro">
+          <h1 class="dashboard__title" id="welcome-title" data-greeting>Buenos días, Arval Mobility Fleet</h1>
+          <p class="badge badge--info dashboard__verified">
+            <span class="icon icon--sm icon--filled" aria-hidden="true">verified</span>
+            Cuenta B2B Verificada
+          </p>
+          <p class="dashboard__lead">
+            Aquí tienes un resumen en tiempo real de la actividad comercial, métricas operativas y rentabilidad de tu
+            flota.
+          </p>
+        </header>
+        <ul class="dashboard__actions">
+          <li>
+            <button class="btn btn--outline" type="button" data-download-report>
+              <span class="icon icon--md" aria-hidden="true">file_download</span>
+              Descargar informe
+            </button>
+          </li>
+          <li>
+            <button class="btn btn--dark" type="button" data-vehicle-create>
+              <span class="icon icon--md dashboard__action-icon" aria-hidden="true">add_circle</span>
+              Crear vehículo
+            </button>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="kpi-title">
+        <h2 class="u-visually-hidden" id="kpi-title">Resumen general</h2>
+        <ul class="dashboard__kpis">
+          <li class="kpi-card">
+            <header class="kpi-card__head">
+              <h3 class="kpi-card__label">Vehículos en flota</h3>
+              <span class="kpi-card__icon kpi-card__icon--fleet" aria-hidden="true">
+                <span class="icon icon--lg">directions_car</span>
+              </span>
+            </header>
+            <p class="kpi-card__figure">
+              <strong class="kpi-card__value kpi-card__value--display" data-stat="fleet">24</strong>
+              <span class="badge badge--info">
+                <span class="icon icon--xs" aria-hidden="true">arrow_upward</span>
+                +3 este mes
+              </span>
             </p>
-          </div>
-          <div class="flex items-center gap-space-sm flex-wrap">
-            <button
-              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface hover:bg-surface-container-low font-label-lg text-label-lg shadow-sm transition-all"
-              onclick="downloadReport()" type="button">
-              <span class="material-symbols-outlined text-[20px] text-on-surface-variant">file_download</span>
-              <span>Descargar informe</span>
-            </button>
-            <button
-              class="btn-create-car inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5"
-              onclick="openCreateModal()" type="button">
-              <span class="material-symbols-outlined text-[20px] text-tertiary-fixed">add_circle</span>
-              <span>+ Crear vehículo</span>
-            </button>
-          </div>
-        </section>
-        <!-- 2. Resumen general (Grid de 4 tarjetas estadísticas interactivas) -->
-        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
-          <!-- Card 1: Flota Total -->
-          <div
-            class="group bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-start justify-between">
-              <div class="space-y-1">
-                <span class="font-label-md text-label-md text-on-surface-variant block">Vehículos en flota</span>
-                <div class="flex items-baseline gap-2">
-                  <span class="font-display-lg text-display-lg font-bold text-on-surface leading-none"
-                    id="statTotalFleet">24</span>
-                  <span
-                    class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-surface-container-low text-secondary font-label-sm text-label-sm">
-                    <span class="material-symbols-outlined text-[14px]">arrow_upward</span>
-                    +3 este mes
-                  </span>
-                </div>
-              </div>
-              <div
-                class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary group-hover:scale-105 transition-transform">
-                <span class="material-symbols-outlined text-[24px]">directions_car</span>
-              </div>
-            </div>
-            <div class="pt-space-md mt-space-md flex items-center justify-between">
-              <span class="font-body-sm text-body-sm text-on-surface-variant">Flota operativa asignada</span>
-              <a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary hover:underline cursor-pointer"
-                onclick="scrollToVehicles()">
-                Gestionar flota <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            <footer class="kpi-card__foot">
+              <p class="kpi-card__note">Flota operativa asignada</p>
+              <a class="kpi-card__link" href="#mis-vehiculos">
+                Gestionar flota
+                <span class="icon icon--sm" aria-hidden="true">arrow_forward</span>
               </a>
-            </div>
-          </div>
-          <!-- Card 2: Publicados -->
-          <div
-            class="group bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-start justify-between">
-              <div class="space-y-1">
-                <span class="font-label-md text-label-md text-on-surface-variant block">Vehículos publicados</span>
-                <div class="flex items-baseline gap-2">
-                  <span class="font-display-lg text-display-lg font-bold text-on-surface leading-none"
-                    id="statPublishedFleet">18</span>
-                  <span
-                    class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-on-secondary-fixed-variant font-label-sm text-label-sm">
-                    75% activo
-                  </span>
-                </div>
-              </div>
-              <div
-                class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary group-hover:scale-105 transition-transform">
-                <span class="material-symbols-outlined text-[24px]">storefront</span>
-              </div>
-            </div>
-            <div class="space-y-2 pt-space-md mt-space-md">
-              <div class="w-full bg-surface-container-low rounded-full h-1.5 overflow-hidden">
-                <div class="bg-secondary h-1.5 rounded-full" style="width: 75%"></div>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="font-body-sm text-body-sm text-on-surface-variant">Marketplace visible</span>
-                <a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary hover:underline cursor-pointer"
-                  onclick="filterByTab('Publicados', document.getElementById('filter-publicados'))">
-                  Ver marketplace <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Card 3: En Renting -->
-          <div
-            class="group bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-start justify-between">
-              <div class="space-y-1">
-                <span class="font-label-md text-label-md text-on-surface-variant block">Vehículos en renting
-                  activo</span>
-                <div class="flex items-baseline gap-2">
-                  <span class="font-display-lg text-display-lg font-bold text-on-surface leading-none"
-                    id="statRentingFleet">12</span>
-                  <span
-                    class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm">
-                    50% ocupación
-                  </span>
-                </div>
-              </div>
-              <div
-                class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary-container group-hover:scale-105 transition-transform">
-                <span class="material-symbols-outlined text-[24px]">vpn_key</span>
-              </div>
-            </div>
-            <div class="pt-space-md mt-space-md flex items-center justify-between">
-              <span class="font-body-sm text-body-sm text-on-surface-variant">100% cobro puntual</span>
-              <a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary hover:underline cursor-pointer"
-                onclick="filterByTab('En renting', document.getElementById('filter-renting'))">
-                Ver contratos <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </footer>
+          </li>
+
+          <li class="kpi-card">
+            <header class="kpi-card__head">
+              <h3 class="kpi-card__label">Vehículos publicados</h3>
+              <span class="kpi-card__icon kpi-card__icon--published" aria-hidden="true">
+                <span class="icon icon--lg">storefront</span>
+              </span>
+            </header>
+            <p class="kpi-card__figure">
+              <strong class="kpi-card__value kpi-card__value--display" data-stat="published">18</strong>
+              <span class="badge badge--info">75% activo</span>
+            </p>
+            <progress class="kpi-card__meter" max="100" value="75"
+              aria-label="Vehículos publicados sobre el total de la flota">75%</progress>
+            <footer class="kpi-card__foot">
+              <p class="kpi-card__note">Marketplace visible</p>
+              <a class="kpi-card__link" href="#mis-vehiculos" data-fleet-filter="Publicado">
+                Ver marketplace
+                <span class="icon icon--sm" aria-hidden="true">arrow_forward</span>
               </a>
-            </div>
-          </div>
-          <!-- Card 4: Solicitudes (Atención Ámbar) -->
-          <div
-            class="group bg-surface-container-lowest rounded-xl p-space-lg shadow-md hover:shadow-lg transition-all flex flex-col justify-between relative overflow-hidden bg-gradient-to-br from-surface-container-lowest via-surface-container-lowest to-surface-container">
-            <div class="flex items-start justify-between">
-              <div class="space-y-1">
-                <div class="flex items-center gap-2">
-                  <span class="font-label-md text-label-md text-on-tertiary-container font-semibold">Solicitudes
-                    pendientes</span>
-                  <span class="relative flex h-2 w-2">
-                    <span
-                      class="animate-ping absolute inline-flex h-full w-full rounded-full bg-on-tertiary-container opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-on-tertiary-container"></span>
-                  </span>
-                </div>
-                <div class="flex items-baseline gap-2">
-                  <span class="font-display-lg text-display-lg font-bold text-tertiary-container leading-none"
-                    id="statPendingReqs">7</span>
-                  <span
-                    class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
-                    3 hoy urgentes
-                  </span>
-                </div>
-              </div>
-              <div
-                class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-container group-hover:scale-105 transition-transform">
-                <span class="material-symbols-outlined text-[24px]">assignment_late</span>
-              </div>
-            </div>
-            <div class="pt-space-md mt-space-md flex items-center justify-between">
-              <span class="font-body-sm text-body-sm text-on-surface-variant">Riesgo / Score pendiente</span>
-              <a class="inline-flex items-center gap-1 font-label-md text-label-md text-on-tertiary-container font-bold hover:underline cursor-pointer"
-                onclick="scrollToRequests()">
-                Revisar solicitudes <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </footer>
+          </li>
+
+          <li class="kpi-card">
+            <header class="kpi-card__head">
+              <h3 class="kpi-card__label">Vehículos en renting activo</h3>
+              <span class="kpi-card__icon kpi-card__icon--renting" aria-hidden="true">
+                <span class="icon icon--lg">vpn_key</span>
+              </span>
+            </header>
+            <p class="kpi-card__figure">
+              <strong class="kpi-card__value kpi-card__value--display" data-stat="renting">12</strong>
+              <span class="badge">50% ocupación</span>
+            </p>
+            <footer class="kpi-card__foot">
+              <p class="kpi-card__note">100% cobro puntual</p>
+              <a class="kpi-card__link" href="#mis-vehiculos" data-fleet-filter="En renting">
+                Ver contratos
+                <span class="icon icon--sm" aria-hidden="true">arrow_forward</span>
               </a>
-            </div>
-          </div>
-        </section>
-        <!-- 3. Sección "Mis vehículos" (Panel de gestión principal con tabla SaaS elegante) -->
-        <section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg space-y-space-md"
-          id="sectionVehicles">
-          <!-- Header de la tabla -->
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
-            <div class="flex items-center gap-space-md flex-wrap">
-              <h2 class="font-headline-sm text-headline-sm text-on-surface">Mis vehículos</h2>
-              <!-- Filtros rápidos segmentados -->
-              <div class="inline-flex p-1 bg-surface-container-low rounded-lg gap-1" id="filterTabsGroup">
-                <button
-                  class="filter-tab px-3 py-1 rounded-md bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm font-semibold transition-all"
-                  id="filter-todos" onclick="filterByTab('Todos', this)" type="button">Todos (24)</button>
-                <button
-                  class="filter-tab px-3 py-1 rounded-md hover:bg-surface-container-lowest/60 font-label-md text-label-md text-on-surface-variant transition-colors"
-                  id="filter-disponibles" onclick="filterByTab('Disponible', this)" type="button">Disponibles
-                  (6)</button>
-                <button
-                  class="filter-tab px-3 py-1 rounded-md hover:bg-surface-container-lowest/60 font-label-md text-label-md text-on-surface-variant transition-colors"
-                  id="filter-renting" onclick="filterByTab('En renting', this)" type="button">En renting (12)</button>
-                <button
-                  class="filter-tab px-3 py-1 rounded-md hover:bg-surface-container-lowest/60 font-label-md text-label-md text-on-surface-variant transition-colors"
-                  id="filter-publicados" onclick="filterByTab('Publicado', this)" type="button">Publicados (18)</button>
-              </div>
-            </div>
-            <div class="flex items-center gap-space-sm">
-              <button class="font-label-lg text-label-lg text-secondary hover:underline px-2"
-                onclick="filterByTab('Todos', document.getElementById('filter-todos'))" type="button">Ver todos
-                →</button>
-              <button
-                class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors"
-                onclick="openCreateModal()" type="button">
-                <span class="material-symbols-outlined text-[18px]">add</span>
+            </footer>
+          </li>
+
+          <li class="kpi-card kpi-card--alert">
+            <header class="kpi-card__head">
+              <h3 class="kpi-card__label kpi-card__label--alert">
+                Solicitudes pendientes
+                <span class="kpi-card__pulse" aria-hidden="true"></span>
+              </h3>
+              <span class="kpi-card__icon kpi-card__icon--pending" aria-hidden="true">
+                <span class="icon icon--lg">assignment_late</span>
+              </span>
+            </header>
+            <p class="kpi-card__figure">
+              <strong class="kpi-card__value kpi-card__value--display kpi-card__value--alert"
+                data-stat="pending">7</strong>
+              <span class="badge badge--warning">3 hoy urgentes</span>
+            </p>
+            <footer class="kpi-card__foot">
+              <p class="kpi-card__note">Riesgo / Score pendiente</p>
+              <a class="kpi-card__link kpi-card__link--alert" href="#solicitudes">
+                Revisar solicitudes
+                <span class="icon icon--sm" aria-hidden="true">arrow_forward</span>
+              </a>
+            </footer>
+          </li>
+        </ul>
+      </section>
+
+      <section class="panel" id="mis-vehiculos" aria-labelledby="vehicles-title">
+        <header class="panel__header">
+          <h2 class="panel__title" id="vehicles-title">Mis vehículos</h2>
+          <ul class="tabs panel__tabs" aria-label="Filtrar vehículos por estado">
+            <li><button class="tabs__tab tabs__tab--active" type="button" aria-pressed="true"
+                data-fleet-filter="Todos">Todos (24)</button></li>
+            <li><button class="tabs__tab" type="button" aria-pressed="false" data-fleet-filter="Disponible">Disponibles
+                (6)</button></li>
+            <li><button class="tabs__tab" type="button" aria-pressed="false" data-fleet-filter="En renting">En renting
+                (12)</button></li>
+            <li><button class="tabs__tab" type="button" aria-pressed="false" data-fleet-filter="Publicado">Publicados
+                (18)</button></li>
+          </ul>
+          <ul class="panel__actions">
+            <li>
+              <button class="btn btn--ghost" type="button" data-fleet-filter="Todos">
+                Ver todos
+                <span class="icon icon--sm" aria-hidden="true">arrow_forward</span>
+              </button>
+            </li>
+            <li>
+              <button class="btn btn--ghost" type="button" data-vehicle-create>
+                <span class="icon icon--md" aria-hidden="true">add</span>
                 Crear vehículo
               </button>
-            </div>
-          </div>
-          <!-- Tabla fluida y espaciada -->
-          <div class="overflow-x-auto w-full relative">
-            <table class="w-full text-left border-collapse">
-              <thead>
-                <tr
-                  class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
-                  <th class="py-3 px-4 rounded-l-lg">Vehículo</th>
-                  <th class="py-3 px-4">Matrícula</th>
-                  <th class="py-3 px-4">Estado</th>
-                  <th class="py-3 px-4">Precio Mes</th>
-                  <th class="py-3 px-4">Renting / Plazo</th>
-                  <th class="py-3 px-4 text-right rounded-r-lg">Acciones</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-surface-container-low text-on-surface font-body-md text-body-md"
-                id="vehicleTableBody">
-                <!-- Fila 1 -->
-                <tr class="vehicle-row hover:bg-surface-bright transition-colors group"
-                  data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCgBPSOUntsBaoVzs5qvR4K0iT7dYUFYicQNDI_Cy-MiyKw4N3HFUTLbZoZdYJgklaWir30VbNH1IY0XTUCNKLEZ7YdnB3SUCt-4kMs2oP7pj9srdWTjxjLd8aqzVEsvjsM6kM0EelHfl4BK7_s-2LDaqRBfE_1oWiv-IZUFPV-yhUk6zGDd2-6OGQBMYPtoW-xNodvnR8sLOsyk5LEnF4JTo5FNyhVbiBRMikA2YsVAoP9zshUYcbsBA"
-                  data-model="BMW X1 sDrive18d xLine" data-plate="1234 ABC" data-price="449"
-                  data-specs="Automático · Diesel · 2024" data-status="Disponible" data-term="36 meses · 10.000 km/año">
-                  <td class="py-3.5 px-4">
-                    <div class="flex items-center gap-3">
-                      <img class="w-12 h-10 object-cover rounded-lg bg-surface-container flex-shrink-0"
-                        data-alt="BMW X1"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgBPSOUntsBaoVzs5qvR4K0iT7dYUFYicQNDI_Cy-MiyKw4N3HFUTLbZoZdYJgklaWir30VbNH1IY0XTUCNKLEZ7YdnB3SUCt-4kMs2oP7pj9srdWTjxjLd8aqzVEsvjsM6kM0EelHfl4BK7_s-2LDaqRBfE_1oWiv-IZUFPV-yhUk6zGDd2-6OGQBMYPtoW-xNodvnR8sLOsyk5LEnF4JTo5FNyhVbiBRMikA2YsVAoP9zshUYcbsBA" />
-                      <div class="min-w-0">
-                        <div class="car-title font-label-lg text-label-lg text-on-surface truncate">BMW X1 sDrive18d
-                          xLine</div>
-                        <div class="car-subtitle font-body-sm text-body-sm text-on-surface-variant truncate">Automático
-                          · Diesel · 2024</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap">
-                    <span
-                      class="car-plate px-2.5 py-1 rounded bg-surface-container-high font-mono text-[12px] font-bold text-on-surface tracking-wider">1234
-                      ABC</span>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap">
-                    <span
-                      class="car-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low text-secondary font-label-sm text-label-sm font-semibold">
-                      <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-                      Disponible
+            </li>
+          </ul>
+        </header>
+
+        <div class="data-table fleet-table">
+          <table class="data-table__element">
+            <caption class="u-visually-hidden">Listado de vehículos de la flota con estado, precio y condiciones de
+              renting</caption>
+            <thead>
+              <tr>
+                <th class="data-table__th fleet-cell fleet-cell--start" scope="col">Vehículo</th>
+                <th class="data-table__th fleet-cell fleet-cell--start" scope="col">Matrícula</th>
+                <th class="data-table__th fleet-cell fleet-cell--start" scope="col">Estado</th>
+                <th class="data-table__th fleet-cell fleet-cell--start" scope="col">Precio Mes</th>
+                <th class="data-table__th fleet-cell fleet-cell--start" scope="col">Renting / Plazo</th>
+                <th class="data-table__th fleet-cell fleet-cell--end" scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody data-vehicle-body>
+              <tr class="data-table__row" data-vehicle-row data-model="BMW X1 sDrive18d xLine" data-plate="1234 ABC"
+                data-price="449" data-specs="Automático · Diesel · 2024" data-status="Disponible"
+                data-term="36 meses · 10.000 km/año"
+                data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCgBPSOUntsBaoVzs5qvR4K0iT7dYUFYicQNDI_Cy-MiyKw4N3HFUTLbZoZdYJgklaWir30VbNH1IY0XTUCNKLEZ7YdnB3SUCt-4kMs2oP7pj9srdWTjxjLd8aqzVEsvjsM6kM0EelHfl4BK7_s-2LDaqRBfE_1oWiv-IZUFPV-yhUk6zGDd2-6OGQBMYPtoW-xNodvnR8sLOsyk5LEnF4JTo5FNyhVbiBRMikA2YsVAoP9zshUYcbsBA">
+                <th class="data-table__td fleet-cell fleet-cell--head" scope="row">
+                  <figure class="fleet-vehicle">
+                    <img class="fleet-vehicle__image" data-field="image" alt="Fotografía del BMW X1" loading="lazy"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgBPSOUntsBaoVzs5qvR4K0iT7dYUFYicQNDI_Cy-MiyKw4N3HFUTLbZoZdYJgklaWir30VbNH1IY0XTUCNKLEZ7YdnB3SUCt-4kMs2oP7pj9srdWTjxjLd8aqzVEsvjsM6kM0EelHfl4BK7_s-2LDaqRBfE_1oWiv-IZUFPV-yhUk6zGDd2-6OGQBMYPtoW-xNodvnR8sLOsyk5LEnF4JTo5FNyhVbiBRMikA2YsVAoP9zshUYcbsBA">
+                    <figcaption class="fleet-vehicle__caption">
+                      <strong class="fleet-vehicle__title" data-field="model">BMW X1 sDrive18d xLine</strong>
+                      <span class="fleet-vehicle__subtitle" data-field="specs">Automático · Diesel · 2024</span>
+                    </figcaption>
+                  </figure>
+                </th>
+                <td class="data-table__td fleet-cell"><span class="plate" data-field="plate">1234 ABC</span></td>
+                <td class="data-table__td fleet-cell">
+                  <span class="badge status status--available">
+                    <span class="status__dot" aria-hidden="true"></span>
+                    <span data-field="status">Disponible</span>
+                  </span>
+                </td>
+                <td class="data-table__td fleet-cell">
+                  <strong class="fleet-cell__price" data-field="price">449 €</strong>
+                  <span class="fleet-cell__unit">/mes</span>
+                </td>
+                <td class="data-table__td fleet-cell fleet-cell--muted" data-field="term">36 meses · 10.000 km/año</td>
+                <td class="data-table__td fleet-cell fleet-cell--end">
+                  <ul class="row-actions">
+                    <li><button class="icon-button" type="button" aria-label="Editar vehículo"
+                        data-vehicle-edit><span class="icon icon--md" aria-hidden="true">edit</span></button></li>
+                    <li><button class="icon-button" type="button" aria-label="Ver ficha del vehículo"
+                        data-vehicle-preview><span class="icon icon--md"
+                          aria-hidden="true">visibility</span></button></li>
+                    <li><button class="icon-button" type="button" aria-label="Más opciones" aria-haspopup="true"
+                        data-row-menu-toggle><span class="icon icon--md" aria-hidden="true">more_vert</span></button>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr class="data-table__row" data-vehicle-row data-model="Audi A3 Sportback 35 TFSI" data-plate="5678 DEF"
+                data-price="399" data-specs="S tronic · Gasolina MHEV · 2024" data-status="En renting"
+                data-term="48 meses · 15.000 km/año"
+                data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDNq5xaxs04UNbJcikjHt5oJaofkpRrfFpO6XckvFlN_cQPK5vn9AtM-b3CGBJKTKxCJAGXrm0P-N8LNr3MSidB20OWaYObs6a9WjnEDv_oz5RQMCcqD_8yayryApZXxuEpq2-v2swyh-kbupz5yaLPoQ9yBURiC35i8LejX60D3xSsWXBtM19FtST5UaMTUnU1L6OnqUPtadtKXt3gyxnYSaCk9OUAgQUdzR3Fx-fN8_iUGyl7-1Y1HA">
+                <th class="data-table__td fleet-cell fleet-cell--head" scope="row">
+                  <figure class="fleet-vehicle">
+                    <img class="fleet-vehicle__image" data-field="image" alt="Fotografía del Audi A3" loading="lazy"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNq5xaxs04UNbJcikjHt5oJaofkpRrfFpO6XckvFlN_cQPK5vn9AtM-b3CGBJKTKxCJAGXrm0P-N8LNr3MSidB20OWaYObs6a9WjnEDv_oz5RQMCcqD_8yayryApZXxuEpq2-v2swyh-kbupz5yaLPoQ9yBURiC35i8LejX60D3xSsWXBtM19FtST5UaMTUnU1L6OnqUPtadtKXt3gyxnYSaCk9OUAgQUdzR3Fx-fN8_iUGyl7-1Y1HA">
+                    <figcaption class="fleet-vehicle__caption">
+                      <strong class="fleet-vehicle__title" data-field="model">Audi A3 Sportback 35 TFSI</strong>
+                      <span class="fleet-vehicle__subtitle" data-field="specs">S tronic · Gasolina MHEV · 2024</span>
+                    </figcaption>
+                  </figure>
+                </th>
+                <td class="data-table__td fleet-cell"><span class="plate" data-field="plate">5678 DEF</span></td>
+                <td class="data-table__td fleet-cell">
+                  <span class="badge status status--renting">
+                    <span class="status__dot" aria-hidden="true"></span>
+                    <span data-field="status">En renting</span>
+                  </span>
+                </td>
+                <td class="data-table__td fleet-cell">
+                  <strong class="fleet-cell__price" data-field="price">399 €</strong>
+                  <span class="fleet-cell__unit">/mes</span>
+                </td>
+                <td class="data-table__td fleet-cell fleet-cell--muted" data-field="term">48 meses · 15.000 km/año</td>
+                <td class="data-table__td fleet-cell fleet-cell--end">
+                  <ul class="row-actions">
+                    <li><button class="icon-button" type="button" aria-label="Editar vehículo"
+                        data-vehicle-edit><span class="icon icon--md" aria-hidden="true">edit</span></button></li>
+                    <li><button class="icon-button" type="button" aria-label="Ver ficha del vehículo"
+                        data-vehicle-preview><span class="icon icon--md"
+                          aria-hidden="true">visibility</span></button></li>
+                    <li><button class="icon-button" type="button" aria-label="Más opciones" aria-haspopup="true"
+                        data-row-menu-toggle><span class="icon icon--md" aria-hidden="true">more_vert</span></button>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr class="data-table__row" data-vehicle-row data-model="Toyota C-HR 140H Advance" data-plate="9012 GHI"
+                data-price="429" data-specs="e-CVT · Híbrido · 2024" data-status="Publicado"
+                data-term="36 meses · Entrega inmediata"
+                data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCoRQBMr9c7FmcNgGpKZd_Ueszl88EawlTAIPxCB1YDKdIrXujZwPfBLt-_8IuO0ex_AECe460phwXNkUrwv809XZeNU6nREpHlOGVFwrZdO_dXATmq5nfQaB73QE0XACK2qgxDEmlrHdowZETmeHeLmhjmm_b0sQGCO-ae2HjlcWNFDHaQ0b0wX3mfIU3P_W0ouvCAeWv9wQ2i9BoH9HQ0b3YHjIiWgS5mcbhrZYrME2ZHD2U5hKyoow">
+                <th class="data-table__td fleet-cell fleet-cell--head" scope="row">
+                  <figure class="fleet-vehicle">
+                    <img class="fleet-vehicle__image" data-field="image" alt="Fotografía del Toyota C-HR"
+                      loading="lazy"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoRQBMr9c7FmcNgGpKZd_Ueszl88EawlTAIPxCB1YDKdIrXujZwPfBLt-_8IuO0ex_AECe460phwXNkUrwv809XZeNU6nREpHlOGVFwrZdO_dXATmq5nfQaB73QE0XACK2qgxDEmlrHdowZETmeHeLmhjmm_b0sQGCO-ae2HjlcWNFDHaQ0b0wX3mfIU3P_W0ouvCAeWv9wQ2i9BoH9HQ0b3YHjIiWgS5mcbhrZYrME2ZHD2U5hKyoow">
+                    <figcaption class="fleet-vehicle__caption">
+                      <strong class="fleet-vehicle__title" data-field="model">Toyota C-HR 140H Advance</strong>
+                      <span class="fleet-vehicle__subtitle" data-field="specs">e-CVT · Híbrido · 2024</span>
+                    </figcaption>
+                  </figure>
+                </th>
+                <td class="data-table__td fleet-cell"><span class="plate" data-field="plate">9012 GHI</span></td>
+                <td class="data-table__td fleet-cell">
+                  <span class="badge status status--published">
+                    <span class="status__dot" aria-hidden="true"></span>
+                    <span data-field="status">Publicado</span>
+                  </span>
+                </td>
+                <td class="data-table__td fleet-cell">
+                  <strong class="fleet-cell__price" data-field="price">429 €</strong>
+                  <span class="fleet-cell__unit">/mes</span>
+                </td>
+                <td class="data-table__td fleet-cell fleet-cell--muted" data-field="term">36 meses · Entrega inmediata</td>
+                <td class="data-table__td fleet-cell fleet-cell--end">
+                  <ul class="row-actions">
+                    <li><button class="icon-button" type="button" aria-label="Editar vehículo"
+                        data-vehicle-edit><span class="icon icon--md" aria-hidden="true">edit</span></button></li>
+                    <li><button class="icon-button" type="button" aria-label="Ver ficha del vehículo"
+                        data-vehicle-preview><span class="icon icon--md"
+                          aria-hidden="true">visibility</span></button></li>
+                    <li><button class="icon-button" type="button" aria-label="Más opciones" aria-haspopup="true"
+                        data-row-menu-toggle><span class="icon icon--md" aria-hidden="true">more_vert</span></button>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr class="data-table__row" data-vehicle-row data-model="Mercedes-Benz GLA 200d" data-plate="3456 JKL"
+                data-price="520" data-specs="8G-DCT · Diésel · AMG Line" data-status="En renting"
+                data-term="48 meses · 20.000 km/año"
+                data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAWTXOQw2RHVJG1Rjz5nRb-6CAaPr-ccbitm7MYHvGrFCd6yV35oqhTxa_CEuJMMDhHeuKgKwgxUM8YqlU4JGsfQ6iKiX9cSySdJDQ8PJjjArndgd_gyGPNPj1Rxmymki84koLr91rIhKqpCZB3vZyRvZFnpWUBtCXp4zNgJJ7e7bVGjO3LvjJULEY0TN52YdUrqIMmOLWJOvQRomz82TJnH45PU8PxXELI2BRqYrjTJvGKc8B9gvBoSA">
+                <th class="data-table__td fleet-cell fleet-cell--head" scope="row">
+                  <figure class="fleet-vehicle">
+                    <img class="fleet-vehicle__image" data-field="image" alt="Fotografía del Mercedes GLA"
+                      loading="lazy"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWTXOQw2RHVJG1Rjz5nRb-6CAaPr-ccbitm7MYHvGrFCd6yV35oqhTxa_CEuJMMDhHeuKgKwgxUM8YqlU4JGsfQ6iKiX9cSySdJDQ8PJjjArndgd_gyGPNPj1Rxmymki84koLr91rIhKqpCZB3vZyRvZFnpWUBtCXp4zNgJJ7e7bVGjO3LvjJULEY0TN52YdUrqIMmOLWJOvQRomz82TJnH45PU8PxXELI2BRqYrjTJvGKc8B9gvBoSA">
+                    <figcaption class="fleet-vehicle__caption">
+                      <strong class="fleet-vehicle__title" data-field="model">Mercedes-Benz GLA 200d</strong>
+                      <span class="fleet-vehicle__subtitle" data-field="specs">8G-DCT · Diésel · AMG Line</span>
+                    </figcaption>
+                  </figure>
+                </th>
+                <td class="data-table__td fleet-cell"><span class="plate" data-field="plate">3456 JKL</span></td>
+                <td class="data-table__td fleet-cell">
+                  <span class="badge status status--renting">
+                    <span class="status__dot" aria-hidden="true"></span>
+                    <span data-field="status">En renting</span>
+                  </span>
+                </td>
+                <td class="data-table__td fleet-cell">
+                  <strong class="fleet-cell__price" data-field="price">520 €</strong>
+                  <span class="fleet-cell__unit">/mes</span>
+                </td>
+                <td class="data-table__td fleet-cell fleet-cell--muted" data-field="term">48 meses · 20.000 km/año</td>
+                <td class="data-table__td fleet-cell fleet-cell--end">
+                  <ul class="row-actions">
+                    <li><button class="icon-button" type="button" aria-label="Editar vehículo"
+                        data-vehicle-edit><span class="icon icon--md" aria-hidden="true">edit</span></button></li>
+                    <li><button class="icon-button" type="button" aria-label="Ver ficha del vehículo"
+                        data-vehicle-preview><span class="icon icon--md"
+                          aria-hidden="true">visibility</span></button></li>
+                    <li><button class="icon-button" type="button" aria-label="Más opciones" aria-haspopup="true"
+                        data-row-menu-toggle><span class="icon icon--md" aria-hidden="true">more_vert</span></button>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr class="data-table__row" data-vehicle-row data-model="Cupra Formentor 1.5 TSI" data-plate="7890 MNO"
+                data-price="385" data-specs="DSG · Gasolina · 150 CV" data-status="Borrador"
+                data-term="36 meses · 10.000 km/año"
+                data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAiwVdr3NT5sVEoukOYFhaWB2y2ATGFoF0Agf2cf4kTIXc_pdlgSysUqS_vNupIV3NQ_W8IwCo6IjbzHteNmBKvPVHzu-xsxeEYXMDFsxq-loBprJ-auqEvHhYocXepaEmWmqfQH4HYXTzjiUh99fTHKkvfdIkoYvVbvRKOZTrazEuHA0bf7oCJlyfm5I7XtetB2tfiEOY8PBrEjKYu9F051QND620KvhFGzE0HJw2lvWomWb3XkNSJeQ">
+                <th class="data-table__td fleet-cell fleet-cell--head" scope="row">
+                  <figure class="fleet-vehicle">
+                    <img class="fleet-vehicle__image" data-field="image" alt="Fotografía del Cupra Formentor"
+                      loading="lazy"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiwVdr3NT5sVEoukOYFhaWB2y2ATGFoF0Agf2cf4kTIXc_pdlgSysUqS_vNupIV3NQ_W8IwCo6IjbzHteNmBKvPVHzu-xsxeEYXMDFsxq-loBprJ-auqEvHhYocXepaEmWmqfQH4HYXTzjiUh99fTHKkvfdIkoYvVbvRKOZTrazEuHA0bf7oCJlyfm5I7XtetB2tfiEOY8PBrEjKYu9F051QND620KvhFGzE0HJw2lvWomWb3XkNSJeQ">
+                    <figcaption class="fleet-vehicle__caption">
+                      <strong class="fleet-vehicle__title" data-field="model">Cupra Formentor 1.5 TSI</strong>
+                      <span class="fleet-vehicle__subtitle" data-field="specs">DSG · Gasolina · 150 CV</span>
+                    </figcaption>
+                  </figure>
+                </th>
+                <td class="data-table__td fleet-cell"><span class="plate" data-field="plate">7890 MNO</span></td>
+                <td class="data-table__td fleet-cell">
+                  <span class="badge status status--draft">
+                    <span class="status__dot" aria-hidden="true"></span>
+                    <span data-field="status">Borrador</span>
+                  </span>
+                </td>
+                <td class="data-table__td fleet-cell">
+                  <strong class="fleet-cell__price" data-field="price">385 €</strong>
+                  <span class="fleet-cell__unit">/mes</span>
+                </td>
+                <td class="data-table__td fleet-cell fleet-cell--muted" data-field="term">36 meses · 10.000 km/año</td>
+                <td class="data-table__td fleet-cell fleet-cell--end">
+                  <ul class="row-actions">
+                    <li><button class="icon-button" type="button" aria-label="Editar vehículo"
+                        data-vehicle-edit><span class="icon icon--md" aria-hidden="true">edit</span></button></li>
+                    <li><button class="icon-button" type="button" aria-label="Ver ficha del vehículo"
+                        data-vehicle-preview><span class="icon icon--md"
+                          aria-hidden="true">visibility</span></button></li>
+                    <li><button class="icon-button" type="button" aria-label="Más opciones" aria-haspopup="true"
+                        data-row-menu-toggle><span class="icon icon--md" aria-hidden="true">more_vert</span></button>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="dashboard__split">
+        <section class="panel" id="publicaciones" aria-labelledby="posts-title">
+          <header class="panel__header">
+            <hgroup class="panel__heading">
+              <h2 class="panel__title" id="posts-title">Publicaciones en Marketplace</h2>
+              <p class="panel__subtitle">Rendimiento en tiempo real de vehículos destacados</p>
+            </hgroup>
+            <a class="panel__link" href="#mis-vehiculos" data-fleet-filter="Publicado">Ver todas (18)</a>
+          </header>
+
+          <ul class="fleet-list">
+            <li>
+              <button class="fleet-list__item" type="button"
+                data-toast="Rendimiento BMW X1: +12% visitas esta semana">
+                <img class="fleet-list__image" alt="BMW X1 sDrive18d publicado en el marketplace" loading="lazy"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMNF5dR6UiAKgXVosz90hmqUvVIMXQhwcErnBWomv-pOnIiqrU0mO7BNL2jvx1w3EBpqHgDWIOtFHP18d9ZFFWh7PrFPcuI7VE47bjUnVGb4ahY7scty4GNunokOBlbQQjRe0O8Wgq0CMQyLkJ8dAmPrw0Cutbz_nCp6cke4DlCgB8tHhHK4WQUXn7JubeV90FJOMDGwyGHG5KEIGuetwmzIMpG6R-hnryteWefdRU2e4SMbqy3DxDlw">
+                <span class="fleet-list__body">
+                  <span class="fleet-list__headline">
+                    <span class="fleet-list__title">BMW X1 sDrive18d</span>
+                    <span class="fleet-list__price">449 €<small class="fleet-list__unit">/m</small></span>
+                  </span>
+                  <span class="fleet-list__stats">
+                    <span class="fleet-list__stat">
+                      <span class="icon icon--sm fleet-list__icon" aria-hidden="true">visibility</span>
+                      <strong>1.420</strong> visitas
                     </span>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap">
-                    <span class="car-price font-headline-sm text-headline-sm font-bold text-on-surface">449 €</span>
-                    <span class="font-body-sm text-body-sm text-on-surface-variant">/mes</span>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap font-body-sm text-body-sm text-on-surface-variant car-term">
-                    36 meses · 10.000 km/año
-                  </td>
-                  <td class="py-3.5 px-4 text-right whitespace-nowrap">
-                    <div class="inline-flex items-center gap-1 opacity-80 group-hover:opacity-100 transition-opacity">
-                      <button
-                        class="p-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-surface-container-low transition-colors"
-                        onclick="openEditModal(this)" title="Editar">
-                        <span class="material-symbols-outlined text-[18px]">edit</span>
-                      </button>
-                      <button
-                        class="p-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-surface-container-low transition-colors"
-                        onclick="openPreviewModal(this)" title="Ver Ficha">
-                        <span class="material-symbols-outlined text-[18px]">visibility</span>
-                      </button>
-                      <button
-                        class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
-                        onclick="toggleRowMenu(event, this)" title="Opciones">
-                        <span class="material-symbols-outlined text-[18px]">more_vert</span>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <!-- Fila 2 -->
-                <tr class="vehicle-row hover:bg-surface-bright transition-colors group"
-                  data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDNq5xaxs04UNbJcikjHt5oJaofkpRrfFpO6XckvFlN_cQPK5vn9AtM-b3CGBJKTKxCJAGXrm0P-N8LNr3MSidB20OWaYObs6a9WjnEDv_oz5RQMCcqD_8yayryApZXxuEpq2-v2swyh-kbupz5yaLPoQ9yBURiC35i8LejX60D3xSsWXBtM19FtST5UaMTUnU1L6OnqUPtadtKXt3gyxnYSaCk9OUAgQUdzR3Fx-fN8_iUGyl7-1Y1HA"
-                  data-model="Audi A3 Sportback 35 TFSI" data-plate="5678 DEF" data-price="399"
-                  data-specs="S tronic · Gasolina MHEV · 2024" data-status="En renting"
-                  data-term="48 meses · 15.000 km/año">
-                  <td class="py-3.5 px-4">
-                    <div class="flex items-center gap-3">
-                      <img class="w-12 h-10 object-cover rounded-lg bg-surface-container flex-shrink-0"
-                        data-alt="Audi A3"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNq5xaxs04UNbJcikjHt5oJaofkpRrfFpO6XckvFlN_cQPK5vn9AtM-b3CGBJKTKxCJAGXrm0P-N8LNr3MSidB20OWaYObs6a9WjnEDv_oz5RQMCcqD_8yayryApZXxuEpq2-v2swyh-kbupz5yaLPoQ9yBURiC35i8LejX60D3xSsWXBtM19FtST5UaMTUnU1L6OnqUPtadtKXt3gyxnYSaCk9OUAgQUdzR3Fx-fN8_iUGyl7-1Y1HA" />
-                      <div class="min-w-0">
-                        <div class="car-title font-label-lg text-label-lg text-on-surface truncate">Audi A3 Sportback 35
-                          TFSI</div>
-                        <div class="car-subtitle font-body-sm text-body-sm text-on-surface-variant truncate">S tronic ·
-                          Gasolina MHEV · 2024</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap">
-                    <span
-                      class="car-plate px-2.5 py-1 rounded bg-surface-container-high font-mono text-[12px] font-bold text-on-surface tracking-wider">5678
-                      DEF</span>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap">
-                    <span
-                      class="car-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-highest text-primary-container font-label-sm text-label-sm font-semibold">
-                      <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-                      En renting
+                    <span class="fleet-list__stat">
+                      <span class="icon icon--sm fleet-list__icon fleet-list__icon--clicks"
+                        aria-hidden="true">ads_click</span>
+                      <strong>84</strong> clics renting
                     </span>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap">
-                    <span class="car-price font-headline-sm text-headline-sm font-bold text-on-surface">399 €</span>
-                    <span class="font-body-sm text-body-sm text-on-surface-variant">/mes</span>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap font-body-sm text-body-sm text-on-surface-variant car-term">
-                    48 meses · 15.000 km/año
-                  </td>
-                  <td class="py-3.5 px-4 text-right whitespace-nowrap">
-                    <div class="inline-flex items-center gap-1 opacity-80 group-hover:opacity-100 transition-opacity">
-                      <button
-                        class="p-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-surface-container-low transition-colors"
-                        onclick="openEditModal(this)" title="Editar">
-                        <span class="material-symbols-outlined text-[18px]">edit</span>
-                      </button>
-                      <button
-                        class="p-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-surface-container-low transition-colors"
-                        onclick="openPreviewModal(this)" title="Ver Ficha">
-                        <span class="material-symbols-outlined text-[18px]">visibility</span>
-                      </button>
-                      <button
-                        class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
-                        onclick="toggleRowMenu(event, this)" title="Opciones">
-                        <span class="material-symbols-outlined text-[18px]">more_vert</span>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <!-- Fila 3 -->
-                <tr class="vehicle-row hover:bg-surface-bright transition-colors group"
-                  data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCoRQBMr9c7FmcNgGpKZd_Ueszl88EawlTAIPxCB1YDKdIrXujZwPfBLt-_8IuO0ex_AECe460phwXNkUrwv809XZeNU6nREpHlOGVFwrZdO_dXATmq5nfQaB73QE0XACK2qgxDEmlrHdowZETmeHeLmhjmm_b0sQGCO-ae2HjlcWNFDHaQ0b0wX3mfIU3P_W0ouvCAeWv9wQ2i9BoH9HQ0b3YHjIiWgS5mcbhrZYrME2ZHD2U5hKyoow"
-                  data-model="Toyota C-HR 140H Advance" data-plate="9012 GHI" data-price="429"
-                  data-specs="e-CVT · Híbrido · 2024" data-status="Publicado" data-term="36 meses · Entrega inmediata">
-                  <td class="py-3.5 px-4">
-                    <div class="flex items-center gap-3">
-                      <img class="w-12 h-10 object-cover rounded-lg bg-surface-container flex-shrink-0"
-                        data-alt="Toyota CHR"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoRQBMr9c7FmcNgGpKZd_Ueszl88EawlTAIPxCB1YDKdIrXujZwPfBLt-_8IuO0ex_AECe460phwXNkUrwv809XZeNU6nREpHlOGVFwrZdO_dXATmq5nfQaB73QE0XACK2qgxDEmlrHdowZETmeHeLmhjmm_b0sQGCO-ae2HjlcWNFDHaQ0b0wX3mfIU3P_W0ouvCAeWv9wQ2i9BoH9HQ0b3YHjIiWgS5mcbhrZYrME2ZHD2U5hKyoow" />
-                      <div class="min-w-0">
-                        <div class="car-title font-label-lg text-label-lg text-on-surface truncate">Toyota C-HR 140H
-                          Advance</div>
-                        <div class="car-subtitle font-body-sm text-body-sm text-on-surface-variant truncate">e-CVT ·
-                          Híbrido · 2024</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap">
-                    <span
-                      class="car-plate px-2.5 py-1 rounded bg-surface-container-high font-mono text-[12px] font-bold text-on-surface tracking-wider">9012
-                      GHI</span>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap">
-                    <span
-                      class="car-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
-                      <span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
-                      Publicado
+                    <span class="badge status status--available fleet-list__state">
+                      <span class="status__dot" aria-hidden="true"></span>
+                      Activo
                     </span>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap">
-                    <span class="car-price font-headline-sm text-headline-sm font-bold text-on-surface">429 €</span>
-                    <span class="font-body-sm text-body-sm text-on-surface-variant">/mes</span>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap font-body-sm text-body-sm text-on-surface-variant car-term">
-                    36 meses · Entrega inmediata
-                  </td>
-                  <td class="py-3.5 px-4 text-right whitespace-nowrap">
-                    <div class="inline-flex items-center gap-1 opacity-80 group-hover:opacity-100 transition-opacity">
-                      <button
-                        class="p-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-surface-container-low transition-colors"
-                        onclick="openEditModal(this)" title="Editar">
-                        <span class="material-symbols-outlined text-[18px]">edit</span>
-                      </button>
-                      <button
-                        class="p-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-surface-container-low transition-colors"
-                        onclick="openPreviewModal(this)" title="Ver Ficha">
-                        <span class="material-symbols-outlined text-[18px]">visibility</span>
-                      </button>
-                      <button
-                        class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
-                        onclick="toggleRowMenu(event, this)" title="Opciones">
-                        <span class="material-symbols-outlined text-[18px]">more_vert</span>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <!-- Fila 4 -->
-                <tr class="vehicle-row hover:bg-surface-bright transition-colors group"
-                  data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAWTXOQw2RHVJG1Rjz5nRb-6CAaPr-ccbitm7MYHvGrFCd6yV35oqhTxa_CEuJMMDhHeuKgKwgxUM8YqlU4JGsfQ6iKiX9cSySdJDQ8PJjjArndgd_gyGPNPj1Rxmymki84koLr91rIhKqpCZB3vZyRvZFnpWUBtCXp4zNgJJ7e7bVGjO3LvjJULEY0TN52YdUrqIMmOLWJOvQRomz82TJnH45PU8PxXELI2BRqYrjTJvGKc8B9gvBoSA"
-                  data-model="Mercedes-Benz GLA 200d" data-plate="3456 JKL" data-price="520"
-                  data-specs="8G-DCT · Diésel · AMG Line" data-status="En renting" data-term="48 meses · 20.000 km/año">
-                  <td class="py-3.5 px-4">
-                    <div class="flex items-center gap-3">
-                      <img class="w-12 h-10 object-cover rounded-lg bg-surface-container flex-shrink-0"
-                        data-alt="Mercedes GLA"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWTXOQw2RHVJG1Rjz5nRb-6CAaPr-ccbitm7MYHvGrFCd6yV35oqhTxa_CEuJMMDhHeuKgKwgxUM8YqlU4JGsfQ6iKiX9cSySdJDQ8PJjjArndgd_gyGPNPj1Rxmymki84koLr91rIhKqpCZB3vZyRvZFnpWUBtCXp4zNgJJ7e7bVGjO3LvjJULEY0TN52YdUrqIMmOLWJOvQRomz82TJnH45PU8PxXELI2BRqYrjTJvGKc8B9gvBoSA" />
-                      <div class="min-w-0">
-                        <div class="car-title font-label-lg text-label-lg text-on-surface truncate">Mercedes-Benz GLA
-                          200d</div>
-                        <div class="car-subtitle font-body-sm text-body-sm text-on-surface-variant truncate">8G-DCT ·
-                          Diésel · AMG Line</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap">
-                    <span
-                      class="car-plate px-2.5 py-1 rounded bg-surface-container-high font-mono text-[12px] font-bold text-on-surface tracking-wider">3456
-                      JKL</span>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap">
-                    <span
-                      class="car-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-highest text-primary-container font-label-sm text-label-sm font-semibold">
-                      <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-                      En renting
-                    </span>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap">
-                    <span class="car-price font-headline-sm text-headline-sm font-bold text-on-surface">520 €</span>
-                    <span class="font-body-sm text-body-sm text-on-surface-variant">/mes</span>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap font-body-sm text-body-sm text-on-surface-variant car-term">
-                    48 meses · 20.000 km/año
-                  </td>
-                  <td class="py-3.5 px-4 text-right whitespace-nowrap">
-                    <div class="inline-flex items-center gap-1 opacity-80 group-hover:opacity-100 transition-opacity">
-                      <button
-                        class="p-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-surface-container-low transition-colors"
-                        onclick="openEditModal(this)" title="Editar">
-                        <span class="material-symbols-outlined text-[18px]">edit</span>
-                      </button>
-                      <button
-                        class="p-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-surface-container-low transition-colors"
-                        onclick="openPreviewModal(this)" title="Ver Ficha">
-                        <span class="material-symbols-outlined text-[18px]">visibility</span>
-                      </button>
-                      <button
-                        class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
-                        onclick="toggleRowMenu(event, this)" title="Opciones">
-                        <span class="material-symbols-outlined text-[18px]">more_vert</span>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <!-- Fila 5 -->
-                <tr class="vehicle-row hover:bg-surface-bright transition-colors group"
-                  data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAiwVdr3NT5sVEoukOYFhaWB2y2ATGFoF0Agf2cf4kTIXc_pdlgSysUqS_vNupIV3NQ_W8IwCo6IjbzHteNmBKvPVHzu-xsxeEYXMDFsxq-loBprJ-auqEvHhYocXepaEmWmqfQH4HYXTzjiUh99fTHKkvfdIkoYvVbvRKOZTrazEuHA0bf7oCJlyfm5I7XtetB2tfiEOY8PBrEjKYu9F051QND620KvhFGzE0HJw2lvWomWb3XkNSJeQ"
-                  data-model="Cupra Formentor 1.5 TSI" data-plate="7890 MNO" data-price="385"
-                  data-specs="DSG · Gasolina · 150 CV" data-status="Borrador" data-term="36 meses · 10.000 km/año">
-                  <td class="py-3.5 px-4">
-                    <div class="flex items-center gap-3">
-                      <img class="w-12 h-10 object-cover rounded-lg bg-surface-container flex-shrink-0"
-                        data-alt="Cupra Formentor"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiwVdr3NT5sVEoukOYFhaWB2y2ATGFoF0Agf2cf4kTIXc_pdlgSysUqS_vNupIV3NQ_W8IwCo6IjbzHteNmBKvPVHzu-xsxeEYXMDFsxq-loBprJ-auqEvHhYocXepaEmWmqfQH4HYXTzjiUh99fTHKkvfdIkoYvVbvRKOZTrazEuHA0bf7oCJlyfm5I7XtetB2tfiEOY8PBrEjKYu9F051QND620KvhFGzE0HJw2lvWomWb3XkNSJeQ" />
-                      <div class="min-w-0">
-                        <div class="car-title font-label-lg text-label-lg text-on-surface truncate">Cupra Formentor 1.5
-                          TSI</div>
-                        <div class="car-subtitle font-body-sm text-body-sm text-on-surface-variant truncate">DSG ·
-                          Gasolina · 150 CV</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap">
-                    <span
-                      class="car-plate px-2.5 py-1 rounded bg-surface-container-high font-mono text-[12px] font-bold text-on-surface tracking-wider">7890
-                      MNO</span>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap">
-                    <span
-                      class="car-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
-                      <span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
-                      Borrador
-                    </span>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap">
-                    <span class="car-price font-headline-sm text-headline-sm font-bold text-on-surface">385 €</span>
-                    <span class="font-body-sm text-body-sm text-on-surface-variant">/mes</span>
-                  </td>
-                  <td class="py-3.5 px-4 whitespace-nowrap font-body-sm text-body-sm text-on-surface-variant car-term">
-                    36 meses · 10.000 km/año
-                  </td>
-                  <td class="py-3.5 px-4 text-right whitespace-nowrap">
-                    <div class="inline-flex items-center gap-1 opacity-80 group-hover:opacity-100 transition-opacity">
-                      <button
-                        class="p-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-surface-container-low transition-colors"
-                        onclick="openEditModal(this)" title="Editar">
-                        <span class="material-symbols-outlined text-[18px]">edit</span>
-                      </button>
-                      <button
-                        class="p-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-surface-container-low transition-colors"
-                        onclick="openPreviewModal(this)" title="Ver Ficha">
-                        <span class="material-symbols-outlined text-[18px]">visibility</span>
-                      </button>
-                      <button
-                        class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
-                        onclick="toggleRowMenu(event, this)" title="Opciones">
-                        <span class="material-symbols-outlined text-[18px]">more_vert</span>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-        <!-- 4. Sección "Publicaciones" y "Últimas solicitudes" (Dos columnas equilibradas) -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
-          <!-- Columna Izquierda: Publicaciones activas en Marketplace -->
-          <div
-            class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-space-md">
-                <div>
-                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Publicaciones en Marketplace</h3>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant">Rendimiento en tiempo real de vehículos
-                    destacados</p>
-                </div>
-                <a class="font-label-md text-label-md text-secondary hover:underline cursor-pointer"
-                  onclick="filterByTab('Publicado', document.getElementById('filter-publicados'))">Ver todas (18)</a>
-              </div>
-              <div class="space-y-3">
-                <!-- Card Mini Publicación 1 -->
-                <div
-                  class="p-3 bg-surface-container-low rounded-xl flex items-center gap-4 hover:bg-surface-container transition-colors cursor-pointer"
-                  onclick="showToast('Rendimiento BMW X1: +12% visitas esta semana')">
-                  <div class="w-16 h-14 rounded-lg bg-surface overflow-hidden flex-shrink-0">
-                    <img class="w-full h-full object-cover" data-alt="BMW X1"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMNF5dR6UiAKgXVosz90hmqUvVIMXQhwcErnBWomv-pOnIiqrU0mO7BNL2jvx1w3EBpqHgDWIOtFHP18d9ZFFWh7PrFPcuI7VE47bjUnVGb4ahY7scty4GNunokOBlbQQjRe0O8Wgq0CMQyLkJ8dAmPrw0Cutbz_nCp6cke4DlCgB8tHhHK4WQUXn7JubeV90FJOMDGwyGHG5KEIGuetwmzIMpG6R-hnryteWefdRU2e4SMbqy3DxDlw" />
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <div class="flex items-center justify-between">
-                      <span class="font-label-lg text-label-lg text-on-surface truncate">BMW X1 sDrive18d</span>
-                      <span class="font-headline-sm text-headline-sm font-bold text-on-tertiary-container">449 €<span
-                          class="font-body-sm text-body-sm font-normal text-on-surface-variant">/m</span></span>
-                    </div>
-                    <div class="flex items-center gap-4 mt-1 font-body-sm text-body-sm text-on-surface-variant">
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-[16px] text-secondary">visibility</span>
-                        <strong>1.420</strong> visitas
-                      </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-[16px] text-on-tertiary-container">ads_click</span>
-                        <strong>84</strong> clics renting
-                      </span>
-                      <span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm ml-auto">
-                        <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Activo
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card Mini Publicación 2 -->
-                <div
-                  class="p-3 bg-surface-container-low rounded-xl flex items-center gap-4 hover:bg-surface-container transition-colors cursor-pointer"
-                  onclick="showToast('Rendimiento Audi A3: 62 interesados')">
-                  <div class="w-16 h-14 rounded-lg bg-surface overflow-hidden flex-shrink-0">
-                    <img class="w-full h-full object-cover" data-alt="Audi A3"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS3byA0LS9dlep_Rw97C5edFbzXb_f65cIVRKWu_1b32_cmtGZSRn4sl4HfIhJ9JnbQDuYOHR6MWt_Fm4THuOtVnH54zJf8pLV7Bd-VjzIdHI67CmsRJS2tqOYbjMQ4ad0j_ABDWoZQeyswk4x5XtIYS1phtK8YspsaoPeRD2sh7hRiQiYdrEDoz5heLgl7v3Q-8Y76OkEwpClX3T7imfsi08eCmJvxz36D6m-r_NB0Vbaog14ActMvQ" />
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <div class="flex items-center justify-between">
-                      <span class="font-label-lg text-label-lg text-on-surface truncate">Audi A3 Sportback 35
-                        TFSI</span>
-                      <span class="font-headline-sm text-headline-sm font-bold text-on-tertiary-container">399 €<span
-                          class="font-body-sm text-body-sm font-normal text-on-surface-variant">/m</span></span>
-                    </div>
-                    <div class="flex items-center gap-4 mt-1 font-body-sm text-body-sm text-on-surface-variant">
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-[16px] text-secondary">visibility</span>
-                        <strong>980</strong> visitas
-                      </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-[16px] text-on-tertiary-container">ads_click</span>
-                        <strong>62</strong> clics renting
-                      </span>
-                      <span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm ml-auto">
-                        <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Activo
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card Mini Publicación 3 -->
-                <div
-                  class="p-3 bg-surface-container-low rounded-xl flex items-center gap-4 hover:bg-surface-container transition-colors cursor-pointer"
-                  onclick="showToast('Rendimiento Toyota C-HR: Vehículo más visto del mes')">
-                  <div class="w-16 h-14 rounded-lg bg-surface overflow-hidden flex-shrink-0">
-                    <img class="w-full h-full object-cover" data-alt="Toyota CHR"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0x1zUV331Z-uDN2W99Y9CJRke9DAZiQw8ELM6yJIL1VWQ_PKDFVX4ZqINfeth8qJ8ChgU3h2bMv062hDbKb_N0OzfQhDDY0EAZmq2lBg24tCd1RAIsPkTy7xeFxt0WPRUvEQfjxa7X6tTFPzDWRT7U_IGNoH7nSIyS9_Sm5LOBJ44brQ3bo1ORyXUKRecXzA1PR0GVv6v9zM7Zxaqo2AGiCHTge7JlUaF7JGZxGyttvdy5cj1c8egSQ" />
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <div class="flex items-center justify-between">
-                      <span class="font-label-lg text-label-lg text-on-surface truncate">Toyota C-HR 140H Advance</span>
-                      <span class="font-headline-sm text-headline-sm font-bold text-on-tertiary-container">429 €<span
-                          class="font-body-sm text-body-sm font-normal text-on-surface-variant">/m</span></span>
-                    </div>
-                    <div class="flex items-center gap-4 mt-1 font-body-sm text-body-sm text-on-surface-variant">
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-[16px] text-secondary">visibility</span>
-                        <strong>2.150</strong> visitas
-                      </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-[16px] text-on-tertiary-container">ads_click</span>
-                        <strong>115</strong> clics renting
-                      </span>
-                      <span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm ml-auto">
-                        <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Activo
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="pt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
-              <span>Actualizado hace 15 minutos</span>
-              <button class="text-secondary font-label-md text-label-md hover:underline inline-flex items-center gap-1"
-                onclick="showToast('Campaña de patrocinio iniciada para 3 vehículos')" type="button">
-                Promocionar vehículos <span class="material-symbols-outlined text-[16px]">campaign</span>
+                  </span>
+                </span>
               </button>
-            </div>
-          </div>
-          <!-- Columna Derecha: Solicitudes recientes de clientes -->
-          <div
-            class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md flex flex-col justify-between"
-            id="sectionRequests">
-            <div>
-              <div class="flex items-center justify-between mb-space-md">
-                <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="font-headline-sm text-headline-sm text-on-surface">Últimas solicitudes</h3>
-                    <span
-                      class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold"
-                      id="badgePendingReqs">7 pendientes</span>
-                  </div>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant">Peticiones de renting recibidas para
-                    scoring y validación</p>
-                </div>
-                <a class="font-label-md text-label-md text-secondary hover:underline cursor-pointer"
-                  onclick="showToast('Mostrando todas las solicitudes')">Ver todas</a>
-              </div>
-              <div class="space-y-3">
-                <!-- Solicitud Item 1 -->
-                <div
-                  class="p-3.5 bg-surface-container-low rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-surface-container transition-colors"
-                  data-applicant="Logística TransIberia S.L." data-cif="B-84930219" data-fee="520 €/mes"
-                  data-model="Mercedes-Benz GLA 200d" data-score="8.9 / 10 (Excelente)"
-                  data-term="48 meses · 20.000 km">
-                  <div class="space-y-1 min-w-0">
-                    <div class="flex items-center gap-2">
-                      <span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Logística TransIberia
-                        S.L.</span>
-                      <span
-                        class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant font-semibold">Empresa</span>
-                    </div>
-                    <div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2">
-                      <span>Mercedes-Benz GLA 200d</span>
-                      <span>•</span>
-                      <span class="font-bold text-on-surface">520 €/mes</span>
-                      <span>•</span>
-                      <span class="text-on-tertiary-container font-semibold">Hoy, 09:42</span>
-                    </div>
-                  </div>
-                  <div class="flex items-center gap-2 flex-shrink-0">
-                    <button
-                      class="px-3 py-1.5 rounded-lg bg-surface-container-highest text-primary-container font-label-sm text-label-sm hover:bg-surface-container-high transition-colors font-semibold"
-                      onclick="openRequestDetail(this)" type="button">
-                      Ver detalle
-                    </button>
-                    <button
-                      class="btn-approve px-3 py-1.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim font-label-sm text-label-sm transition-colors font-bold shadow-sm inline-flex items-center gap-1"
-                      onclick="approveRequest(this, 'Logística TransIberia S.L.')" type="button">
-                      <span>Aprobar estudio</span>
-                    </button>
-                  </div>
-                </div>
-                <!-- Solicitud Item 2 -->
-                <div
-                  class="p-3.5 bg-surface-container-low rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-surface-container transition-colors"
-                  data-applicant="Carlos Mendoza Valls" data-cif="47289104-K" data-fee="385 €/mes"
-                  data-model="Cupra Formentor 1.5 TSI" data-score="7.8 / 10 (Aprobado)"
-                  data-term="36 meses · 10.000 km">
-                  <div class="space-y-1 min-w-0">
-                    <div class="flex items-center gap-2">
-                      <span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Carlos Mendoza
-                        Valls</span>
-                      <span
-                        class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-semibold">Particular</span>
-                    </div>
-                    <div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2">
-                      <span>Cupra Formentor 1.5 TSI</span>
-                      <span>•</span>
-                      <span class="font-bold text-on-surface">385 €/mes</span>
-                      <span>•</span>
-                      <span class="text-on-tertiary-container font-semibold">Hoy, 10:15</span>
-                    </div>
-                  </div>
-                  <div class="flex items-center gap-2 flex-shrink-0">
-                    <button
-                      class="px-3 py-1.5 rounded-lg bg-surface-container-highest text-primary-container font-label-sm text-label-sm hover:bg-surface-container-high transition-colors font-semibold"
-                      onclick="openRequestDetail(this)" type="button">
-                      Ver detalle
-                    </button>
-                    <button
-                      class="btn-approve px-3 py-1.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim font-label-sm text-label-sm transition-colors font-bold shadow-sm inline-flex items-center gap-1"
-                      onclick="approveRequest(this, 'Carlos Mendoza Valls')" type="button">
-                      <span>Aprobar estudio</span>
-                    </button>
-                  </div>
-                </div>
-                <!-- Solicitud Item 3 -->
-                <div
-                  class="p-3.5 bg-surface-container-low rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-surface-container transition-colors"
-                  data-applicant="Consultoría Innova Madrid" data-cif="B-28994312" data-fee="449 €/mes"
-                  data-model="BMW X1 sDrive18d" data-score="9.4 / 10 (Excelente)" data-term="36 meses · 10.000 km">
-                  <div class="space-y-1 min-w-0">
-                    <div class="flex items-center gap-2">
-                      <span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Consultoría Innova
-                        Madrid</span>
-                      <span
-                        class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant font-semibold">Empresa</span>
-                    </div>
-                    <div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2">
-                      <span>BMW X1 sDrive18d</span>
-                      <span>•</span>
-                      <span class="font-bold text-on-surface">449 €/mes</span>
-                      <span>•</span>
-                      <span>Ayer, 18:30</span>
-                    </div>
-                  </div>
-                  <div class="flex items-center gap-2 flex-shrink-0">
-                    <button
-                      class="px-3 py-1.5 rounded-lg bg-surface-container-highest text-primary-container font-label-sm text-label-sm hover:bg-surface-container-high transition-colors font-semibold"
-                      onclick="openRequestDetail(this)" type="button">
-                      Ver detalle
-                    </button>
-                    <button
-                      class="btn-approve px-3 py-1.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim font-label-sm text-label-sm transition-colors font-bold shadow-sm inline-flex items-center gap-1"
-                      onclick="approveRequest(this, 'Consultoría Innova Madrid')" type="button">
-                      <span>Aprobar estudio</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="pt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
-              <span>Tiempo medio de resolución: <strong>3.2 horas</strong></span>
-              <a class="text-secondary font-label-md text-label-md hover:underline inline-flex items-center gap-1 cursor-pointer"
-                onclick="scrollToRequests()">
-                Bandeja de solicitudes <span class="material-symbols-outlined text-[16px]">inbox</span>
-              </a>
-            </div>
-          </div>
+            </li>
+            <li>
+              <button class="fleet-list__item" type="button" data-toast="Rendimiento Audi A3: 62 interesados">
+                <img class="fleet-list__image" alt="Audi A3 Sportback publicado en el marketplace" loading="lazy"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS3byA0LS9dlep_Rw97C5edFbzXb_f65cIVRKWu_1b32_cmtGZSRn4sl4HfIhJ9JnbQDuYOHR6MWt_Fm4THuOtVnH54zJf8pLV7Bd-VjzIdHI67CmsRJS2tqOYbjMQ4ad0j_ABDWoZQeyswk4x5XtIYS1phtK8YspsaoPeRD2sh7hRiQiYdrEDoz5heLgl7v3Q-8Y76OkEwpClX3T7imfsi08eCmJvxz36D6m-r_NB0Vbaog14ActMvQ">
+                <span class="fleet-list__body">
+                  <span class="fleet-list__headline">
+                    <span class="fleet-list__title">Audi A3 Sportback 35 TFSI</span>
+                    <span class="fleet-list__price">399 €<small class="fleet-list__unit">/m</small></span>
+                  </span>
+                  <span class="fleet-list__stats">
+                    <span class="fleet-list__stat">
+                      <span class="icon icon--sm fleet-list__icon" aria-hidden="true">visibility</span>
+                      <strong>980</strong> visitas
+                    </span>
+                    <span class="fleet-list__stat">
+                      <span class="icon icon--sm fleet-list__icon fleet-list__icon--clicks"
+                        aria-hidden="true">ads_click</span>
+                      <strong>62</strong> clics renting
+                    </span>
+                    <span class="badge status status--available fleet-list__state">
+                      <span class="status__dot" aria-hidden="true"></span>
+                      Activo
+                    </span>
+                  </span>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button class="fleet-list__item" type="button"
+                data-toast="Rendimiento Toyota C-HR: Vehículo más visto del mes">
+                <img class="fleet-list__image" alt="Toyota C-HR 140H publicado en el marketplace" loading="lazy"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0x1zUV331Z-uDN2W99Y9CJRke9DAZiQw8ELM6yJIL1VWQ_PKDFVX4ZqINfeth8qJ8ChgU3h2bMv062hDbKb_N0OzfQhDDY0EAZmq2lBg24tCd1RAIsPkTy7xeFxt0WPRUvEQfjxa7X6tTFPzDWRT7U_IGNoH7nSIyS9_Sm5LOBJ44brQ3bo1ORyXUKRecXzA1PR0GVv6v9zM7Zxaqo2AGiCHTge7JlUaF7JGZxGyttvdy5cj1c8egSQ">
+                <span class="fleet-list__body">
+                  <span class="fleet-list__headline">
+                    <span class="fleet-list__title">Toyota C-HR 140H Advance</span>
+                    <span class="fleet-list__price">429 €<small class="fleet-list__unit">/m</small></span>
+                  </span>
+                  <span class="fleet-list__stats">
+                    <span class="fleet-list__stat">
+                      <span class="icon icon--sm fleet-list__icon" aria-hidden="true">visibility</span>
+                      <strong>2.150</strong> visitas
+                    </span>
+                    <span class="fleet-list__stat">
+                      <span class="icon icon--sm fleet-list__icon fleet-list__icon--clicks"
+                        aria-hidden="true">ads_click</span>
+                      <strong>115</strong> clics renting
+                    </span>
+                    <span class="badge status status--available fleet-list__state">
+                      <span class="status__dot" aria-hidden="true"></span>
+                      Activo
+                    </span>
+                  </span>
+                </span>
+              </button>
+            </li>
+          </ul>
+
+          <footer class="panel__footer">
+            <p>Actualizado hace 15 minutos</p>
+            <button class="panel__link" type="button" data-toast="Campaña de patrocinio iniciada para 3 vehículos">
+              Promocionar vehículos
+              <span class="icon icon--sm" aria-hidden="true">campaign</span>
+            </button>
+          </footer>
+        </section>
+
+        <section class="panel" id="solicitudes" aria-labelledby="requests-title">
+          <header class="panel__header">
+            <hgroup class="panel__heading">
+              <h2 class="panel__title" id="requests-title">
+                Últimas solicitudes
+                <span class="badge badge--warning" data-pending-badge>7 pendientes</span>
+              </h2>
+              <p class="panel__subtitle">Peticiones de renting recibidas para scoring y validación</p>
+            </hgroup>
+            <button class="panel__link" type="button" data-toast="Mostrando todas las solicitudes">Ver
+              todas</button>
+          </header>
+
+          <ul class="activity">
+            <li class="activity__item" data-request data-applicant="Logística TransIberia S.L." data-cif="B-84930219"
+              data-fee="520 €/mes" data-model="Mercedes-Benz GLA 200d" data-score="8.9 / 10 (Excelente)"
+              data-term="48 meses · 20.000 km">
+              <p class="activity__name">
+                <strong class="activity__applicant">Logística TransIberia S.L.</strong>
+                <span class="badge activity__type activity__type--company">Empresa</span>
+              </p>
+              <p class="activity__meta">
+                <span class="activity__meta-item">Mercedes-Benz GLA 200d</span>
+                <strong class="activity__meta-item">520 €/mes</strong>
+                <span class="activity__meta-item activity__meta-item--today">Hoy, 09:42</span>
+              </p>
+              <ul class="activity__actions">
+                <li><button class="btn btn--outline activity__button" type="button" data-request-detail>Ver
+                    detalle</button></li>
+                <li><button class="btn btn--cta activity__button" type="button" data-approve>Aprobar
+                    estudio</button></li>
+              </ul>
+            </li>
+            <li class="activity__item" data-request data-applicant="Carlos Mendoza Valls" data-cif="47289104-K"
+              data-fee="385 €/mes" data-model="Cupra Formentor 1.5 TSI" data-score="7.8 / 10 (Aprobado)"
+              data-term="36 meses · 10.000 km">
+              <p class="activity__name">
+                <strong class="activity__applicant">Carlos Mendoza Valls</strong>
+                <span class="badge activity__type">Particular</span>
+              </p>
+              <p class="activity__meta">
+                <span class="activity__meta-item">Cupra Formentor 1.5 TSI</span>
+                <strong class="activity__meta-item">385 €/mes</strong>
+                <span class="activity__meta-item activity__meta-item--today">Hoy, 10:15</span>
+              </p>
+              <ul class="activity__actions">
+                <li><button class="btn btn--outline activity__button" type="button" data-request-detail>Ver
+                    detalle</button></li>
+                <li><button class="btn btn--cta activity__button" type="button" data-approve>Aprobar
+                    estudio</button></li>
+              </ul>
+            </li>
+            <li class="activity__item" data-request data-applicant="Consultoría Innova Madrid" data-cif="B-28994312"
+              data-fee="449 €/mes" data-model="BMW X1 sDrive18d" data-score="9.4 / 10 (Excelente)"
+              data-term="36 meses · 10.000 km">
+              <p class="activity__name">
+                <strong class="activity__applicant">Consultoría Innova Madrid</strong>
+                <span class="badge activity__type activity__type--company">Empresa</span>
+              </p>
+              <p class="activity__meta">
+                <span class="activity__meta-item">BMW X1 sDrive18d</span>
+                <strong class="activity__meta-item">449 €/mes</strong>
+                <span class="activity__meta-item">Ayer, 18:30</span>
+              </p>
+              <ul class="activity__actions">
+                <li><button class="btn btn--outline activity__button" type="button" data-request-detail>Ver
+                    detalle</button></li>
+                <li><button class="btn btn--cta activity__button" type="button" data-approve>Aprobar
+                    estudio</button></li>
+              </ul>
+            </li>
+          </ul>
+
+          <footer class="panel__footer">
+            <p>Tiempo medio de resolución: <strong>3.2 horas</strong></p>
+            <a class="panel__link" href="#solicitudes">
+              Bandeja de solicitudes
+              <span class="icon icon--sm" aria-hidden="true">inbox</span>
+            </a>
+          </footer>
         </section>
       </div>
     </main>
   </div>
-  <!-- MODAL: Crear Vehículo -->
-  <div
-    class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
-    id="modalCreateCar">
-    <div
-      class="bg-surface-container-lowest rounded-2xl w-full max-w-xl shadow-2xl overflow-hidden border border-surface-container animate-in-modal">
-      <div class="flex items-center justify-between px-6 py-4 border-b border-surface-container-low">
-        <div class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-secondary text-[24px]">directions_car</span>
-          <h3 class="font-headline-sm text-on-surface" id="modalCreateTitle">Crear nuevo vehículo en flota</h3>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__brand">
+        <span class="footer__name">MAHARent</span>
+        <span class="footer__tagline">· Renting Inteligente</span>
+      </p>
+      <nav aria-label="Enlaces del pie de página">
+        <ul class="footer__list">
+          <li><a class="footer__link" href="marketplace.html">Marketplace</a></li>
+          <li><a class="footer__link" href="dashboard.html">Empresas</a></li>
+          <li><a class="footer__link" href="contacto.html">Contacto</a></li>
+          <li><a class="footer__link" href="#">Términos y condiciones</a></li>
+          <li><a class="footer__link" href="#">Política de privacidad</a></li>
+        </ul>
+      </nav>
+      <p class="footer__copy">© 2026 MAHARent. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="modal-vehicle" aria-labelledby="vehicle-modal-title">
+    <header class="modal__header">
+      <h2 class="modal__title dialog-title" id="vehicle-modal-title">
+        <span class="icon icon--lg dialog-title__icon" aria-hidden="true">directions_car</span>
+        <span data-vehicle-title>Crear nuevo vehículo en flota</span>
+      </h2>
+      <button class="icon-button" type="button" aria-label="Cerrar" data-modal-close>
+        <span class="icon icon--md" aria-hidden="true">close</span>
+      </button>
+    </header>
+    <form class="modal__body form" id="vehicle-form" action="#" method="post">
+      <div class="vehicle-form">
+        <div class="field vehicle-form__item vehicle-form__item--wide">
+          <label class="field__label" for="vehicle-model">Marca, Modelo y Acabado *</label>
+          <input class="field__control" id="vehicle-model" name="model" type="text"
+            placeholder="Ej. Audi Q3 35 TDI S tronic" required>
         </div>
-        <button
-          class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors"
-          onclick="closeCreateModal()">
-          <span class="material-symbols-outlined text-[20px]">close</span>
-        </button>
-      </div>
-      <form class="p-6 space-y-4" id="formCar" onsubmit="handleCarSubmit(event)">
-        <input id="editingRowIndex" type="hidden" value="-1" />
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="sm:col-span-2">
-            <label class="block font-label-md text-on-surface mb-1">Marca, Modelo y Acabado *</label>
-            <input
-              class="w-full px-3.5 py-2.5 rounded-lg border border-outline-variant bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary text-on-surface font-body-md outline-none"
-              id="inputModel" placeholder="Ej. Audi Q3 35 TDI S tronic" required="" type="text" />
+        <div class="field vehicle-form__item">
+          <label class="field__label" for="vehicle-plate">Matrícula *</label>
+          <input class="field__control" id="vehicle-plate" name="plate" type="text" placeholder="4567 LMN" required>
+        </div>
+        <div class="field vehicle-form__item">
+          <label class="field__label" for="vehicle-specs">Motorización / Transmisión</label>
+          <input class="field__control" id="vehicle-specs" name="specs" type="text"
+            placeholder="Automático · Diésel · 2024">
+        </div>
+        <div class="field vehicle-form__item">
+          <label class="field__label" for="vehicle-price">Cuota mensual (€/mes) *</label>
+          <div class="field__wrapper">
+            <input class="field__control field__control--icon-end" id="vehicle-price" name="price" type="number"
+              min="50" step="1" placeholder="475" required>
+            <span class="field__icon field__icon--end" aria-hidden="true">€</span>
           </div>
-          <div>
-            <label class="block font-label-md text-on-surface mb-1">Matrícula *</label>
-            <input
-              class="w-full px-3.5 py-2.5 rounded-lg border border-outline-variant bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary text-on-surface font-mono font-bold uppercase text-on-surface outline-none"
-              id="inputPlate" placeholder="4567 LMN" required="" type="text" />
-          </div>
-          <div>
-            <label class="block font-label-md text-on-surface mb-1">Motorización / Transmisión</label>
-            <input
-              class="w-full px-3.5 py-2.5 rounded-lg border border-outline-variant bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary text-on-surface font-body-md outline-none"
-              id="inputSpecs" placeholder="Automático · Diésel · 2024" type="text" />
-          </div>
-          <div>
-            <label class="block font-label-md text-on-surface mb-1">Cuota mensual (€/mes) *</label>
-            <div class="relative">
-              <input
-                class="w-full pl-3.5 pr-8 py-2.5 rounded-lg border border-outline-variant bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary text-on-surface font-body-md outline-none"
-                id="inputPrice" min="50" placeholder="475" required="" step="5" type="number" />
-              <span class="absolute right-3 top-2.5 text-on-surface-variant font-bold">€</span>
-            </div>
-          </div>
-          <div>
-            <label class="block font-label-md text-on-surface mb-1">Plazo y Kilometraje</label>
-            <input
-              class="w-full px-3.5 py-2.5 rounded-lg border border-outline-variant bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary text-on-surface font-body-md outline-none"
-              id="inputTerm" placeholder="36 meses · 15.000 km/año" type="text" />
-          </div>
-          <div class="sm:col-span-2">
-            <label class="block font-label-md text-on-surface mb-1">Estado de publicación / Flota</label>
-            <select
-              class="w-full px-3.5 py-2.5 rounded-lg border border-outline-variant bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary text-on-surface font-body-md outline-none cursor-pointer"
-              id="inputStatus">
+        </div>
+        <div class="field vehicle-form__item">
+          <label class="field__label" for="vehicle-term">Plazo y Kilometraje</label>
+          <input class="field__control" id="vehicle-term" name="term" type="text"
+            placeholder="36 meses · 15.000 km/año">
+        </div>
+        <div class="field vehicle-form__item vehicle-form__item--wide">
+          <label class="field__label" for="vehicle-status">Estado de publicación / Flota</label>
+          <div class="field__wrapper">
+            <select class="field__control field__control--select" id="vehicle-status" name="status">
               <option value="Disponible">Disponible (En stock para renting)</option>
               <option value="Publicado">Publicado (Activo en Marketplace)</option>
               <option value="En renting">En renting (Contrato activo)</option>
               <option value="Borrador">Borrador (Oculto)</option>
             </select>
+            <span class="icon icon--md field__icon field__icon--end" aria-hidden="true">expand_more</span>
           </div>
-        </div>
-        <div class="flex items-center justify-end gap-3 pt-4 border-t border-surface-container-low">
-          <button class="px-4 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-low font-label-md"
-            onclick="closeCreateModal()" type="button">Cancelar</button>
-          <button
-            class="px-5 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-md font-bold shadow-md transition-all flex items-center gap-1.5"
-            id="btnCarSubmit" type="submit">
-            <span class="material-symbols-outlined text-[18px] text-tertiary-fixed">check</span>
-            <span id="btnCarSubmitText">Guardar vehículo</span>
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-  <!-- MODAL: Vista Previa Ficha de Vehículo -->
-  <div
-    class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
-    id="modalPreviewCar">
-    <div
-      class="bg-surface-container-lowest rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden border border-surface-container animate-in-modal">
-      <div class="relative h-48 bg-surface-container">
-        <img alt="Vehículo" class="w-full h-full object-cover" id="previewModalImg" src="" />
-        <button
-          class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors"
-          onclick="closePreviewModal()">
-          <span class="material-symbols-outlined text-[18px]">close</span>
-        </button>
-        <span class="absolute bottom-3 left-3 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow"
-          id="previewModalBadge"></span>
-      </div>
-      <div class="p-6 space-y-4">
-        <div>
-          <div class="flex items-center justify-between">
-            <h3 class="font-headline-sm text-on-surface font-bold" id="previewModalTitle"></h3>
-            <span class="font-headline-sm text-secondary font-bold" id="previewModalPrice"></span>
-          </div>
-          <p class="font-body-md text-on-surface-variant" id="previewModalSpecs"></p>
-        </div>
-        <div class="grid grid-cols-2 gap-3 p-3 bg-surface-container-low rounded-xl">
-          <div>
-            <span class="text-xs text-on-surface-variant block">Matrícula</span>
-            <span class="font-mono font-bold text-on-surface" id="previewModalPlate"></span>
-          </div>
-          <div>
-            <span class="text-xs text-on-surface-variant block">Condiciones Renting</span>
-            <span class="font-body-sm font-semibold text-on-surface" id="previewModalTerm"></span>
-          </div>
-        </div>
-        <div class="flex items-center justify-end gap-2 pt-2">
-          <button
-            class="px-3.5 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md flex items-center gap-1.5 text-xs font-semibold"
-            onclick="showToast('Generando enlace público del vehículo...'); closePreviewModal();">
-            <span class="material-symbols-outlined text-[16px]">share</span>
-            Compartir ficha
-          </button>
-          <button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-xs font-bold"
-            onclick="closePreviewModal()">Cerrar</button>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- MODAL: Expediente Solicitud -->
-  <div
-    class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
-    id="modalRequestDetail">
-    <div
-      class="bg-surface-container-lowest rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden border border-surface-container animate-in-modal">
-      <div class="flex items-center justify-between px-6 py-4 border-b border-surface-container-low">
-        <div class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-on-tertiary-container text-[22px]">assignment</span>
-          <h3 class="font-headline-sm text-on-surface">Expediente de Scoring B2B</h3>
-        </div>
-        <button
-          class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors"
-          onclick="closeRequestModal()">
-          <span class="material-symbols-outlined text-[20px]">close</span>
-        </button>
-      </div>
-      <div class="p-6 space-y-4">
-        <div class="p-4 bg-surface-container-low rounded-xl space-y-2">
-          <div class="flex items-center justify-between">
-            <span class="font-headline-sm text-[18px] text-on-surface font-bold" id="reqApplicantName"></span>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-secondary-fixed text-on-secondary-fixed"
-              id="reqScoreBadge"></span>
-          </div>
-          <div class="text-xs text-on-surface-variant font-mono flex items-center gap-2">
-            <span>CIF/NIF: <strong class="text-on-surface" id="reqApplicantCif"></strong></span>
-            <span>•</span>
-            <span>Riesgo RAI/ASNEF: <strong class="text-secondary">0 Incidencias</strong></span>
-          </div>
-        </div>
-        <div class="space-y-2">
-          <h4 class="font-label-md text-on-surface font-bold">Vehículo solicitado</h4>
-          <div class="flex items-center justify-between p-3 border border-surface-container rounded-lg">
-            <div>
-              <div class="font-label-lg font-bold text-on-surface" id="reqVehicleModel"></div>
-              <div class="text-xs text-on-surface-variant" id="reqVehicleTerm"></div>
-            </div>
-            <div class="font-headline-sm font-bold text-on-surface" id="reqVehicleFee"></div>
-          </div>
-        </div>
-        <div
-          class="p-3 bg-surface-bright rounded-lg border border-surface-container text-xs text-on-surface-variant space-y-1">
-          <div class="flex items-center gap-1.5 text-secondary font-semibold">
-            <span class="material-symbols-outlined text-[16px]">verified_user</span>
-            Documentación financiera analizada automáticamente
-          </div>
-          <p>Balances 2023-2024 cargados, certificados de estar al corriente con AEAT y TGSS validados sin deuda.</p>
-        </div>
-        <div class="flex items-center justify-end gap-2 pt-2 border-t border-surface-container-low">
-          <button class="px-4 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-low font-label-md"
-            onclick="closeRequestModal()">Cerrar</button>
-          <button
-            class="px-4 py-2 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim font-label-md font-bold shadow flex items-center gap-1.5"
-            id="btnApproveModal" onclick="approveFromModal()">
-            <span class="material-symbols-outlined text-[18px]">verified</span>
-            Aprobar definitivamente
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Menú Contextual Flotante de Fila (3 puntos) -->
-  <div
-    class="hidden fixed bg-surface-container-lowest border border-surface-container rounded-xl shadow-xl py-1.5 z-50 w-44 animate-in-modal text-left"
-    id="rowContextMenu">
-    <button
-      class="w-full px-3.5 py-2 text-label-md hover:bg-surface-container-low flex items-center gap-2 text-on-surface"
-      onclick="handleContextAction('pause')">
-      <span class="material-symbols-outlined text-[18px] text-on-surface-variant">pause_circle</span>
-      <span id="contextPauseText">Pausar publicación</span>
-    </button>
-    <button
-      class="w-full px-3.5 py-2 text-label-md hover:bg-surface-container-low flex items-center gap-2 text-on-surface"
-      onclick="handleContextAction('duplicate')">
-      <span class="material-symbols-outlined text-[18px] text-on-surface-variant">content_copy</span>
-      <span>Duplicar vehículo</span>
-    </button>
-    <div class="border-t border-surface-container-low my-1"></div>
-    <button class="w-full px-3.5 py-2 text-label-md text-error hover:bg-error-container/40 flex items-center gap-2"
-      onclick="handleContextAction('delete')">
-      <span class="material-symbols-outlined text-[18px] text-error">delete</span>
-      <span>Eliminar</span>
-    </button>
-  </div>
-  <!-- TOAST FLOTANTE -->
-  <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none" id="toastContainer"></div>
-  <script>
-    // Variables de Estado
-    let activeContextTargetRow = null;
-    let currentActiveRequestBtn = null;
-    let currentReqApplicantName = "";
-
-    // 1. Toast Notification Helper
-    function showToast(message, type = 'info') {
-      const container = document.getElementById('toastContainer');
-      const toast = document.createElement('div');
-      toast.className = 'pointer-events-auto bg-primary-container text-white px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 border border-surface-container-high transition-all transform duration-300 translate-y-3 opacity-0';
-
-      let iconName = 'info';
-      let iconColor = 'text-tertiary-fixed';
-      if (type === 'success') {
-        iconName = 'check_circle';
-        iconColor = 'text-green-400';
-      } else if (type === 'warn') {
-        iconName = 'warning';
-        iconColor = 'text-on-tertiary-container';
-      }
-
-      toast.innerHTML = `
-      <span class="material-symbols-outlined ${iconColor} text-[20px]">${iconName}</span>
-      <span class="font-label-md text-sm">${message}</span>
-      <button onclick="this.parentElement.remove()" class="ml-2 text-white/60 hover:text-white">
-        <span class="material-symbols-outlined text-[16px]">close</span>
+    </form>
+    <footer class="modal__footer">
+      <button class="btn btn--ghost" type="button" data-modal-close>Cancelar</button>
+      <button class="btn btn--dark" type="submit" form="vehicle-form">
+        <span class="icon icon--md dashboard__action-icon" aria-hidden="true">check</span>
+        <span data-vehicle-submit>Guardar vehículo</span>
       </button>
-    `;
-      container.appendChild(toast);
+    </footer>
+  </dialog>
 
-      // Animate in
-      requestAnimationFrame(() => {
-        toast.classList.remove('translate-y-3', 'opacity-0');
-      });
+  <dialog class="modal preview" id="modal-preview" aria-labelledby="preview-title">
+    <figure class="preview__media">
+      <img class="preview__image" data-preview="image" alt="Fotografía del vehículo" loading="lazy"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgBPSOUntsBaoVzs5qvR4K0iT7dYUFYicQNDI_Cy-MiyKw4N3HFUTLbZoZdYJgklaWir30VbNH1IY0XTUCNKLEZ7YdnB3SUCt-4kMs2oP7pj9srdWTjxjLd8aqzVEsvjsM6kM0EelHfl4BK7_s-2LDaqRBfE_1oWiv-IZUFPV-yhUk6zGDd2-6OGQBMYPtoW-xNodvnR8sLOsyk5LEnF4JTo5FNyhVbiBRMikA2YsVAoP9zshUYcbsBA">
+      <figcaption class="preview__caption">
+        <span class="badge status status--available">
+          <span class="status__dot" aria-hidden="true"></span>
+          <span data-preview="status">Disponible</span>
+        </span>
+      </figcaption>
+    </figure>
+    <button class="icon-button icon-button--media preview__close" type="button" aria-label="Cerrar ficha"
+      data-modal-close>
+      <span class="icon icon--md" aria-hidden="true">close</span>
+    </button>
+    <div class="preview__body">
+      <header class="preview__header">
+        <h2 class="preview__title" id="preview-title" data-preview="title">Vehículo</h2>
+        <p class="preview__price" data-preview="price"></p>
+        <p class="preview__specs" data-preview="specs"></p>
+      </header>
+      <dl class="spec-list">
+        <div class="spec-list__item">
+          <dt class="spec-list__term">Matrícula</dt>
+          <dd class="spec-list__value"><span class="plate" data-preview="plate"></span></dd>
+        </div>
+        <div class="spec-list__item">
+          <dt class="spec-list__term">Condiciones Renting</dt>
+          <dd class="spec-list__value" data-preview="term"></dd>
+        </div>
+      </dl>
+    </div>
+    <footer class="modal__footer">
+      <button class="btn btn--outline" type="button" data-toast="Generando enlace público del vehículo..."
+        data-modal-close>
+        <span class="icon icon--sm" aria-hidden="true">share</span>
+        Compartir ficha
+      </button>
+      <button class="btn btn--dark" type="button" data-modal-close>Cerrar</button>
+    </footer>
+  </dialog>
 
-      // Auto dismiss
-      setTimeout(() => {
-        toast.classList.add('opacity-0', 'translate-y-2');
-        setTimeout(() => toast.remove(), 300);
-      }, 3800);
-    }
-
-    // 2. Dropdown Header Controllers
-    const btnCompanySelect = document.getElementById('btnCompanySelect');
-    const companyDropdown = document.getElementById('companyDropdown');
-    const btnNotif = document.getElementById('btnNotif');
-    const notifDropdown = document.getElementById('notifDropdown');
-    const btnProfile = document.getElementById('btnProfile');
-    const profileDropdown = document.getElementById('profileDropdown');
-
-    function closeAllDropdowns() {
-      if (companyDropdown) companyDropdown.classList.add('hidden');
-      if (notifDropdown) notifDropdown.classList.add('hidden');
-      if (profileDropdown) profileDropdown.classList.add('hidden');
-      const rowMenu = document.getElementById('rowContextMenu');
-      if (rowMenu) rowMenu.classList.add('hidden');
-    }
-
-    btnCompanySelect?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isClosed = companyDropdown.classList.contains('hidden');
-      closeAllDropdowns();
-      if (isClosed) companyDropdown.classList.remove('hidden');
-    });
-
-    btnNotif?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isClosed = notifDropdown.classList.contains('hidden');
-      closeAllDropdowns();
-      if (isClosed) notifDropdown.classList.remove('hidden');
-    });
-
-    btnProfile?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isClosed = profileDropdown.classList.contains('hidden');
-      closeAllDropdowns();
-      if (isClosed) profileDropdown.classList.remove('hidden');
-    });
-
-    document.addEventListener('click', () => {
-      closeAllDropdowns();
-    });
-
-    function switchCompany(name) {
-      document.getElementById('currentCompanyName').innerText = name;
-      document.getElementById('welcomeGreeting').innerText = `Buenos días, ${name}`;
-      closeAllDropdowns();
-      showToast(`Cambiado a cuenta corporativa: ${name}`, 'success');
-    }
-
-    function markAllNotificationsRead() {
-      const badge = document.getElementById('notifBadge');
-      if (badge) badge.classList.add('hidden');
-      document.querySelectorAll('#notifList .bg-on-tertiary-container, #notifList .bg-secondary').forEach(dot => {
-        dot.className = 'w-2 h-2 rounded-full bg-outline-variant mt-1.5 shrink-0';
-      });
-      showToast('Todas las alertas marcadas como leídas', 'info');
-    }
-
-    // 3. Sidebar Navigation Interactivity
-    function selectSidebarItem(element, name) {
-      document.querySelectorAll('.sidebar-item').forEach(item => {
-        item.className = 'sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors';
-        item.removeAttribute('aria-current');
-      });
-      element.className = 'sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors bg-surface-container-high text-on-surface font-semibold shadow-sm border-l-4 border-on-tertiary-container';
-      element.setAttribute('aria-current', 'page');
-
-      if (name === 'Mis vehículos') {
-        scrollToVehicles();
-      } else if (name === 'Solicitudes') {
-        scrollToRequests();
-      } else if (name === 'Dashboard') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        showToast(`Sección activada: ${name}`, 'info');
-      }
-    }
-
-    function scrollToVehicles() {
-      const sec = document.getElementById('sectionVehicles');
-      if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-
-    function scrollToRequests() {
-      const sec = document.getElementById('sectionRequests');
-      if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-
-    // 4. Vehicle Table Tabs Filtering
-    function filterByTab(statusKey, btnElement) {
-      const tabs = document.querySelectorAll('.filter-tab');
-      tabs.forEach(tab => {
-        tab.className = 'filter-tab px-3 py-1 rounded-md hover:bg-surface-container-lowest/60 font-label-md text-label-md text-on-surface-variant transition-colors';
-      });
-      if (btnElement) {
-        btnElement.className = 'filter-tab px-3 py-1 rounded-md bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm font-semibold transition-all';
-      }
-
-      const rows = document.querySelectorAll('.vehicle-row');
-      let visibleCount = 0;
-      rows.forEach(row => {
-        const rowStatus = row.getAttribute('data-status');
-        if (statusKey === 'Todos' || rowStatus === statusKey) {
-          row.style.display = '';
-          visibleCount++;
-        } else {
-          row.style.display = 'none';
-        }
-      });
-
-      if (btnElement) {
-        showToast(`Filtro aplicado: ${statusKey} (${visibleCount} vehículos)`);
-      }
-    }
-
-    // 5. Create / Edit Vehicle Modal Handlers
-    function openCreateModal() {
-      document.getElementById('formCar').reset();
-      document.getElementById('editingRowIndex').value = "-1";
-      document.getElementById('modalCreateTitle').innerText = "Crear nuevo vehículo en flota";
-      document.getElementById('btnCarSubmitText').innerText = "Guardar vehículo";
-      document.getElementById('modalCreateCar').classList.remove('hidden');
-    }
-
-    function closeCreateModal() {
-      document.getElementById('modalCreateCar').classList.add('hidden');
-    }
-
-    function openEditModal(btn) {
-      const row = btn.closest('.vehicle-row');
-      const model = row.getAttribute('data-model') || '';
-      const specs = row.getAttribute('data-specs') || '';
-      const plate = row.getAttribute('data-plate') || '';
-      const price = row.getAttribute('data-price') || '';
-      const term = row.getAttribute('data-term') || '';
-      const status = row.getAttribute('data-status') || 'Disponible';
-
-      document.getElementById('inputModel').value = model;
-      document.getElementById('inputSpecs').value = specs;
-      document.getElementById('inputPlate').value = plate;
-      document.getElementById('inputPrice').value = price;
-      document.getElementById('inputTerm').value = term;
-      document.getElementById('inputStatus').value = status;
-
-      // Guardar referencia
-      activeContextTargetRow = row;
-      document.getElementById('editingRowIndex').value = "edit";
-      document.getElementById('modalCreateTitle').innerText = `Editar vehículo (${plate})`;
-      document.getElementById('btnCarSubmitText').innerText = "Actualizar vehículo";
-      document.getElementById('modalCreateCar').classList.remove('hidden');
-    }
-
-    function handleCarSubmit(e) {
-      e.preventDefault();
-      const model = document.getElementById('inputModel').value;
-      const plate = document.getElementById('inputPlate').value.toUpperCase();
-      const specs = document.getElementById('inputSpecs').value || 'Automático · Híbrido · 2024';
-      const price = document.getElementById('inputPrice').value;
-      const term = document.getElementById('inputTerm').value || '36 meses · 10.000 km/año';
-      const status = document.getElementById('inputStatus').value;
-      const isEditing = document.getElementById('editingRowIndex').value === "edit";
-
-      let badgeClass = 'bg-surface-container-low text-secondary';
-      let dotColor = 'bg-secondary';
-      if (status === 'En renting') {
-        badgeClass = 'bg-surface-container-highest text-primary-container';
-        dotColor = 'bg-secondary';
-      } else if (status === 'Publicado') {
-        badgeClass = 'bg-surface-container text-on-surface-variant';
-        dotColor = 'bg-secondary-container';
-      } else if (status === 'Borrador') {
-        badgeClass = 'bg-surface-container text-on-surface-variant';
-        dotColor = 'bg-outline';
-      }
-
-      if (isEditing && activeContextTargetRow) {
-        activeContextTargetRow.setAttribute('data-model', model);
-        activeContextTargetRow.setAttribute('data-specs', specs);
-        activeContextTargetRow.setAttribute('data-plate', plate);
-        activeContextTargetRow.setAttribute('data-price', price);
-        activeContextTargetRow.setAttribute('data-term', term);
-        activeContextTargetRow.setAttribute('data-status', status);
-
-        activeContextTargetRow.querySelector('.car-title').innerText = model;
-        activeContextTargetRow.querySelector('.car-subtitle').innerText = specs;
-        activeContextTargetRow.querySelector('.car-plate').innerText = plate;
-        activeContextTargetRow.querySelector('.car-price').innerText = `${price} €`;
-        activeContextTargetRow.querySelector('.car-term').innerText = term;
-
-        const badge = activeContextTargetRow.querySelector('.car-badge');
-        badge.className = `car-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full ${badgeClass} font-label-sm text-label-sm font-semibold`;
-        badge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full ${dotColor}"></span> ${status}`;
-
-        closeCreateModal();
-        showToast(`Vehículo ${plate} actualizado con éxito`, 'success');
-      } else {
-        // Create new row
-        const tbody = document.getElementById('vehicleTableBody');
-        const defaultImg = "https://lh3.googleusercontent.com/aida-public/AB6AXuCgBPSOUntsBaoVzs5qvR4K0iT7dYUFYicQNDI_Cy-MiyKw4N3HFUTLbZoZdYJgklaWir30VbNH1IY0XTUCNKLEZ7YdnB3SUCt-4kMs2oP7pj9srdWTjxjLd8aqzVEsvjsM6kM0EelHfl4BK7_s-2LDaqRBfE_1oWiv-IZUFPV-yhUk6zGDd2-6OGQBMYPtoW-xNodvnR8sLOsyk5LEnF4JTo5FNyhVbiBRMikA2YsVAoP9zshUYcbsBA";
-
-        const tr = document.createElement('tr');
-        tr.className = 'vehicle-row hover:bg-surface-bright transition-colors group animate-in-modal';
-        tr.setAttribute('data-status', status);
-        tr.setAttribute('data-model', model);
-        tr.setAttribute('data-specs', specs);
-        tr.setAttribute('data-plate', plate);
-        tr.setAttribute('data-price', price);
-        tr.setAttribute('data-term', term);
-        tr.setAttribute('data-img', defaultImg);
-
-        tr.innerHTML = `
-        <td class="py-3.5 px-4">
-          <div class="flex items-center gap-3">
-            <img class="w-12 h-10 object-cover rounded-lg bg-surface-container flex-shrink-0" src="${defaultImg}" alt="${model}"/>
-            <div class="min-w-0">
-              <div class="car-title font-label-lg text-label-lg text-on-surface truncate">${model}</div>
-              <div class="car-subtitle font-body-sm text-body-sm text-on-surface-variant truncate">${specs}</div>
-            </div>
-          </div>
-        </td>
-        <td class="py-3.5 px-4 whitespace-nowrap">
-          <span class="car-plate px-2.5 py-1 rounded bg-surface-container-high font-mono text-[12px] font-bold text-on-surface tracking-wider">${plate}</span>
-        </td>
-        <td class="py-3.5 px-4 whitespace-nowrap">
-          <span class="car-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full ${badgeClass} font-label-sm text-label-sm font-semibold">
-            <span class="w-1.5 h-1.5 rounded-full ${dotColor}"></span>
-            ${status}
+  <dialog class="modal" id="modal-request" aria-labelledby="request-title">
+    <header class="modal__header">
+      <h2 class="modal__title dialog-title" id="request-title">
+        <span class="icon icon--lg dialog-title__icon dialog-title__icon--warning" aria-hidden="true">assignment</span>
+        Expediente de Scoring B2B
+      </h2>
+      <button class="icon-button" type="button" aria-label="Cerrar" data-modal-close>
+        <span class="icon icon--md" aria-hidden="true">close</span>
+      </button>
+    </header>
+    <div class="modal__body dossier">
+      <section class="dossier__summary" aria-label="Datos del solicitante">
+        <p class="dossier__headline">
+          <strong class="dossier__name" data-request-field="applicant"></strong>
+          <span class="badge badge--info" data-request-field="score"></span>
+        </p>
+        <p class="dossier__meta">
+          <span>CIF/NIF: <strong data-request-field="cif"></strong></span>
+          <span>Riesgo RAI/ASNEF: <strong class="dossier__ok">0 Incidencias</strong></span>
+        </p>
+      </section>
+      <section class="dossier__section" aria-labelledby="request-vehicle-title">
+        <h3 class="dossier__heading" id="request-vehicle-title">Vehículo solicitado</h3>
+        <p class="dossier__vehicle">
+          <span class="dossier__vehicle-info">
+            <strong class="dossier__model" data-request-field="model"></strong>
+            <span class="dossier__term" data-request-field="term"></span>
           </span>
-        </td>
-        <td class="py-3.5 px-4 whitespace-nowrap">
-          <span class="car-price font-headline-sm text-headline-sm font-bold text-on-surface">${price} €</span>
-          <span class="font-body-sm text-body-sm text-on-surface-variant">/mes</span>
-        </td>
-        <td class="py-3.5 px-4 whitespace-nowrap font-body-sm text-body-sm text-on-surface-variant car-term">
-          ${term}
-        </td>
-        <td class="py-3.5 px-4 text-right whitespace-nowrap">
-          <div class="inline-flex items-center gap-1 opacity-80 group-hover:opacity-100 transition-opacity">
-            <button class="p-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-surface-container-low transition-colors" title="Editar" onclick="openEditModal(this)">
-              <span class="material-symbols-outlined text-[18px]">edit</span>
-            </button>
-            <button class="p-1.5 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-surface-container-low transition-colors" title="Ver Ficha" onclick="openPreviewModal(this)">
-              <span class="material-symbols-outlined text-[18px]">visibility</span>
-            </button>
-            <button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" title="Opciones" onclick="toggleRowMenu(event, this)">
-              <span class="material-symbols-outlined text-[18px]">more_vert</span>
-            </button>
-          </div>
-        </td>
-      `;
+          <strong class="dossier__fee" data-request-field="fee"></strong>
+        </p>
+      </section>
+      <aside class="dossier__note">
+        <p class="dossier__note-title">
+          <span class="icon icon--sm" aria-hidden="true">verified_user</span>
+          Documentación financiera analizada automáticamente
+        </p>
+        <p>Balances 2023-2024 cargados, certificados de estar al corriente con AEAT y TGSS validados sin deuda.</p>
+      </aside>
+    </div>
+    <footer class="modal__footer">
+      <button class="btn btn--ghost" type="button" data-modal-close>Cerrar</button>
+      <button class="btn btn--cta" type="button" data-approve-modal>
+        <span class="icon icon--md" aria-hidden="true">verified</span>
+        Aprobar definitivamente
+      </button>
+    </footer>
+  </dialog>
 
-        tbody.insertBefore(tr, tbody.firstChild);
+  <ul class="row-menu" id="row-menu" hidden>
+    <li>
+      <button class="row-menu__item" type="button" data-menu-action="pause">
+        <span class="icon icon--md" aria-hidden="true">pause_circle</span>
+        <span data-menu-pause-label>Pausar publicación</span>
+      </button>
+    </li>
+    <li>
+      <button class="row-menu__item" type="button" data-menu-action="duplicate">
+        <span class="icon icon--md" aria-hidden="true">content_copy</span>
+        Duplicar vehículo
+      </button>
+    </li>
+    <li class="row-menu__divider" aria-hidden="true"></li>
+    <li>
+      <button class="row-menu__item row-menu__item--danger" type="button" data-menu-action="delete">
+        <span class="icon icon--md" aria-hidden="true">delete</span>
+        Eliminar
+      </button>
+    </li>
+  </ul>
 
-        // Update fleet counter
-        const statFleet = document.getElementById('statTotalFleet');
-        if (statFleet) statFleet.innerText = parseInt(statFleet.innerText || '24') + 1;
+  <div class="toasts" role="status" aria-live="polite" data-toast-region></div>
 
-        closeCreateModal();
-        showToast(`Vehículo ${model} (${plate}) añadido a la flota`, 'success');
-      }
-    }
-
-    // 6. Preview Modal Handlers
-    function openPreviewModal(btn) {
-      const row = btn.closest('.vehicle-row');
-      const model = row.getAttribute('data-model');
-      const specs = row.getAttribute('data-specs');
-      const plate = row.getAttribute('data-plate');
-      const price = row.getAttribute('data-price');
-      const term = row.getAttribute('data-term');
-      const status = row.getAttribute('data-status');
-      const img = row.getAttribute('data-img');
-
-      document.getElementById('previewModalImg').src = img;
-      document.getElementById('previewModalTitle').innerText = model;
-      document.getElementById('previewModalSpecs').innerText = specs;
-      document.getElementById('previewModalPlate').innerText = plate;
-      document.getElementById('previewModalPrice').innerText = `${price} €/mes`;
-      document.getElementById('previewModalTerm').innerText = term;
-
-      const badge = document.getElementById('previewModalBadge');
-      badge.innerText = status;
-      if (status === 'Disponible') {
-        badge.className = "absolute bottom-3 left-3 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-secondary text-white shadow";
-      } else if (status === 'En renting') {
-        badge.className = "absolute bottom-3 left-3 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-primary text-white shadow";
-      } else {
-        badge.className = "absolute bottom-3 left-3 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-gray-800 text-white shadow";
-      }
-
-      document.getElementById('modalPreviewCar').classList.remove('hidden');
-    }
-
-    function closePreviewModal() {
-      document.getElementById('modalPreviewCar').classList.add('hidden');
-    }
-
-    // 7. Context Menu for Rows (3 puntos)
-    function toggleRowMenu(event, btn) {
-      event.stopPropagation();
-      activeContextTargetRow = btn.closest('.vehicle-row');
-      const menu = document.getElementById('rowContextMenu');
-
-      // Status-sensitive text
-      const status = activeContextTargetRow.getAttribute('data-status');
-      const pauseText = document.getElementById('contextPauseText');
-      if (status === 'Publicado') {
-        pauseText.innerText = 'Pausar publicación';
-      } else {
-        pauseText.innerText = 'Publicar oferta';
-      }
-
-      // Position menu near button
-      const rect = btn.getBoundingClientRect();
-      menu.style.top = `${rect.bottom + window.scrollY + 4}px`;
-      menu.style.left = `${rect.left - 130}px`;
-      menu.classList.remove('hidden');
-    }
-
-    function handleContextAction(action) {
-      const menu = document.getElementById('rowContextMenu');
-      menu.classList.add('hidden');
-      if (!activeContextTargetRow) return;
-
-      const plate = activeContextTargetRow.getAttribute('data-plate');
-      const model = activeContextTargetRow.getAttribute('data-model');
-
-      if (action === 'pause') {
-        const currentStatus = activeContextTargetRow.getAttribute('data-status');
-        const newStatus = currentStatus === 'Publicado' ? 'Disponible' : 'Publicado';
-        activeContextTargetRow.setAttribute('data-status', newStatus);
-        const badge = activeContextTargetRow.querySelector('.car-badge');
-        badge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full ${newStatus === 'Publicado' ? 'bg-secondary-container' : 'bg-secondary'}"></span> ${newStatus}`;
-        showToast(`Estado de ${plate} cambiado a: ${newStatus}`, 'info');
-      } else if (action === 'duplicate') {
-        const clone = activeContextTargetRow.cloneNode(true);
-        const newPlate = Math.floor(1000 + Math.random() * 9000) + ' CPX';
-        clone.setAttribute('data-plate', newPlate);
-        clone.querySelector('.car-plate').innerText = newPlate;
-        activeContextTargetRow.parentNode.insertBefore(clone, activeContextTargetRow.nextSibling);
-        showToast(`Vehículo duplicado con nueva matrícula ${newPlate}`, 'success');
-      } else if (action === 'delete') {
-        if (confirm(`¿Seguro que deseas eliminar el vehículo ${model} (${plate}) de la flota?`)) {
-          activeContextTargetRow.remove();
-          showToast(`Vehículo ${plate} eliminado correctamente`, 'warn');
-        }
-      }
-    }
-
-    // 8. Solicitudes Recientes Interactivas
-    function approveRequest(btn, applicantName) {
-      btn.disabled = true;
-      btn.className = "px-3 py-1.5 rounded-lg bg-green-100 text-green-800 font-label-sm text-label-sm font-bold shadow-sm inline-flex items-center gap-1 cursor-default";
-      btn.innerHTML = `<span class="material-symbols-outlined text-[16px] text-green-700">check_circle</span> <span>✓ Aprobado</span>`;
-
-      // Decrement pending counter
-      const badge = document.getElementById('badgePendingReqs');
-      const statPending = document.getElementById('statPendingReqs');
-      if (badge && statPending) {
-        let currentVal = parseInt(statPending.innerText || '7');
-        if (currentVal > 0) {
-          currentVal--;
-          statPending.innerText = currentVal;
-          badge.innerText = `${currentVal} pendientes`;
-        }
-      }
-
-      showToast(`Estudio de riesgo para '${applicantName}' aprobado con éxito`, 'success');
-    }
-
-    function openRequestDetail(btn) {
-      const parentItem = btn.closest('[data-applicant]');
-      currentReqApplicantName = parentItem.getAttribute('data-applicant');
-      const cif = parentItem.getAttribute('data-cif');
-      const score = parentItem.getAttribute('data-score');
-      const model = parentItem.getAttribute('data-model');
-      const fee = parentItem.getAttribute('data-fee');
-      const term = parentItem.getAttribute('data-term');
-      currentActiveRequestBtn = parentItem.querySelector('.btn-approve');
-
-      document.getElementById('reqApplicantName').innerText = currentReqApplicantName;
-      document.getElementById('reqApplicantCif').innerText = cif;
-      document.getElementById('reqScoreBadge').innerText = score;
-      document.getElementById('reqVehicleModel').innerText = model;
-      document.getElementById('reqVehicleFee').innerText = fee;
-      document.getElementById('reqVehicleTerm').innerText = term;
-
-      document.getElementById('modalRequestDetail').classList.remove('hidden');
-    }
-
-    function closeRequestModal() {
-      document.getElementById('modalRequestDetail').classList.add('hidden');
-    }
-
-    function approveFromModal() {
-      closeRequestModal();
-      if (currentActiveRequestBtn) {
-        approveRequest(currentActiveRequestBtn, currentReqApplicantName);
-      }
-    }
-
-    function downloadReport() {
-      showToast('Generando informe ejecutivo de flota (PDF / Excel)...', 'info');
-      setTimeout(() => {
-        showToast('Descarga iniciada: Informe_Flota_Arval_2024.pdf', 'success');
-      }, 1200);
-    }
-  </script>
   <script src="js/main.js" defer></script>
 </body>
 

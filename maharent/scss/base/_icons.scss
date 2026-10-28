@@ -1,28 +1,39 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts' as *;
 
+// Iconos Material Symbols. Uso: <span class="icon icon--md" aria-hidden="true">mail</span>
 .icon {
   display: inline-block;
-  width: 1.25rem;
-  height: 1.25rem;
-  vertical-align: middle;
-  fill: currentColor;
   flex-shrink: 0;
+  font-family: $font-family-icons;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'liga';
+  user-select: none;
+
+  &--xs {
+    font-size: 0.875rem;
+  }
 
   &--sm {
-    width: 1rem;
-    height: 1rem;
+    font-size: 1rem;
+  }
+
+  &--md {
+    font-size: 1.25rem;
   }
 
   &--lg {
-    width: 1.75rem;
-    height: 1.75rem;
+    font-size: 1.5rem;
   }
 
-  &--accent {
-    color: $color-accent;
-  }
-
-  &--muted {
-    color: $color-text-secondary;
+  &--filled {
+    font-variation-settings: 'FILL' 1;
   }
 }

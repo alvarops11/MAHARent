@@ -1,0 +1,7 @@
+// Punto único de acceso a los tokens, funciones y mixins:
+// @use '../abstracts' as *;
+@forward 'variables';
+@forward 'typography-tokens';
+@forward 'breakpoints';
+@forward 'functions';
+@forward 'mixins';

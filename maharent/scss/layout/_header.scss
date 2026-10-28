@@ -1,11 +1,88 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts' as *;
 
+// Cabecera fija: marca a la izquierda, navegación central y acciones a la derecha (Flexbox)
 .header {
-  grid-area: header;
-  background-color: $color-bg-secondary;
-  border-bottom: 1px solid $color-border;
-  padding: 1rem 1.5rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: $z-header;
+  background-color: rgba($color-surface, 0.9);
+  box-shadow: $shadow-header;
+  backdrop-filter: blur(24px);
+
+  &__inner {
+    @include container($container-max-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $gutter;
+    height: $header-height;
+    padding-inline: $margin-sm;
+
+    @include respond-to('lg') {
+      padding-inline: $margin-lg;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  &__logo {
+    width: auto;
+    height: 2.25rem;
+    object-fit: contain;
+
+    @include respond-to('sm') {
+      height: 2.5rem;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: $space-md;
+    white-space: nowrap;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-xs;
+    color: $color-on-surface-variant;
+    @include type('label-lg');
+    @include interactive($hover-color: $color-on-surface);
+
+    &--secondary {
+      display: none;
+
+      @include respond-to('lg') {
+        display: inline-flex;
+      }
+    }
+  }
+
+  // Botón de menú (solo móvil)
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: $color-on-surface;
+    border-radius: $radius-lg;
+    @include interactive($hover-bg: $color-surface-container);
+
+    @include respond-to('md') {
+      display: none;
+    }
+  }
+}
+
+// Contenido principal desplazado por la altura de la cabecera fija
+.main {
+  flex: 1;
+  padding-top: $header-height;
 }

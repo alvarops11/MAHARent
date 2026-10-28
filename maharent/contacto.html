@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | MAHARent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__brand" href="index.html">
+        <img class="header__logo" alt="MAHARent Renting de Coches"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHb71RAvnL9Ama0BfTnp5pUXSJsw8frIM6_GpZNHDtHfAl2YtCZJ2pGJBE02LPaYOPoh6CnDVTgemxWJFwd820-0c63MVx3wFGzwPWgRn0McBB5426Le3ex6km_KhDHFvnQXHT2PPUyGAJhAk3QSa9nfq63eMWm5CH4m3w04XQAHAnLMHfv5URZItPrJdRFmx9Cp_LsCyDwROsV5SAFJoBNar4nG-pQwaXosqN69TXIVeqH9sHn7rTeW-YEHLWacblXO4">
+      </a>
+      <nav class="nav" id="main-nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Inicio</a></li>
+          <li><a class="nav__link" href="marketplace.html">Marketplace</a></li>
+          <li><a class="nav__link" href="dashboard.html">Empresas</a></li>
+          <li><a class="nav__link nav__link--active" href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a class="header__link header__link--secondary" href="login.html">Iniciar sesión</a>
+        <a class="btn btn--dark" href="login.html">Registrarse</a>
+        <button class="header__toggle" type="button" aria-controls="main-nav" aria-expanded="false"
+          aria-label="Abrir menú" data-nav-toggle>
+          <span class="icon" aria-hidden="true">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main contact">
+    <div class="container">
+      <header class="contact__intro">
+        <p class="contact__eyebrow">Contacto</p>
+        <h1 class="contact__title">Hablemos de tu próximo vehículo</h1>
+        <p class="contact__lead">
+          Cuéntanos qué necesitas y un asesor de MAHARent te responderá en menos de 24 horas laborables.
+        </p>
+      </header>
+
+      <div class="grid">
+        <section class="grid__item grid__item--lg-span-7 contact__form-card" aria-labelledby="contact-form-title">
+          <h2 class="contact__heading" id="contact-form-title">Envíanos un mensaje</h2>
+          <form class="form" action="#" method="post" data-demo-form>
+            <div class="contact__row">
+              <div class="field">
+                <label class="field__label" for="contact-name">Nombre completo</label>
+                <input class="field__control" id="contact-name" name="name" type="text" autocomplete="name"
+                  placeholder="Tu nombre y apellidos" required>
+              </div>
+              <div class="field">
+                <label class="field__label" for="contact-phone">Teléfono</label>
+                <input class="field__control" id="contact-phone" name="phone" type="tel" autocomplete="tel"
+                  placeholder="+34 600 000 000">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="contact-email">Correo electrónico</label>
+              <input class="field__control" id="contact-email" name="email" type="email" autocomplete="email"
+                placeholder="nombre@empresa.com" required>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="contact-subject">Motivo de la consulta</label>
+              <div class="field__wrapper">
+                <select class="field__control field__control--select" id="contact-subject" name="subject" required>
+                  <option value="" selected disabled>Selecciona una opción</option>
+                  <option value="particular">Renting para particulares</option>
+                  <option value="empresa">Flotas y empresas</option>
+                  <option value="reserva">Duda sobre una reserva</option>
+                  <option value="otro">Otro</option>
+                </select>
+                <span class="icon icon--md field__icon field__icon--end" aria-hidden="true">expand_more</span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="contact-message">Mensaje</label>
+              <textarea class="field__control field__control--textarea" id="contact-message" name="message" rows="5"
+                placeholder="¿En qué podemos ayudarte?" required></textarea>
+            </div>
+
+            <label class="checkbox">
+              <input class="checkbox__input" name="privacy" type="checkbox" required>
+              <span class="checkbox__label">He leído y acepto la política de privacidad</span>
+            </label>
+
+            <button class="btn btn--cta btn--lg btn--full" type="submit">
+              Enviar mensaje
+              <span class="icon icon--md" aria-hidden="true">send</span>
+            </button>
+
+            <p class="contact__status" role="status" data-form-status hidden>
+              ¡Gracias! Hemos recibido tu mensaje y te responderemos lo antes posible.
+            </p>
+          </form>
+        </section>
+
+        <aside class="grid__item grid__item--lg-span-5 contact__info" aria-labelledby="contact-info-title">
+          <h2 class="contact__info-title" id="contact-info-title">Datos de contacto</h2>
+          <dl class="contact__details">
+            <div class="contact__detail">
+              <dt class="contact__detail-label">
+                <span class="icon icon--md contact__detail-icon" aria-hidden="true">mail</span>
+                Correo electrónico
+              </dt>
+              <dd class="contact__detail-value">
+                  <a class="contact__detail-link" href="mailto:hola@maharent.es">hola@maharent.es</a>
+                </dd>
+            </div>
+            <div class="contact__detail">
+              <dt class="contact__detail-label">
+                <span class="icon icon--md contact__detail-icon" aria-hidden="true">call</span>
+                Teléfono
+              </dt>
+              <dd class="contact__detail-value">
+                  <a class="contact__detail-link" href="tel:+34900000000">+34 900 000 000</a>
+                </dd>
+            </div>
+            <div class="contact__detail">
+              <dt class="contact__detail-label">
+                <span class="icon icon--md contact__detail-icon" aria-hidden="true">schedule</span>
+                Horario de atención
+              </dt>
+              <dd class="contact__detail-value">Lunes a viernes, de 9:00 a 19:00</dd>
+            </div>
+            <div class="contact__detail">
+              <dt class="contact__detail-label">
+                <span class="icon icon--md contact__detail-icon" aria-hidden="true">location_on</span>
+                Oficina
+              </dt>
+              <dd class="contact__detail-value">Madrid, España</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__brand">
+        <span class="footer__name">MAHARent</span>
+        <span class="footer__tagline">· Renting Inteligente</span>
+      </p>
+      <nav aria-label="Enlaces del pie de página">
+        <ul class="footer__list">
+          <li><a class="footer__link" href="marketplace.html">Marketplace</a></li>
+          <li><a class="footer__link" href="dashboard.html">Empresas</a></li>
+          <li><a class="footer__link" href="contacto.html">Contacto</a></li>
+          <li><a class="footer__link" href="#">Términos y condiciones</a></li>
+          <li><a class="footer__link" href="#">Política de privacidad</a></li>
+        </ul>
+      </nav>
+      <p class="footer__copy">© 2026 MAHARent. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

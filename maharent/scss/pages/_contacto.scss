@@ -1,0 +1,125 @@
+@use '../abstracts' as *;
+
+// Página de contacto: introducción, formulario y datos de contacto
+.contact {
+  padding-block: ($header-height + $space-xl) $space-xl;
+
+  @include respond-to('lg') {
+    padding-block: ($header-height + $margin-lg) $margin-lg;
+  }
+
+  &__intro {
+    max-width: 40rem;
+    margin-bottom: $space-xl;
+  }
+
+  &__eyebrow {
+    margin-bottom: $space-sm;
+    color: $color-secondary;
+    text-transform: uppercase;
+    @include type('label-md');
+  }
+
+  &__title {
+    @include type('display-lg-mobile');
+
+    @include respond-to('md') {
+      @include type('display-lg');
+    }
+  }
+
+  &__lead {
+    margin-top: $space-md;
+    color: $color-on-surface-variant;
+    @include type('body-lg');
+  }
+
+  // --- Formulario ---
+  &__form-card {
+    @include card-surface($shadow: $shadow-card);
+    padding: $space-lg;
+
+    @include respond-to('md') {
+      padding: $space-xl;
+    }
+  }
+
+  &__heading {
+    margin-bottom: $space-lg;
+    @include type('headline-md');
+  }
+
+  &__row {
+    display: grid;
+    gap: $space-md;
+
+    @include respond-to('md') {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  &__status {
+    padding: $space-md;
+    background-color: $color-secondary-fixed;
+    color: $color-on-secondary-fixed;
+    border-radius: $radius-lg;
+    @include type('body-md');
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  // --- Datos de contacto ---
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: $space-lg;
+    padding: $space-lg;
+    background-color: $color-primary-container;
+    color: $color-surface-container-lowest;
+    border-radius: $radius-xl;
+
+    @include respond-to('md') {
+      padding: $space-xl;
+    }
+  }
+
+  &__info-title {
+    color: $color-surface-container-lowest;
+    @include type('headline-md');
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: $space-lg;
+  }
+
+  &__detail {
+    display: grid;
+    gap: $space-xs;
+  }
+
+  &__detail-icon {
+    color: $color-tertiary-fixed-dim;
+  }
+
+  &__detail-label {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    color: $color-on-primary-container;
+    text-transform: uppercase;
+    @include type('label-sm');
+  }
+
+  &__detail-value {
+    padding-left: 1.75rem;
+    @include type('body-lg');
+  }
+
+  &__detail-link {
+    @include interactive($hover-color: $color-tertiary-fixed-dim);
+  }
+}

@@ -1,34 +1,59 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts' as *;
 
+// Botones: base común + variantes de color construidas con el mixin button-variant
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.5rem;
-  border-radius: $border-radius-sm;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  @include button-base;
 
   &--primary {
-    background-color: $color-accent;
-    color: #000000;
+    @include button-variant(
+      $color-secondary,
+      $color-on-secondary,
+      $color-secondary-container,
+      $shadow-button
+    );
+  }
+
+  &--dark {
+    @include button-variant($color-primary-container, $color-on-primary, $color-inverse-surface);
+  }
+
+  &--cta {
+    @include button-variant(
+      $color-tertiary-fixed-dim,
+      $color-on-tertiary-fixed,
+      $color-on-tertiary-container,
+      $shadow-cta,
+      $shadow-cta-hover
+    );
+    font-weight: $font-weight-bold;
 
     &:hover {
-      background-color: $color-accent-hover;
-      box-shadow: $shadow-md;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
     }
   }
 
-  &--secondary {
-    background-color: $color-bg-card;
-    color: $color-text-primary;
-    border: 1px solid $color-border;
+  &--outline {
+    @include button-variant(
+      $color-surface-container-lowest,
+      $color-on-surface,
+      $color-surface-container-low,
+      $shadow-field,
+      $shadow-card
+    );
+  }
 
-    &:hover {
-      border-color: $color-accent;
-    }
+  &--ghost {
+    @include button-variant(transparent, $color-on-surface-variant, $color-surface-container);
+  }
+
+  &--lg {
+    padding: 0.875rem $space-lg;
+    border-radius: $radius-xl;
+    @include type('headline-sm');
   }
 
   &--full {
