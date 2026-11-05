@@ -476,7 +476,7 @@ Los indicadores anteriores miden el resultado de la explotación, sin incluir la
 
 En el **escenario pesimista**, la plataforma solo alcanza 12 empresas de pago en cinco años: nunca llega al equilibrio operativo, la caja acumulada sigue cayendo hasta −31.815 € y no se recupera ni la caja de explotación ni la inversión total, por lo que sería necesario replantear el modelo de negocio. En el **escenario realista**, con 39 clientes de pago al tercer año y 51 al quinto, el negocio cubre sus costes mensuales a partir del mes 21 y recupera las pérdidas de explotación en el mes 42; sin embargo, la caja acumulada al quinto año (+26.465 €) aún no cubre la inversión total de 31.295 €, por lo que el ROI a cinco años es de −15,4 % y la recuperación completa se produciría hacia el mes 64. Además, el capital máximo necesario (12.753 €) supera en 5.458 € lo aportado como fondo de caja y contingencias, que deberá cubrirse con financiación adicional. En el **escenario optimista**, el equilibrio operativo llega en el mes 13, la caja de explotación se recupera en el mes 23 y la inversión total hacia el mes 34, con un ROI a cinco años de +416,0 %.
 
-El proyecto resulta, por tanto, económicamente sostenible a medio plazo en el escenario realista, aunque su rentabilidad depende directamente del ritmo de captación de empresas proveedoras, que es precisamente el riesgo R-11 identificado en el apartado 2.8. Estas cifras se recalcularán con los datos que se obtengan en el piloto con pymes.
+El proyecto resulta, por tanto, económicamente sostenible a medio plazo en el escenario realista, aunque su rentabilidad depende directamente del ritmo de captación de empresas proveedoras, que es precisamente el riesgo RL-04 identificado en el apartado 2.8. Estas cifras se recalcularán con los datos que se obtengan en el piloto con pymes.
 
 Con independencia de su sostenibilidad económica, la plataforma debe operar dentro del marco jurídico vigente, aspecto que se analiza a continuación.
 
@@ -579,41 +579,105 @@ Superados los análisis de viabilidad, resta anticipar los obstáculos que podr�
 
 ## 2.8. Análisis de riesgos inicial
 
-La gestión de riesgos se ha planteado siguiendo el proceso de identificación, análisis, evaluación y tratamiento descrito en la norma ISO 31000 [55].
+### 2.8.1. Definición y alcance
 
-### 2.8.1. Identificación de riesgos
+El análisis de riesgos anticipa los obstáculos técnicos, de planificación, operativos, de equipo y legales o comerciales que pueden amenazar el éxito de MAHARent, valora su impacto y define respuestas preventivas y correctivas, siguiendo el proceso de identificación, análisis, evaluación y tratamiento de la norma ISO 31000 [55]. Se identifican **24 riesgos: 1 crítico, 8 altos y 15 medios**; el crítico es que las capas gratuitas de los servicios en la nube fallen durante la demostración.
 
-A partir de los apartados anteriores se identifican riesgos técnicos (complejidad del 3D y la IA, rendimiento en dispositivos antiguos), de planificación (curva de aprendizaje, variaciones de alcance), operativos (dependencia de servicios externos, concurrencia en reservas), legales (protección de datos, accesibilidad) y de equipo (disponibilidad de sus integrantes).
+El análisis cubre dos horizontes:
 
-### 2.8.2. Evaluación
+- **Desarrollo del proyecto:** 1.200 horas repartidas en 6 sprints, con un equipo de 4 personas (unas 50 horas por persona y sprint) y entrega al profesor (apartado 2.6).
+- **Posible lanzamiento comercial:** captación de empresas, bajas, pagos a través de entidades bancarias, titularidad y datos personales (apartados 2.6.4 y 2.7).
 
-Cada riesgo se clasifica por su probabilidad (Baja, Media, Alta) y su impacto (Bajo, Medio, Alto). La severidad resulta de combinar ambos valores asignando 1, 2 y 3 puntos a cada nivel: **Crítica** (≥ 6), **Moderada** (3–4) y **Baja** (≤ 2).
+Se parte de los datos de los apartados anteriores: el stack y las capas gratuitas de la nube (2.5), el presupuesto y los escenarios económicos (2.6) y el marco legal y de licencias (2.7). La matriz se revisa al cierre de cada sprint, en la *Sprint Review* y la *Sprint Retrospective* [1].
 
-### 2.8.3. Plan de mitigación
+### 2.8.2. Identificación de riesgos
 
-Para cada riesgo se define una medida de prevención, orientada a reducir su probabilidad, y un plan de contingencia, que se activará si el riesgo llega a materializarse. Los riesgos se revisarán en cada *Sprint Review* y *Sprint Retrospective* [1].
+Los riesgos salen de cuatro fuentes: el plan de sprints y sus horas, los límites de las capas gratuitas de la nube, el modelo económico y sus escenarios, y el marco legal y de licencias. Se agrupan en cinco categorías y cada riesgo lleva un identificador con la inicial de su categoría.
 
-### 2.8.4. Aportación documental
+**Tabla 2.10a.** Categorías de riesgos.
 
-#### 2.8.4.1. Matriz de gestión de riesgos
+| Categoría | ID | Riesgos típicos en MAHARent | Origen |
+|---|---|---|---|
+| Técnicos | RT-01 a RT-07 | Curva de aprendizaje de WebGL/glTF, rendimiento del visor en equipos antiguos, incompatibilidades entre navegadores, reservas solapadas, acceso a datos de otra empresa, caída de las capas gratuitas, dependencia del servicio de IA | Apartados 2.5.3, 2.5.6 y 2.6.2 |
+| Planificación | RP-01 a RP-04 | Desvío sobre las 1.200 h, ampliación del alcance, coincidencia con exámenes, dependencias entre *backend* y *frontend* | Plan de sprints y alcance del MVP |
+| Operativos | RO-01 a RO-05 | Pérdida de código o datos, falta de pymes reales para validar, modelos 3D con IA insuficientes o sin derechos comerciales, conciliación con el banco, dependencia de la entidad bancaria | Apartados 2.5.4 y 2.7.2 |
+| Equipo | RE-01 a RE-02 | Baja de un integrante, conflictos o reparto desigual de la carga | Dedicación parcial de 4 personas |
+| Legales y comerciales | RL-01 a RL-06 | Titularidad, licencias *copyleft*, RGPD, captación más lenta de lo previsto, bajas elevadas, accesibilidad | Apartados 2.6.4 y 2.7 |
+
+### 2.8.3. Evaluación
+
+Cada riesgo se clasifica por su probabilidad (Baja, Media, Alta) y su impacto (Bajo, Medio, Alto) antes de aplicar medidas. La severidad es el producto de ambos valores, con Baja o Bajo = 1, Media o Medio = 2 y Alta o Alto = 3.
+
+**Tabla 2.10b.** Escalas de probabilidad, impacto y severidad.
+
+| Valor | Probabilidad de ocurrencia | Impacto en el proyecto |
+|---|---|---|
+| 1 (Baja / Bajo) | Poco probable durante el proyecto | Retraso inferior a una semana o corrección sin coste |
+| 2 (Media / Medio) | Puede ocurrir | Retraso de una a tres semanas o recorte menor del alcance |
+| 3 (Alta / Alto) | Es esperable si no se actúa | Se incumple la entrega, se compromete el producto o el capital |
+
+| Severidad (P × I) | Nivel | Respuesta |
+|---|---|---|
+| 1 a 2 | Baja | Se vigila; no requiere acción inmediata |
+| 3 a 4 | Media | Medida preventiva en el sprint correspondiente |
+| 6 | Alta | Medida preventiva antes de empezar la tarea afectada y seguimiento semanal |
+| 9 | Crítica | Medida preventiva inmediata y plan de contingencia ensayado |
+
+**Tabla 2.10c.** Mapa de riesgos según probabilidad (filas) e impacto (columnas).
+
+| Probabilidad \ Impacto | Bajo | Medio | Alto |
+|---|---|---|---|
+| Alta | — | RT-02, RP-03 (Alta) | RT-06 (Crítica) |
+| Media | — | RT-03, RT-07, RP-02, RP-04, RO-02, RO-03, RO-05, RE-02, RL-06 (Media) | RT-01, RT-04, RP-01, RO-04, RL-04, RL-05 (Alta) |
+| Baja | — | — | RT-05, RO-01, RE-01, RL-01, RL-02, RL-03 (Media) |
+
+### 2.8.4. Plan de mitigación
+
+Cada riesgo tiene una medida preventiva, que reduce su probabilidad, y un plan de contingencia, que limita el daño si llega a materializarse. Ambos figuran en la matriz del apartado 2.8.5.1. Las acciones más importantes se ordenan por momento:
+
+- **Antes de empezar el desarrollo:** prueba de concepto del visor 3D con un modelo glTF generado con IA (RT-01, RO-03), calendario de exámenes incorporado al plan de sprints (RP-03), alcance congelado en un *Product Backlog* priorizado por el *Product Owner* (RP-02), contratos de la API REST y datos simulados para trabajar en paralelo (RP-04) y dos personas que conozcan cada módulo (RE-01).
+- **Durante los sprints:** seguimiento semanal de horas y tablero visible en GitHub Projects (RP-01, RE-02), pruebas del visor en un equipo de gama baja (RT-02), pruebas de reservas simultáneas sobre el mismo vehículo (RT-04), pruebas de acceso entre cuentas de empresas distintas (RT-05) y lista de verificación WCAG en la *Definition of Done* (RL-06).
+- **Antes de entregar al profesor:** comprobación de la demostración 24 h antes con los servicios activos, exportación de los datos y vídeo de respaldo, con el entorno completo listo para arrancar en local con Docker Compose (RT-06), confirmación escrita de la titularidad (RL-01) e inventario de licencias (RL-02, Tabla 2.9).
+- **Antes de lanzar comercialmente:** planes de pago de los servicios en la nube, acuerdo con al menos una entidad bancaria y pruebas del flujo de pago (RO-04, RO-05), documentación RGPD (RL-03) y métricas de captación, conversión y bajas desde el primer mes (RL-04, RL-05).
+
+**Activadores y seguimiento.** La matriz se revisa al cierre de cada sprint y cada riesgo puede subir o bajar de nivel. Se activa la contingencia de RP-01 cuando un sprint supera en más de un 15 % sus horas previstas; la de RO-05 cuando una reserva permanece más de 48 horas en estado *Pendiente de aprobación bancaria*, momento en que se libera el vehículo; y la de RL-04 y RL-05 si en el mes 12 hay menos de 8 empresas de pago, un punto intermedio entre el escenario pesimista (3) y el realista (11) de la Tabla 2.7b. Todo riesgo alto o crítico que se materialice se comunica al profesor en la misma semana.
+
+### 2.8.5. Aportación documental
+
+#### 2.8.5.1. Matriz de gestión de riesgos
+
+Severidad = probabilidad × impacto, antes de aplicar las medidas (escalas de la Tabla 2.10b). Los riesgos están ordenados por categoría.
 
 **Tabla 2.10.** Matriz de gestión de riesgos.
 
 | ID | Descripción | Probabilidad | Impacto | Severidad | Medida de prevención | Plan de contingencia |
 |---|---|---|---|---|---|---|
-| R-01 | Retraso por la curva de aprendizaje de WebGL/glTF y de la generación 3D con IA | Alta | Alto | Crítica (9) | *Spike* técnico temprano; formación planificada | Sustituir el visor 3D por una galería 360° de imágenes en el MVP |
-| R-02 | Calidad o coste inasumible del servicio de IA (NLP / *chatbot* / 3D) | Media | Alto | Crítica (6) | Prueba de concepto y comparación de proveedores; límites de uso | Búsqueda por filtros tradicionales; *chatbot* con respuestas predefinidas |
-| R-03 | Bajo rendimiento del visor 3D en equipos o móviles antiguos | Media | Medio | Moderada (4) | Modelos glTF optimizados, carga diferida | Detección de WebGL y alternativa en 2D |
-| R-04 | Variaciones del alcance (*scope creep*) por el número de funcionalidades diferenciales | Alta | Alto | Crítica (9) | Definir MVP y priorizar el *Product Backlog* con el PO | Trasladar funcionalidades a sprints posteriores |
-| R-05 | Solapamiento de reservas por concurrencia | Media | Alto | Crítica (6) | Validación de disponibilidad en el *backend* y transacciones multidocumento en MongoDB | Proceso de resolución manual y notificación al cliente |
-| R-06 | Errores en la conciliación de pagos con la entidad bancaria | Media | Alto | Crítica (6) | Flujo de estados de la reserva (*Solicitado*, *Pendiente*, *Confirmado*, *Rechazado*) y pruebas con la entidad | Conciliación manual con los justificantes bancarios |
-| R-07 | Incumplimiento del RGPD/LOPDGDD o brecha de datos | Baja | Alto | Moderada (3) | *Privacy by Design*, control de acceso con JWT, revisión de políticas | Protocolo de notificación de brechas en 72 h (art. 33 RGPD) [23] |
-| R-08 | Incumplimiento de requisitos de accesibilidad | Media | Medio | Moderada (4) | Lista de verificación WCAG en la *Definition of Done* | Auditoría y corrección prioritaria |
-| R-09 | Cambios en precios o condiciones de los servicios en la nube (MongoDB Atlas, Render, Vercel) | Baja | Medio | Baja (2) | Seguimiento de condiciones; configuración en variables de entorno | Migración a otro proveedor *cloud* o a un servidor Ubuntu propio gracias a Docker |
-| R-10 | Indisponibilidad temporal de miembros del equipo | Media | Medio | Moderada (4) | Documentación continua y reparto de conocimiento | Redistribución de tareas en el *Sprint Planning* |
-| R-11 | Baja adopción por parte de pymes proveedoras (catálogo vacío) | Media | Alto | Crítica (6) | Validación temprana con empresas; datos de demostración | Ajustar el modelo de monetización y el *onboarding* |
+| RT-01 | La curva de aprendizaje de WebGL/glTF y de la generación 3D con IA retrasa el visor (conocimiento previo nulo, Tabla 2.6b) | Media | Alto | 6 Alta | Prueba de concepto con un modelo glTF antes del sprint y 10 h de autoformación por persona | Sustituir el visor por una galería de imágenes 360° en el MVP |
+| RT-02 | El visor 3D va lento en ordenadores o móviles antiguos | Alta | Medio | 6 Alta | Modelos glTF comprimidos (5 MB como máximo, Tabla 2.6), carga diferida y pruebas en un equipo de gama baja | Detectar WebGL y mostrar una galería de fotos 2D cuando el visor no cargue |
+| RT-03 | Incompatibilidades entre navegadores y dispositivos (Safari, iOS, Android) | Media | Medio | 4 Media | Diseño *responsive* y matriz de pruebas en Chrome, Safari, Firefox, Edge, Android e iOS | Corregir en el último sprint por orden de uso y publicar los navegadores admitidos |
+| RT-04 | Dos clientes reservan el mismo vehículo a la vez | Media | Alto | 6 Alta | Validación de disponibilidad en el *backend* y transacciones multidocumento en MongoDB [35]; bloqueo temporal del vehículo mientras la reserva está pendiente | Resolución manual y aviso inmediato al cliente afectado |
+| RT-05 | Una empresa accede a datos de otra por una autorización mal configurada | Baja | Alto | 3 Media | Token JWT con rol y empresa [27], filtro por empresa en cada consulta de Mongoose y pruebas con cuentas de empresas distintas | Cortar el acceso afectado, rotar el secreto de firma de los JWT y notificar la brecha a la AEPD en 72 h |
+| RT-06 | Las capas gratuitas fallan en la demostración: Render detiene el servicio gratuito tras 15 minutos sin tráfico y tarda en arrancar, y MongoDB Atlas M0 está limitado a 512 MB [33], [35] | Alta | Alto | 9 Crítica | Comprobar y «despertar» los servicios antes de la demostración, exportar los datos cada semana y preparar un vídeo de respaldo | Demostrar con el vídeo y con el entorno local levantado con Docker Compose y datos de ejemplo |
+| RT-07 | El servicio de IA (búsqueda en lenguaje natural, *chatbot* o generación 3D) deja de estar disponible, sube de precio o cambia sus términos | Media | Medio | 4 Media | Prueba de concepto y comparación de proveedores; límites de uso; clave del servicio en variables de entorno | Búsqueda por filtros clásicos y *chatbot* con respuestas predefinidas |
+| RP-01 | Las horas reales superan las 1.200 h previstas | Media | Alto | 6 Alta | Seguimiento semanal de horas por sprint y contingencias del 10 % (2.845 €, Tabla 2.7) | Recortar al MVP y mover tareas a sprints posteriores si un sprint supera en un 15 % sus horas |
+| RP-02 | El alcance crece por el número de funcionalidades diferenciales (3D, IA, panel SaaS) | Media | Medio | 4 Media | Alcance del MVP congelado en un *Product Backlog* priorizado por el *Product Owner* | Un cambio entra solo si sustituye a otro de igual esfuerzo |
+| RP-03 | Los hitos coinciden con exámenes y entregas de otras asignaturas | Alta | Medio | 6 Alta | Calendario de exámenes en el plan, sprints más ligeros en esas semanas y tareas adelantadas | Redistribuir tareas entre los cuatro y reducir el alcance del sprint |
+| RP-04 | El retraso de la API REST bloquea el *frontend* y el panel de empresas | Media | Medio | 4 Media | Contratos de la API acordados al inicio y datos simulados para trabajar en paralelo | Reordenar el sprint y priorizar las tareas que desbloquean a las demás |
+| RO-01 | Pérdida de código o de datos, sin copias de seguridad automáticas en la capa gratuita de Atlas | Baja | Alto | 3 Media | Repositorio en GitHub con ramas protegidas (GitFlow) y exportación semanal de la base de datos | Restaurar desde el último *commit* y la última exportación |
+| RO-02 | No hay pymes reales para probar el producto | Media | Medio | 4 Media | Acordar pruebas con 3 a 5 empresas de la red de contactos del equipo y de la Cámara de Comercio | Validar con datos de demostración y con el profesor como usuario |
+| RO-03 | Los modelos 3D generados con IA no tienen calidad suficiente o los términos del servicio no permiten su uso comercial | Media | Medio | 4 Media | Pruebas con fotos reales de las carrocerías más comunes y revisión de los términos del servicio (Tabla 2.9) | Sustituir por galerías de fotos hasta disponer de modelos válidos |
+| RO-04 | Errores en la conciliación de los pagos con la entidad bancaria | Media | Alto | 6 Alta | Flujo de estados de la reserva (*Solicitado*, *Pendiente de aprobación bancaria*, *Confirmado*, *Rechazado*) y pruebas con la entidad | Conciliación manual con los justificantes bancarios |
+| RO-05 | Dependencia de la entidad bancaria: la aprobación se retrasa o no se alcanza un acuerdo con ninguna entidad | Media | Medio | 4 Media | Contactar con varias entidades antes del lanzamiento; caducidad de 48 h del estado *Pendiente* | Trabajar con otra entidad o con pago por recibo bancario, habitual en el sector |
+| RE-01 | Un integrante abandona el proyecto o deja de estar disponible | Baja | Alto | 3 Media | Documentación del código y dos personas por módulo | Reasignar el módulo y reducir el alcance del sprint |
+| RE-02 | Mala comunicación o reparto desigual de la carga | Media | Medio | 4 Media | *Daily Scrum*, tablero de tareas visible y reparto en cada *Sprint Planning* | Mediación del profesor y reasignación de tareas |
+| RL-01 | Conflicto sobre la titularidad con el centro o entre los socios | Baja | Alto | 3 Media | Confirmación escrita del centro y reparto de derechos por escrito entre los cuatro (apartado 2.7.2) [49] | Licencia de explotación para los autores; no se lanza hasta resolverlo |
+| RL-02 | Se incorpora una dependencia con licencia *copyleft* en red (AGPL) o se distribuye un componente GPL o SSPL | Baja | Alto | 3 Media | Lista de licencias aceptadas (Tabla 2.9) y revisión con *license-checker* en cada sprint | Sustituir la dependencia antes del lanzamiento |
+| RL-03 | Incumplimiento del RGPD/LOPDGDD con datos de clientes y empresas | Baja | Alto | 3 Media | *Privacy by Design*, datos de tarjeta fuera de la plataforma (pago delegado en el banco), solo los datos necesarios (Tabla 2.8) y servicios en región UE | Procedimiento de brecha: bloquear el acceso y notificar a la AEPD en 72 h (art. 33 RGPD) [23] |
+| RL-04 | La captación de empresas es más lenta de lo previsto (escenario pesimista: 3 empresas de pago en el mes 12) | Media | Alto | 6 Alta | Medir captación y conversión desde el primer mes, validación temprana con pymes y canales de bajo coste | Ajustar precios y el proceso de alta; replantear el modelo si hay menos de 8 empresas de pago en el mes 12 |
+| RL-05 | Las bajas de empresas superan lo previsto o la competencia ofrece planes gratuitos | Media | Alto | 6 Alta | Alta asistida (*onboarding*), seguimiento del primer mes e incentivo por pago anual | Campañas de retención y revisión de precios; financiación adicional según el capital máximo del escenario (Tabla 2.7c) |
+| RL-06 | Incumplimiento de los requisitos de accesibilidad (Ley 11/2023, WCAG 2.2 AA) [52], [24] | Media | Medio | 4 Media | Lista de verificación WCAG en la *Definition of Done* y Lighthouse en el flujo CI/CD | Auditoría y corrección prioritaria antes del lanzamiento |
 
-La valoración de probabilidades e impactos es inicial y se revisará en cada *Sprint Review*, actualizando la matriz en GitHub Projects.
+La valoración de probabilidades e impactos es inicial y se revisará en cada *Sprint Review*, actualizando la matriz en GitHub Projects [2].
 
 ## 2.9. Conclusiones del capítulo
 
