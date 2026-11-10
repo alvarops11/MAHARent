@@ -361,4 +361,4 @@ MAHARent
 - *Adrian Lopez* - 100% de las tareas completadas en tiempo y forma.
 - *Hugo del Rio* - 100% de las tareas completadas en tiempo y forma.
 - *Álvaro Pérez* - 100% de las tareas completadas en tiempo y forma.
-- *Manuel Parrilla* - 80% de las tareas completadas en tiempo y forma.
+- *Manuel Parrilla* - 100% de las tareas completadas en tiempo y forma. Bajo el porcentaje a 90% por no añadir la matriz de stakeholders a la presentación.
