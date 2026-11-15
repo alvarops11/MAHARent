@@ -159,7 +159,12 @@ b {
   width: 100%;
   max-width: 80rem;
   margin-inline: auto;
-  padding-inline: 1.5rem;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+  .container {
+    padding-inline: 1.5rem;
+  }
 }
 @media (min-width: 1024px) {
   .container {
@@ -279,7 +284,14 @@ b {
   width: 100%;
   max-width: 80rem;
   margin-inline: auto;
-  padding-inline: 1.5rem;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+  .header__inner {
+    padding-inline: 1.5rem;
+  }
+}
+.header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -513,7 +525,14 @@ b {
   width: 100%;
   max-width: 80rem;
   margin-inline: auto;
-  padding-inline: 1.5rem;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+  .footer__inner {
+    padding-inline: 1.5rem;
+  }
+}
+.footer__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -740,7 +759,8 @@ b {
 .vehicle-card__media {
   position: relative;
   aspect-ratio: 16/10;
-  background-color: #e5eeff;
+  background-color: #eff4ff;
+  background-image: linear-gradient(to bottom, #eff4ff, #ffffff);
 }
 .vehicle-card__image {
   width: 100%;
@@ -763,6 +783,11 @@ b {
   flex: 1;
   gap: 0.5rem;
   padding: 1rem;
+}
+@media (min-width: 1024px) {
+  .vehicle-card__body {
+    padding: 1.5rem;
+  }
 }
 .vehicle-card__title {
   color: #0b1c30;
@@ -790,7 +815,7 @@ b {
   font-weight: 600;
 }
 .vehicle-card__price--highlight {
-  color: #0051d5;
+  color: #b87500;
 }
 
 .kpi-card {
@@ -2054,7 +2079,14 @@ b {
   width: 100%;
   max-width: 90rem;
   margin-inline: auto;
-  padding-inline: 1.5rem;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+  .marketplace__hero-inner {
+    padding-inline: 1.5rem;
+  }
+}
+.marketplace__hero-inner {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -2101,7 +2133,14 @@ b {
   width: 100%;
   max-width: 90rem;
   margin-inline: auto;
-  padding-inline: 1.5rem;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+  .marketplace__layout {
+    padding-inline: 1.5rem;
+  }
+}
+.marketplace__layout {
   align-items: start;
   padding-block: 1.5rem;
 }
@@ -2904,7 +2943,14 @@ b {
   width: 100%;
   max-width: 90rem;
   margin-inline: auto;
-  padding-inline: 1.5rem;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+  .marketplace-cta {
+    padding-inline: 1.5rem;
+  }
+}
+.marketplace-cta {
   padding-bottom: 2.5rem;
 }
 @media (min-width: 1024px) {

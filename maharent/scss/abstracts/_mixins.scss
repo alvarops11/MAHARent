@@ -2,6 +2,7 @@
 @use 'sass:map';
 @use 'variables' as *;
 @use 'typography-tokens' as *;
+@use 'breakpoints' as *;
 
 // Aplica un estilo de la escala tipográfica: @include type('body-md');
 @mixin type($name) {
@@ -26,7 +27,13 @@
   width: 100%;
   max-width: $max-width;
   margin-inline: auto;
-  padding-inline: $margin;
+  // Márgenes del manual de diseño: 16px en móvil (margin-sm) y 24px en tablet (margin).
+  // En escritorio cada contenedor aplica margin-lg (48px).
+  padding-inline: $margin-sm;
+
+  @include respond-to('md') {
+    padding-inline: $margin;
+  }
 }
 
 @mixin grid-auto-fit($min-width: 17.5rem, $gap: $gutter) {

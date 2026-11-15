@@ -47,10 +47,13 @@
     box-shadow: $shadow-card;
   }
 
+  // Zona de imagen: foto de borde a borde sobre un degradado suave (manual de diseño).
+  // El degradado se ve mientras carga la foto o si no llega a cargar.
   &__media {
     position: relative;
     aspect-ratio: 16 / 10;
-    background-color: $color-surface-container;
+    background-color: $color-surface-container-low;
+    background-image: linear-gradient(to bottom, $color-surface-container-low, $color-surface-container-lowest);
   }
 
   &__image {
@@ -76,7 +79,12 @@
     flex-direction: column;
     flex: 1;
     gap: $space-sm;
+    // Manual de diseño: padding de tarjeta space-md (16px) en móvil y space-lg (24px) en escritorio
     padding: $space-md;
+
+    @include respond-to('lg') {
+      padding: $space-lg;
+    }
   }
 
   &__title {
@@ -97,8 +105,11 @@
     color: $color-on-surface;
     @include type('headline-md');
 
+    // Manual de diseño: los precios usan el acento ámbar de conversión.
+    // Se usa la variante oscura (on-tertiary-container, contraste 3,76:1 sobre blanco) porque
+    // el ámbar #F59E0B del manual (2,15:1) no cumple WCAG para texto.
     &--highlight {
-      color: $color-secondary;
+      color: $color-on-tertiary-container;
     }
   }
 }
