@@ -9,8 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind.config.js"></script>
   <link rel="stylesheet" href="css/main.css">
@@ -36,7 +34,7 @@
         <a class="btn btn--dark" href="login.html">Registrarse</a>
         <button class="header__toggle" type="button" aria-controls="main-nav" aria-expanded="false"
           aria-label="Abrir menú" data-nav-toggle>
-          <span class="icon" aria-hidden="true">menu</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-menu"></use></svg>
         </button>
       </div>
     </div>
@@ -49,31 +47,31 @@
         <ul class="sidebar__menu">
           <li>
             <a class="sidebar__link sidebar__link--active" href="#panel" aria-current="page" data-sidebar-link>
-              <span class="icon icon--md" aria-hidden="true">dashboard</span>
+              <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-dashboard"></use></svg>
               Dashboard
             </a>
           </li>
           <li>
             <a class="sidebar__link" href="#mis-vehiculos" data-sidebar-link>
-              <span class="icon icon--md" aria-hidden="true">directions_car</span>
+              <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-directions-car"></use></svg>
               Mis vehículos
             </a>
           </li>
           <li>
             <a class="sidebar__link" href="#publicaciones" data-sidebar-link>
-              <span class="icon icon--md" aria-hidden="true">campaign</span>
+              <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-campaign"></use></svg>
               Publicaciones
             </a>
           </li>
           <li>
             <a class="sidebar__link" href="#solicitudes" data-sidebar-link>
-              <span class="icon icon--md" aria-hidden="true">assignment</span>
+              <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-assignment"></use></svg>
               Solicitudes
             </a>
           </li>
           <li>
             <a class="sidebar__link" href="#" data-sidebar-link data-toast="Sección activada: Rentings activos">
-              <span class="icon icon--md" aria-hidden="true">key</span>
+              <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-key"></use></svg>
               Rentings activos
             </a>
           </li>
@@ -84,7 +82,7 @@
         <ul class="sidebar__menu">
           <li>
             <a class="sidebar__link" href="#" data-sidebar-link data-toast="Sección activada: Configuración">
-              <span class="icon icon--md" aria-hidden="true">settings</span>
+              <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-settings"></use></svg>
               Configuración
             </a>
           </li>
@@ -99,29 +97,29 @@
           <li class="dropdown">
             <button class="dropdown__toggle" type="button" aria-expanded="false" aria-controls="company-menu"
               data-dropdown-toggle>
-              <span class="icon icon--md dropdown__icon" aria-hidden="true">business</span>
+              <svg class="icon icon--md dropdown__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-business"></use></svg>
               <span data-company-name>Arval Fleet Services</span>
-              <span class="icon icon--sm" aria-hidden="true">expand_more</span>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-expand-more"></use></svg>
             </button>
             <ul class="dropdown__menu" id="company-menu" hidden>
               <li class="dropdown__heading">Cuentas vinculadas</li>
               <li>
                 <button class="dropdown__item" type="button" data-company="Arval Fleet Services" aria-current="true">
                   Arval Fleet Services
-                  <span class="icon icon--sm dropdown__check dropdown__check--on" aria-hidden="true">check</span>
+                  <svg class="icon icon--sm dropdown__check dropdown__check--on" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check"></use></svg>
                 </button>
               </li>
               <li>
                 <button class="dropdown__item" type="button" data-company="AutoEmpresa Madrid S.L.">
                   AutoEmpresa Madrid S.L.
-                  <span class="icon icon--sm dropdown__check" aria-hidden="true">check</span>
+                  <svg class="icon icon--sm dropdown__check" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check"></use></svg>
                 </button>
               </li>
               <li class="dropdown__divider" aria-hidden="true"></li>
               <li>
                 <button class="dropdown__item dropdown__item--accent" type="button"
                   data-toast="Solicitud para vincular nueva empresa enviada">
-                  <span class="icon icon--md" aria-hidden="true">add_business</span>
+                  <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-add-business"></use></svg>
                   Añadir otra empresa
                 </button>
               </li>
@@ -131,7 +129,7 @@
           <li class="dropdown">
             <button class="dropdown__toggle dropdown__toggle--icon" type="button" aria-label="Notificaciones"
               aria-expanded="false" aria-controls="notif-menu" data-dropdown-toggle>
-              <span class="icon icon--lg" aria-hidden="true">notifications</span>
+              <svg class="icon icon--lg" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-notifications"></use></svg>
               <span class="dropdown__badge" data-notif-badge>
                 <span class="u-visually-hidden">Tienes notificaciones sin leer</span>
               </span>
@@ -179,13 +177,13 @@
             <button class="dropdown__toggle dropdown__toggle--profile" type="button" aria-label="Cuenta de Gestión Flota"
               aria-expanded="false" aria-controls="profile-menu" data-dropdown-toggle>
               <span class="avatar avatar--sm avatar--dark" aria-hidden="true">
-                <span class="icon icon--md">person</span>
+                <svg class="icon icon--md"><use href="assets/icons/sprite.svg#icon-person"></use></svg>
               </span>
               <span class="dropdown__who">
                 <span class="dropdown__name">Gestión Flota</span>
                 <span class="dropdown__role">Admin Corporativo</span>
               </span>
-              <span class="icon icon--sm" aria-hidden="true">expand_more</span>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-expand-more"></use></svg>
             </button>
             <ul class="dropdown__menu dropdown__menu--end" id="profile-menu" hidden>
               <li class="dropdown__identity">
@@ -194,13 +192,13 @@
               </li>
               <li>
                 <button class="dropdown__item" type="button" data-toast="Accediendo a Facturación B2B...">
-                  <span class="icon icon--md" aria-hidden="true">receipt_long</span>
+                  <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-receipt-long"></use></svg>
                   Facturación B2B
                 </button>
               </li>
               <li>
                 <button class="dropdown__item" type="button" data-toast="Ajustes de cuenta abiertos">
-                  <span class="icon icon--md" aria-hidden="true">manage_accounts</span>
+                  <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-manage-accounts"></use></svg>
                   Ajustes de cuenta
                 </button>
               </li>
@@ -208,7 +206,7 @@
               <li>
                 <button class="dropdown__item dropdown__item--danger" type="button"
                   data-toast="Sesión cerrada correctamente">
-                  <span class="icon icon--md" aria-hidden="true">logout</span>
+                  <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-logout"></use></svg>
                   Cerrar sesión
                 </button>
               </li>
@@ -221,7 +219,7 @@
         <header class="dashboard__intro">
           <h1 class="dashboard__title" id="welcome-title" data-greeting>Buenos días, Arval Mobility Fleet</h1>
           <p class="badge badge--info dashboard__verified">
-            <span class="icon icon--sm icon--filled" aria-hidden="true">verified</span>
+            <svg class="icon icon--sm icon--filled" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-verified"></use></svg>
             Cuenta B2B Verificada
           </p>
           <p class="dashboard__lead">
@@ -232,13 +230,13 @@
         <ul class="dashboard__actions">
           <li>
             <button class="btn btn--outline" type="button" data-download-report>
-              <span class="icon icon--md" aria-hidden="true">file_download</span>
+              <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-file-download"></use></svg>
               Descargar informe
             </button>
           </li>
           <li>
             <button class="btn btn--dark" type="button" data-vehicle-create>
-              <span class="icon icon--md dashboard__action-icon" aria-hidden="true">add_circle</span>
+              <svg class="icon icon--md dashboard__action-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-add-circle"></use></svg>
               Crear vehículo
             </button>
           </li>
@@ -252,13 +250,13 @@
             <header class="kpi-card__head">
               <h3 class="kpi-card__label">Vehículos en flota</h3>
               <span class="kpi-card__icon kpi-card__icon--fleet" aria-hidden="true">
-                <span class="icon icon--lg">directions_car</span>
+                <svg class="icon icon--lg"><use href="assets/icons/sprite.svg#icon-directions-car"></use></svg>
               </span>
             </header>
             <p class="kpi-card__figure">
               <strong class="kpi-card__value kpi-card__value--display" data-stat="fleet">24</strong>
               <span class="badge badge--info">
-                <span class="icon icon--xs" aria-hidden="true">arrow_upward</span>
+                <svg class="icon icon--xs" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-upward"></use></svg>
                 +3 este mes
               </span>
             </p>
@@ -266,7 +264,7 @@
               <p class="kpi-card__note">Flota operativa asignada</p>
               <a class="kpi-card__link" href="#mis-vehiculos">
                 Gestionar flota
-                <span class="icon icon--sm" aria-hidden="true">arrow_forward</span>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-forward"></use></svg>
               </a>
             </footer>
           </li>
@@ -275,7 +273,7 @@
             <header class="kpi-card__head">
               <h3 class="kpi-card__label">Vehículos publicados</h3>
               <span class="kpi-card__icon kpi-card__icon--published" aria-hidden="true">
-                <span class="icon icon--lg">storefront</span>
+                <svg class="icon icon--lg"><use href="assets/icons/sprite.svg#icon-storefront"></use></svg>
               </span>
             </header>
             <p class="kpi-card__figure">
@@ -288,7 +286,7 @@
               <p class="kpi-card__note">Marketplace visible</p>
               <a class="kpi-card__link" href="#mis-vehiculos" data-fleet-filter="Publicado">
                 Ver marketplace
-                <span class="icon icon--sm" aria-hidden="true">arrow_forward</span>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-forward"></use></svg>
               </a>
             </footer>
           </li>
@@ -297,7 +295,7 @@
             <header class="kpi-card__head">
               <h3 class="kpi-card__label">Vehículos en renting activo</h3>
               <span class="kpi-card__icon kpi-card__icon--renting" aria-hidden="true">
-                <span class="icon icon--lg">vpn_key</span>
+                <svg class="icon icon--lg"><use href="assets/icons/sprite.svg#icon-vpn-key"></use></svg>
               </span>
             </header>
             <p class="kpi-card__figure">
@@ -308,7 +306,7 @@
               <p class="kpi-card__note">100% cobro puntual</p>
               <a class="kpi-card__link" href="#mis-vehiculos" data-fleet-filter="En renting">
                 Ver contratos
-                <span class="icon icon--sm" aria-hidden="true">arrow_forward</span>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-forward"></use></svg>
               </a>
             </footer>
           </li>
@@ -320,7 +318,7 @@
                 <span class="kpi-card__pulse" aria-hidden="true"></span>
               </h3>
               <span class="kpi-card__icon kpi-card__icon--pending" aria-hidden="true">
-                <span class="icon icon--lg">assignment_late</span>
+                <svg class="icon icon--lg"><use href="assets/icons/sprite.svg#icon-assignment-late"></use></svg>
               </span>
             </header>
             <p class="kpi-card__figure">
@@ -332,7 +330,7 @@
               <p class="kpi-card__note">Riesgo / Score pendiente</p>
               <a class="kpi-card__link kpi-card__link--alert" href="#solicitudes">
                 Revisar solicitudes
-                <span class="icon icon--sm" aria-hidden="true">arrow_forward</span>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-forward"></use></svg>
               </a>
             </footer>
           </li>
@@ -356,12 +354,12 @@
             <li>
               <button class="btn btn--ghost" type="button" data-fleet-filter="Todos">
                 Ver todos
-                <span class="icon icon--sm" aria-hidden="true">arrow_forward</span>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-forward"></use></svg>
               </button>
             </li>
             <li>
               <button class="btn btn--ghost" type="button" data-vehicle-create>
-                <span class="icon icon--md" aria-hidden="true">add</span>
+                <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-add"></use></svg>
                 Crear vehículo
               </button>
             </li>
@@ -412,12 +410,12 @@
                 <td class="data-table__td fleet-cell fleet-cell--end">
                   <ul class="row-actions">
                     <li><button class="icon-button" type="button" aria-label="Editar vehículo"
-                        data-vehicle-edit><span class="icon icon--md" aria-hidden="true">edit</span></button></li>
+                        data-vehicle-edit><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-edit"></use></svg></button></li>
                     <li><button class="icon-button" type="button" aria-label="Ver ficha del vehículo"
-                        data-vehicle-preview><span class="icon icon--md"
-                          aria-hidden="true">visibility</span></button></li>
+                        data-vehicle-preview><svg class="icon icon--md"
+                          aria-hidden="true"><use href="assets/icons/sprite.svg#icon-visibility"></use></svg></button></li>
                     <li><button class="icon-button" type="button" aria-label="Más opciones" aria-haspopup="true"
-                        data-row-menu-toggle><span class="icon icon--md" aria-hidden="true">more_vert</span></button>
+                        data-row-menu-toggle><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-more-vert"></use></svg></button>
                     </li>
                   </ul>
                 </td>
@@ -452,12 +450,12 @@
                 <td class="data-table__td fleet-cell fleet-cell--end">
                   <ul class="row-actions">
                     <li><button class="icon-button" type="button" aria-label="Editar vehículo"
-                        data-vehicle-edit><span class="icon icon--md" aria-hidden="true">edit</span></button></li>
+                        data-vehicle-edit><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-edit"></use></svg></button></li>
                     <li><button class="icon-button" type="button" aria-label="Ver ficha del vehículo"
-                        data-vehicle-preview><span class="icon icon--md"
-                          aria-hidden="true">visibility</span></button></li>
+                        data-vehicle-preview><svg class="icon icon--md"
+                          aria-hidden="true"><use href="assets/icons/sprite.svg#icon-visibility"></use></svg></button></li>
                     <li><button class="icon-button" type="button" aria-label="Más opciones" aria-haspopup="true"
-                        data-row-menu-toggle><span class="icon icon--md" aria-hidden="true">more_vert</span></button>
+                        data-row-menu-toggle><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-more-vert"></use></svg></button>
                     </li>
                   </ul>
                 </td>
@@ -493,12 +491,12 @@
                 <td class="data-table__td fleet-cell fleet-cell--end">
                   <ul class="row-actions">
                     <li><button class="icon-button" type="button" aria-label="Editar vehículo"
-                        data-vehicle-edit><span class="icon icon--md" aria-hidden="true">edit</span></button></li>
+                        data-vehicle-edit><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-edit"></use></svg></button></li>
                     <li><button class="icon-button" type="button" aria-label="Ver ficha del vehículo"
-                        data-vehicle-preview><span class="icon icon--md"
-                          aria-hidden="true">visibility</span></button></li>
+                        data-vehicle-preview><svg class="icon icon--md"
+                          aria-hidden="true"><use href="assets/icons/sprite.svg#icon-visibility"></use></svg></button></li>
                     <li><button class="icon-button" type="button" aria-label="Más opciones" aria-haspopup="true"
-                        data-row-menu-toggle><span class="icon icon--md" aria-hidden="true">more_vert</span></button>
+                        data-row-menu-toggle><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-more-vert"></use></svg></button>
                     </li>
                   </ul>
                 </td>
@@ -534,12 +532,12 @@
                 <td class="data-table__td fleet-cell fleet-cell--end">
                   <ul class="row-actions">
                     <li><button class="icon-button" type="button" aria-label="Editar vehículo"
-                        data-vehicle-edit><span class="icon icon--md" aria-hidden="true">edit</span></button></li>
+                        data-vehicle-edit><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-edit"></use></svg></button></li>
                     <li><button class="icon-button" type="button" aria-label="Ver ficha del vehículo"
-                        data-vehicle-preview><span class="icon icon--md"
-                          aria-hidden="true">visibility</span></button></li>
+                        data-vehicle-preview><svg class="icon icon--md"
+                          aria-hidden="true"><use href="assets/icons/sprite.svg#icon-visibility"></use></svg></button></li>
                     <li><button class="icon-button" type="button" aria-label="Más opciones" aria-haspopup="true"
-                        data-row-menu-toggle><span class="icon icon--md" aria-hidden="true">more_vert</span></button>
+                        data-row-menu-toggle><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-more-vert"></use></svg></button>
                     </li>
                   </ul>
                 </td>
@@ -575,12 +573,12 @@
                 <td class="data-table__td fleet-cell fleet-cell--end">
                   <ul class="row-actions">
                     <li><button class="icon-button" type="button" aria-label="Editar vehículo"
-                        data-vehicle-edit><span class="icon icon--md" aria-hidden="true">edit</span></button></li>
+                        data-vehicle-edit><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-edit"></use></svg></button></li>
                     <li><button class="icon-button" type="button" aria-label="Ver ficha del vehículo"
-                        data-vehicle-preview><span class="icon icon--md"
-                          aria-hidden="true">visibility</span></button></li>
+                        data-vehicle-preview><svg class="icon icon--md"
+                          aria-hidden="true"><use href="assets/icons/sprite.svg#icon-visibility"></use></svg></button></li>
                     <li><button class="icon-button" type="button" aria-label="Más opciones" aria-haspopup="true"
-                        data-row-menu-toggle><span class="icon icon--md" aria-hidden="true">more_vert</span></button>
+                        data-row-menu-toggle><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-more-vert"></use></svg></button>
                     </li>
                   </ul>
                 </td>
@@ -613,12 +611,12 @@
                   </span>
                   <span class="fleet-list__stats">
                     <span class="fleet-list__stat">
-                      <span class="icon icon--sm fleet-list__icon" aria-hidden="true">visibility</span>
+                      <svg class="icon icon--sm fleet-list__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-visibility"></use></svg>
                       <strong>1.420</strong> visitas
                     </span>
                     <span class="fleet-list__stat">
-                      <span class="icon icon--sm fleet-list__icon fleet-list__icon--clicks"
-                        aria-hidden="true">ads_click</span>
+                      <svg class="icon icon--sm fleet-list__icon fleet-list__icon--clicks"
+                        aria-hidden="true"><use href="assets/icons/sprite.svg#icon-ads-click"></use></svg>
                       <strong>84</strong> clics renting
                     </span>
                     <span class="badge status status--available fleet-list__state">
@@ -640,12 +638,12 @@
                   </span>
                   <span class="fleet-list__stats">
                     <span class="fleet-list__stat">
-                      <span class="icon icon--sm fleet-list__icon" aria-hidden="true">visibility</span>
+                      <svg class="icon icon--sm fleet-list__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-visibility"></use></svg>
                       <strong>980</strong> visitas
                     </span>
                     <span class="fleet-list__stat">
-                      <span class="icon icon--sm fleet-list__icon fleet-list__icon--clicks"
-                        aria-hidden="true">ads_click</span>
+                      <svg class="icon icon--sm fleet-list__icon fleet-list__icon--clicks"
+                        aria-hidden="true"><use href="assets/icons/sprite.svg#icon-ads-click"></use></svg>
                       <strong>62</strong> clics renting
                     </span>
                     <span class="badge status status--available fleet-list__state">
@@ -668,12 +666,12 @@
                   </span>
                   <span class="fleet-list__stats">
                     <span class="fleet-list__stat">
-                      <span class="icon icon--sm fleet-list__icon" aria-hidden="true">visibility</span>
+                      <svg class="icon icon--sm fleet-list__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-visibility"></use></svg>
                       <strong>2.150</strong> visitas
                     </span>
                     <span class="fleet-list__stat">
-                      <span class="icon icon--sm fleet-list__icon fleet-list__icon--clicks"
-                        aria-hidden="true">ads_click</span>
+                      <svg class="icon icon--sm fleet-list__icon fleet-list__icon--clicks"
+                        aria-hidden="true"><use href="assets/icons/sprite.svg#icon-ads-click"></use></svg>
                       <strong>115</strong> clics renting
                     </span>
                     <span class="badge status status--available fleet-list__state">
@@ -690,7 +688,7 @@
             <p>Actualizado hace 15 minutos</p>
             <button class="panel__link" type="button" data-toast="Campaña de patrocinio iniciada para 3 vehículos">
               Promocionar vehículos
-              <span class="icon icon--sm" aria-hidden="true">campaign</span>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-campaign"></use></svg>
             </button>
           </footer>
         </section>
@@ -772,7 +770,7 @@
             <p>Tiempo medio de resolución: <strong>3.2 horas</strong></p>
             <a class="panel__link" href="#solicitudes">
               Bandeja de solicitudes
-              <span class="icon icon--sm" aria-hidden="true">inbox</span>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-inbox"></use></svg>
             </a>
           </footer>
         </section>
@@ -802,11 +800,11 @@
   <dialog class="modal" id="modal-vehicle" aria-labelledby="vehicle-modal-title">
     <header class="modal__header">
       <h2 class="modal__title dialog-title" id="vehicle-modal-title">
-        <span class="icon icon--lg dialog-title__icon" aria-hidden="true">directions_car</span>
+        <svg class="icon icon--lg dialog-title__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-directions-car"></use></svg>
         <span data-vehicle-title>Crear nuevo vehículo en flota</span>
       </h2>
       <button class="icon-button" type="button" aria-label="Cerrar" data-modal-close>
-        <span class="icon icon--md" aria-hidden="true">close</span>
+        <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-close"></use></svg>
       </button>
     </header>
     <form class="modal__body form" id="vehicle-form" action="#" method="post">
@@ -847,7 +845,7 @@
               <option value="En renting">En renting (Contrato activo)</option>
               <option value="Borrador">Borrador (Oculto)</option>
             </select>
-            <span class="icon icon--md field__icon field__icon--end" aria-hidden="true">expand_more</span>
+            <svg class="icon icon--md field__icon field__icon--end" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-expand-more"></use></svg>
           </div>
         </div>
       </div>
@@ -855,7 +853,7 @@
     <footer class="modal__footer">
       <button class="btn btn--ghost" type="button" data-modal-close>Cancelar</button>
       <button class="btn btn--dark" type="submit" form="vehicle-form">
-        <span class="icon icon--md dashboard__action-icon" aria-hidden="true">check</span>
+        <svg class="icon icon--md dashboard__action-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check"></use></svg>
         <span data-vehicle-submit>Guardar vehículo</span>
       </button>
     </footer>
@@ -874,7 +872,7 @@
     </figure>
     <button class="icon-button icon-button--media preview__close" type="button" aria-label="Cerrar ficha"
       data-modal-close>
-      <span class="icon icon--md" aria-hidden="true">close</span>
+      <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-close"></use></svg>
     </button>
     <div class="preview__body">
       <header class="preview__header">
@@ -896,7 +894,7 @@
     <footer class="modal__footer">
       <button class="btn btn--outline" type="button" data-toast="Generando enlace público del vehículo..."
         data-modal-close>
-        <span class="icon icon--sm" aria-hidden="true">share</span>
+        <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-share"></use></svg>
         Compartir ficha
       </button>
       <button class="btn btn--dark" type="button" data-modal-close>Cerrar</button>
@@ -906,11 +904,11 @@
   <dialog class="modal" id="modal-request" aria-labelledby="request-title">
     <header class="modal__header">
       <h2 class="modal__title dialog-title" id="request-title">
-        <span class="icon icon--lg dialog-title__icon dialog-title__icon--warning" aria-hidden="true">assignment</span>
+        <svg class="icon icon--lg dialog-title__icon dialog-title__icon--warning" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-assignment"></use></svg>
         Expediente de Scoring B2B
       </h2>
       <button class="icon-button" type="button" aria-label="Cerrar" data-modal-close>
-        <span class="icon icon--md" aria-hidden="true">close</span>
+        <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-close"></use></svg>
       </button>
     </header>
     <div class="modal__body dossier">
@@ -936,7 +934,7 @@
       </section>
       <aside class="dossier__note">
         <p class="dossier__note-title">
-          <span class="icon icon--sm" aria-hidden="true">verified_user</span>
+          <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-verified-user"></use></svg>
           Documentación financiera analizada automáticamente
         </p>
         <p>Balances 2023-2024 cargados, certificados de estar al corriente con AEAT y TGSS validados sin deuda.</p>
@@ -945,7 +943,7 @@
     <footer class="modal__footer">
       <button class="btn btn--ghost" type="button" data-modal-close>Cerrar</button>
       <button class="btn btn--cta" type="button" data-approve-modal>
-        <span class="icon icon--md" aria-hidden="true">verified</span>
+        <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-verified"></use></svg>
         Aprobar definitivamente
       </button>
     </footer>
@@ -954,20 +952,20 @@
   <ul class="row-menu" id="row-menu" hidden>
     <li>
       <button class="row-menu__item" type="button" data-menu-action="pause">
-        <span class="icon icon--md" aria-hidden="true">pause_circle</span>
+        <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-pause-circle"></use></svg>
         <span data-menu-pause-label>Pausar publicación</span>
       </button>
     </li>
     <li>
       <button class="row-menu__item" type="button" data-menu-action="duplicate">
-        <span class="icon icon--md" aria-hidden="true">content_copy</span>
+        <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-content-copy"></use></svg>
         Duplicar vehículo
       </button>
     </li>
     <li class="row-menu__divider" aria-hidden="true"></li>
     <li>
       <button class="row-menu__item row-menu__item--danger" type="button" data-menu-action="delete">
-        <span class="icon icon--md" aria-hidden="true">delete</span>
+        <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-delete"></use></svg>
         Eliminar
       </button>
     </li>

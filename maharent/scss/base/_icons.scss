@@ -1,21 +1,19 @@
 @use '../abstracts' as *;
 
-// Iconos Material Symbols. Uso: <span class="icon icon--md" aria-hidden="true">mail</span>
+// Iconos SVG (sprite generado con "npm run icons" a partir de Material Symbols Outlined).
+// Uso: <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-mail"></use></svg>
+//
+// El icono mide 1em x 1em, así que su tamaño se sigue controlando con font-size (igual que con la
+// antigua fuente de iconos) y su color con color, gracias a fill: currentColor.
 .icon {
   display: inline-block;
   flex-shrink: 0;
-  font-family: $font-family-icons;
-  font-weight: normal;
-  font-style: normal;
+  width: 1em;
+  height: 1em;
   font-size: 1.5rem;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  white-space: nowrap;
-  direction: ltr;
-  -webkit-font-smoothing: antialiased;
-  font-feature-settings: 'liga';
-  user-select: none;
+  fill: currentColor;
+  vertical-align: middle;
+  overflow: visible;
 
   &--xs {
     font-size: 0.875rem;
@@ -33,7 +31,9 @@
     font-size: 1.5rem;
   }
 
+  // Versión rellena: los iconos que la tienen (favorite, star, verified) guardan los dos trazados
+  // en el sprite y muestran uno u otro según esta variable (0 = contorno, 1 = relleno).
   &--filled {
-    font-variation-settings: 'FILL' 1;
+    --icon-fill: 1;
   }
 }

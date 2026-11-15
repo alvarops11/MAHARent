@@ -689,7 +689,7 @@
       color: $color-error;
 
       .icon {
-        font-variation-settings: 'FILL' 1;
+        --icon-fill: 1;
       }
     }
   }

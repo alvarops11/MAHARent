@@ -132,3 +132,11 @@
     box-shadow: 0 0 0 2px $color-secondary;
   }
 }
+
+// Icono SVG dentro de una caja de color de tamaño fijo ($size x $size).
+// El padding deja el dibujo a 1em (su font-size) y centrado, como hacía la fuente de iconos.
+@mixin icon-box($size) {
+  width: $size;
+  height: $size;
+  padding: calc((#{$size} - 1em) / 2);
+}

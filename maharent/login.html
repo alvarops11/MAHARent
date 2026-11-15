@@ -9,8 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind.config.js"></script>
   <link rel="stylesheet" href="css/main.css">
@@ -36,7 +34,7 @@
         <a class="btn btn--dark" href="login.html">Registrarse</a>
         <button class="header__toggle" type="button" aria-controls="main-nav" aria-expanded="false"
           aria-label="Abrir menú" data-nav-toggle>
-          <span class="icon" aria-hidden="true">menu</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-menu"></use></svg>
         </button>
       </div>
     </div>
@@ -64,11 +62,11 @@
     <source src="assets/vid/Video-Login.mp4" type="video/mp4">
 </video>
           <p class="login__chip login__chip--top">
-            <span class="icon icon--sm login__chip-icon" aria-hidden="true">verified</span>
+            <svg class="icon icon--sm login__chip-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-verified"></use></svg>
             100% Digital
           </p>
           <p class="login__chip login__chip--bottom">
-            <span class="icon icon--sm login__chip-icon login__chip-icon--light" aria-hidden="true">shield_lock</span>
+            <svg class="icon icon--sm login__chip-icon login__chip-icon--light" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-shield-lock"></use></svg>
             Sin costes ocultos
           </p>
           <figcaption class="u-visually-hidden">Vehículo premium de la flota MAHARent</figcaption>
@@ -79,7 +77,7 @@
             <span class="avatar-group">
               <span class="avatar avatar--sm avatar--accent avatar-group__item">+5k</span>
               <span class="avatar avatar--sm avatar-group__item">
-                <span class="icon icon--sm" aria-hidden="true">electric_car</span>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-electric-car"></use></svg>
               </span>
             </span>
             <p>
@@ -88,7 +86,7 @@
             </p>
           </div>
           <p class="login__metric login__metric--delivery">
-            <span class="icon icon--md login__chip-icon" aria-hidden="true">speed</span>
+            <svg class="icon icon--md login__chip-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-speed"></use></svg>
             Entrega en 48h
           </p>
         </footer>
@@ -108,7 +106,7 @@
             <div class="field">
               <label class="field__label" for="login-email">Correo electrónico</label>
               <div class="field__wrapper">
-                <span class="icon icon--md field__icon" aria-hidden="true">mail</span>
+                <svg class="icon icon--md field__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-mail"></use></svg>
                 <input class="field__control field__control--icon-start" id="login-email" name="email" type="email"
                   placeholder="Introduce tu correo electrónico" autocomplete="email" required>
               </div>
@@ -120,13 +118,13 @@
                 <a class="field__link" href="#">¿Has olvidado tu contraseña?</a>
               </div>
               <div class="field__wrapper">
-                <span class="icon icon--md field__icon" aria-hidden="true">lock</span>
+                <svg class="icon icon--md field__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-lock"></use></svg>
                 <input class="field__control field__control--icon-start field__control--icon-end" id="login-password"
                   name="password" type="password" placeholder="Introduce tu contraseña" autocomplete="current-password"
                   required>
                 <button class="field__action" type="button" aria-label="Mostrar contraseña"
                   data-toggle-password="login-password">
-                  <span class="icon icon--md" aria-hidden="true">visibility</span>
+                  <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-visibility"></use></svg>
                 </button>
               </div>
             </div>
@@ -138,7 +136,7 @@
 
             <button class="btn btn--cta btn--lg btn--full" type="submit">
               Iniciar sesión
-              <span class="icon icon--md" aria-hidden="true">arrow_forward</span>
+              <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-forward"></use></svg>
             </button>
           </form>
 
@@ -166,11 +164,11 @@
               ¿Todavía no tienes una cuenta?
               <a class="login__signup-link" href="#">
                 Regístrate gratis
-                <span class="icon icon--sm" aria-hidden="true">chevron_right</span>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"></use></svg>
               </a>
             </p>
             <p class="badge login__secure">
-              <span class="icon icon--xs badge__icon" aria-hidden="true">verified_user</span>
+              <svg class="icon icon--xs badge__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-verified-user"></use></svg>
               Conexión encriptada SSL de 256 bits · MAHARent Security
             </p>
           </footer>

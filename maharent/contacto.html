@@ -9,8 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind.config.js"></script>
   <link rel="stylesheet" href="css/main.css">
@@ -36,7 +34,7 @@
         <a class="btn btn--dark" href="login.html">Registrarse</a>
         <button class="header__toggle" type="button" aria-controls="main-nav" aria-expanded="false"
           aria-label="Abrir menú" data-nav-toggle>
-          <span class="icon" aria-hidden="true">menu</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-menu"></use></svg>
         </button>
       </div>
     </div>
@@ -85,7 +83,7 @@
                   <option value="reserva">Duda sobre una reserva</option>
                   <option value="otro">Otro</option>
                 </select>
-                <span class="icon icon--md field__icon field__icon--end" aria-hidden="true">expand_more</span>
+                <svg class="icon icon--md field__icon field__icon--end" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-expand-more"></use></svg>
               </div>
             </div>
 
@@ -102,7 +100,7 @@
 
             <button class="btn btn--cta btn--lg btn--full" type="submit">
               Enviar mensaje
-              <span class="icon icon--md" aria-hidden="true">send</span>
+              <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-send"></use></svg>
             </button>
 
             <p class="contact__status" role="status" data-form-status hidden>
@@ -116,7 +114,7 @@
           <dl class="contact__details">
             <div class="contact__detail">
               <dt class="contact__detail-label">
-                <span class="icon icon--md contact__detail-icon" aria-hidden="true">mail</span>
+                <svg class="icon icon--md contact__detail-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-mail"></use></svg>
                 Correo electrónico
               </dt>
               <dd class="contact__detail-value">
@@ -125,7 +123,7 @@
             </div>
             <div class="contact__detail">
               <dt class="contact__detail-label">
-                <span class="icon icon--md contact__detail-icon" aria-hidden="true">call</span>
+                <svg class="icon icon--md contact__detail-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-call"></use></svg>
                 Teléfono
               </dt>
               <dd class="contact__detail-value">
@@ -134,14 +132,14 @@
             </div>
             <div class="contact__detail">
               <dt class="contact__detail-label">
-                <span class="icon icon--md contact__detail-icon" aria-hidden="true">schedule</span>
+                <svg class="icon icon--md contact__detail-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-schedule"></use></svg>
                 Horario de atención
               </dt>
               <dd class="contact__detail-value">Lunes a viernes, de 9:00 a 19:00</dd>
             </div>
             <div class="contact__detail">
               <dt class="contact__detail-label">
-                <span class="icon icon--md contact__detail-icon" aria-hidden="true">location_on</span>
+                <svg class="icon icon--md contact__detail-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-location-on"></use></svg>
                 Oficina
               </dt>
               <dd class="contact__detail-value">Madrid, España</dd>

@@ -2,6 +2,23 @@
 (function () {
   'use strict';
 
+  // Iconos SVG del sprite (assets/icons/sprite.svg). Los nombres usan guiones: 'check-circle'.
+  const ICON_SPRITE = 'assets/icons/sprite.svg';
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+
+  function setIcon(icon, name) {
+    icon.querySelector('use').setAttribute('href', ICON_SPRITE + '#icon-' + name);
+  }
+
+  function createIcon(name, size) {
+    const icon = document.createElementNS(SVG_NS, 'svg');
+    icon.setAttribute('class', 'icon icon--' + size);
+    icon.setAttribute('aria-hidden', 'true');
+    icon.appendChild(document.createElementNS(SVG_NS, 'use'));
+    setIcon(icon, name);
+    return icon;
+  }
+
   // Mostrar / ocultar contraseña: <button data-toggle-password="id-del-input">
   document.querySelectorAll('[data-toggle-password]').forEach(function (button) {
     const input = document.getElementById(button.dataset.togglePassword);
@@ -12,7 +29,7 @@
       const isHidden = input.type === 'password';
       input.type = isHidden ? 'text' : 'password';
       button.setAttribute('aria-label', isHidden ? 'Ocultar contraseña' : 'Mostrar contraseña');
-      if (icon) icon.textContent = isHidden ? 'visibility_off' : 'visibility';
+      if (icon) setIcon(icon, isHidden ? 'visibility-off' : 'visibility');
     });
   });
 
@@ -282,7 +299,7 @@
     if (!document.querySelector('[data-dashboard]')) return;
 
     const STATUS_MODIFIERS = { 'Disponible': 'available', 'En renting': 'renting', 'Publicado': 'published', 'Borrador': 'draft' };
-    const TOAST_ICONS = { info: 'info', success: 'check_circle', warn: 'warning' };
+    const TOAST_ICONS = { info: 'info', success: 'check-circle', warn: 'warning' };
     const toastRegion = document.querySelector('[data-toast-region]');
     const rowMenu = document.getElementById('row-menu');
     const vehicleModal = document.getElementById('modal-vehicle');
@@ -291,14 +308,6 @@
     let editingRow = null;
     let menuRow = null;
     let requestButton = null;
-
-    function createIcon(name, size) {
-      const icon = document.createElement('span');
-      icon.className = 'icon icon--' + size;
-      icon.setAttribute('aria-hidden', 'true');
-      icon.textContent = name;
-      return icon;
-    }
 
     function showToast(message, type) {
       const kind = type || 'info';
@@ -427,7 +436,7 @@
       button.disabled = true;
       button.classList.remove('btn--cta');
       button.classList.add('activity__button--approved');
-      button.replaceChildren(createIcon('check_circle', 'sm'), 'Aprobado');
+      button.replaceChildren(createIcon('check-circle', 'sm'), 'Aprobado');
       const counter = document.querySelector('[data-stat="pending"]');
       const badge = document.querySelector('[data-pending-badge]');
       const pending = Math.max(0, parseInt(counter.textContent, 10) - 1);

@@ -9,8 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind.config.js"></script>
   <link rel="stylesheet" href="css/main.css">
@@ -36,7 +34,7 @@
         <a class="btn btn--dark" href="login.html">Registrarse</a>
         <button class="header__toggle" type="button" aria-controls="main-nav" aria-expanded="false"
           aria-label="Abrir menú" data-nav-toggle>
-          <span class="icon" aria-hidden="true">menu</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-menu"></use></svg>
         </button>
       </div>
     </div>
@@ -60,10 +58,10 @@
           <div class="hero__actions">
             <a class="btn btn--cta btn--lg" href="marketplace.html">
               Explorar Marketplace
-              <span class="icon icon--md" aria-hidden="true">arrow_forward</span>
+              <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-forward"></use></svg>
             </a>
             <a class="btn btn--outline btn--lg" href="dashboard.html">
-              <span class="icon icon--md hero__action-icon" aria-hidden="true">business_center</span>
+              <svg class="icon icon--md hero__action-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-business-center"></use></svg>
               Soy una empresa
             </a>
           </div>
@@ -90,7 +88,7 @@
           </div>
           <figcaption>
             <p class="showcase__tag showcase__tag--price">
-              <span class="icon icon--md showcase__tag-icon" aria-hidden="true">payments</span>
+              <svg class="icon icon--md showcase__tag-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-payments"></use></svg>
               <span class="showcase__tag-text">
                 <span class="showcase__tag-label">Cuota reducida</span>
                 <strong class="showcase__tag-value">Desde 299 €<span class="showcase__tag-unit">/mes</span></strong>
@@ -101,13 +99,13 @@
               <span class="showcase__tag-text">
                 <strong class="showcase__tag-value showcase__tag-value--sm">Disponible para renting</strong>
                 <span class="showcase__tag-note">
-                  <span class="icon icon--xs showcase__note-icon" aria-hidden="true">bolt</span>
+                  <svg class="icon icon--xs showcase__note-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-bolt"></use></svg>
                   Entrega rápida asegurada
                 </span>
               </span>
             </p>
             <p class="showcase__tag showcase__tag--included">
-              <span class="icon icon--md showcase__included-icon" aria-hidden="true">verified</span>
+              <svg class="icon icon--md showcase__included-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-verified"></use></svg>
               Todo incluido: Seguro, mantenimiento e impuestos
             </p>
           </figcaption>
@@ -128,7 +126,7 @@
         <ul class="features__list">
           <li class="features__item">
             <article class="feature">
-              <span class="icon feature__icon" aria-hidden="true">directions_car</span>
+              <svg class="icon feature__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-directions-car"></use></svg>
               <h3 class="feature__title">Descubre vehículos</h3>
               <p class="feature__text">
                 Explora vehículos disponibles para renting con filtros intuitivos por marca, segmento y cuota mensual
@@ -136,13 +134,13 @@
               </p>
               <a class="feature__link" href="marketplace.html">
                 Ver catálogo
-                <span class="icon icon--sm" aria-hidden="true">arrow_forward</span>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-forward"></use></svg>
               </a>
             </article>
           </li>
           <li class="features__item">
             <article class="feature">
-              <span class="icon feature__icon" aria-hidden="true">fact_check</span>
+              <svg class="icon feature__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-fact-check"></use></svg>
               <h3 class="feature__title">Encuentra lo que necesitas</h3>
               <p class="feature__text">
                 Consulta características, precios y disponibilidad con transparencia absoluta y fichas técnicas
@@ -150,13 +148,13 @@
               </p>
               <a class="feature__link" href="marketplace.html">
                 Comparar opciones
-                <span class="icon icon--sm" aria-hidden="true">arrow_forward</span>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-forward"></use></svg>
               </a>
             </article>
           </li>
           <li class="features__item">
             <article class="feature">
-              <span class="icon feature__icon" aria-hidden="true">speed</span>
+              <svg class="icon feature__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-speed"></use></svg>
               <h3 class="feature__title">Solicita tu renting</h3>
               <p class="feature__text">
                 Contacta con la empresa y solicita el vehículo en cuestión de minutos, con un proceso 100% asistido y
@@ -164,7 +162,7 @@
               </p>
               <a class="feature__link" href="contacto.html">
                 Iniciar gestión
-                <span class="icon icon--sm" aria-hidden="true">arrow_forward</span>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-forward"></use></svg>
               </a>
             </article>
           </li>
@@ -261,7 +259,7 @@
 
     <section class="cta" aria-labelledby="cta-title">
       <p class="cta__eyebrow">
-        <span class="icon icon--sm cta__eyebrow-icon" aria-hidden="true">bolt</span>
+        <svg class="icon icon--sm cta__eyebrow-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-bolt"></use></svg>
         Catálogo actualizado a diario
       </p>
       <h2 class="cta__title" id="cta-title">Encuentra tu próximo vehículo.</h2>
@@ -271,19 +269,19 @@
       </p>
       <a class="btn btn--cta btn--lg" href="marketplace.html">
         Explorar Marketplace
-        <span class="icon icon--md" aria-hidden="true">arrow_forward</span>
+        <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-forward"></use></svg>
       </a>
       <ul class="cta__assurances">
         <li class="cta__assurance">
-          <span class="icon icon--md cta__assurance-icon" aria-hidden="true">verified_user</span>
+          <svg class="icon icon--md cta__assurance-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-verified-user"></use></svg>
           Garantía de precio final
         </li>
         <li class="cta__assurance">
-          <span class="icon icon--md cta__assurance-icon" aria-hidden="true">support_agent</span>
+          <svg class="icon icon--md cta__assurance-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-support-agent"></use></svg>
           Asesoramiento personalizado
         </li>
         <li class="cta__assurance">
-          <span class="icon icon--md cta__assurance-icon" aria-hidden="true">lock</span>
+          <svg class="icon icon--md cta__assurance-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-lock"></use></svg>
           Contratación 100% segura
         </li>
       </ul>

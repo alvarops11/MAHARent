@@ -6,9 +6,11 @@
   "scripts": {
     "sass": "sass --style=expanded --source-map scss/main.scss css/main.css",
     "sass:watch": "sass --watch --style=expanded --source-map scss/main.scss css/main.css",
-    "serve": "python -m http.server 8000"
+    "serve": "python -m http.server 8000",
+    "icons": "node scripts/build-icons.mjs"
   },
   "devDependencies": {
-    "sass": "^1.80.0"
+    "sass": "^1.80.0",
+    "svgo": "^3.3.5"
   }
 }

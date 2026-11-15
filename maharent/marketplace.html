@@ -9,8 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind.config.js"></script>
   <link rel="stylesheet" href="css/main.css">
@@ -36,7 +34,7 @@
         <a class="btn btn--dark" href="login.html">Registrarse</a>
         <button class="header__toggle" type="button" aria-controls="main-nav" aria-expanded="false"
           aria-label="Abrir menú" data-nav-toggle>
-          <span class="icon" aria-hidden="true">menu</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-menu"></use></svg>
         </button>
       </div>
     </div>
@@ -47,7 +45,7 @@
       <div class="marketplace__hero-inner">
         <header class="marketplace__intro">
           <p class="badge marketplace__eyebrow">
-            <span class="icon icon--sm" aria-hidden="true">verified</span>
+            <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-verified"></use></svg>
             Catálogo oficial MAHARent 2026
           </p>
           <h1 class="marketplace__title" id="marketplace-title">Encuentra tu próximo vehículo.</h1>
@@ -61,19 +59,19 @@
           data-demo-form>
           <div class="search-box__row">
             <label class="search-box__field" for="main-vehicle-search">
-              <span class="icon icon--lg search-box__icon" aria-hidden="true">search</span>
+              <svg class="icon icon--lg search-box__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-search"></use></svg>
               <span class="u-visually-hidden">Buscar vehículo</span>
               <input class="search-box__input" id="main-vehicle-search" name="q" type="search"
                 placeholder="¿Qué vehículo estás buscando? (ej. Audi A4, SUV híbrido...)">
             </label>
             <button class="btn btn--cta search-box__submit" type="submit">
               Buscar vehículos
-              <span class="icon icon--md" aria-hidden="true">arrow_forward</span>
+              <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-forward"></use></svg>
             </button>
           </div>
           <div class="search-box__suggestions">
             <p class="search-box__hint" id="search-suggestions-label">
-              <span class="icon icon--xs" aria-hidden="true">bolt</span>
+              <svg class="icon icon--xs" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-bolt"></use></svg>
               Sugerencias:
             </p>
             <ul class="search-box__list" aria-labelledby="search-suggestions-label">
@@ -90,15 +88,15 @@
         <ul class="chip-rail" aria-label="Filtros rápidos" data-chip-group>
           <li><button class="chip chip--glass" type="button" aria-pressed="true" data-chip-all>Todos</button></li>
           <li><button class="chip chip--glass" type="button" aria-pressed="false">
-              <span class="icon icon--sm" aria-hidden="true">electric_car</span>100% Eléctricos</button></li>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-electric-car"></use></svg>100% Eléctricos</button></li>
           <li><button class="chip chip--glass" type="button" aria-pressed="false">
-              <span class="icon icon--sm" aria-hidden="true">eco</span>Híbridos enchufables</button></li>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-eco"></use></svg>Híbridos enchufables</button></li>
           <li><button class="chip chip--glass" type="button" aria-pressed="false">
-              <span class="icon icon--sm" aria-hidden="true">schedule</span>Entrega inmediata</button></li>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-schedule"></use></svg>Entrega inmediata</button></li>
           <li><button class="chip chip--glass" type="button" aria-pressed="false">
-              <span class="icon icon--sm" aria-hidden="true">payments</span>Menos de 400€/mes</button></li>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-payments"></use></svg>Menos de 400€/mes</button></li>
           <li><button class="chip chip--glass" type="button" aria-pressed="false">
-              <span class="icon icon--sm" aria-hidden="true">domain</span>Empresas y Autónomos</button></li>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-domain"></use></svg>Empresas y Autónomos</button></li>
         </ul>
       </div>
     </section>
@@ -108,13 +106,13 @@
         <form class="filters" action="marketplace.html" data-demo-form>
           <header class="filters__header">
             <h2 class="filters__title" id="filters-title">
-              <span class="icon icon--lg filters__title-icon" aria-hidden="true">tune</span>
+              <svg class="icon icon--lg filters__title-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-tune"></use></svg>
               Filtros
             </h2>
             <button class="filters__reset" id="reset-filters" type="reset">Limpiar filtros</button>
             <button class="filters__toggle" type="button" aria-controls="filters-body" aria-expanded="false"
               aria-label="Mostrar filtros" data-filters-toggle>
-              <span class="icon icon--lg" aria-hidden="true">expand_more</span>
+              <svg class="icon icon--lg" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-expand-more"></use></svg>
             </button>
           </header>
 
@@ -146,7 +144,7 @@
               <span class="field__wrapper">
                 <input class="field__control field__control--icon-end" id="filter-model" name="modelo"
                   type="search" placeholder="Ej. X1, Model Y, Formentor...">
-                <span class="icon icon--md field__icon field__icon--end" aria-hidden="true">search</span>
+                <svg class="icon icon--md field__icon field__icon--end" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-search"></use></svg>
               </span>
             </div>
 
@@ -198,8 +196,8 @@
               <legend class="filters__legend">Transmisión</legend>
               <ul class="filters__chips filters__chips--pair">
                 <li><label class="filters__chip"><input class="filters__chip-input" type="checkbox"
-                      name="transmision" value="automatico" checked><span class="filters__chip-text"><span
-                        class="icon icon--sm" aria-hidden="true">settings</span>Automático</span></label></li>
+                      name="transmision" value="automatico" checked><span class="filters__chip-text"><svg
+                        class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-settings"></use></svg>Automático</span></label></li>
                 <li><label class="filters__chip"><input class="filters__chip-input" type="checkbox"
                       name="transmision" value="manual"><span class="filters__chip-text">Manual</span></label></li>
               </ul>
@@ -228,7 +226,7 @@
                     <option>48 meses</option>
                     <option>Flexible mes a mes</option>
                   </select>
-                  <span class="icon icon--md field__icon field__icon--end" aria-hidden="true">expand_more</span>
+                  <svg class="icon icon--md field__icon field__icon--end" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-expand-more"></use></svg>
                 </span>
               </div>
               <div class="field">
@@ -240,7 +238,7 @@
                     <option>20.000 km</option>
                     <option>30.000 km</option>
                   </select>
-                  <span class="icon icon--md field__icon field__icon--end" aria-hidden="true">expand_more</span>
+                  <svg class="icon icon--md field__icon field__icon--end" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-expand-more"></use></svg>
                 </span>
               </div>
             </div>
@@ -282,17 +280,17 @@
                   <option>Más recientes</option>
                   <option>Menor cuota inicial</option>
                 </select>
-                <span class="icon icon--md results__select-icon" aria-hidden="true">expand_more</span>
+                <svg class="icon icon--md results__select-icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-expand-more"></use></svg>
               </span>
             </label>
             <div class="view-toggle" role="group" aria-label="Tipo de vista" data-view-toggle="vehicle-list">
               <button class="view-toggle__button view-toggle__button--active" type="button" aria-pressed="true"
                 aria-label="Vista cuadrícula" title="Vista cuadrícula" data-view="grid">
-                <span class="icon icon--md" aria-hidden="true">grid_view</span>
+                <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-grid-view"></use></svg>
               </button>
               <button class="view-toggle__button" type="button" aria-pressed="false" aria-label="Vista lista"
                 title="Vista lista" data-view="list">
-                <span class="icon icon--md" aria-hidden="true">view_list</span>
+                <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-view-list"></use></svg>
               </button>
             </div>
           </div>
@@ -305,12 +303,12 @@
                 <img class="vehicle-card__image" loading="lazy" alt="BMW X1 azul metalizado en estudio, vista de perfil"
                   src="assets/img/marketplace/bmw-x1.jpg">
                 <ul class="vehicle-card__badges">
-                  <li><span class="badge badge--dark"><span class="icon icon--xs badge__icon" aria-hidden="true">view_in_ar</span>3D disponible</span></li>
+                  <li><span class="badge badge--dark"><svg class="icon icon--xs badge__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-view-in-ar"></use></svg>3D disponible</span></li>
                   <li><span class="badge badge--info">Etiqueta ECO</span></li>
                 </ul>
                 <button class="vehicle-card__favorite" type="button" aria-pressed="false"
                   aria-label="Guardar BMW X1 sDrive18d en favoritos" data-favorite>
-                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                  <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-favorite"></use></svg>
                 </button>
                 <figcaption class="vehicle-card__provider">Arval Renting</figcaption>
               </figure>
@@ -320,17 +318,17 @@
                   <p class="vehicle-card__subtitle">SUV · Automático · Mild-Hybrid Diésel</p>
                 </header>
                 <dl class="vehicle-card__features">
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">speed</span>150 CV</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Consumo</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">local_gas_station</span>4.9 L/100</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>540 L</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-speed"></use></svg>150 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Consumo</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-local-gas-station"></use></svg>4.9 L/100</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-airline-seat-recline-normal"></use></svg>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-luggage"></use></svg>540 L</dd></div>
                 </dl>
                 <footer class="vehicle-card__footer">
                   <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">449 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
                   <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
                   <p class="vehicle-card__terms">36 meses · 15.000 km/año</p>
-                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">check_circle</span>Stock 48h</p>
-                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> BMW X1 sDrive18d</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                  <p class="vehicle-card__availability"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check-circle"></use></svg>Stock 48h</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> BMW X1 sDrive18d</span><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"></use></svg></a>
                 </footer>
               </div>
             </article>
@@ -342,12 +340,12 @@
                 <img class="vehicle-card__image" loading="lazy" alt="Tesla Model Y blanco perla en estudio, vista tres cuartos delantera"
                   src="assets/img/marketplace/tesla-model-y.jpg">
                 <ul class="vehicle-card__badges">
-                  <li><span class="badge badge--dark"><span class="icon icon--xs badge__icon" aria-hidden="true">view_in_ar</span>3D disponible</span></li>
+                  <li><span class="badge badge--dark"><svg class="icon icon--xs badge__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-view-in-ar"></use></svg>3D disponible</span></li>
                   <li><span class="badge badge--info">0 Emisiones</span></li>
                 </ul>
                 <button class="vehicle-card__favorite" type="button" aria-pressed="true"
                   aria-label="Guardar Tesla Model Y Gran Autonomía en favoritos" data-favorite>
-                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                  <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-favorite"></use></svg>
                 </button>
                 <figcaption class="vehicle-card__provider">MAHARent Selection</figcaption>
               </figure>
@@ -357,17 +355,17 @@
                   <p class="vehicle-card__subtitle">SUV Crossover · Tracción Integral AWD · 100% Eléctrico</p>
                 </header>
                 <dl class="vehicle-card__features">
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">bolt</span>514 CV</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Autonomía</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">ev_station</span>533 km</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>854 L</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-bolt"></use></svg>514 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Autonomía</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-ev-station"></use></svg>533 km</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-airline-seat-recline-normal"></use></svg>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-luggage"></use></svg>854 L</dd></div>
                 </dl>
                 <footer class="vehicle-card__footer">
                   <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">520 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
                   <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
                   <p class="vehicle-card__terms">48 meses · 15.000 km/año</p>
-                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">local_shipping</span>Entrega 7 días</p>
-                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Tesla Model Y Gran Autonomía</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                  <p class="vehicle-card__availability"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-local-shipping"></use></svg>Entrega 7 días</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Tesla Model Y Gran Autonomía</span><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"></use></svg></a>
                 </footer>
               </div>
             </article>
@@ -379,12 +377,12 @@
                 <img class="vehicle-card__image" loading="lazy" alt="Audi A4 Avant gris plata en estudio con fondo oscuro"
                   src="assets/img/marketplace/audi-a4-avant.jpg">
                 <ul class="vehicle-card__badges">
-                  <li><span class="badge badge--dark"><span class="icon icon--xs badge__icon" aria-hidden="true">view_in_ar</span>3D disponible</span></li>
+                  <li><span class="badge badge--dark"><svg class="icon icon--xs badge__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-view-in-ar"></use></svg>3D disponible</span></li>
                   <li><span class="badge badge--info">Etiqueta ECO</span></li>
                 </ul>
                 <button class="vehicle-card__favorite" type="button" aria-pressed="false"
                   aria-label="Guardar Audi A4 Avant 35 TDI S Line en favoritos" data-favorite>
-                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                  <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-favorite"></use></svg>
                 </button>
                 <figcaption class="vehicle-card__provider">LeasePlan</figcaption>
               </figure>
@@ -394,17 +392,17 @@
                   <p class="vehicle-card__subtitle">Familiar · S tronic Automático · Híbrido Ligero</p>
                 </header>
                 <dl class="vehicle-card__features">
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">speed</span>163 CV</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Consumo</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">local_gas_station</span>4.8 L/100</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>495 L</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-speed"></use></svg>163 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Consumo</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-local-gas-station"></use></svg>4.8 L/100</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-airline-seat-recline-normal"></use></svg>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-luggage"></use></svg>495 L</dd></div>
                 </dl>
                 <footer class="vehicle-card__footer">
                   <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">465 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
                   <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
                   <p class="vehicle-card__terms">36 meses · 20.000 km/año</p>
-                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">check_circle</span>Stock 48h</p>
-                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Audi A4 Avant 35 TDI S Line</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                  <p class="vehicle-card__availability"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check-circle"></use></svg>Stock 48h</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Audi A4 Avant 35 TDI S Line</span><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"></use></svg></a>
                 </footer>
               </div>
             </article>
@@ -421,7 +419,7 @@
                 </ul>
                 <button class="vehicle-card__favorite" type="button" aria-pressed="false"
                   aria-label="Guardar Cupra Formentor 1.4 e-HYBRID en favoritos" data-favorite>
-                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                  <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-favorite"></use></svg>
                 </button>
                 <figcaption class="vehicle-card__provider">MAHARent Selection</figcaption>
               </figure>
@@ -431,17 +429,17 @@
                   <p class="vehicle-card__subtitle">Crossover Deportivo · Automático DSG · PHEV</p>
                 </header>
                 <dl class="vehicle-card__features">
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">speed</span>204 CV</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Autonomía eléctrica</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">ev_station</span>59 km</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>345 L</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-speed"></use></svg>204 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Autonomía eléctrica</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-ev-station"></use></svg>59 km</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-airline-seat-recline-normal"></use></svg>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-luggage"></use></svg>345 L</dd></div>
                 </dl>
                 <footer class="vehicle-card__footer">
                   <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">385 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
                   <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
                   <p class="vehicle-card__terms">48 meses · 10.000 km/año</p>
-                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">check_circle</span>Stock 48h</p>
-                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Cupra Formentor 1.4 e-HYBRID</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                  <p class="vehicle-card__availability"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check-circle"></use></svg>Stock 48h</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Cupra Formentor 1.4 e-HYBRID</span><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"></use></svg></a>
                 </footer>
               </div>
             </article>
@@ -458,7 +456,7 @@
                 </ul>
                 <button class="vehicle-card__favorite" type="button" aria-pressed="false"
                   aria-label="Guardar Mercedes-Benz EQA 250+ en favoritos" data-favorite>
-                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                  <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-favorite"></use></svg>
                 </button>
                 <figcaption class="vehicle-card__provider">Santander Consumer</figcaption>
               </figure>
@@ -468,17 +466,17 @@
                   <p class="vehicle-card__subtitle">SUV Compacto · Automático · 100% Eléctrico</p>
                 </header>
                 <dl class="vehicle-card__features">
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">bolt</span>190 CV</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Autonomía</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">ev_station</span>530 km</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>340 L</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-bolt"></use></svg>190 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Autonomía</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-ev-station"></use></svg>530 km</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-airline-seat-recline-normal"></use></svg>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-luggage"></use></svg>340 L</dd></div>
                 </dl>
                 <footer class="vehicle-card__footer">
                   <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">495 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
                   <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
                   <p class="vehicle-card__terms">36 meses · 15.000 km/año</p>
-                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">local_shipping</span>10 días</p>
-                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Mercedes-Benz EQA 250+</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                  <p class="vehicle-card__availability"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-local-shipping"></use></svg>10 días</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Mercedes-Benz EQA 250+</span><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"></use></svg></a>
                 </footer>
               </div>
             </article>
@@ -495,7 +493,7 @@
                 </ul>
                 <button class="vehicle-card__favorite" type="button" aria-pressed="false"
                   aria-label="Guardar Volkswagen ID.4 Pro en favoritos" data-favorite>
-                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                  <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-favorite"></use></svg>
                 </button>
                 <figcaption class="vehicle-card__provider">Arval Renting</figcaption>
               </figure>
@@ -505,17 +503,17 @@
                   <p class="vehicle-card__subtitle">SUV Eléctrico Familiar · Batería 77 kWh</p>
                 </header>
                 <dl class="vehicle-card__features">
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">bolt</span>286 CV</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Autonomía</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">ev_station</span>543 km</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>543 L</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-bolt"></use></svg>286 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Autonomía</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-ev-station"></use></svg>543 km</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-airline-seat-recline-normal"></use></svg>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-luggage"></use></svg>543 L</dd></div>
                 </dl>
                 <footer class="vehicle-card__footer">
                   <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">430 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
                   <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
                   <p class="vehicle-card__terms">48 meses · 15.000 km/año</p>
-                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">check_circle</span>Stock 48h</p>
-                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Volkswagen ID.4 Pro</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                  <p class="vehicle-card__availability"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check-circle"></use></svg>Stock 48h</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Volkswagen ID.4 Pro</span><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"></use></svg></a>
                 </footer>
               </div>
             </article>
@@ -532,7 +530,7 @@
                 </ul>
                 <button class="vehicle-card__favorite" type="button" aria-pressed="false"
                   aria-label="Guardar Renault Austral E-Tech 200 en favoritos" data-favorite>
-                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                  <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-favorite"></use></svg>
                 </button>
                 <figcaption class="vehicle-card__provider">MAHARent Direct</figcaption>
               </figure>
@@ -542,17 +540,17 @@
                   <p class="vehicle-card__subtitle">SUV Familiar · Automático Multimodo · Híbrido Autorecargable</p>
                 </header>
                 <dl class="vehicle-card__features">
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">speed</span>200 CV</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Consumo</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">local_gas_station</span>4.6 L/100</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>500 L</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-speed"></use></svg>200 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Consumo</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-local-gas-station"></use></svg>4.6 L/100</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-airline-seat-recline-normal"></use></svg>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-luggage"></use></svg>500 L</dd></div>
                 </dl>
                 <footer class="vehicle-card__footer">
                   <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">339 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
                   <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
                   <p class="vehicle-card__terms">48 meses · 10.000 km/año</p>
-                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">check_circle</span>Stock 48h</p>
-                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Renault Austral E-Tech 200</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                  <p class="vehicle-card__availability"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check-circle"></use></svg>Stock 48h</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Renault Austral E-Tech 200</span><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"></use></svg></a>
                 </footer>
               </div>
             </article>
@@ -569,7 +567,7 @@
                 </ul>
                 <button class="vehicle-card__favorite" type="button" aria-pressed="false"
                   aria-label="Guardar Peugeot 3008 Hybrid 136 e-DCS6 GT en favoritos" data-favorite>
-                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                  <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-favorite"></use></svg>
                 </button>
                 <figcaption class="vehicle-card__provider">ALD Automotive</figcaption>
               </figure>
@@ -579,17 +577,17 @@
                   <p class="vehicle-card__subtitle">Fastback SUV · Doble embrague 6 vel · Microhíbrido</p>
                 </header>
                 <dl class="vehicle-card__features">
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">speed</span>136 CV</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Consumo</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">local_gas_station</span>5.5 L/100</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>5 Plazas</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>520 L</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-speed"></use></svg>136 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Consumo</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-local-gas-station"></use></svg>5.5 L/100</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-airline-seat-recline-normal"></use></svg>5 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-luggage"></use></svg>520 L</dd></div>
                 </dl>
                 <footer class="vehicle-card__footer">
                   <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">369 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
                   <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
                   <p class="vehicle-card__terms">36 meses · 15.000 km/año</p>
-                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">check_circle</span>Stock 48h</p>
-                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Peugeot 3008 Hybrid 136 e-DCS6 GT</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                  <p class="vehicle-card__availability"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check-circle"></use></svg>Stock 48h</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Peugeot 3008 Hybrid 136 e-DCS6 GT</span><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"></use></svg></a>
                 </footer>
               </div>
             </article>
@@ -606,7 +604,7 @@
                 </ul>
                 <button class="vehicle-card__favorite" type="button" aria-pressed="false"
                   aria-label="Guardar Mercedes-Benz Vito 116 CDI Tourer en favoritos" data-favorite>
-                  <span class="icon icon--md" aria-hidden="true">favorite</span>
+                  <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-favorite"></use></svg>
                 </button>
                 <figcaption class="vehicle-card__provider">MAHARent Flotas</figcaption>
               </figure>
@@ -616,17 +614,17 @@
                   <p class="vehicle-card__subtitle">Monovolumen / Furgoneta · 9G-TRONIC Automático · Diésel</p>
                 </header>
                 <dl class="vehicle-card__features">
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">speed</span>163 CV</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Consumo</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">local_gas_station</span>7.2 L/100</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">airline_seat_recline_normal</span>8 Plazas</dd></div>
-                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><span class="icon icon--sm" aria-hidden="true">luggage</span>990 L</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Potencia</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-speed"></use></svg>163 CV</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Consumo</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-local-gas-station"></use></svg>7.2 L/100</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Plazas</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-airline-seat-recline-normal"></use></svg>8 Plazas</dd></div>
+                  <div class="vehicle-card__feature"><dt class="u-visually-hidden">Maletero</dt><dd class="vehicle-card__value"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-luggage"></use></svg>990 L</dd></div>
                 </dl>
                 <footer class="vehicle-card__footer">
                   <p class="vehicle-card__price vehicle-card__price--highlight"><strong class="vehicle-card__amount">589 €</strong><span class="vehicle-card__unit">/mes + IVA</span></p>
                   <span class="badge badge--info vehicle-card__down-payment">Sin entrada</span>
                   <p class="vehicle-card__terms">48 meses · 25.000 km/año</p>
-                  <p class="vehicle-card__availability"><span class="icon icon--sm" aria-hidden="true">check_circle</span>Stock 48h</p>
-                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Mercedes-Benz Vito 116 CDI Tourer</span><span class="icon icon--md" aria-hidden="true">chevron_right</span></a>
+                  <p class="vehicle-card__availability"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check-circle"></use></svg>Stock 48h</p>
+                  <a class="btn btn--dark btn--full vehicle-card__cta" href="vehiculo.html">Ver vehículo<span class="u-visually-hidden"> Mercedes-Benz Vito 116 CDI Tourer</span><svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"></use></svg></a>
                 </footer>
               </div>
             </article>
@@ -638,12 +636,12 @@
           <nav class="pagination" aria-label="Paginación">
             <ul class="pagination__list">
               <li><span class="pagination__link pagination__link--disabled" aria-disabled="true">
-                  <span class="icon icon--md" aria-hidden="true">arrow_back</span>Anterior</span></li>
+                  <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-back"></use></svg>Anterior</span></li>
               <li><a class="pagination__link pagination__link--current" href="marketplace.html" aria-current="page"><span class="u-visually-hidden">Página </span>1</a></li>
               <li><a class="pagination__link" href="marketplace.html?pagina=2"><span class="u-visually-hidden">Página </span>2</a></li>
               <li><a class="pagination__link" href="marketplace.html?pagina=3"><span class="u-visually-hidden">Página </span>3</a></li>
               <li><span class="pagination__gap" aria-hidden="true">...</span></li>
-              <li><a class="pagination__link" href="marketplace.html?pagina=2">Siguiente<span class="icon icon--md" aria-hidden="true">arrow_forward</span></a></li>
+              <li><a class="pagination__link" href="marketplace.html?pagina=2">Siguiente<svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-forward"></use></svg></a></li>
             </ul>
           </nav>
         </footer>
@@ -654,7 +652,7 @@
       <div class="marketplace-cta__inner">
         <header class="marketplace-cta__content">
           <p class="badge marketplace-cta__eyebrow">
-            <span class="icon icon--sm" aria-hidden="true">support_agent</span>
+            <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-support-agent"></use></svg>
             Atención personalizada de renting
           </p>
           <h2 class="marketplace-cta__title" id="marketplace-cta-title">¿No encuentras lo que buscas o necesitas una
@@ -665,8 +663,8 @@
           </p>
         </header>
         <ul class="marketplace-cta__actions">
-          <li class="marketplace-cta__action"><a class="btn btn--cta btn--lg" href="contacto.html"><span
-                class="icon icon--md" aria-hidden="true">phone_in_talk</span>Contactar con un asesor</a></li>
+          <li class="marketplace-cta__action"><a class="btn btn--cta btn--lg" href="contacto.html"><svg
+                class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-phone-in-talk"></use></svg>Contactar con un asesor</a></li>
           <li class="marketplace-cta__action"><a class="btn btn--outline btn--lg" href="dashboard.html">Ver renting
               corporativo</a></li>
         </ul>

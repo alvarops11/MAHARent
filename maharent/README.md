@@ -27,7 +27,12 @@ maharent/
 │   ├── components/ buttons, cards, badges, forms, tabs-toggles, tables, modals, avatar
 │   └── pages/      un parcial por página
 ├── js/             main.js (interacciones) y tailwind.config.js
-└── assets/img/
+├── scripts/        build-icons.mjs (genera el sprite de iconos)
+├── svgo.config.js  configuración de SVGO (optimización de SVG)
+└── assets/
+    ├── img/        imágenes locales (brand, home, marketplace, dashboard, vehiculo)
+    ├── icons/      sprite.svg (generado, no editar a mano)
+    └── svg-src/    SVG originales sin optimizar (fuente de verdad de los iconos)
 ```
 
 ## Compilar
@@ -35,8 +40,25 @@ maharent/
 ```bash
 npm run sass         # compila scss/main.scss -> css/main.css (+ mapa)
 npm run sass:watch   # recompila al guardar
+npm run icons        # optimiza assets/svg-src/icons con SVGO y genera assets/icons/sprite.svg
 npm run serve        # servidor local en http://127.0.0.1:8000
 ```
+
+## Iconos SVG
+
+Los iconos son SVG de **Material Symbols Outlined** (licencia Apache 2.0), descargados del repositorio oficial de Google y reunidos en un **sprite** (`assets/icons/sprite.svg`), en lugar de cargar la fuente de iconos desde Google Fonts.
+
+```html
+<svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-mail"></use></svg>
+```
+
+- **Tamaño**: el icono mide `1em`, así que se controla con `font-size` (`icon--xs | sm | md | lg`).
+- **Color**: `fill: currentColor`, hereda el `color` del texto.
+- **Relleno**: `favorite`, `star` y `verified` tienen versión rellena; se activa con `.icon--filled` o con `--icon-fill: 1` en CSS.
+- **Añadir un icono**: guarda su SVG en `assets/svg-src/icons/nombre.svg` (y `nombre-fill.svg` si necesita versión rellena) y ejecuta `npm run icons`. El id será `icon-nombre`.
+- `business.svg` es una copia de `domain.svg`: en Material Symbols, `business` es un alias de ese icono.
+- **Desde JavaScript**: `createIcon('check-circle', 'sm')` y `setIcon(elemento, 'visibility-off')` en `js/main.js`.
+- El sprite se carga como archivo externo, así que las páginas deben abrirse desde un servidor (`npm run serve` o Live Server). Abriendo el HTML con doble clic (`file://`), el navegador bloquea el sprite y los iconos no se ven.
 
 También funciona **Live Sass** (`glenn2223.live-sass`) con la configuración de `.vscode/settings.json` abriendo la carpeta `maharent` como espacio de trabajo.
 

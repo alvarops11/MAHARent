@@ -121,18 +121,12 @@ b {
 .icon {
   display: inline-block;
   flex-shrink: 0;
-  font-family: "Material Symbols Outlined";
-  font-weight: normal;
-  font-style: normal;
+  width: 1em;
+  height: 1em;
   font-size: 1.5rem;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  white-space: nowrap;
-  direction: ltr;
-  -webkit-font-smoothing: antialiased;
-  font-feature-settings: "liga";
-  user-select: none;
+  fill: currentColor;
+  vertical-align: middle;
+  overflow: visible;
 }
 .icon--xs {
   font-size: 0.875rem;
@@ -147,7 +141,7 @@ b {
   font-size: 1.5rem;
 }
 .icon--filled {
-  font-variation-settings: "FILL" 1;
+  --icon-fill: 1;
 }
 
 .u-visually-hidden {
@@ -1526,6 +1520,7 @@ b {
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
+  padding: calc((2.5rem - 1em) / 2);
   background-color: #ffddb8;
   color: #653e00;
   border-radius: 0.75rem;
@@ -1713,6 +1708,7 @@ b {
   justify-content: center;
   width: 3.5rem;
   height: 3.5rem;
+  padding: calc((3.5rem - 1em) / 2);
   background-color: #dbe1ff;
   color: #0051d5;
   border-radius: 1rem;
@@ -2746,7 +2742,7 @@ b {
   color: #ba1a1a;
 }
 .vehicle-card__favorite[aria-pressed=true] .icon {
-  font-variation-settings: "FILL" 1;
+  --icon-fill: 1;
 }
 .vehicle-card__provider {
   position: absolute;
@@ -3304,6 +3300,7 @@ b {
   place-items: center;
   width: 2.5rem;
   height: 2.5rem;
+  padding: calc((2.5rem - 1em) / 2);
   background-color: #e5eeff;
   color: #0051d5;
   border-radius: 0.75rem;
@@ -3411,6 +3408,7 @@ b {
   place-items: center;
   width: 2rem;
   height: 2rem;
+  padding: calc((2rem - 1em) / 2);
   background-color: #ffffff;
   color: #0e1c2f;
   border-radius: 0.5rem;
@@ -3616,7 +3614,7 @@ b {
 }
 .booking__favorite[aria-pressed=true] .booking__favorite-icon {
   color: #ba1a1a;
-  font-variation-settings: "FILL" 1;
+  --icon-fill: 1;
 }
 .booking__perks {
   display: flex;
@@ -3875,6 +3873,7 @@ b {
   place-items: center;
   width: 2.25rem;
   height: 2.25rem;
+  padding: calc((2.25rem - 1em) / 2);
   background-color: #e5eeff;
   color: #0051d5;
   border-radius: 0.5rem;
