@@ -135,55 +135,20 @@
     });
   });
 
-  // Visor 3D simulado: <section data-viewer> con data-viewer-stage, data-viewer-image y botones data-viewer-action
+  // Visor 3D: <model-viewer> controla la cámara mediante ratón, tacto y acciones accesibles.
   document.querySelectorAll('[data-viewer]').forEach(function (viewer) {
-    const stage = viewer.querySelector('[data-viewer-stage]');
-    const image = viewer.querySelector('[data-viewer-image]');
+    const model = viewer.querySelector('[data-viewer-model]');
     const angleLabel = viewer.querySelector('[data-viewer-angle]');
-    const interiorLabel = viewer.querySelector('[data-viewer-interior-label]');
-    const interiorButton = viewer.querySelector('[data-viewer-action="interior"]');
-    const swatches = Array.from(viewer.querySelectorAll('[data-viewer-action="color"]'));
-    if (!stage || !image) return;
+    if (!model) return;
 
-    const angles = [
-      'Vista Frontal 0°', 'Ángulo Tres Cuartos 45°', 'Perfil Lateral 90°', 'Ángulo Trasero 135°',
-      'Vista Trasera 180°', 'Ángulo Trasero 225°', 'Perfil Lateral 270°', 'Ángulo Frontal 315°'
-    ];
-    let zoom = 1;
-    let rotation = 0;
-    let interior = false;
-
-    function render() {
-      stage.style.setProperty('--viewer-zoom', zoom);
-      stage.style.setProperty('--viewer-rotation', rotation + 'deg');
-      if (angleLabel) {
-        const index = Math.round((((rotation % 360) + 360) % 360) / 45) % 8;
-        angleLabel.textContent = interior ? 'Cockpit Interior Panorámico' : 'Perspectiva: ' + angles[index];
-      }
-      if (interiorLabel) interiorLabel.textContent = interior ? 'Ver Exterior' : 'Ver Interior';
-      if (interiorButton) interiorButton.setAttribute('aria-pressed', String(interior));
+    function updateAngle() {
+      if (!angleLabel || typeof model.getCameraOrbit !== 'function') return;
+      const orbit = model.getCameraOrbit();
+      const degrees = Math.round(((orbit.theta * 180 / Math.PI) % 360 + 360) % 360);
+      angleLabel.textContent = 'Perspectiva: ' + degrees + '°';
     }
 
-    function flash(callback) {
-      image.classList.add('viewer__image--busy');
-      setTimeout(function () {
-        if (callback) callback();
-        image.classList.remove('viewer__image--busy');
-      }, 200);
-    }
-
-    function toggleInterior() {
-      flash(function () {
-        interior = !interior;
-        if (interior) {
-          rotation = 0;
-          zoom = 1.1;
-        } else {
-          zoom = 1;
-        }
-        render();
-      });
-    }
+    model.addEventListener('camera-change', updateAngle);
 
     viewer.addEventListener('click', function (event) {
       const button = event.target.closest('[data-viewer-action]');
@@ -191,33 +156,23 @@
       const value = Number(button.dataset.viewerValue);
 
       switch (button.dataset.viewerAction) {
-        case 'rotate':
-          if (interior) interior = false;
-          rotation += value;
+        case 'rotate': {
+          const orbit = model.getCameraOrbit();
+          orbit.theta += value * Math.PI / 180;
+          model.cameraOrbit = orbit.toString();
           break;
-        case 'zoom':
-          zoom = Math.min(Math.max(0.7, zoom + value), 1.6);
+        }
+        case 'zoom': {
+          const orbit = model.getCameraOrbit();
+          orbit.radius = Math.max(0.1, orbit.radius * (value > 0 ? 0.85 : 1.15));
+          model.cameraOrbit = orbit.toString();
           break;
+        }
         case 'reset':
-          zoom = 1;
-          rotation = 0;
-          interior = false;
+          model.cameraOrbit = '0deg 70deg 105%';
           break;
-        case 'color':
-          if (interior) interior = false;
-          swatches.forEach(function (swatch) {
-            swatch.setAttribute('aria-pressed', String(swatch === button));
-          });
-          flash();
-          break;
-        case 'interior':
-          toggleInterior();
-          return;
       }
-      render();
     });
-
-    render();
   });
 
   // Marketplace: cambio de vista <div data-view-toggle="id-lista"> con botones data-view="grid|list"

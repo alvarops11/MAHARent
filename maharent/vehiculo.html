@@ -11,6 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind.config.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer@4.0.0/dist/model-viewer.min.js"></script>
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -438,20 +439,21 @@
         <hgroup class="viewer__heading">
           <p class="viewer__eyebrow">Visualizador Virtual</p>
           <h2 class="viewer__title" id="viewer-title">Explora el vehículo en 3D</h2>
-          <p class="viewer__lead">Interactúa con el modelo para visualizar el vehículo desde diferentes perspectivas y
-            acabados.</p>
+          <p class="viewer__lead">Arrastra el modelo para girarlo y usa los controles para cambiar la perspectiva.</p>
         </hgroup>
         <p class="badge">
           <span class="live-dot live-dot--static" aria-hidden="true"></span>
-          Modo Interactivo HD · 60 FPS
+          Modelo 3D interactivo
         </p>
       </header>
 
       <figure class="viewer__stage" data-viewer-stage>
-        <img class="viewer__image" data-viewer-image
-          alt="Render 3D del BMW X1 en azul metalizado oscuro sobre un suelo de cristal reflectante de un concesionario"
-          src="assets/img/vehiculo/bmw-x1-render-3d.jpg"
-          loading="lazy">
+        <model-viewer class="viewer__model" data-viewer-model src="assets/3d/car.glb"
+          poster="assets/img/vehiculo/bmw-x1-render-3d.jpg"
+          alt="Modelo 3D interactivo del BMW X1" camera-controls touch-action="pan-y"
+          interaction-prompt="auto" camera-orbit="0deg 70deg 105%"
+          min-camera-orbit="auto auto 70%" max-camera-orbit="auto auto 150%"
+          shadow-intensity="1" exposure="1" loading="eager"></model-viewer>
 
         <div class="viewer__dock">
           <fieldset class="viewer__panel">
@@ -481,30 +483,11 @@
             </button>
           </fieldset>
 
-          <fieldset class="viewer__panel">
-            <legend class="u-visually-hidden">Color y vista interior</legend>
-            <button class="viewer__swatch viewer__swatch--portimao" type="button" aria-label="Azul Portimao"
-              title="Azul Portimao" aria-pressed="true" data-viewer-action="color"></button>
-            <button class="viewer__swatch viewer__swatch--dorado" type="button" aria-label="Dorado Sunset"
-              title="Dorado Sunset" aria-pressed="false" data-viewer-action="color"></button>
-            <button class="viewer__swatch viewer__swatch--mineral" type="button" aria-label="Gris Mineral"
-              title="Gris Mineral" aria-pressed="false" data-viewer-action="color"></button>
-            <button class="viewer__swatch viewer__swatch--alpin" type="button" aria-label="Blanco Alpin"
-              title="Blanco Alpin" aria-pressed="false" data-viewer-action="color"></button>
-            <button class="viewer__swatch viewer__swatch--zafiro" type="button" aria-label="Negro Zafiro"
-              title="Negro Zafiro" aria-pressed="false" data-viewer-action="color"></button>
-            <span class="viewer__divider" aria-hidden="true"></span>
-            <button class="viewer__button viewer__button--toggle" type="button" aria-pressed="false"
-              data-viewer-action="interior">
-              <svg class="icon icon--md" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-airline-seat-recline-extra"></use></svg>
-              <span data-viewer-interior-label>Ver Interior</span>
-            </button>
-          </fieldset>
         </div>
 
         <figcaption class="viewer__angle" aria-live="polite">
           <svg class="icon icon--md viewer__spin" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-360"></use></svg>
-          <span data-viewer-angle>Ángulo actual: 45° Lateral</span>
+          <span data-viewer-angle>Arrastra para girar el modelo</span>
         </figcaption>
       </figure>
     </section>
