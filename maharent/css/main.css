@@ -1629,9 +1629,29 @@ b {
   }
 }
 .features {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding-block: 4rem;
-  background-color: rgba(239, 244, 255, 0.6);
-  border-block: 1px solid #e5eeff;
+  background-color: #0e1c2f;
+  border-block: 1px solid rgba(214, 227, 254, 0.16);
+}
+.features::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(110deg, rgba(14, 28, 47, 0.92), rgba(0, 0, 0, 0.72));
+  content: "";
+  pointer-events: none;
+}
+.features__video {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 58%;
 }
 @media (min-width: 1024px) {
   .features {
@@ -1639,6 +1659,7 @@ b {
   }
 }
 .features__header {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1659,6 +1680,13 @@ b {
   font-weight: 700;
 }
 .features__title {
+  color: #eaf1ff;
+}
+.features__lead {
+  max-width: 38rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+.features__title {
   font-size: 1.75rem;
   line-height: 2.25rem;
   letter-spacing: -0.02em;
@@ -1675,7 +1703,7 @@ b {
   }
 }
 .features__lead {
-  color: #44474c;
+  color: #eaf1ff;
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: -0.005em;
@@ -1705,6 +1733,11 @@ b {
 }
 .features__item {
   display: flex;
+}
+@media (prefers-reduced-motion: reduce) {
+  .features__video {
+    display: none;
+  }
 }
 
 .feature {
@@ -4008,21 +4041,18 @@ b {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   pointer-events: none;
 }
-.viewer__image {
+.viewer__model {
   position: relative;
   z-index: 1;
   width: 100%;
+  height: 100%;
   max-width: 56rem;
-  max-height: 23.75rem;
   padding-inline: 1rem;
-  object-fit: contain;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.85));
-  transform: scale(var(--viewer-zoom, 1)) rotate(var(--viewer-rotation, 0deg));
-  transition: transform 0.3s ease, opacity 0.2s ease, filter 0.2s ease;
+  cursor: grab;
+  --poster-color: transparent;
 }
-.viewer__image--busy {
-  opacity: 0.4;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.85)) blur(4px);
+.viewer__model:active {
+  cursor: grabbing;
 }
 .viewer__angle {
   position: absolute;
@@ -4329,7 +4359,6 @@ b {
   }
   .gallery__image,
   .gallery__thumb,
-  .viewer__image,
   .viewer__swatch {
     transition: none;
   }
